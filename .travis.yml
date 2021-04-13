@@ -12,7 +12,7 @@ deploy:
   provider: heroku
   api_key:
     secure: F9r8s+Rt3ZE8/He/BvNfXlh0sMzVbkkUevd98YGaT/1QwE5LdGT6XaTm1NGIVCDguG5mIhNn5KneTGFLaY+oQnAZqCYO7L4v7St4pjqTSkTLMJshLJ7L8Le7j4JUY0sMYFwPzH6krZ6v1WffuIFleQsdkYtgAMnAy2dON69HsZrT8F+9sJWkYc4+uG4iJ0MMCsWLTqYXF2NLkqSr1CddPizsz6ZTc2TaQSEWVZ8NPUoGFbIU7pCd3UDnjpnBXhjOokNwlybq92wZqrAy47qR75mTdxzdsy7+3uEyExO3xjVtyVuBCJsU/iTd9xottog5bs7mXN8LEzT9Bez4bQLvRbVQvNcY+GEkaG8cW4Fpeck7i66FWUmb0GNjuDdSTtn2P35bkRjbTCdYyAfAGQ9BZBAsU9X6LH7zq5LZT5JcbvYtNVhlERgtUwqTGq7kWzqf2qEhCFSZEK6LFbm3GxU4oNVTB3/eGBcpbGEWGurDjug66wUZfWdb8zbB8wWQ2rwyWG/VXd8gy4SqN9G7p9beNSvALKZimo9xqPFgPZ2NMGE1rVBWFOPg9lZLCfm23h7pcWmcr7tg+jB7LZeZaxVwEmGeR2tvFm+BeiBcL27ruPa2WMVw+iifbo+eT3yJ3NRIiGTceubYr3akymsB6f0Oc70dtZj/UiA2o+2iFYRKC/g=
-  app: level_front_end
+  app: arcane-scrubland-46989
   on:
     repo: Level-turing-team/level_front_end
     branch: travis
