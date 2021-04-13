@@ -13,3 +13,23 @@
 //= require rails-ujs
 //= require activestorage
 //= require_tree .
+storage = window.localStorage
+$(function() {
+if (storage.chkbx && storage.chkbx != '') {
+  $('#remember_me').attr('checked', 'checked');
+  $('#username').val(storage.usrname);
+} else {
+  $('#remember_me').removeAttr('checked');
+  $('#username').val('');
+}
+ $('#submit').click(function(){
+if ($('#remember_me').is(':checked')) {
+// save username and password
+  storage.usrname = $('#username').val();
+  storage.chkbx = $('#remember_me').val();
+} else {
+  storage.usrname = '';
+  storage.chkbx = '';
+    }
+  });
+});
