@@ -14,5 +14,5 @@ deploy:
   app: arcane-scrubland-46989
   on:
     repo: Level-turing-team/level_front_end
-    branch: travis
+    branch: main
   skip_cleanup: 'true'
