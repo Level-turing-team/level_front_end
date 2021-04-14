@@ -11,16 +11,16 @@ class SessionsController < ApplicationController
     end
   end
 
-  def authenticate(user)
-    if user.authenticate(params[:password])
-      session[:user_id] = user.id
-      flash[:success] = "Welcome, #{user.username}!"
-      redirect_to dashboard_path
-    else
-      flash[:error] = 'Invalid password. Please try again.'
-      redirect_to root_path
-    end
-  end
+  # def authenticate(user)
+  #   if user.authenticate(params[:password])
+  #     session[:user_id] = user.id
+  #     flash[:success] = "Welcome, #{user.username}!"
+  #     redirect_to dashboard_path
+  #   else
+  #     flash[:error] = 'Invalid password. Please try again.'
+  #     redirect_to root_path
+  #   end
+  # end
 
   def destroy
     session.delete :user_id
