@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  def new
-    @user = User.new
+  def edit
+    @user = User.find_by(google_id: session[:user_id])
   end
 
   def create
@@ -15,6 +15,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def update
+    @user = User.find_by(google_id: session[:user_id])
+    @user.update(user_params)
+    redirect_to dashboard_index_path
+  end
+
   private
 
   def new_params
@@ -27,6 +33,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :username, :email)
+    params.require(:user).permit(:first_name, :last_name, :username, :email, :zip, :picture_url)
   end
 end
