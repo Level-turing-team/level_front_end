@@ -33,6 +33,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'omniauth', '~> 1.9'
+gem 'omniauth-google-oauth2'
 gem 'bcrypt'
 gem 'bootstrap', '~> 5.0.0.beta2'
 gem 'jquery-rails'

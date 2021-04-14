@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   post '/logout', to: 'sessions#destroy'
   resources :users, only: %i[create edit]
   resources :dashboard, only: %i[index]
+
+  get '/auth/google_oauth2/callback', to: 'sessions#googleAuth'
+  get '/failure', to: redirect('/')
 end
