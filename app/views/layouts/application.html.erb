@@ -14,12 +14,7 @@
 
   <body>
     <main>
-      <div class="user_info" >
-        <% if session[:user_id] %>
-          <%= "Logged in as: #{current_user.username}" %>
-          <%= link_to "Log Out", logout_path, method: :post %>
-        <% end %>
-      </div>
+      
       <script src="" integrity="" crossorigin="anonymous"></script>
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, class: name %>
@@ -39,4 +34,3 @@
     </footer>
   </body>
 </html>
-

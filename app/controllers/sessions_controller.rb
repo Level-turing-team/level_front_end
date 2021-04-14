@@ -11,16 +11,16 @@ class SessionsController < ApplicationController
     end
   end
 
-  # def authenticate(user)
-  #   if user.authenticate(params[:password])
-  #     session[:user_id] = user.id
-  #     flash[:success] = "Welcome, #{user.username}!"
-  #     redirect_to dashboard_path
-  #   else
-  #     flash[:error] = 'Invalid password. Please try again.'
-  #     redirect_to root_path
-  #   end
-  # end
+  def googleAuth
+      access_token = request.env["omniauth.auth"]
+      user = User.from_omniauth(access_token)
+      session[:user_id] = user.google_id
+      if User.find_by(google_id: user.google_id)
+        redirect_to dashboard_index_path
+      else
+        redirect_to register_path
+      end
+    end
 
   def destroy
     session.delete :user_id
