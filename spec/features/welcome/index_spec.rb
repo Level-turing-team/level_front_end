@@ -6,7 +6,8 @@ RSpec.describe 'Welcome Page' do
   end
 
   describe "When a user visits the root path" do
-  it "they should be on the welcome page" do
-    expect(current_path).to eq("/")
+    it "they should be on the welcome page" do
+      expect(current_path).to eq("/")
+    end
   end
 end
