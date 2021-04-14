@@ -1,12 +1,2 @@
 <header><center>New User Registration</center></header>
-<%= form_with model: @user, local: true do |f| %>
-  <div class="mb-3">
-    <%= f.label :username, "Choose your desired username: ", class: "form-label" %>
-    <%= f.text_field :username, required: true, class: "form-control" %>
-  </div>
-  <div class="mb-3">
-    <%= f.label :email, "Email address: ", class: "form-label" %>
-    <%= f.text_field :email, required: true, class: "form-control" %>
-  </div>
-  <%= f.submit "Register" %>
-<% end %>
+<%= button_to "Log in with Google", '/oauth2' %>
