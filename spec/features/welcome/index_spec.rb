@@ -15,8 +15,16 @@ RSpec.describe 'Welcome Page' do
     end
 
     it "they should see a button to log in with google" do
+      expect(page).to have_button('Log in/Register with Google')
       login
-      # expect(page).to have_button('Log in with Google')
+      expect(current_path).to eq(register_path)
+
+      fill_in 'user[username]', with: "name"
+      fill_in 'user[zip]', with: "8111"
+
+      click_button 'Register'
+      expect(current_path).to eq(dashboard_index_path)
+      binding.pry
     end
   end
 end

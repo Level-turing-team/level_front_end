@@ -1,64 +1,37 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/kn/Projects/mod3/group_projects/level_front_end/app/helpers/application_helper.rb": {
+      "/Users/josephbudina/turing/mod_3/projects/level/level_front_end/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/kn/Projects/mod3/group_projects/level_front_end/app/helpers/dashboard_helper.rb": {
+      "/Users/josephbudina/turing/mod_3/projects/level/level_front_end/app/helpers/dashboard_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/kn/Projects/mod3/group_projects/level_front_end/app/helpers/sessions_helper.rb": {
+      "/Users/josephbudina/turing/mod_3/projects/level/level_front_end/app/helpers/sessions_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/kn/Projects/mod3/group_projects/level_front_end/app/helpers/users_helper.rb": {
+      "/Users/josephbudina/turing/mod_3/projects/level/level_front_end/app/helpers/users_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/kn/Projects/mod3/group_projects/level_front_end/app/helpers/welcome_helper.rb": {
+      "/Users/josephbudina/turing/mod_3/projects/level/level_front_end/app/helpers/welcome_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/kn/Projects/mod3/group_projects/level_front_end/app/models/user.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/kn/Projects/mod3/group_projects/level_front_end/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/kn/Projects/mod3/group_projects/level_front_end/app/controllers/welcome_controller.rb": {
+      "/Users/josephbudina/turing/mod_3/projects/level/level_front_end/app/controllers/welcome_controller.rb": {
         "lines": [
           1,
           1,
@@ -67,19 +40,19 @@
           null
         ]
       },
-      "/Users/kn/Projects/mod3/group_projects/level_front_end/app/controllers/application_controller.rb": {
+      "/Users/josephbudina/turing/mod_3/projects/level/level_front_end/app/controllers/application_controller.rb": {
         "lines": [
           1,
           1,
           null,
           1,
-          0,
+          1,
           null,
           null,
           null
         ]
       },
-      "/Users/kn/Projects/mod3/group_projects/level_front_end/app/controllers/sessions_controller.rb": {
+      "/Users/josephbudina/turing/mod_3/projects/level/level_front_end/app/controllers/sessions_controller.rb": {
         "lines": [
           1,
           null,
@@ -103,60 +76,85 @@
           null
         ]
       },
-      "/Users/kn/Projects/mod3/group_projects/level_front_end/app/controllers/users_controller.rb": {
+      "/Users/josephbudina/turing/mod_3/projects/level/level_front_end/app/models/user.rb": {
         "lines": [
           1,
           1,
           1,
-          null,
-          null,
           1,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          null,
           null,
           1,
           null,
           1,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
           1,
-          0,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           null
         ]
       },
-      "/Users/kn/Projects/mod3/group_projects/level_front_end/app/controllers/dashboard_controller.rb": {
+      "/Users/josephbudina/turing/mod_3/projects/level/level_front_end/app/models/application_record.rb": {
         "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/josephbudina/turing/mod_3/projects/level/level_front_end/app/controllers/users_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
           0,
           0,
           0,
           0,
-          0
-        ],
-        "branches": {
-        }
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/josephbudina/turing/mod_3/projects/level/level_front_end/app/controllers/dashboard_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1618446695
+    "timestamp": 1618449912
   }
 }
