@@ -37,7 +37,17 @@
           1,
           1,
           1,
+          null,
           1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
           null
         ]
       },
@@ -66,34 +76,41 @@
           0,
           null,
           null,
+          null
+        ]
+      },
+      "/Users/kn/Projects/mod3/group_projects/level_front_end/app/controllers/sessions_controller.rb": {
+        "lines": [
           1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
           null
         ]
       },
       "/Users/kn/Projects/mod3/group_projects/level_front_end/app/controllers/users_controller.rb": {
         "lines": [
-          0,
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
           null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
           null,
-          0,
-          null,
-          0,
-          0,
-          0,
+          1,
           0,
           0,
           0,
@@ -102,20 +119,18 @@
           null,
           0,
           0,
+          null,
+          null,
+          null,
+          1,
           0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/kn/Projects/mod3/group_projects/level_front_end/app/controllers/sessions_controller.rb": {
-        "lines": [
           0,
           0,
           null,
-          0,
-          0,
-          0,
+          null,
+          1,
+          null,
+          1,
           0,
           0,
           0,
@@ -124,31 +139,17 @@
           0,
           null,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
+          1,
           0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
+          null,
+          null
+        ]
       },
       "/Users/kn/Projects/mod3/group_projects/level_front_end/app/controllers/dashboard_controller.rb": {
         "lines": [
           0,
           0,
-          null,
+          0,
           0,
           0
         ],
@@ -156,6 +157,6 @@
         }
       }
     },
-    "timestamp": 1618360778
+    "timestamp": 1618446695
   }
 }

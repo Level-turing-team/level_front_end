@@ -18,6 +18,25 @@ require 'rspec/rails'
 # The following line is provided for convenience purposes. It has the downside
 # of increasing the boot-up time by auto-requiring all files in the support
 # directory. Alternatively, in the individual `*_spec.rb` files, manually
+OmniAuth.config.test_mode = true
+OmniAuth.config.mock_auth[:google] = OmniAuth::AuthHash.new({
+  :provider => 'google',
+  :uid => '123545',
+  :info => {
+    :first_name => 'Test',
+    :last_name => "Test",
+    :email => "test@test.com"
+  },
+  :credentials => {
+    :token => "token",
+    :secret => "secret"
+  }
+  })
+
+  def login
+    Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:google]
+    click_button 'Log in/Register with Google'
+  end
 # require only the support files necessary.
 #
 # Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }

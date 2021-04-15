@@ -1,2 +1,4 @@
 <h1>Dashboard</h1>
-<%= @user.first_name %>
+<%= link_to "Log Out", logout_path, method: :post %>
+
+Hello <%= @user.username %>

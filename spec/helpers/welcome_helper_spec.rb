@@ -11,5 +11,9 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe WelcomeHelper, type: :helper do
-  # pending "add some examples to (or delete) #{__FILE__}"
+  def login
+    Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:google]
+    visit root_path
+    click_button 'Log in with Google'
+  end
 end
