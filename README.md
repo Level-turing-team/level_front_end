@@ -93,8 +93,8 @@ gem install rails --version 5.2.4.3
 
 ### Khoa/Joseph Notes
  * The from omniauth method living inside the user model is consuming the information from google authentication and creating that user(see method for details)
-   *This info covers first name, last name, and email, but it doesn't cover the usename and zip attributes
-   *the way we have this set up is if the user has not registered yet they will be redirected to a registeration form asking for those details and that will route the user to the user update method
+   * This info covers first name, last name, and email, but it doesn't cover the usename and zip attributes
+   * the way we have this set up is if the user has not registered yet they will be redirected to a registeration form asking for those details and that will route the user to the user update method
  * In order for you to have access to the google auth info you will need to run `bundle exec figaro install` and then will need to add the client id and secret from the link provided below
 https://console.cloud.google.com/apis/credentials/oauthclient/200802976231-hm6uqid00ehcbavj9l8s1nqna55rg40i.apps.googleusercontent.com?project=level-local-3000
 
