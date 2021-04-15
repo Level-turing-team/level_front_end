@@ -3,34 +3,17 @@ class UsersController < ApplicationController
     @user = User.find_by(google_id: session[:user_id])
   end
 
-  def create
-    user = User.create(new_params)
-    if user.id
-      flash[:success] = 'Account created successfully.'
-      session[:user_id] = user.id
-      redirect_to dashboard_path
+  def update
+    @user = User.find_by(google_id: session[:user_id])
+    if params[:user][:username] == "" || params[:user][:zip] == ""
+      redirect_to register_path
     else
-      flash[:alert] = user.errors.full_messages.to_sentence
-      render :new
+      @user.update(user_params)
+      redirect_to dashboard_index_path
     end
   end
 
-  def update
-    @user = User.find_by(google_id: session[:user_id])
-    @user.update(user_params)
-    redirect_to dashboard_index_path
-  end
-
   private
-
-  def new_params
-    new_params = user_params
-    new_params[:first_name] = user_params[:first_name].downcase
-    new_params[:last_name] = user_params[:last_name].downcase
-    new_params[:username] = user_params[:username].downcase
-    new_params[:email] = user_params[:email].downcase
-    new_params
-  end
 
   def user_params
     params.require(:user).permit(:first_name, :last_name, :username, :email, :zip, :picture_url)
