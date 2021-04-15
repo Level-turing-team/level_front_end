@@ -91,69 +91,20 @@ gem install rails --version 5.2.4.3
     4. Migrate and Seed the database: `rails db:setup`
 
 
-## Method Highlights/Tests
+### Khoa/Joseph Notes
+ * The from omniauth method living inside the user model is consuming the information from google authentication and creating that user(see method for details)
+   *This info covers first name, last name, and email, but it doesn't cover the usename and zip attributes
+   *the way we have this set up is if the user has not registered yet they will be redirected to a registeration form asking for those details and that will route the user to the user update method
+ * In order for you to have access to the google auth info you will need to run `bundle exec figaro install` and then will need to add the client id and secret from the link provided below
+https://console.cloud.google.com/apis/credentials/oauthclient/200802976231-hm6uqid00ehcbavj9l8s1nqna55rg40i.apps.googleusercontent.com?project=level-local-3000
 
-### Search for an items by prices
-  * Trying out public_send, this particular method send the values to the method inside the model.
+ * testing omniauth is interesting and you will need to look at the methods provided in rails helper in order to mock the google auth/ ian posted more info on this after we completed testing so feel free to update if needed. This is the link he provided in code help
+https://gist.github.com/iandouglas/a9942814d016f2090b9f27dde848b565
 
-  <img src="https://user-images.githubusercontent.com/46826902/114095050-38203900-987a-11eb-8c5e-281b5857c62f.png" width="75%" height="50%">
-
-  * Utilizing scope (class method), and the naming convention, the public_send able to pass the params value into the correct method.
-
-  <img src="https://user-images.githubusercontent.com/46826902/114096172-98fc4100-987b-11eb-8d43-e32c8829bb2d.png" width="75%" height="50%">
-
-### Testing this Method
-  * Testing items by prices
-     - Happy Path
-
-     <img src="https://user-images.githubusercontent.com/46826902/114103746-e631e000-9886-11eb-962f-09fad3cc34fa.png" width="75%" height="50%">\
-
-     <img src="https://user-images.githubusercontent.com/46826902/114104388-001ff280-9888-11eb-9eab-19249010ee5f.png" width="75%" height="50%">
-
-     - Sad Path
-
-     <img src="https://user-images.githubusercontent.com/46826902/114103855-12e5f780-9887-11eb-9b59-ebf451a4cb41.png" width="75%" height="50%">
-
-     <img src="https://user-images.githubusercontent.com/46826902/114104458-1f1e8480-9888-11eb-9510-1107cc82540b.png" width="75%" height="50%">
-
-     - Edge Case
-
-     <img src="https://user-images.githubusercontent.com/46826902/114105566-39596200-988a-11eb-896e-0e966b9fe9e3.png" width="75%" height="50%">
-
-
-
-## Running the tests
-
-In order to run all tests and see coverage run:
-
-  ```
-  bundle exec rspec
-  ```
-
-## API End Points
-  To access the API end points, type in rails server then copy and paste the end points into the browser with the values.
-
-  * All Merchants    - http://localhost:3000/api/v1/merchants then add ?per_page=<number_per_page>&page=<page_number>
-  * One Merchant     - http://localhost:3000/api/v1/merchants/{{merchant_id}}
-  * Find Merchants   - http://localhost:3000/api/v1/merchants/find?name={{name}}
-  * Find_all Merc.   - http://localhost:3000/api/v1/merchants/find_all?name={{name}}
-  * Merchant's Items - http://localhost:3000/api/v1/merchants/{{merchant_id}}/items
-  * Merc most_items  - http://localhost:3000/api/v1/merchants/most_items?quantity={{quantity}}
-  * Merc revenue     - http://localhost:3000/api/v1/revenue/merchants?quantity={{quantity}}
-
-  * Items            - http://localhost:3000/api/v1/items then add ?per_page=<number_per_page>&page=<page_number>
-  * One Item         - http://localhost:3000/api/v1/items/{{item_id}}
-  * Create Item      - Post 'http://localhost:3000/api/v1/items'
-  * Update Item      - Patch 'http://localhost:3000/api/v1/items'
-  * Delete Item      - Delete 'http://localhost:3000/api/v1/items/{{item_id}}'
-  * Item's Merchant  - http://localhost:3000/api/v1/items/{{item_id}}/merchant
-  * Find Items name  - http://localhost:3000/api/v1/items/find?name={{name}}
-  * Find Items Price - http://localhost:3000/api/v1/items/find?min_price={{min_price}}
-                       http://localhost:3000/api/v1/items/find?max_price={{max_price}}
-                       http://localhost:3000/api/v1/items/find?max_price={{max_price}}&&min_price={{min_price}}
-  * Revenue          - http://localhost:3000/api/v1/revenue?start={{start_date}}&end={{end_date}}
-  * Single Merc Rev  - http://localhost:3000/api/v1/revenue/merchants/{{merchant_id}}
-
+ * Our plan to edit user info from the settings page is to use the dashboard edit html page and that should route the user info to the user update action/ A SECOND UPDATE METHOD SHOULDN'T NEED TO BE CREATED FOR THIS 
+ * bootstrap and j query has not been implemted so feel free to style if interested. We have not added much in terms of style
+ * The travis ci yml is setup in a way that seems to still push to heroku if all tests pass however it says otherwise. We changed the branch name from travis to main which broke travis, so we changed it back. It needs to be fixed.
+ * For any more clarification hit us up
 ## Built With
 
   - Ruby/Rails
