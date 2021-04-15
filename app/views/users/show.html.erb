@@ -1,0 +1,22 @@
+<% if @user.username.nil? || @user.zip.nil? %>
+	<h3>Action Needed!</h3>
+	<p>Please complete your profile setup</p>
+	<%= render partial: "/shared/registration" %>
+<% else %>
+	<h3><%= @user.username %>'s profile</h3>
+	<section id="artist-bio">
+		<h4>Artist Bio</h4>
+		<% if @user.bio.empty? %>
+			<p>Nothing to see here!</p>
+			<% else %>
+			<figure class="text-left">
+			  <blockquote class="blockquote">
+			  	<p><%= @user.bio %></p>
+			  </blockquote>
+			  <figcaption class="blockquote-footer">
+			    Created by <cite title="Source Title"><%= @user.username %></cite>
+			  </figcaption>
+			</figure>
+		<% end %>
+	</section>
+<% end %>

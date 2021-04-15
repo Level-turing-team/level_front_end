@@ -26,7 +26,7 @@ RSpec.describe 'Profile Page' do
        expect(page).to have_field 'user[zip]'
     end
   end
-
+  #sad path
   describe "dashboard route sad path" do
     it "exists" do
        expect(page).to have_content("Your page needs a new name")
@@ -34,6 +34,28 @@ RSpec.describe 'Profile Page' do
        expect(page).to have_field 'user[zip]'
     end
   end
+  describe "artist bio" do
+    it "should have a section for artist bio" do
+      fill_in 'user[username]', with: "name"
+      fill_in 'user[zip]', with: "8111"
+      fill_in 'user[bio]', with: "music is life"
+      click_button 'Register'
+      visit "/profile"
+      within("#artist-bio") do
+        expect(page).to have_content("music is life")
+      end
+    end
+  end
 
-
+  describe "artist bio" do
+    it "should have a section for artist bio even when not given" do
+      fill_in 'user[username]', with: "name"
+      fill_in 'user[zip]', with: "8111"
+      click_button 'Register'
+      visit "/profile"
+      within("#artist-bio") do
+        expect(page).to have_content("Nothing to see here!")
+      end
+    end
+  end
 end

@@ -1,4 +1,11 @@
 <h1>Dashboard</h1>
-<%= link_to "Log Out", logout_path, method: :post %>
+<% if @user.username.nil? || @user.zip.nil? %>
+	<h3>Action Needed!</h3>
+	<p>Please complete your profile setup</p>
+	<%= render partial: "/shared/registration" %>
+<% else %>
+	<%= link_to "Log Out", logout_path, method: :post %>
 
-Hello <%= @user.username %>
+	Hello <%= @user.username %>
+<% end %>
+
