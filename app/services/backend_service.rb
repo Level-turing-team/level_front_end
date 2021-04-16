@@ -13,6 +13,11 @@ class BackendService
     parse(response)
   end
 
+  def self.dashboard_photos(user_id)
+    response = get_data("profiles/#{user_id}/circle/photos")
+    parse(response)
+  end
+
 private 
   def self.parse(response)
     JSON.parse(response.body, symbolize_names: true)

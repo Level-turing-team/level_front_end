@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Dashboards My Circle", type: :feature do
+RSpec.describe "Dashboards My Circle posts", type: :feature do
   before :each do 
     visit root_path
     login
