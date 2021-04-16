@@ -8,7 +8,12 @@ class BackendService
     parse(response)
   end
 
+  def self.user_feed(user_id)
+    response = get_data("profiles/#{user_id}/circle/posts")
+    parse(response)
+  end
 
+private 
   def self.parse(response)
     JSON.parse(response.body, symbolize_names: true)
   end
