@@ -17,7 +17,6 @@ RSpec.describe "Dashboards My Circle photos", type: :feature do
         click_button 'Register'
         
         response = JSON.parse(@json_details, symbolize_names: true)
-        # binding.pry
         
         expect(response).to be_a(Hash)
         expect(response[:dashboard_user_id]).to eq("14")
