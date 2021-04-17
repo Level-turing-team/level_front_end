@@ -1,3 +1,104 @@
 // Place all the styles related to the dashboard controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// nav.navbar {
+//     background: #6d7fcc;
+//     color: #fff;
+//     border-bottom: none;
+//     border-radius: 0;
+//     box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.2);
+//     padding: 15px 0;
+//     -webkit-transition: all 0.5s;
+//     -o-transition: all 0.5s;
+//     transition: all 0.5s;
+// }
+
+// /* Navbar Brand */
+// nav.navbar a.navbar-brand {
+//     color: #fff;
+//     font-weight: 600;
+// }
+//     nav.navbar a.navbar-brand:hover,
+//     nav.navbar a.navbar-brand:focus {
+//         color: inherit;
+//     }
+
+
+// /* Toggle Button */
+// nav.navbar .navbar-toggle {
+//     background: #fff;
+//     color: #333;
+//     border: none;
+//     border-radius: 0;
+// }
+//     nav.navbar .navbar-toggle:hover,
+//     nav.navbar .navbar-toggle:focus {
+//         background: #fff;
+//         color: #333;
+//     }
+
+// /* Navbar Components Holder */
+// nav.navbar .navbar-collapse {
+//     border: none;
+// }
+
+// /* Navbar links */
+// nav.navbar ul.navbar-nav {
+//     border: none;
+// }
+
+// nav.navbar ul.navbar-nav a {
+//     color: #fff;
+// }
+//     nav.navbar ul.navbar-nav a:hover,
+//     nav.navbar ul.navbar-nav a:focus {
+//         color: #333;
+//         background: #fff;
+//     }
+
+
+
+// /* Navbar Form */
+// nav.navbar form.navbar-form input {
+//     border-radius: 0 ;
+//     border-color: #6172b9;
+//     background: none;
+//     color: #fff;
+//     font-weight: 300;
+// }
+
+// nav.navbar form.navbar-form button {
+//     background: #6172b9;
+//     color: #fff;
+//     border-color: #6172b9;
+//     border-radius: 0;
+//     box-shadow: none !important;
+//     outline: none;
+// }
+//     nav.navbar form.navbar-form button:hover {
+//         background: #fff;
+//         color: #6172b9;
+//     }
+
+// /* Navbar Button */
+// nav.navbar button.navbar-btn {
+//     border-radius: 0;
+//     border-color: #6172b9;
+//     background: #6172b9;
+//     color: #fff;
+// }
+//     nav.navbar button.navbar-btn:hover {
+//         background: #fff;
+//         color: #6172b9;
+//     }
+.topcorner{
+  position:absolute;
+  top:70px;
+  right: 10px;
+}
+#topcornerleft{
+  position:absolute;
+  top:40px;
+  left: 10px;
+}
