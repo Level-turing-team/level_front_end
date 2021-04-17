@@ -24,7 +24,7 @@ RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
-  
+
   config.expect_with :rspec do |expectations|
     # This option will default to `true` in RSpec 4. It makes the `description`
     # and `failure_message` of custom matchers include text for helper methods
@@ -104,7 +104,16 @@ RSpec.configure do |config|
   def json
     JSON.parse(response.body, sumbolize_name: true)
   end
+
+  def db_dump
+    @user = User.create!(id: 10000001, first_name: "Tom", last_name: "Jerry", email: "mausetrap@example.com",username: "tom_jerry", google_id: "98745", zip: "80202", bio:"i love music and arts and stuff")
+    @user_3 = User.create!(id: 10000002, first_name: "Bob", last_name: "Jones", email: "somethingelse2@example.com",username: "test-user-24", google_id: "245234", zip: "80022", bio:"i love music and arts", picture_url: "http://www.ikozmik.com/Content/Images/uploaded/its-free-featured.jpg")
+    @user_4 = User.create!(id: 10000003, first_name: "Alexander", last_name: "Jones", email: "somethingelse3@example.com",username: "test-user-45", google_id: "245235", zip: "80023", bio:"Trying to connect with more artists")
+    @user_5 = User.create!(id: 10000004,first_name: "Sid", last_name: "Jones", email: "else@example.com",username: "test-user-457788", google_id: "44355676", zip: "80024", bio:"Photography is my passion")
+    @user_6 = User.create!(id: 10000005,first_name: "Simon", last_name: "Smith", email: "smith_else@example.com",username: "test-user-788", google_id: "12355676", zip: "80025", bio:"I love turtles")
+  end
 end
+
 
 require 'webmock/rspec'
 
