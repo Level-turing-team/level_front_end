@@ -36,4 +36,10 @@ class BackendService
   def self.parse(response)
     JSON.parse(response.body, symbolize_names: true)
   end
+
+  def self.get_distance(current_user_id,requested_user_id)
+    response = connection.get("/api/v1/distance?current_user=#{current_user_id}&user=#{requested_user_id}")
+    parse(response)
+
+  end
 end
