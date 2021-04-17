@@ -116,4 +116,4 @@ https://gist.github.com/iandouglas/a9942814d016f2090b9f27dde848b565
 
 ## Acknowledgments
 
-  - My 2011 BE cohorts that helped me out a lot.
+  - My 2011 BE cohorts that helped all of us out a lot.

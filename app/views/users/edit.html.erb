@@ -1,20 +1,3 @@
+
 <header><center>Your page needs a new name</center></header>
-<section>
-  <div class="container p-3 my-3 border">
-    <%= form_with model: @user, method: :patch, local: true do |f| %>
-      <div class="form-group">
-        <%= f.text_field :username, {class:"form-control", placeholder:"Enter Blog Name"} %>
-      </div>
-      <div class="form-group">
-        <%= f.number_field :zip, {class:"form-control", placeholder:"Enter Zip Code"} %>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col text-center">
-            <%= f.submit "Register", class:"btn btn-outline-primary" %>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  </div>
-</section>
+<%= render partial: "/shared/registration" %>
