@@ -12,6 +12,9 @@
 # the additional setup, and require it from the spec files that actually need
 # it.
 #
+# def session
+#   last_request.env['rack.session']
+# end
 require 'simplecov'
 SimpleCov.start 'rails'
 SimpleCov.add_filter ['spec', 'config', 'app/channels/application_cable', 'jobs', 'mailers']
