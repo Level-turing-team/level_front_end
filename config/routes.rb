@@ -12,7 +12,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   root 'welcome#index'
-  get '/register', to: 'users#edit'
+  get '/register', to: 'sessions#new'
+  post '/register', to: 'sessions#create'
   get '/profile', to: 'users#show'
   # get '/profile/:id', to: 'users#show', as: "profile"
   resources :discover, only: %i[index]

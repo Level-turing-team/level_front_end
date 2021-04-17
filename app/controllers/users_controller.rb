@@ -1,22 +1,4 @@
 class UsersController < ApplicationController
-  def edit
-    @user = User.find_by(google_id: session[:user_id])
-  end
-
-  def create 
-
-  end
-
-  def update
-    @user = User.find_by(google_id: session[:user_id])
-    BackendService.post_profile_picture(params[:user][:picture])
-    if params[:user][:username] == "" || params[:user][:zip] == ""
-      redirect_to register_path
-    else
-      @user.update(user_params)
-      redirect_to dashboard_index_path
-    end
-  end
 
   def show
      !!params[:lookup] ? @user = User.find(params[:lookup]) : @user = User.find_by(google_id: session[:user_id])
