@@ -64,6 +64,10 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "level_front_end_#{Rails.env}"
 
   config.action_mailer.perform_caching = false
+  
+  # config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  #
+  #     In production, :host should be set to the actual host of your application.
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
