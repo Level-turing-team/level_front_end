@@ -71,15 +71,15 @@
           1,
           null,
           1,
-          0,
-          null,
-          null,
-          1,
           1,
           null,
           null,
           1,
+          2,
+          null,
+          null,
           1,
+          2,
           null,
           null
         ]
@@ -215,6 +215,15 @@
           null
         ]
       },
+      "/Users/krislitman/Turing/mod3/projects/level_front_end/app/controllers/welcome_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/krislitman/Turing/mod3/projects/level_front_end/app/poros/profile.rb": {
         "lines": [
           0,
@@ -289,17 +298,6 @@
         "branches": {
         }
       },
-      "/Users/krislitman/Turing/mod3/projects/level_front_end/app/controllers/welcome_controller.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
       "/Users/krislitman/Turing/mod3/projects/level_front_end/app/controllers/dashboard_controller.rb": {
         "lines": [
           0,
@@ -315,6 +313,6 @@
         }
       }
     },
-    "timestamp": 1618690455
+    "timestamp": 1618690700
   }
 }
