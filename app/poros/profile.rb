@@ -3,8 +3,15 @@ class Profile
   def initialize(data)
     @uid = data[:uid]
     @circle = data[:circle]
-    @posts = data[:posts]
+    @posts = format_posts(data[:posts])
     @tags = data[:tags]
     @circle_posts = data[:circle_posts]
   end
+
+  def format_posts(post_data)
+    post_data.map do |post| 
+      Post.new(post)
+    end
+  end
+  
 end

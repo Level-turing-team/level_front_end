@@ -141,6 +141,44 @@ RSpec.describe 'Profile Page' do
 
 
     end
+    it "displays the users profile pic and name", :vcr do 
+      visit root_path
+      login
+
+      fill_in 'user[username]', with: "name"
+      fill_in 'user[zip]', with: "8111"
+      fill_in 'user[bio]', with: "bio testing"
+      attach_file("user[picture_url]", Rails.root + "spec/fixtures/fluff.jpg")
+      click_button 'Register'
+
+      logged_in_user = User.find_by(email: "test@test.com")
+      logged_in_user.update(id: "10000002")
+      visit profile_path
+      expect(current_path).to eq(profile_path)
+
+      within ("#profilePicture") do 
+        # check for display once image actually displays
+      end
+      within ("#username") do 
+        expect(page).to have_content(logged_in_user.username)
+      end
+    end
+    it "displays the posts of the user profile you are viewing", :vcr do 
+      visit root_path
+      login
+
+      fill_in 'user[username]', with: "name"
+      fill_in 'user[zip]', with: "8111"
+      fill_in 'user[bio]', with: "bio testing"
+      attach_file("user[picture_url]", Rails.root + "spec/fixtures/fluff.jpg")
+      click_button 'Register'
+
+      logged_in_user = User.find_by(email: "test@test.com")
+      logged_in_user.update(id: "10000003")
+      visit profile_path
+      expect(current_path).to eq(profile_path)
+      save_and_open_page
+    end
   end
 
 end

@@ -3,12 +3,16 @@
 	<p>Please complete your profile setup</p>
 	<%= render partial: "/shared/registration" %>
 <% else %>
-	<h3><%= @user.username %>'s profile</h3>
-	<section id="artist-bio">
 		<!-- 
 		REMOVE THIS LINK ONCE FUNCTIONALITY IS IMPLEMENTED, ITS JUST FOR TESTING 
 		 -->
 		<p>Link to other page  <%= link_to("other profile", profile_path(lookup: "10000001")) %> </p>
+		<section id="profilePicture">
+			<%# image_tag @user.picture_url %>
+		</section>
+		<section id="username">
+			<%= @user.username %>
+		</section>
 		<% if @user.id == @current_user.id %>
 			<section id="distance">
 					<p>You are 0 miles from yourself</p>
@@ -20,6 +24,7 @@
 			</section>
 		<% end %>
 
+	<section id="artist-bio">
 		<h4>Artist Bio</h4>
 
 		<% if @user.bio.empty? %>
@@ -33,6 +38,14 @@
 			    Created by <cite title="Source Title"><%= @user.username %></cite>
 			  </figcaption>
 			</figure>
+		<% end %>
+	</section>
+	<section id="posts">
+	<h4>Posts</h4>
+		<% @profile_data.posts.each do |post| %>
+			<p><%= post.content %></p>
+			<p><%= link_to post.link unless post.link.nil? %></p>
+			<br>
 		<% end %>
 	</section>
 <% end %>
