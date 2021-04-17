@@ -1,14 +1,4 @@
 Rails.application.routes.draw do
-  # devise_for :users, skip: [:sessions]
-  # as :user do
-  #   get 'signin', to: 'welcome#index'
-  # end
-
-  # devise_for :users, root_path: {
-  #     sign_in: 'login', sign_out: 'logout',
-  #     password: 'secret', confirmation: 'verification',
-  #     registration: 'register', edit: 'edit/profile'
-  #   }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   root 'welcome#index'

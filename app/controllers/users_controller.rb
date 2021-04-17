@@ -7,7 +7,6 @@ class UsersController < ApplicationController
   def update
     @user = User.find_by(google_id: session[:user_id])
     BackendService.post_profile_picture(@user.id, params[:picture_url])
-    # require 'pry'; binding.pry
     if params[:username] == "" || params[:zip] == ""
       redirect_to register_path
     else
