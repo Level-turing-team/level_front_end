@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe BackendService, type: :model do
   before :each do
+    @user = User.create(first_name: "J", last_name: "b", email: "aa@a.com", username: "la", picture_url: "spec/fixtures/fluff.jpg", zip: "80000")
   end
   describe 'Class Methods' do
     it '#user_circle', :vcr do
@@ -44,6 +45,10 @@ RSpec.describe BackendService, type: :model do
       expect(@response[:data].first[:type]).to eq("post")
       expect(@response[:data].first[:attributes].keys).to eq([:content, :link, :user_id])
     end
-    # xit '#dashboard_photos'
+    
+    it '#post_user', :vcr do
+      @response = BackendService.post_user(@user.id, @user.zip, @user.picture_url, @user.username)
+      expect(@response[:data]).to eq("profile created successfully")
+    end
   end
 end

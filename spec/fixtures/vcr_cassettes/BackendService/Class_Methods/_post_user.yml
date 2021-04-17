@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://lit-atoll-80185.herokuapp.com/api/v1/profiles?profile_picture=spec/fixtures/fluff.jpg&user_id=236&username=la&zipcode=80000
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 17 Apr 2021 16:51:11 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8f7fc60752a9e15e49c51adc89963144"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - bb8bcd2b-9c80-4a56-8e03-7b3695376e14
+      X-Runtime:
+      - '0.015736'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":"profile created successfully"}'
+  recorded_at: Sat, 17 Apr 2021 16:51:11 GMT
+recorded_with: VCR 6.0.0
