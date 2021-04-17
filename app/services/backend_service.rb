@@ -3,6 +3,10 @@ class BackendService
     conn = Faraday.get("https://lit-atoll-80185.herokuapp.com/")
   end
 
+  def self.post_profile_picture(url)
+    Faraday.post("https://lit-atoll-80185.herokuapp.com/api/v1/photos")
+  end
+
   def self.user_circle(user_id)
     response = get_data("profiles/#{user_id}/circle")
     parse(response)
