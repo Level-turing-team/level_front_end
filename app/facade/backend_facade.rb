@@ -15,4 +15,10 @@ class BackendFacade
       circle_posts: circle_posts[:data]
     }
   end
+  def self.artists_near_me(user_id)
+    artists = BackendService.get_artists_near_me(user_id)
+    artists[:data].map do |artist|
+      Artist.combine(artist)
+    end
+  end
 end

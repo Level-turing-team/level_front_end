@@ -6,10 +6,19 @@
 	<h3><%= @user.username %>'s profile</h3>
 	<section id="artist-bio">
 		<!-- 
-		COMMENT THIS LINK OUT, ITS JUST FOR TESTING 
+		REMOVE THIS LINK ONCE FUNCTIONALITY IS IMPLEMENTED, ITS JUST FOR TESTING 
 		 -->
-		<p>Link to other page  <%= link_to("other shit", profile_path(lookup: "#{User.first.id}")) %> </p>
+		<p>Link to other page  <%= link_to("other profile", profile_path(lookup: "10000001")) %> </p>
+      <section id="distance">
+		<% if @user.id == current_user.id %>
+					<p>You are 0 miles from yourself</p>
+		<% else %>
+					<!--p><%= @distance %> miles from you</p-->
+		<% end %>
+			</section>
+
 		<h4>Artist Bio</h4>
+
 		<% if @user.bio.empty? %>
 			<p>Nothing to see here!</p>
 			<% else %>
