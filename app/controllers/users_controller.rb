@@ -5,11 +5,11 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find_by(google_id: session[:user_id])
-    BackendService.post_profile_picture(params[:user][:picture])
     if params[:user][:username] == "" || params[:user][:zip] == ""
       redirect_to register_path
     else
       @user.update(user_params)
+      BackendService.post_user(@user.id, @user.zip, @user.picture_url, @user.username)
       redirect_to dashboard_index_path
     end
   end
