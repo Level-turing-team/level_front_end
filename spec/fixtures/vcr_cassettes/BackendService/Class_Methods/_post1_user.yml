@@ -1,45 +1,47 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: https://lit-atoll-80185.herokuapp.com/api/v1/profile/10000001/tags
+    method: post
+    uri: https://lit-atoll-80185.herokuapp.com/api/v1/profiles?profile_picture=spec/fixtures/fluff.jpg&user_id=477&username=la&zipcode=80000
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
       User-Agent:
       - Faraday v1.3.0
+      Content-Length:
+      - '0'
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 201
+      message: Created
     headers:
       Server:
       - Cowboy
       Date:
-      - Sat, 17 Apr 2021 22:17:20 GMT
+      - Sat, 17 Apr 2021 21:19:08 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"901c8c76acc5457d91aff3a338b7315f"
+      - W/"8f7fc60752a9e15e49c51adc89963144"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ee567ad3-a9c3-4321-a293-bb98431754b9
+      - 99ab27fe-5951-4b14-98d4-c59a8e96c9f3
       X-Runtime:
-      - '0.022063'
+      - '0.044025'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"16","type":"tag","attributes":{"name":"Painter"}},{"id":"18","type":"tag","attributes":{"name":"Sculpter"}}]}'
-  recorded_at: Sat, 17 Apr 2021 22:17:21 GMT
+      string: '{"data":"profile created successfully"}'
+  recorded_at: Sat, 17 Apr 2021 21:19:08 GMT
 recorded_with: VCR 6.0.0
