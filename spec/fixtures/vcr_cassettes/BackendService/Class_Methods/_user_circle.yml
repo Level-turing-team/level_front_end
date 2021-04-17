@@ -1,0 +1,83 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://lit-atoll-80185.herokuapp.com/profiles/10000001/circle
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 16 Apr 2021 23:51:23 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      X-Request-Id:
+      - 872280b1-07dc-447b-8faf-0f427af08c84
+      X-Runtime:
+      - '0.003579'
+      Content-Length:
+      - '0'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Fri, 16 Apr 2021 23:51:24 GMT
+- request:
+    method: get
+    uri: https://lit-atoll-80185.herokuapp.com/api/v1/profiles/10000001/circle
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 16 Apr 2021 23:51:29 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"6bd2f6a8f41b25c1baaae5a5753d2ed2"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - eefd10e2-8a37-406e-8248-ca4ff53edf11
+      X-Runtime:
+      - '0.024444'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"17","type":"profile","attributes":{"zipcode":"80022","user_id":10000002,"profile_picture":"http://www.google.com"}},{"id":"18","type":"profile","attributes":{"zipcode":"80023","user_id":10000003,"profile_picture":"http://www.google.com"}},{"id":"19","type":"profile","attributes":{"zipcode":"80024","user_id":10000004,"profile_picture":"http://www.google.com"}},{"id":"20","type":"profile","attributes":{"zipcode":"80025","user_id":10000005,"profile_picture":"http://www.google.com"}}]}'
+  recorded_at: Fri, 16 Apr 2021 23:51:29 GMT
+recorded_with: VCR 6.0.0
