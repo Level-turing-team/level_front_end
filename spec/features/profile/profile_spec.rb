@@ -2,23 +2,25 @@ require 'rails_helper'
 
 RSpec.describe 'Profile Page' do
   before :each do
-    @user_1 = User.create!(first_name: "Test", last_name: "Account", email: "something@example.com",username: "test-user", google_id: "123", zip: "12345",bio:"music is dope")
+    User.destroy_all
+    @user_1 = User.create!(id: "10000001", first_name: "Test", last_name: "Account", email: "something@example.com",username: "test-user", google_id: "123", zip: "12345",bio:"music is dope")
     @user_2 = User.create!(first_name: "Other", last_name: "Account", email: "somethingelse@example.com",username: "test-user-2", google_id: "456", zip: "23456",bio:"i love music")
     @sad_user = User.create!(first_name: "Other", last_name: "Account", email: "saduser@example.com", google_id: "456")
   end
   #happy path
   describe "profile route" do
-    it "exists" do
+    it "exists", :vcr do
       visit root_path
       login
 
       fill_in 'user[username]', with: "name"
       fill_in 'user[zip]', with: "8111"
-      fill_in 'user[bio]', with: "let me test this shit"
+      fill_in 'user[bio]', with: "bio testing"
 
       click_button 'Register'
 
       logged_in_user = User.find_by(email: "test@test.com")
+      logged_in_user.update(id: "10000002")
       visit profile_path
       expect(current_path).to eq(profile_path)
       expect(page).not_to have_content("Action Needed!")
@@ -26,7 +28,7 @@ RSpec.describe 'Profile Page' do
   end
   #sad path
   describe "profile route sad path" do
-    it "exists" do
+    it "doesnt let you log in", :vcr do
       visit root_path
       login
       visit profile_path
@@ -37,7 +39,7 @@ RSpec.describe 'Profile Page' do
   end
   #sad path
   describe "dashboard route sad path" do
-    it "exists" do
+    it "doesnt let you log in", :vcr do
       visit root_path
       login
       expect(page).to have_content("Your page needs a new name")
@@ -46,26 +48,27 @@ RSpec.describe 'Profile Page' do
     end
   end
   describe "artist bio" do
-    it "should have a section for artist bio" do
+    it "should have a section for artist bio", :vcr do
       visit root_path
       login
 
       fill_in 'user[username]', with: "name"
       fill_in 'user[zip]', with: "8111"
-      fill_in 'user[bio]', with: "let me test this shit"
+      fill_in 'user[bio]', with: "bio testing"
 
       click_button 'Register'
 
       logged_in_user = User.find_by(email: "test@test.com")
+      logged_in_user.update(id: "10000002")
       visit profile_path
       within("#artist-bio") do
-        expect(page).to have_content("let me test this shit")
+        expect(page).to have_content("bio testing")
       end
     end
   end
 
   describe "artist bio" do
-    it "should have a section for artist bio even when not given" do
+    it "should have a section for artist bio even when not given", :vcr do
       visit root_path
       login
 
@@ -75,6 +78,7 @@ RSpec.describe 'Profile Page' do
       click_button 'Register'
 
       logged_in_user = User.find_by(email: "test@test.com")
+      logged_in_user.update(id: "10000002")
       visit profile_path
       within("#artist-bio") do
         expect(page).to have_content("Nothing to see here!")
@@ -83,27 +87,60 @@ RSpec.describe 'Profile Page' do
   end
 
   describe "profile route" do
-    it "shows other profiles" do
+    it "shows other profiles", :vcr do
       visit root_path
       login
 
       fill_in 'user[username]', with: "name"
       fill_in 'user[zip]', with: "8111"
-      fill_in 'user[bio]', with: "let me test this shit"
+      fill_in 'user[bio]', with: "bio testing"
 
 
 
       click_button 'Register'
 
       logged_in_user = User.find_by(email: "test@test.com")
+      logged_in_user.update(id: "10000002")
       visit "/profile"
-      expect(page).not_to have_content "#{@user_2.username}"
+      expect(page).not_to have_content "#{@user_1.username}"
       expect(page).to have_content "#{logged_in_user.username}"
 
-      click_on "other shit"
+      click_on "other profile"
 
-      expect(page).to have_content "#{User.first.username}"
+      expect(page).to have_content "#{@user_1.username}"
       expect(page).not_to have_content "#{logged_in_user.username}"
     end
   end
+  describe "profile page" do
+    it "shows distance to other profiles", :vcr do
+      visit root_path
+      login
+
+      fill_in 'user[username]', with: "name"
+      fill_in 'user[zip]', with: "8111"
+      fill_in 'user[bio]', with: "bio testing"
+
+
+
+      click_button 'Register'
+
+      logged_in_user = User.find_by(email: "test@test.com")
+      logged_in_user.update(id: "10000002")
+      visit "/profile"
+      within ("#distance") do
+        expect(page).to have_content("You are 0 miles from yourself")
+      end
+
+
+      click_on "other profile"
+
+
+      within ("#distance") do
+        expect(page).to have_content("11.51 miles from you")
+      end
+
+
+    end
+  end
+
 end
