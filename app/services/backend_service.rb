@@ -3,6 +3,28 @@ class BackendService
     conn = Faraday.new(url: "https://lit-atoll-80185.herokuapp.com")
   end
 
+  def self.post_gallery_photo(user_id, gallery_id, description, url)
+    response = connection.post("/api/v1/profiles/#{user_id}/galleries/#{gallery_id}/photos") do |f|
+      f.params['description'] = description
+      f.params['url'] = url
+    end
+    parse(response)
+  end
+
+  def self.post_user_galleries(user_id, name, photo_url)
+    response = connection.post("/api/v1/profiles/#{user_id}/galleries") do |f|
+      f.params['user_id'] = user_id
+      f.params['name'] = name
+      f.params['photo_url'] = photo_url
+    end
+    parse(response)
+  end
+
+  def self.get_user_galleries(user_id)
+    response = connection.get("/api/v1/profiles/#{user_id}/galleries")
+    parse(response)
+  end
+
   def self.create_user_post(user_id, content, link)
     response = connection.post("/api/v1/profiles/#{user_id}/post") do |f|
       f.params['content'] = content
