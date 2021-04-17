@@ -37,6 +37,48 @@
           null
         ]
       },
+      "/Users/krislitman/Turing/mod3/projects/level_front_end/app/facade/backend_facade.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/krislitman/Turing/mod3/projects/level_front_end/app/poros/profile.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
       "/Users/krislitman/Turing/mod3/projects/level_front_end/app/models/user.rb": {
         "lines": [
           1,
@@ -46,13 +88,13 @@
           null,
           1,
           null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
           null,
           null
         ]
@@ -61,66 +103,6 @@
         "lines": [
           1,
           1,
-          null
-        ]
-      },
-      "/Users/krislitman/Turing/mod3/projects/level_front_end/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          2,
-          null,
-          null,
-          1,
-          2,
-          null,
-          null
-        ]
-      },
-      "/Users/krislitman/Turing/mod3/projects/level_front_end/app/controllers/discover_controller.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/krislitman/Turing/mod3/projects/level_front_end/app/facade/backend_facade.rb": {
-        "lines": [
-          1,
-          1,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
           null
         ]
       },
@@ -143,48 +125,80 @@
           null,
           null,
           1,
-          1,
+          23,
           null,
           null,
           1,
-          0,
+          14,
           null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
           null,
           null,
           null,
           1,
+          2,
+          2,
+          null,
+          null,
           1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          2,
+          2,
           null,
           null,
           1,
           0,
           0,
+          null,
+          null,
+          null,
+          1,
+          9,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/krislitman/Turing/mod3/projects/level_front_end/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          37,
+          null,
+          null,
+          1,
+          18,
+          null,
+          null,
+          1,
+          18,
+          null,
+          null
+        ]
+      },
+      "/Users/krislitman/Turing/mod3/projects/level_front_end/app/controllers/discover_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
           null,
           null
         ]
@@ -224,95 +238,74 @@
           null
         ]
       },
-      "/Users/krislitman/Turing/mod3/projects/level_front_end/app/poros/profile.rb": {
+      "/Users/krislitman/Turing/mod3/projects/level_front_end/app/controllers/sessions_controller.rb": {
         "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
+          1,
+          null,
+          1,
+          17,
+          17,
+          17,
+          17,
+          16,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          2,
+          2,
+          2,
+          null,
+          null
+        ]
       },
       "/Users/krislitman/Turing/mod3/projects/level_front_end/app/controllers/users_controller.rb": {
         "lines": [
+          1,
+          null,
+          1,
+          16,
+          null,
+          null,
+          1,
+          14,
+          14,
+          14,
           0,
           null,
-          0,
-          0,
-          0,
+          14,
+          14,
           null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
           null,
-          0,
-          0,
-          0,
           null,
-          0,
+          1,
+          6,
           null,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/krislitman/Turing/mod3/projects/level_front_end/app/controllers/sessions_controller.rb": {
-        "lines": [
-          0,
           null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
           null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
+          1,
+          null,
+          1,
+          14,
+          null,
+          null
+        ]
       },
       "/Users/krislitman/Turing/mod3/projects/level_front_end/app/controllers/dashboard_controller.rb": {
         "lines": [
-          0,
-          0,
+          1,
+          1,
           null,
-          0,
-          0,
+          1,
+          15,
           null,
-          0,
-          0
-        ],
-        "branches": {
-        }
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1618690700
+    "timestamp": 1618693426
   }
 }
