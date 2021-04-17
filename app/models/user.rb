@@ -13,4 +13,10 @@ class User < ApplicationRecord
     user.save
     user
   end
+
+  def self.find_circle(circle_data)
+    circle_data.map do |profile|
+      User.find(profile[:attributes][:user_id])
+    end
+  end
 end
