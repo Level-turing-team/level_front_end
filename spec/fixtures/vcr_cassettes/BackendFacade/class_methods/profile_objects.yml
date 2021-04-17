@@ -1,0 +1,181 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://lit-atoll-80185.herokuapp.com/api/v1/profiles/10000001/circle
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 17 Apr 2021 00:33:41 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"6bd2f6a8f41b25c1baaae5a5753d2ed2"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8db69989-6533-456c-a4cd-86d3b824c13c
+      X-Runtime:
+      - '0.036336'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"17","type":"profile","attributes":{"zipcode":"80022","user_id":10000002,"profile_picture":"http://www.google.com"}},{"id":"18","type":"profile","attributes":{"zipcode":"80023","user_id":10000003,"profile_picture":"http://www.google.com"}},{"id":"19","type":"profile","attributes":{"zipcode":"80024","user_id":10000004,"profile_picture":"http://www.google.com"}},{"id":"20","type":"profile","attributes":{"zipcode":"80025","user_id":10000005,"profile_picture":"http://www.google.com"}}]}'
+  recorded_at: Sat, 17 Apr 2021 00:33:41 GMT
+- request:
+    method: get
+    uri: https://lit-atoll-80185.herokuapp.com/api/v1/profiles/10000001/circle/posts
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 17 Apr 2021 00:33:41 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"7e68d5cc82a09281137bce72e2cd6867"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f48d503b-7525-4e5c-8239-b7399c79d2a9
+      X-Runtime:
+      - '0.009771'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"4","type":"post","attributes":{"content":"hey did you
+        see that headline?","link":"photoURL.com","user_id":10000002}},{"id":"5","type":"post","attributes":{"content":"hey
+        checkout my create shoes?","link":"photoURL.com","user_id":10000002}},{"id":"6","type":"post","attributes":{"content":"hey
+        did you see software update?","link":"photoURL.com","user_id":10000003}},{"id":"7","type":"post","attributes":{"content":"hey
+        did you see your mom called?","link":null,"user_id":10000003}},{"id":"8","type":"post","attributes":{"content":"hey
+        did you see that we''re not friends on FB anymore?","link":"photoURL.com","user_id":10000004}},{"id":"9","type":"post","attributes":{"content":"hey
+        did you see hear about that create app called ''level''?","link":"photoURL.com","user_id":10000004}},{"id":"10","type":"post","attributes":{"content":"hey
+        i just got hired at a sick new comapny","link":null,"user_id":10000005}}]}'
+  recorded_at: Sat, 17 Apr 2021 00:33:42 GMT
+- request:
+    method: get
+    uri: https://lit-atoll-80185.herokuapp.com/api/v1/profile/10000001/tags
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 17 Apr 2021 00:33:42 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"901c8c76acc5457d91aff3a338b7315f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 80332be2-8237-4fba-ada6-584a83fdbd35
+      X-Runtime:
+      - '0.012097'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"16","type":"tag","attributes":{"name":"Painter"}},{"id":"18","type":"tag","attributes":{"name":"Sculpter"}}]}'
+  recorded_at: Sat, 17 Apr 2021 00:33:42 GMT
+- request:
+    method: get
+    uri: https://lit-atoll-80185.herokuapp.com/api/v1/profiles/10000001/post
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 17 Apr 2021 00:33:41 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"1edafbd422cf6d3f9fa28aef9b25ba28"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1db7d792-9a28-4511-8dc2-fccc9615dc9f
+      X-Runtime:
+      - '0.014152'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"post","attributes":{"content":"hey did you
+        see that lil nas X video?","link":"photoURL.com","user_id":10000001}},{"id":"2","type":"post","attributes":{"content":"hey
+        did you see that create meme?","link":"photoURL.com","user_id":10000001}},{"id":"3","type":"post","attributes":{"content":"hey
+        did you see that riot footage?","link":null,"user_id":10000001}}]}'
+  recorded_at: Sat, 17 Apr 2021 00:33:42 GMT
+recorded_with: VCR 6.0.0
