@@ -3,10 +3,11 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
   get '/register', to: 'users#edit'
-  post '/login', to: 'sessions#create'
-  post '/logout', to: 'sessions#destroy'
+  post '/register', to: 'users#update'
   get '/profile', to: 'users#show'
+  post '/logout', to: 'sessions#destroy'
   # get '/profile/:id', to: 'users#show', as: "profile"
+  resources :discover, only: %i[index]
   resources :users, only: %i[create update]
   resources :dashboard, only: %i[index]
 

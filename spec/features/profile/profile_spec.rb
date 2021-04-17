@@ -112,7 +112,7 @@ RSpec.describe 'Profile Page' do
     end
   end
   describe "profile page" do
-    it "shows distance to other profiles", :vcr do
+    xit "shows distance to other profiles", :vcr do
       visit root_path
       login
 
@@ -138,9 +138,6 @@ RSpec.describe 'Profile Page' do
       within ("#distance") do
         expect(page).to have_content("11.51 miles from you")
       end
-
-
     end
   end
-
 end

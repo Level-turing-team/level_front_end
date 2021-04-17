@@ -9,16 +9,13 @@
 		REMOVE THIS LINK ONCE FUNCTIONALITY IS IMPLEMENTED, ITS JUST FOR TESTING 
 		 -->
 		<p>Link to other page  <%= link_to("other profile", profile_path(lookup: "10000001")) %> </p>
-		<% if @user.id == @current_user.id %>
-			<section id="distance">
+      <section id="distance">
+		<% if @user.id == current_user.id %>
 					<p>You are 0 miles from yourself</p>
-			</section>
-
 		<% else %>
-			<section id="distance">
-					<p><%= @distance %> miles from you</p>
-			</section>
+					<!--p><%= @distance %> miles from you</p-->
 		<% end %>
+			</section>
 
 		<h4>Artist Bio</h4>
 

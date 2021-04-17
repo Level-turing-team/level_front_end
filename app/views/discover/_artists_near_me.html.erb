@@ -1,0 +1,8 @@
+<section class='artists_near_me'>
+  <h2>Artists Near Me: <%= artists.count %></h2>
+    <% artists.each do |artist| %>
+      <h3>Artist:<%= artist.username %></h3>
+      <h3>Zipcode: <%= artist.zipcode %></h3>
+      <h3>Profile Picture:</h3><%= artist.profile_picture %>
+  <% end %>
+</section>

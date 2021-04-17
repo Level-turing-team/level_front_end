@@ -32,7 +32,9 @@ RSpec.describe 'Welcome Page' do
       expect(current_path).to eq(register_path)
 
       click_button 'Register'
-      expect(current_path).to eq(register_path)
+      click_link 'Log Out'
+      visit dashboard_index_path
+      expect(current_path).to eq(root_path)
     end
   end
 
