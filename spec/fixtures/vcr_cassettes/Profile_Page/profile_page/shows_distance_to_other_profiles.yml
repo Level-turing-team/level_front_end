@@ -1,0 +1,127 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://lit-atoll-80185.herokuapp.com/api/v1/photos
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 17 Apr 2021 17:15:09 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      X-Request-Id:
+      - 63cfa92c-ecbd-40d6-894f-0d781cb91bdc
+      X-Runtime:
+      - '0.002427'
+      Content-Length:
+      - '0'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Sat, 17 Apr 2021 17:15:10 GMT
+- request:
+    method: get
+    uri: https://lit-atoll-80185.herokuapp.com/api/v1/distance?current_user=10000002&user=10000002
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 17 Apr 2021 17:15:10 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"1f76e91028fbb6d3dcccb3be7352576f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 947ea30b-6430-4388-97fb-79fd90bb12c5
+      X-Runtime:
+      - '0.553200'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":0}'
+  recorded_at: Sat, 17 Apr 2021 17:15:10 GMT
+- request:
+    method: get
+    uri: https://lit-atoll-80185.herokuapp.com/api/v1/distance?current_user=10000002&user=10000001
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 17 Apr 2021 17:15:10 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"0796fb69546a910ad9dfda60fc382b8f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b77d12a4-dbd6-4260-b262-7086958b5acf
+      X-Runtime:
+      - '0.225361'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":11.51}'
+  recorded_at: Sat, 17 Apr 2021 17:15:11 GMT
+recorded_with: VCR 6.0.0

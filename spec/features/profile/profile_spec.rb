@@ -9,7 +9,7 @@ RSpec.describe 'Profile Page' do
   end
   #happy path
   describe "profile route" do
-    it "exists" do
+    it "exists", :vcr do
       visit root_path
       login
 
@@ -28,7 +28,7 @@ RSpec.describe 'Profile Page' do
   end
   #sad path
   describe "profile route sad path" do
-    it "exists" do
+    it "doesnt let you log in", :vcr do
       visit root_path
       login
       visit profile_path
@@ -39,7 +39,7 @@ RSpec.describe 'Profile Page' do
   end
   #sad path
   describe "dashboard route sad path" do
-    it "exists" do
+    it "doesnt let you log in", :vcr do
       visit root_path
       login
       expect(page).to have_content("Your page needs a new name")
@@ -48,7 +48,7 @@ RSpec.describe 'Profile Page' do
     end
   end
   describe "artist bio" do
-    it "should have a section for artist bio" do
+    it "should have a section for artist bio", :vcr do
       visit root_path
       login
 
@@ -68,7 +68,7 @@ RSpec.describe 'Profile Page' do
   end
 
   describe "artist bio" do
-    it "should have a section for artist bio even when not given" do
+    it "should have a section for artist bio even when not given", :vcr do
       visit root_path
       login
 
@@ -87,7 +87,7 @@ RSpec.describe 'Profile Page' do
   end
 
   describe "profile route" do
-    it "shows other profiles" do
+    it "shows other profiles", :vcr do
       visit root_path
       login
 
@@ -112,7 +112,7 @@ RSpec.describe 'Profile Page' do
     end
   end
   describe "profile page" do
-    it "shows distance to other profiles" do
+    it "shows distance to other profiles", :vcr do
       visit root_path
       login
 
