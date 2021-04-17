@@ -1,7 +1,6 @@
 class DiscoverController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authorized, only: [:index]
 
   def index
-
   end
 end

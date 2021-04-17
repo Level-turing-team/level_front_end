@@ -1,10 +1,21 @@
 class BackendService
+
+  # def self.user_profile_create
+  #   Faraday.post("https://lit-atoll-80185.herokuapp.com/api/v1/profile")
+  # end
+
+  # def self.user_profile_update
+  #   Faraday.patch("https://lit-atoll-80185.herokuapp.com/api/v1/profile")
+  # end
+
   def self.connection
     conn = Faraday.new(url: "https://lit-atoll-80185.herokuapp.com")
   end
 
-  def self.post_profile_picture(url)
-    Faraday.post("https://lit-atoll-80185.herokuapp.com/api/v1/photos")
+  def self.post_profile_picture(user_id, picture_url)
+    Faraday.post("https://lit-atoll-80185.herokuapp.com/api/v1/photos",
+    user_id: "#{user_id}",
+    picture_url: "#{picture_url}") 
   end
 
   def self.user_circle(user_id)

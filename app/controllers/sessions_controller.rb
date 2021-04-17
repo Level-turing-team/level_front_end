@@ -1,20 +1,10 @@
 class SessionsController < ApplicationController
 
-  def new
-    require "pry"; binding.pry
-    @user = User.find(params[:id])
-  end
-
   def googleAuth
     access_token = request.env["omniauth.auth"]
-    @user = User.from_omniauth(access_token)
-    require "pry"; binding.pry
-    render :new
-  end
-
-  def create
-    BackendService.post_profile_picture(params[:user][:picture])
-    if params[:user][:username] == "" || params[:user][:zip] == ""
+    user = User.from_omniauth(access_token)
+    session[:user_id] = user.google_id
+    if user.username.nil? || user.zip.nil?
       redirect_to register_path
     else
       redirect_to dashboard_index_path
