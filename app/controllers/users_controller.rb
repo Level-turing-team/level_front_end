@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by(google_id: session[:user_id])
+     !!params[:lookup] ? @user = User.find(params[:lookup]) : @user = User.find_by(google_id: session[:user_id])
   end
 
   private
