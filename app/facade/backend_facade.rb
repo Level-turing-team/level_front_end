@@ -21,4 +21,9 @@ class BackendFacade
       Artist.combine(artist)
     end
   end
+
+  # def self.create_profile_gallery_and_photo(user_id, picture_url)
+  #   #create profile_gallery & profile_photo
+  #   BackendService.post_user_galleries(user_id, 'Profile', picture_url)
+  # end
 end
