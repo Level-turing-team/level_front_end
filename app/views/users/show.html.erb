@@ -1,0 +1,35 @@
+<% if @user.username.nil? || @user.zip.nil? %>
+	<h3>Action Needed!</h3>
+	<p>Please complete your profile setup</p>
+	<%= render partial: "/shared/registration" %>
+<% else %>
+	<h3><%= @user.username %>'s profile</h3>
+	<section id="artist-bio">
+		<!-- 
+		REMOVE THIS LINK ONCE FUNCTIONALITY IS IMPLEMENTED, ITS JUST FOR TESTING 
+		 -->
+		<p>Link to other page  <%= link_to("other profile", profile_path(lookup: "10000001")) %> </p>
+      <section id="distance">
+		<% if @user.id == current_user.id %>
+					<p>You are 0 miles from yourself</p>
+		<% else %>
+					<!--p><%= @distance %> miles from you</p-->
+		<% end %>
+			</section>
+
+		<h4>Artist Bio</h4>
+
+		<% if @user.bio.empty? %>
+			<p>Nothing to see here!</p>
+			<% else %>
+			<figure class="text-left">
+			  <blockquote class="blockquote">
+			  	<p><%= @user.bio %></p>
+			  </blockquote>
+			  <figcaption class="blockquote-footer">
+			    Created by <cite title="Source Title"><%= @user.username %></cite>
+			  </figcaption>
+			</figure>
+		<% end %>
+	</section>
+<% end %>
