@@ -1,0 +1,11 @@
+<h1> <%= current_user.username %> Discover Page</h1>
+<section>
+  <h2>Artists Near Me</h2>
+  <%= @artists.each do |artist| %>
+    <%= link_to artist.username, profile_path(artist.id) %>
+    <!-- need artist profile picture -->
+    <!-- need artist.near_me(10miles) -->
+    <!-- need artist.galleries.each do gallery.feature_pictures -->
+    <!-- need artist.tags -->
+  <% end %>
+</section>

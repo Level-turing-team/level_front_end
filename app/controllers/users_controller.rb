@@ -3,6 +3,10 @@ class UsersController < ApplicationController
     @user = User.find_by(google_id: session[:user_id])
   end
 
+  def create 
+
+  end
+
   def update
     @user = User.find_by(google_id: session[:user_id])
     BackendService.post_profile_picture(params[:user][:picture])
