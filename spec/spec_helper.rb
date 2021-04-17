@@ -12,6 +12,9 @@
 # the additional setup, and require it from the spec files that actually need
 # it.
 #
+# def session
+#   last_request.env['rack.session']
+# end
 require 'simplecov'
 require 'webmock/rspec'
 SimpleCov.start 'rails'
@@ -102,4 +105,8 @@ RSpec.configure do |config|
     JSON.parse(response.body, sumbolize_name: true)
   end
 end
+
+require 'webmock/rspec'
+
+
 

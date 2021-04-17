@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   post '/logout', to: 'sessions#destroy'
   get '/profile', to: 'users#show'
+  # get '/profile/:id', to: 'users#show', as: "profile"
   resources :users, only: %i[create update]
   resources :dashboard, only: %i[index]
 

@@ -5,6 +5,10 @@
 <% else %>
 	<h3><%= @user.username %>'s profile</h3>
 	<section id="artist-bio">
+		<!-- 
+		COMMENT THIS LINK OUT, ITS JUST FOR TESTING 
+		 -->
+		<p>Link to other page  <%= link_to("other shit", profile_path(lookup: "#{User.first.id}")) %> </p>
 		<h4>Artist Bio</h4>
 		<% if @user.bio.empty? %>
 			<p>Nothing to see here!</p>
