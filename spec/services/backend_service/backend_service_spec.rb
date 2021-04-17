@@ -50,5 +50,12 @@ RSpec.describe BackendService, type: :model do
       @response = BackendService.post_user(@user.id, @user.zip, @user.picture_url, @user.username)
       expect(@response[:data]).to eq("profile created successfully")
     end
+    
+    it "#create_user_post", :vcr do
+      BackendService.post_user(@user.id, @user.zip, @user.picture_url, @user.username)
+      @response = BackendService.create_user_post(@user.id, 'THis is content', 'This is link')
+      # binding.pry
+      expect(@response[:data]).to eq("post created successfully")
+    end
   end
 end
