@@ -42,4 +42,38 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":[{"id":"16","type":"tag","attributes":{"name":"Painter"}},{"id":"18","type":"tag","attributes":{"name":"Sculpter"}}]}'
   recorded_at: Sat, 17 Apr 2021 23:37:39 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profile/1/tags
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"431f28e382cb4969305146b6f1f3d405"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 33787336-6795-4f48-927f-15df4efa3fc7
+      X-Runtime:
+      - '0.012288'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"6","type":"tag","attributes":{"name":"Painter"}},{"id":"8","type":"tag","attributes":{"name":"Sculpter"}}]}'
+  recorded_at: Sun, 18 Apr 2021 17:27:34 GMT
 recorded_with: VCR 6.0.0

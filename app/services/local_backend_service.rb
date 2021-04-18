@@ -1,11 +1,11 @@
-class BackendService
+class LocalBackendService
   def self.get_artists_near_me(user_id)
     response = connection.get("/api/v1/profiles/#{user_id}/discover")
     parse(response)
   end
 
   def self.connection
-    conn = Faraday.new(url: "https://lit-atoll-80185.herokuapp.com")
+    conn = Faraday.new(url: "http://localhost:3001")
   end
 
   def self.post_gallery_photo(user_id, gallery_id, description, url)
@@ -78,7 +78,7 @@ class BackendService
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def self.get_distance(current_user_id,requested_user_id)
+  def self.get_distance(current_user_id, requested_user_id)
     response = connection.get("/api/v1/distance?current_user=#{current_user_id}&user=#{requested_user_id}")
     parse(response)
   end
