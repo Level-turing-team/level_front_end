@@ -23,15 +23,15 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 17 Apr 2021 17:15:06 GMT
+      - Sat, 17 Apr 2021 23:01:41 GMT
       Connection:
       - keep-alive
       Content-Type:
       - text/html; charset=UTF-8
       X-Request-Id:
-      - c4e50c37-9a7f-4297-8a80-a79e9fe31378
+      - db678edd-8d05-454a-84ee-4dc1b6166125
       X-Runtime:
-      - '0.002622'
+      - '0.004668'
       Content-Length:
       - '0'
       Via:
@@ -39,10 +39,10 @@ http_interactions:
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Sat, 17 Apr 2021 17:15:06 GMT
+  recorded_at: Sat, 17 Apr 2021 23:01:42 GMT
 - request:
     method: get
-    uri: https://lit-atoll-80185.herokuapp.com/api/v1/distance?current_user=10000002&user=10000002
+    uri: https://lit-atoll-80185.herokuapp.com/api/v1/profiles/10000002/circle
     body:
       encoding: US-ASCII
       string: ''
@@ -61,25 +61,161 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 17 Apr 2021 17:15:07 GMT
+      - Sat, 17 Apr 2021 23:01:41 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"1f76e91028fbb6d3dcccb3be7352576f"
+      - W/"2143c67a9cfae90f985a4aece53a6a6b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ee98029e-fee5-47da-aa67-f9d00e385b6e
+      - c8461b64-f4dd-45b2-b492-b4bbea3cc263
       X-Runtime:
-      - '0.505234'
+      - '0.016233'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":0}'
-  recorded_at: Sat, 17 Apr 2021 17:15:07 GMT
+      string: '{"data":[{"id":"16","type":"profile","attributes":{"zipcode":"80021","user_id":10000001,"profile_picture":"http://www.google.com","username":null}},{"id":"18","type":"profile","attributes":{"zipcode":"80023","user_id":10000003,"profile_picture":"http://www.google.com","username":null}},{"id":"19","type":"profile","attributes":{"zipcode":"80024","user_id":10000004,"profile_picture":"http://www.google.com","username":null}},{"id":"20","type":"profile","attributes":{"zipcode":"80025","user_id":10000005,"profile_picture":"http://www.google.com","username":null}}]}'
+  recorded_at: Sat, 17 Apr 2021 23:01:42 GMT
+- request:
+    method: get
+    uri: https://lit-atoll-80185.herokuapp.com/api/v1/profiles/10000002/circle/posts
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 17 Apr 2021 23:01:42 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"6af2cd0c229d555c2d2361ed72e92649"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d0c9e975-aef9-4434-a5c5-3a7e0526c50d
+      X-Runtime:
+      - '0.033713'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"post","attributes":{"content":"hey did you
+        see that lil nas X video?","link":"photoURL.com","user_id":10000001}},{"id":"2","type":"post","attributes":{"content":"hey
+        did you see that create meme?","link":"photoURL.com","user_id":10000001}},{"id":"3","type":"post","attributes":{"content":"hey
+        did you see that riot footage?","link":null,"user_id":10000001}},{"id":"6","type":"post","attributes":{"content":"hey
+        did you see software update?","link":"photoURL.com","user_id":10000003}},{"id":"7","type":"post","attributes":{"content":"hey
+        did you see your mom called?","link":null,"user_id":10000003}},{"id":"8","type":"post","attributes":{"content":"hey
+        did you see that we''re not friends on FB anymore?","link":"photoURL.com","user_id":10000004}},{"id":"9","type":"post","attributes":{"content":"hey
+        did you see hear about that create app called ''level''?","link":"photoURL.com","user_id":10000004}},{"id":"10","type":"post","attributes":{"content":"hey
+        i just got hired at a sick new comapny","link":null,"user_id":10000005}}]}'
+  recorded_at: Sat, 17 Apr 2021 23:01:42 GMT
+- request:
+    method: get
+    uri: https://lit-atoll-80185.herokuapp.com/api/v1/profile/10000002/tags
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 17 Apr 2021 23:01:42 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8ed601282728e6ea6eb126ae334fa48c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c1a521cb-f14f-4cf3-8e24-bfd199a5bb8c
+      X-Runtime:
+      - '0.021242'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"19","type":"tag","attributes":{"name":"Photographer"}},{"id":"20","type":"tag","attributes":{"name":"Drummer"}}]}'
+  recorded_at: Sat, 17 Apr 2021 23:01:43 GMT
+- request:
+    method: get
+    uri: https://lit-atoll-80185.herokuapp.com/api/v1/profiles/10000002/post
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 17 Apr 2021 23:01:42 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8dfe7cfaf5e6ed4df8ce610a22486f53"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 50c0991a-a3bd-4037-8c57-17fb12d1836e
+      X-Runtime:
+      - '0.014475'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"4","type":"post","attributes":{"content":"hey did you
+        see that headline?","link":"photoURL.com","user_id":10000002}},{"id":"5","type":"post","attributes":{"content":"hey
+        checkout my create shoes?","link":"photoURL.com","user_id":10000002}}]}'
+  recorded_at: Sat, 17 Apr 2021 23:01:43 GMT
 recorded_with: VCR 6.0.0

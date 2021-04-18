@@ -48,7 +48,13 @@ RSpec.describe 'Welcome Page' do
       click_button 'Register'
       expect(current_path).to eq(dashboard_index_path)
 
-      click_link 'Log Out'
+      # find("#navbarDropdown").find(:xpath, 'option[2]').select_option
+      within ("#navbarDropdown") do 
+        # click_button "#navbarDropdown"  
+        click_link 'Log Out'
+      end
+
+      # click_button "#navbarDropdown"
       expect(current_path).to eq(root_path)
 
       login

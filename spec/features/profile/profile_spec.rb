@@ -28,7 +28,7 @@ RSpec.describe 'Profile Page' do
   end
   #sad path
   describe "profile route sad path" do
-    it "doesnt let you log in", :vcr do
+    it "doesnt let you log in and displays Action Needed", :vcr do
       visit root_path
       login
       visit profile_path
@@ -177,7 +177,6 @@ RSpec.describe 'Profile Page' do
       logged_in_user.update(id: "10000003")
       visit profile_path
       expect(current_path).to eq(profile_path)
-      save_and_open_page
     end
   end
 
