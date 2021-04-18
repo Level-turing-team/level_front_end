@@ -1,4 +1,5 @@
 require 'rails_helper'
+
 RSpec.describe BackendService, type: :model do
   before :each do
     @user_1 = User.find(1)

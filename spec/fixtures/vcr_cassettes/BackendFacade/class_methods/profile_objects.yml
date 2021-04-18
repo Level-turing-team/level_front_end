@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://lit-atoll-80185.herokuapp.com/api/v1/profiles/10000001/circle
+    uri: http://localhost:3001/api/v1/profiles/10000001/post
     body:
       encoding: US-ASCII
       string: ''
@@ -18,30 +18,65 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"1edafbd422cf6d3f9fa28aef9b25ba28"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a6d41991-e2de-43dc-a5ea-c16ca2a1468e
+      X-Runtime:
+      - '0.004592'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"post","attributes":{"content":"hey did you
+        see that lil nas X video?","link":"photoURL.com","user_id":10000001}},{"id":"2","type":"post","attributes":{"content":"hey
+        did you see that create meme?","link":"photoURL.com","user_id":10000001}},{"id":"3","type":"post","attributes":{"content":"hey
+        did you see that riot footage?","link":null,"user_id":10000001}}]}'
+  recorded_at: Sun, 18 Apr 2021 16:30:07 GMT
+- request:
+    method: get
+    uri: https://lit-atoll-80185.herokuapp.com/api/v1/profiles/10000001/circle
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
       Server:
       - Cowboy
       Date:
-      - Sat, 17 Apr 2021 23:37:35 GMT
+      - Sun, 18 Apr 2021 16:37:15 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
-      Etag:
-      - W/"4c80578967fdb2ddaf27de095489a853"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - e6514582-b384-4311-acd0-c7771e31e785
+      - 6ea02aea-5bc8-4c68-b9b5-5eaa31f787da
       X-Runtime:
-      - '0.027656'
+      - '0.015935'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"17","type":"profile","attributes":{"zipcode":"80022","user_id":10000002,"profile_picture":"http://www.google.com","username":null}},{"id":"18","type":"profile","attributes":{"zipcode":"80023","user_id":10000003,"profile_picture":"http://www.google.com","username":null}},{"id":"19","type":"profile","attributes":{"zipcode":"80024","user_id":10000004,"profile_picture":"http://www.google.com","username":null}},{"id":"20","type":"profile","attributes":{"zipcode":"80025","user_id":10000005,"profile_picture":"http://www.google.com","username":null}}]}'
-  recorded_at: Sat, 17 Apr 2021 23:37:36 GMT
+      string: '{"data":{},"error":"invalid parameters"}'
+  recorded_at: Sun, 18 Apr 2021 16:37:15 GMT
 - request:
     method: get
     uri: https://lit-atoll-80185.herokuapp.com/api/v1/profiles/10000001/circle/posts
@@ -57,40 +92,31 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 400
+      message: Bad Request
     headers:
       Server:
       - Cowboy
       Date:
-      - Sat, 17 Apr 2021 23:37:36 GMT
+      - Sun, 18 Apr 2021 16:37:15 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
-      Etag:
-      - W/"7e68d5cc82a09281137bce72e2cd6867"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - ed207700-28da-4af2-ae30-fbe92e958759
+      - be2a765f-af36-44c6-ba4f-cbabf0b5d31f
       X-Runtime:
-      - '0.016140'
+      - '0.026444'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"4","type":"post","attributes":{"content":"hey did you
-        see that headline?","link":"photoURL.com","user_id":10000002}},{"id":"5","type":"post","attributes":{"content":"hey
-        checkout my create shoes?","link":"photoURL.com","user_id":10000002}},{"id":"6","type":"post","attributes":{"content":"hey
-        did you see software update?","link":"photoURL.com","user_id":10000003}},{"id":"7","type":"post","attributes":{"content":"hey
-        did you see your mom called?","link":null,"user_id":10000003}},{"id":"8","type":"post","attributes":{"content":"hey
-        did you see that we''re not friends on FB anymore?","link":"photoURL.com","user_id":10000004}},{"id":"9","type":"post","attributes":{"content":"hey
-        did you see hear about that create app called ''level''?","link":"photoURL.com","user_id":10000004}},{"id":"10","type":"post","attributes":{"content":"hey
-        i just got hired at a sick new comapny","link":null,"user_id":10000005}}]}'
-  recorded_at: Sat, 17 Apr 2021 23:37:36 GMT
+      string: '{"data":{},"error":"invalid parameters"}'
+  recorded_at: Sun, 18 Apr 2021 16:37:16 GMT
 - request:
     method: get
     uri: https://lit-atoll-80185.herokuapp.com/api/v1/profile/10000001/tags
@@ -106,33 +132,31 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 400
+      message: Bad Request
     headers:
       Server:
       - Cowboy
       Date:
-      - Sat, 17 Apr 2021 23:37:36 GMT
+      - Sun, 18 Apr 2021 16:37:15 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
-      Etag:
-      - W/"901c8c76acc5457d91aff3a338b7315f"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - dd36499c-00a6-40dc-a8e9-9db3bc495a50
+      - 40760615-2c00-4c37-8410-66294882c855
       X-Runtime:
-      - '0.017070'
+      - '0.006989'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"16","type":"tag","attributes":{"name":"Painter"}},{"id":"18","type":"tag","attributes":{"name":"Sculpter"}}]}'
-  recorded_at: Sat, 17 Apr 2021 23:37:36 GMT
+      string: '{"data":{},"error":"invalid parameters"}'
+  recorded_at: Sun, 18 Apr 2021 16:37:16 GMT
 - request:
     method: get
     uri: https://lit-atoll-80185.herokuapp.com/api/v1/profiles/10000001/post
@@ -148,34 +172,29 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 400
+      message: Bad Request
     headers:
       Server:
       - Cowboy
       Date:
-      - Sat, 17 Apr 2021 23:37:36 GMT
+      - Sun, 18 Apr 2021 16:37:15 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
-      Etag:
-      - W/"1edafbd422cf6d3f9fa28aef9b25ba28"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - a790e8fe-7545-4ff6-ac52-c635605a50f7
+      - 7056a273-7bc3-42a0-a4ef-aa8db9e96d0e
       X-Runtime:
-      - '0.016973'
+      - '0.009748'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"post","attributes":{"content":"hey did you
-        see that lil nas X video?","link":"photoURL.com","user_id":10000001}},{"id":"2","type":"post","attributes":{"content":"hey
-        did you see that create meme?","link":"photoURL.com","user_id":10000001}},{"id":"3","type":"post","attributes":{"content":"hey
-        did you see that riot footage?","link":null,"user_id":10000001}}]}'
-  recorded_at: Sat, 17 Apr 2021 23:37:37 GMT
+      string: '{"data":{},"error":"invalid parameters"}'
+  recorded_at: Sun, 18 Apr 2021 16:37:16 GMT
 recorded_with: VCR 6.0.0

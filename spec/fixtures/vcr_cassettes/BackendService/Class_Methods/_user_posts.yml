@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://lit-atoll-80185.herokuapp.com/api/v1/profiles/10000001/post
+    uri: http://localhost:3001/api/v1/profiles/10000001/post
     body:
       encoding: US-ASCII
       string: ''
@@ -18,12 +18,6 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Sat, 17 Apr 2021 23:37:39 GMT
-      Connection:
-      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
@@ -31,13 +25,11 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d7eb0413-2e1f-4343-896a-e2a1c672f70a
+      - 6a92a43a-06ad-4912-bb1c-9cdddbce29b7
       X-Runtime:
-      - '0.030345'
+      - '0.003916'
       Transfer-Encoding:
       - chunked
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"post","attributes":{"content":"hey did you

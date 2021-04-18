@@ -82,4 +82,296 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":0}'
   recorded_at: Sat, 17 Apr 2021 17:15:07 GMT
+- request:
+    method: post
+    uri: http://localhost:3001/api/v1/profiles?user_id=612&zipcode=8111
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8f7fc60752a9e15e49c51adc89963144"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 004771d1-6be9-4555-b772-bac8a5aa29ad
+      X-Runtime:
+      - '0.010211'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":"profile created successfully"}'
+  recorded_at: Sun, 18 Apr 2021 16:27:21 GMT
+- request:
+    method: post
+    uri: http://localhost:3001/api/v1/profiles?user_id=651&zipcode=8111
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8f7fc60752a9e15e49c51adc89963144"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ace3e3b4-4c73-495e-a073-bb4bb54c305d
+      X-Runtime:
+      - '0.011617'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":"profile created successfully"}'
+  recorded_at: Sun, 18 Apr 2021 16:29:11 GMT
+- request:
+    method: post
+    uri: https://lit-atoll-80185.herokuapp.com/api/v1/profiles?user_id=690&zipcode=8111
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sun, 18 Apr 2021 16:30:09 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8f7fc60752a9e15e49c51adc89963144"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 246cb9b4-780e-42e5-b1ca-c84e149b6da0
+      X-Runtime:
+      - '0.038604'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":"profile created successfully"}'
+  recorded_at: Sun, 18 Apr 2021 16:30:09 GMT
+- request:
+    method: post
+    uri: https://lit-atoll-80185.herokuapp.com/api/v1/profiles?user_id=729&zipcode=8111
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sun, 18 Apr 2021 16:30:43 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8f7fc60752a9e15e49c51adc89963144"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6ea868f4-8f5c-4c66-9795-39e26d7f4d95
+      X-Runtime:
+      - '0.056841'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":"profile created successfully"}'
+  recorded_at: Sun, 18 Apr 2021 16:30:44 GMT
+- request:
+    method: post
+    uri: https://lit-atoll-80185.herokuapp.com/api/v1/profiles?user_id=768&zipcode=8111
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sun, 18 Apr 2021 16:33:10 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8f7fc60752a9e15e49c51adc89963144"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 407233d0-f86a-4d0a-8c11-83e5dfaa3457
+      X-Runtime:
+      - '0.021705'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":"profile created successfully"}'
+  recorded_at: Sun, 18 Apr 2021 16:33:10 GMT
+- request:
+    method: post
+    uri: https://lit-atoll-80185.herokuapp.com/api/v1/profiles?user_id=807&zipcode=8111
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sun, 18 Apr 2021 16:36:31 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8f7fc60752a9e15e49c51adc89963144"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a4c1aa0f-241c-4ee3-b92d-180b3f0c481b
+      X-Runtime:
+      - '0.211013'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":"profile created successfully"}'
+  recorded_at: Sun, 18 Apr 2021 16:36:31 GMT
+- request:
+    method: post
+    uri: https://lit-atoll-80185.herokuapp.com/api/v1/profiles?user_id=846&zipcode=8111
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sun, 18 Apr 2021 17:08:31 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8f7fc60752a9e15e49c51adc89963144"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5f5688ac-4101-4090-a40e-92d1a8c3bfa2
+      X-Runtime:
+      - '0.034452'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":"profile created successfully"}'
+  recorded_at: Sun, 18 Apr 2021 17:08:31 GMT
 recorded_with: VCR 6.0.0
