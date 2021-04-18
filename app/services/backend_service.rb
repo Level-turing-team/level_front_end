@@ -11,8 +11,8 @@ class BackendService
   end
 
   def self.connection
-    conn = Faraday.new(url: "https://lit-atoll-80185.herokuapp.com")
-  end
+     conn = Faraday.new(url: ENV["API_URL"])
+   end
 
   def self.post_gallery_photo(user_id, gallery_id, description, url)
     response = connection.post("/api/v1/profiles/#{user_id}/galleries/#{gallery_id}/photos") do |f|
@@ -63,7 +63,6 @@ class BackendService
   def self.circle_posts(user_id)
     response = connection.get("/api/v1/profiles/#{user_id}/circle/posts")
     parse(response)
-    require "pry"; binding.pry
   end
 
   def self.tags(user_id)

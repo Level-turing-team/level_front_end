@@ -15,6 +15,7 @@
 # def session
 #   last_request.env['rack.session']
 # end
+
 require 'simplecov'
 require 'webmock/rspec'
 SimpleCov.start 'rails'
@@ -106,11 +107,11 @@ RSpec.configure do |config|
   end
 
   def db_dump
-    @user = User.create!(id: 10000001, first_name: "Tom", last_name: "Jerry", email: "mausetrap@example.com",username: "tom_jerry", google_id: "98745", zip: "80202", bio:"i love music and arts and stuff")
-    @user_3 = User.create!(id: 10000002, first_name: "Bob", last_name: "Jones", email: "somethingelse2@example.com",username: "test-user-24", google_id: "245234", zip: "80022", bio:"i love music and arts", picture_url: "http://www.ikozmik.com/Content/Images/uploaded/its-free-featured.jpg")
-    @user_4 = User.create!(id: 10000003, first_name: "Alexander", last_name: "Jones", email: "somethingelse3@example.com",username: "test-user-45", google_id: "245235", zip: "80023", bio:"Trying to connect with more artists")
-    @user_5 = User.create!(id: 10000004,first_name: "Sid", last_name: "Jones", email: "else@example.com",username: "test-user-457788", google_id: "44355676", zip: "80024", bio:"Photography is my passion")
-    @user_6 = User.create!(id: 10000005,first_name: "Simon", last_name: "Smith", email: "smith_else@example.com",username: "test-user-788", google_id: "12355676", zip: "80025", bio:"I love turtles")
+    @user_1 = User.create!(id: 1,first_name: "Andrew", last_name: "Account", email: "something@example.com", username: "the painter man", google_id: "123", zip: "80301", bio:"music is dope")
+    @user_2 = User.create!(id: 2,first_name: "Joe", last_name: "Account", email: "something2@example.com", username: "korn", google_id: "456", zip: "80305", bio:"i love music")
+    @user_3 = User.create!(id: 3,first_name: "Kris", last_name: "Account", email: "something3@example.com", username: "slipknot", google_id: "789", zip: "80304", bio:"music is dope")
+    @user_4 = User.create!(id: 4,first_name: "Jesus", last_name: "Account", email: "something4@example.com", username: "photos by jim", google_id: "910", zip: "80303", bio:"i love music")
+    @user_5 = User.create!(id: 5,first_name: "Kyle", last_name: "Account", email: "something5@example.com", username: "arteest", google_id: "111", zip: "80544", bio:"music is dope")
   end
 end
 require 'webmock/rspec'
