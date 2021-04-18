@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3001/api/v1/profile/1/tags
+    uri: http://localhost:3001/api/v1/profiles/1/search?medium=painter%20man
     body:
       encoding: US-ASCII
       string: ''
@@ -15,23 +15,21 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 400
+      message: Bad Request
     headers:
       Content-Type:
       - application/json; charset=utf-8
-      Etag:
-      - W/"431f28e382cb4969305146b6f1f3d405"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - add81f42-bb2a-4f97-8176-38db0a87e2ae
+      - c39f120e-cac6-4952-88cf-611af76f8d57
       X-Runtime:
-      - '0.005745'
+      - '0.006198'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"6","type":"tag","attributes":{"name":"Painter"}},{"id":"8","type":"tag","attributes":{"name":"Sculpter"}}]}'
-  recorded_at: Sun, 18 Apr 2021 20:16:37 GMT
+      string: '{"data":{},"error":"invalid parameters"}'
+  recorded_at: Sun, 18 Apr 2021 21:17:21 GMT
 recorded_with: VCR 6.0.0

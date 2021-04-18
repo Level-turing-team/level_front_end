@@ -2,50 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3001/api/v1/profiles/10000001/post
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.3.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"1edafbd422cf6d3f9fa28aef9b25ba28"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 6a92a43a-06ad-4912-bb1c-9cdddbce29b7
-      X-Runtime:
-      - '0.003916'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"post","attributes":{"content":"hey did you
-        see that lil nas X video?","link":"photoURL.com","user_id":10000001}},{"id":"2","type":"post","attributes":{"content":"hey
-        did you see that create meme?","link":"photoURL.com","user_id":10000001}},{"id":"3","type":"post","attributes":{"content":"hey
-        did you see that riot footage?","link":null,"user_id":10000001}}]}'
-  recorded_at: Sat, 17 Apr 2021 23:37:39 GMT
-- request:
-    method: get
     uri: http://localhost:3001/api/v1/profiles/1/post
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.3.0
+      - Faraday v1.4.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -62,9 +25,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - dece1a4d-adc1-44fb-9aa9-e18a144e13f7
+      - be17912c-bd30-433c-9cee-17cda4f2015b
       X-Runtime:
-      - '0.065947'
+      - '0.004850'
       Transfer-Encoding:
       - chunked
     body:
@@ -73,5 +36,5 @@ http_interactions:
         you see that lil nas X video?","link":"photoURL.com","user_id":1,"created_at":"2021-04-18T16:28:20.859Z"}},{"id":"12","type":"post","attributes":{"content":"hey
         did you see that create meme?","link":"photoURL.com","user_id":1,"created_at":"2021-04-18T16:28:20.861Z"}},{"id":"13","type":"post","attributes":{"content":"hey
         did you see that riot footage?","link":null,"user_id":1,"created_at":"2021-04-18T16:28:20.863Z"}}]}'
-  recorded_at: Sun, 18 Apr 2021 17:29:46 GMT
+  recorded_at: Sun, 18 Apr 2021 20:16:37 GMT
 recorded_with: VCR 6.0.0

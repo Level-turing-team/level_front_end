@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.3.0
+      - Faraday v1.4.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -25,14 +25,14 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e36c6eaf-0622-4eb0-a92c-3c6756ebfdbf
+      - edec3efb-c497-43fc-a20e-74c2676cdff1
       X-Runtime:
-      - '0.055778'
+      - '0.011476'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"gallery","attributes":{"user_id":1,"photo_url":"http://www.google.com","name":"photos
         from cali","created_at":"2021-04-18T16:28:20.884Z","updated_at":"2021-04-18T16:28:20.884Z","photo_count":3}}]}'
-  recorded_at: Sun, 18 Apr 2021 17:48:09 GMT
+  recorded_at: Sun, 18 Apr 2021 20:16:37 GMT
 recorded_with: VCR 6.0.0

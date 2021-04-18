@@ -7,7 +7,7 @@ RSpec.describe 'Register Page' do
   end
 
   describe 'Photo Upload' do
-    it "sends photo url to backend for storage" do
+    it "sends photo url to backend for storage", :vcr do
 
       fill_in 'user[username]', with: "name"
       fill_in 'user[zip]', with: "8111"

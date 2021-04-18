@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3001/api/v1/profile/1/tags
+    uri: http://localhost:3001/api/v1/profiles/1/search?tag=painter
     body:
       encoding: US-ASCII
       string: ''
@@ -21,17 +21,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"431f28e382cb4969305146b6f1f3d405"
+      - W/"98ad2758ed397f7c78316786f9f212af"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - add81f42-bb2a-4f97-8176-38db0a87e2ae
+      - 2546b3c5-c589-45c7-895b-b9f2bd051b52
       X-Runtime:
-      - '0.005745'
+      - '0.012164'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"6","type":"tag","attributes":{"name":"Painter"}},{"id":"8","type":"tag","attributes":{"name":"Sculpter"}}]}'
-  recorded_at: Sun, 18 Apr 2021 20:16:37 GMT
+      string: '{"data":[{"id":"8","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}},{"id":"9","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
+        by jim"}}]}'
+  recorded_at: Sun, 18 Apr 2021 21:33:42 GMT
 recorded_with: VCR 6.0.0

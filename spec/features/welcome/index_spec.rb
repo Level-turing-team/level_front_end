@@ -6,15 +6,15 @@ RSpec.describe 'Welcome Page' do
   end
 
   describe "When a user visits the root path" do
-    it "they should be on the welcome page" do
+    it "they should be on the welcome page", :vcr do
       expect(current_path).to eq("/")
     end
 
-    it "they should see a welcome message" do
+    it "they should see a welcome message", :vcr do
       expect(page).to have_content("LEVEL")
     end
 
-    it "they should see a button to log in with google" do
+    it "they should see a button to log in with google", :vcr do
       expect(page).to have_button('Log in/Register with Google')
       login
       expect(current_path).to eq(register_path)
@@ -26,7 +26,7 @@ RSpec.describe 'Welcome Page' do
       expect(current_path).to eq(dashboard_index_path)
     end
 
-    it 'redirects to register/sad path' do
+    it 'redirects to register/sad path', :vcr do
       expect(page).to have_button('Log in/Register with Google')
       login
       expect(current_path).to eq(register_path)
@@ -38,7 +38,7 @@ RSpec.describe 'Welcome Page' do
     end
   end
 
-  describe 'It logs out/log  in' do
+  describe 'It logs out/log  in', :vcr do
     it 'happy path' do
       expect(page).to have_button('Log in/Register with Google')
       login

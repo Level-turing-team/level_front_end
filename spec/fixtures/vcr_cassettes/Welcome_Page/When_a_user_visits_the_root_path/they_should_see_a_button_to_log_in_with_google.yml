@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3001/api/v1/profiles?profile_picture=name&user_id=398&username&zipcode=8111
+    uri: http://localhost:3001/api/v1/profiles?profile_picture=name&user_id=406&username&zipcode=8111
     body:
       encoding: UTF-8
       string: ''
@@ -27,13 +27,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9129428f-1450-4a85-9840-6bc7141165ef
+      - ddf529f7-62fa-41b2-a6d5-2b6f1587da1c
       X-Runtime:
-      - '0.009387'
+      - '0.009448'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":"profile created successfully"}'
-  recorded_at: Sun, 18 Apr 2021 20:22:28 GMT
+  recorded_at: Sun, 18 Apr 2021 20:22:29 GMT
 recorded_with: VCR 6.0.0

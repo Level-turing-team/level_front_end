@@ -72,7 +72,7 @@ GEM
     coffee-script (2.4.1)
       coffee-script-source
       execjs
-    coffee-script-source (1.12.2)
+    coffee-script-source (1.8.0)
     concurrent-ruby (1.1.8)
     crack (0.4.5)
       rexml
@@ -329,6 +329,7 @@ DEPENDENCIES
   byebug
   capybara
   coffee-rails (~> 4.2)
+  coffee-script-source (= 1.8.0)
   devise
   factory_bot_rails
   faker
@@ -343,6 +344,7 @@ DEPENDENCIES
   omniauth-google-oauth2
   orderly
   pg (>= 0.18, < 2.0)
+  popper_js (~> 2.8.6)
   pry
   puma (~> 3.11)
   rails (~> 5.2.5)

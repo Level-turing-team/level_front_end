@@ -1,39 +1,37 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: http://localhost:3001/api/v1/profiles?profile_picture=name&user_id=398&username&zipcode=8111
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/1/search?name=arteest
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
       - Faraday v1.4.1
-      Content-Length:
-      - '0'
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
   response:
     status:
-      code: 201
-      message: Created
+      code: 200
+      message: OK
     headers:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"8f7fc60752a9e15e49c51adc89963144"
+      - W/"e012ca16315b62554329a403b621df2d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9129428f-1450-4a85-9840-6bc7141165ef
+      - 8b691503-ae76-40b8-82b8-8b383c4d4399
       X-Runtime:
-      - '0.009387'
+      - '0.007826'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":"profile created successfully"}'
-  recorded_at: Sun, 18 Apr 2021 20:22:28 GMT
+      string: '{"data":[{"id":"10","type":"profile","attributes":{"zipcode":"80544","user_id":5,"profile_picture":"http://www.google.com","username":"arteest"}}]}'
+  recorded_at: Sun, 18 Apr 2021 21:33:42 GMT
 recorded_with: VCR 6.0.0
