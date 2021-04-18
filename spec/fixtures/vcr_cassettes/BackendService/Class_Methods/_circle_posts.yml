@@ -15,38 +15,29 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 400
+      message: Bad Request
     headers:
       Server:
       - Cowboy
       Date:
-      - Sat, 17 Apr 2021 23:37:38 GMT
+      - Sun, 18 Apr 2021 17:08:32 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
-      Etag:
-      - W/"7e68d5cc82a09281137bce72e2cd6867"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - cd9e075d-cd30-4963-8bd1-ebc780535124
+      - b3581a85-1c86-4491-8ffa-432c2de85684
       X-Runtime:
-      - '0.015062'
+      - '0.010272'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"4","type":"post","attributes":{"content":"hey did you
-        see that headline?","link":"photoURL.com","user_id":10000002}},{"id":"5","type":"post","attributes":{"content":"hey
-        checkout my create shoes?","link":"photoURL.com","user_id":10000002}},{"id":"6","type":"post","attributes":{"content":"hey
-        did you see software update?","link":"photoURL.com","user_id":10000003}},{"id":"7","type":"post","attributes":{"content":"hey
-        did you see your mom called?","link":null,"user_id":10000003}},{"id":"8","type":"post","attributes":{"content":"hey
-        did you see that we''re not friends on FB anymore?","link":"photoURL.com","user_id":10000004}},{"id":"9","type":"post","attributes":{"content":"hey
-        did you see hear about that create app called ''level''?","link":"photoURL.com","user_id":10000004}},{"id":"10","type":"post","attributes":{"content":"hey
-        i just got hired at a sick new comapny","link":null,"user_id":10000005}}]}'
-  recorded_at: Sat, 17 Apr 2021 23:37:39 GMT
+      string: '{"data":{},"error":"invalid parameters"}'
+  recorded_at: Sun, 18 Apr 2021 17:08:33 GMT
 recorded_with: VCR 6.0.0

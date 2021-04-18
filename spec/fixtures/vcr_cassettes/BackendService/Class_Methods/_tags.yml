@@ -15,31 +15,29 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 400
+      message: Bad Request
     headers:
       Server:
       - Cowboy
       Date:
-      - Sat, 17 Apr 2021 23:37:39 GMT
+      - Sun, 18 Apr 2021 17:08:33 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
-      Etag:
-      - W/"901c8c76acc5457d91aff3a338b7315f"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - cc54b7f5-e499-43aa-9155-3be09233ce16
+      - a6eaf5e6-c642-4947-a235-56b9f2ee3ef0
       X-Runtime:
-      - '0.017830'
+      - '0.009599'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"16","type":"tag","attributes":{"name":"Painter"}},{"id":"18","type":"tag","attributes":{"name":"Sculpter"}}]}'
-  recorded_at: Sat, 17 Apr 2021 23:37:39 GMT
+      string: '{"data":{},"error":"invalid parameters"}'
+  recorded_at: Sun, 18 Apr 2021 17:08:33 GMT
 recorded_with: VCR 6.0.0

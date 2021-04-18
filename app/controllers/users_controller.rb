@@ -6,13 +6,13 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find_by(google_id: session[:user_id])
-    # BackendFacade.create_profile_gallery_and_photo(@user.id, params[:picture_url])
-    if params[:username] == "" || params[:zip] == ""
+    if params[:user][:username] == "" || params[:user][:zip] == ""
       redirect_to register_path
-    else
-      @user.update(user_params)
-      redirect_to dashboard_index_path
     end
+    BackendFacade.create_profile(@user.id,params[:user][:zip])
+    # BackendFacade.create_profile_gallery_and_photo(@user.id, params[:user][:picture_url])
+    @user.update(user_params)
+    redirect_to dashboard_index_path
   end
 
   def show

@@ -53,31 +53,29 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 400
+      message: Bad Request
     headers:
       Server:
       - Cowboy
       Date:
-      - Sat, 17 Apr 2021 23:37:39 GMT
+      - Sun, 18 Apr 2021 17:08:33 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
-      Etag:
-      - W/"4c80578967fdb2ddaf27de095489a853"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - 6bf10b2d-055a-4ebd-8bde-cfe8b0ed5f48
+      - 422b19bb-d571-4e82-a161-7cb2d8d0e58c
       X-Runtime:
-      - '0.010111'
+      - '0.013075'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"17","type":"profile","attributes":{"zipcode":"80022","user_id":10000002,"profile_picture":"http://www.google.com","username":null}},{"id":"18","type":"profile","attributes":{"zipcode":"80023","user_id":10000003,"profile_picture":"http://www.google.com","username":null}},{"id":"19","type":"profile","attributes":{"zipcode":"80024","user_id":10000004,"profile_picture":"http://www.google.com","username":null}},{"id":"20","type":"profile","attributes":{"zipcode":"80025","user_id":10000005,"profile_picture":"http://www.google.com","username":null}}]}'
-  recorded_at: Sat, 17 Apr 2021 23:37:39 GMT
+      string: '{"data":{},"error":"invalid parameters"}'
+  recorded_at: Sun, 18 Apr 2021 17:08:33 GMT
 recorded_with: VCR 6.0.0

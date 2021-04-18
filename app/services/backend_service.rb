@@ -1,17 +1,16 @@
 class BackendService
-  # def self.user_profile_create
-  #   Faraday.post("https://lit-atoll-80185.herokuapp.com/api/v1/profile")
-  # end
-  # def self.user_profile_update
-  #   Faraday.patch("https://lit-atoll-80185.herokuapp.com/api/v1/profile")
-  # end
+
   def self.get_artists_near_me(user_id)
     response = connection.get("/api/v1/profiles/#{user_id}/discover")
     parse(response)
   end
 
   def self.connection
-    conn = Faraday.new(url: "https://lit-atoll-80185.herokuapp.com")
+    conn = Faraday.new(url: ENV['URL'])
+  end
+
+  def self.local_connection
+    conn = Faraday.new(url: "http://localhost:3001")
   end
 
   def self.post_gallery_photo(user_id, gallery_id, description, url)
@@ -45,12 +44,10 @@ class BackendService
     parse(response)
   end
 
-  def self.post_user(user_id, zip, picture_url, username)
+  def self.post_user(user_id, zip)
     response = connection.post("/api/v1/profiles") do |f|
       f.params['user_id'] = user_id
       f.params['zipcode'] = zip
-      f.params['profile_picture'] = picture_url
-      f.params['username'] = username
     end
     parse(response)
   end
@@ -83,7 +80,7 @@ class BackendService
   def self.parse(response)
     JSON.parse(response.body, symbolize_names: true)
   end
-  
+
   def self.get_distance(current_user_id,requested_user_id)
     response = connection.get("/api/v1/distance?current_user=#{current_user_id}&user=#{requested_user_id}")
     parse(response)

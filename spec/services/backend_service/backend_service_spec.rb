@@ -47,14 +47,14 @@ RSpec.describe BackendService, type: :model do
 
     it '#post_user' do
       VCR.use_cassette('cassette_1') do
-        @response = BackendService.post_user(@user.id, @user.zip, @user.picture_url, @user.username)
+        @response = BackendService.post_user(@user.id, @user.zip)
         expect(@response[:data]).to eq('profile created successfully')
       end
     end
 
     it '#create_user_post' do
       VCR.use_cassette('cassette_2') do
-        BackendService.post_user(@user.id, @user.zip, @user.picture_url, @user.username)
+        BackendService.post_user(@user.id, @user.zip)
       end
 
       VCR.use_cassette('cassette_3') do
@@ -64,17 +64,17 @@ RSpec.describe BackendService, type: :model do
     end
 
     it '#get_user_galleries', :vcr do
-      BackendService.post_user(@user.id, @user.zip, @user.picture_url, @user.username)
+      BackendService.post_user(@user.id, @user.zip)
       @response = BackendService.get_user_galleries(@user.id)
       expect(@response[:data]).to eq([])
     end
     it '#post_user_galleries', :vcr do
-      BackendService.post_user(@user.id, @user.zip, @user.picture_url, @user.username)
+      BackendService.post_user(@user.id, @user.zip)
       @response = BackendService.post_user_galleries(@user.id, 'gallery', 'fjdlkas')
       expect(@response[:data]).to eq('gallery created successfully')
     end
     it '#post_gallery_photo', :vcr do
-      BackendService.post_user(@user.id, @user.zip, @user.picture_url, @user.username)
+      BackendService.post_user(@user.id, @user.zip)
       BackendService.post_user_galleries(@user.id, 'gallery', 'fjdlkas')
       @gallery_id = BackendService.get_user_galleries(@user.id)[:data][0][:id]
       @response = BackendService.post_gallery_photo(@user.id, @gallery_id, 'description', 'url')
