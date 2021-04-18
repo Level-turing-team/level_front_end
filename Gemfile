@@ -40,6 +40,11 @@ gem 'jquery-rails'
 gem 'fast_jsonapi'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise'
+gem 'sass-rails', '~> 5.0'
+gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '~> 4.2'
+gem 'coffee-script-source', '1.8.0'
+gem 'popper_js', '~> 2.8.6'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

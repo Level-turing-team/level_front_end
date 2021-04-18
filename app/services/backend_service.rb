@@ -5,7 +5,11 @@ class BackendService
   end
 
   def self.connection
-    conn = Faraday.new(url: "https://lit-atoll-80185.herokuapp.com")
+    conn = Faraday.new(url: ENV['URL'])
+  end
+
+  def self.local_connection
+    conn = Faraday.new(url: "http://localhost:3001")
   end
 
   def self.post_gallery_photo(user_id, gallery_id, description, url)
@@ -39,12 +43,10 @@ class BackendService
     parse(response)
   end
 
-  def self.post_user(user_id, zip, picture_url, username)
+  def self.post_user(user_id, zip)
     response = connection.post("/api/v1/profiles") do |f|
       f.params['user_id'] = user_id
       f.params['zipcode'] = zip
-      f.params['profile_picture'] = picture_url
-      f.params['username'] = username
     end
     parse(response)
   end
