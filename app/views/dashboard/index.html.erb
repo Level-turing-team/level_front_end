@@ -17,19 +17,23 @@
     </div>
   </div>
 </div>
-<% @circle_posts.each do |post| %>
-	<div class="d-flex justify-content-center">
-	  <div class="card text-white bg-dark mb-3" style="width: 40rem; top: 15px;">
-	    <div class="card-body">
-	      <h5 class="card-title"><%= post.username %></h5>
-	      <h6 class="card-subtitle mb-2 text-muted">post.created_at</h6>
-	      <p class="card-text">post.content</p>
-	      <a href="#" class="card-link"><%= post.link %></a>
-	      <a href="#" class="card-link">Another link</a>
-	    </div>
-	  </div>
-	</div>
-<% end %>
+<div id="circle-feed">
+	<% if !@circle_posts.empty? %>
+		<% @circle_posts.each do |post| %>
+			<div class="d-flex justify-content-center">
+			  <div class="card text-white bg-dark mb-3" style="width: 40rem; top: 15px;">
+			    <div class="card-body">
+			      <h5 class="card-title"><%= post.user.username %></h5>
+			      <h6 class="card-subtitle mb-2 text-muted"><%= post.created_at %></h6>
+			      <p class="card-text"><%= post.content %></p>
+			      <a href="#" class="card-link"><%= post.link %></a>
+			      <a href="#" class="card-link">Another link</a>
+			    </div>
+			  </div>
+			</div>
+		<% end %>
+	<% end %>
+</div>
 <div class="d-flex justify-content-left" id="topcornerleft">
   <div class="card text-white bg-dark mb-3" style="width: 20rem; top: 30px; Height 100%;">
     <div class="card-body">
