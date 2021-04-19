@@ -1,5 +1,5 @@
 class DashboardFacade < BackendFacade
-  def self.profile_objects(user_id)
+  def self.profile_object(user_id)
     user_circle = user_circle_objects(user_id)
     circle_posts = post_objects(BackendService.circle_posts(user_id))
     tags = tag_objects(user_id)
