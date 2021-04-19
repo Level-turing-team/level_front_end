@@ -16,8 +16,10 @@ class UsersController < ApplicationController
   end
 
   def show
-     !!params[:lookup] ? @user = User.find(params[:lookup]) : @user = User.find_by(google_id: session[:user_id])
-     # Will need to @distance for distance from user on show page
+    @current_user = current_user
+    !!params[:lookup] ? @user = User.find(params[:lookup]) : @user = User.find_by(google_id: session[:user_id])
+    @distance = BackendService.get_distance(@current_user.id,@user.id)[:data] unless @current_user.zip.nil? || @current_user.username.nil? || params[:lookup].nil?
+    @profile_data = params[:lookup].nil? ? BackendFacade.profile_object(@current_user.id) : BackendFacade.profile_object(@user.id)
   end
 
   private
