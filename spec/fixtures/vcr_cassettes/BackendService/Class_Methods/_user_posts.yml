@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - be17912c-bd30-433c-9cee-17cda4f2015b
+      - e5e962d6-15ed-48c5-b649-1d5fedd63d63
       X-Runtime:
-      - '0.004850'
+      - '0.010640'
       Transfer-Encoding:
       - chunked
     body:
@@ -36,5 +36,5 @@ http_interactions:
         you see that lil nas X video?","link":"photoURL.com","user_id":1,"created_at":"2021-04-18T16:28:20.859Z"}},{"id":"12","type":"post","attributes":{"content":"hey
         did you see that create meme?","link":"photoURL.com","user_id":1,"created_at":"2021-04-18T16:28:20.861Z"}},{"id":"13","type":"post","attributes":{"content":"hey
         did you see that riot footage?","link":null,"user_id":1,"created_at":"2021-04-18T16:28:20.863Z"}}]}'
-  recorded_at: Sun, 18 Apr 2021 20:16:37 GMT
+  recorded_at: Mon, 19 Apr 2021 15:33:16 GMT
 recorded_with: VCR 6.0.0

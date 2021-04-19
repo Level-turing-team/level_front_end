@@ -1,4 +1,4 @@
-class BackendFacade
+class DashboardFacade < BackendFacade
   def self.profile_objects(user_id)
     user_circle = user_circle_objects(user_id)
     circle_posts = post_objects(BackendService.circle_posts(user_id))
@@ -74,14 +74,5 @@ class BackendFacade
     circle_data.map do |profile|
       User.find(profile[:attributes][:user_id])
     end
-  end
-
-  def self.create_profile_gallery_and_photo(user_id, picture_url)
-    #create profile_gallery & profile_photo
-    BackendService.post_user_galleries(user_id, 'Profile', picture_url)
-  end
-
-  def self.create_profile(user_id, user_zipcode, profile_picture, username)
-    BackendService.post_user(user_id, user_zipcode, profile_picture, username)
   end
 end

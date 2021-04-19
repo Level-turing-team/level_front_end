@@ -8,7 +8,7 @@ require 'rails_helper'
 RSpec.describe BackendFacade, type: :model do
   describe "class methods" do
     it "profile objects", :vcr do
-      @profile = BackendFacade.profile_objects(1)
+      @profile = BackendFacade.profile_object(1)
 
       expect(@profile.class).to eq(Profile)
       expect(@profile.id).to eq(1)
