@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3001/api/v1/profiles?profile_picture=name&user_id=497&username&zipcode=8111
+    uri: http://localhost:3001/api/v1/profiles?profile_picture=name&user_id=502&username&zipcode=8111
     body:
       encoding: UTF-8
       string: ''
@@ -27,9 +27,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0413f659-291c-4575-8bfc-ef822a17cf5d
+      - fb8702f9-7825-4339-b464-50a3a52ff0df
       X-Runtime:
-      - '0.020366'
+      - '0.030833'
       Transfer-Encoding:
       - chunked
     body:

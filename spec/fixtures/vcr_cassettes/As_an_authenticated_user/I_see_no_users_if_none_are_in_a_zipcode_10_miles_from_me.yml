@@ -1,39 +1,35 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: http://localhost:3001/api/v1/profiles?profile_picture=name&user_id=485&username&zipcode=8111
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/10000002/discover
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
       - Faraday v1.4.1
-      Content-Length:
-      - '0'
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
   response:
     status:
-      code: 201
-      message: Created
+      code: 400
+      message: Bad Request
     headers:
       Content-Type:
       - application/json; charset=utf-8
-      Etag:
-      - W/"8f7fc60752a9e15e49c51adc89963144"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - bb47a9f2-e0e4-4c58-8555-b30541e40482
+      - d1d47f72-ff24-4b27-a8ba-785085d7cfcd
       X-Runtime:
-      - '0.054139'
+      - '0.007519'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":"profile created successfully"}'
+      string: '{"data":{},"error":"invalid parameters"}'
   recorded_at: Mon, 19 Apr 2021 15:33:15 GMT
 recorded_with: VCR 6.0.0

@@ -23,7 +23,8 @@ RSpec.describe User, type: :model do
                     :secret => "secret"
                   }
                   })
-      expect(User.from_omniauth(user)).to eq(User.first)
+
+      expect(User.from_omniauth(user)).to eq(User.last)
     end
   end
 end
