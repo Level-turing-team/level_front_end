@@ -56,7 +56,7 @@ class BackendService
   end
 
   def self.post_user(user_id, zip)
-    response = connection.post("/api/v1/profiles") do |f|
+    response = local_connection.post("/api/v1/profiles") do |f|
       f.params['user_id'] = user_id
       f.params['zipcode'] = zip
     end

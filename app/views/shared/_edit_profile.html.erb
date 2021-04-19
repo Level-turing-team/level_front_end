@@ -8,8 +8,9 @@
   <div class="offcanvas-body">
     <section>
       <%= form_with url: '/galleries' , local: true, method: :post do |form| %>
-        <%= form.label 'upload your profile picture'%>
-        <%= form.file_field :profile_gallery_picture %>
+        <%= form.text_field :name, {class:"form-control", placeholder:"Enter Gallery Name"} %>
+        <%= form.label 'Upload Images to your Gallery'%>
+        <%= form.file_field :image, multiple: true, class: "form-control" %>
         <%= form.submit 'Upload' %>
       <% end %>
     </section>
