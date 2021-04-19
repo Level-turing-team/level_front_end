@@ -1,6 +1,11 @@
-class BackendService
-    def self.connection
-    conn = Faraday.new(url: ENV['API_URL'])
+class LocalBackendService
+  def self.get_artists_near_me(user_id)
+    response = connection.get("/api/v1/profiles/#{user_id}/discover")
+    parse(response)
+  end
+
+  def self.connection
+    conn = Faraday.new(url: "http://localhost:3001")
   end
 
   def self.post_gallery_photo(user_id, gallery_id, description, url)
@@ -69,53 +74,12 @@ class BackendService
     parse(response)
   end
 
+  def self.parse(response)
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
   def self.get_distance(current_user_id, requested_user_id)
     response = connection.get("/api/v1/distance?current_user=#{current_user_id}&user=#{requested_user_id}")
     parse(response)
-  end
-
-  def self.get_artists_near_me(user_id)
-    response = connection.get("/api/v1/profiles/#{user_id}/discover")
-    parse(response)
-  end
-
-  def self.get_user(user_id)
-    response = connection.get("/api/v1/profiles/#{user_id}")
-    parse(response)
-  end
-
-  def self.get_gallery_photos(user_id, gallery_id)
-    response = connection.get("/api/v1/profiles/#{user_id}/galleries/#{gallery_id}/photos")
-    parse(response)
-  end
-
-  def self.get_all_photos
-    response = connection.get("/api/v1/photos")
-    parse(response)
-  end
-
-  def self.profile_search(user_id, search_term, search_type)
-    response = connection.get("/api/v1/profiles/#{user_id}/search") do |f|
-      f.params[search_type] = search_term
-    end
-    parse(response)
-  end
-
-  def self.post_tag(name)
-    response = connection.post("/api/v1/tags") do |f|
-      f.params['name'] = name
-    end
-    parse(response)
-  end
-
-  def self.post_profile_tag(user_id, tag_id)
-    response = connection.post("/api/v1/profile/#{user_id}/tags") do |f|
-      f.params['tag_id'] = tag_id
-    end
-    parse(response)
-  end
-
-  def self.parse(response)
-    JSON.parse(response.body, symbolize_names: true)
   end
 end

@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3001/api/v1/profiles/10000001/post
+    uri: http://localhost:3001/api/v1/profiles/1/circle
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.3.0
+      - Faraday v1.4.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -21,180 +21,272 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"1edafbd422cf6d3f9fa28aef9b25ba28"
+      - W/"6e55a6aa79081d4b65e8ea4ee75b5d90"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a6d41991-e2de-43dc-a5ea-c16ca2a1468e
+      - f3f3d881-f5c2-4cfb-861b-c157e8d9140c
       X-Runtime:
-      - '0.004592'
+      - '0.043682'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"post","attributes":{"content":"hey did you
-        see that lil nas X video?","link":"photoURL.com","user_id":10000001}},{"id":"2","type":"post","attributes":{"content":"hey
-        did you see that create meme?","link":"photoURL.com","user_id":10000001}},{"id":"3","type":"post","attributes":{"content":"hey
-        did you see that riot footage?","link":null,"user_id":10000001}}]}'
-  recorded_at: Sun, 18 Apr 2021 16:30:07 GMT
+      string: '{"data":[{"id":"7","type":"profile","attributes":{"zipcode":"80305","user_id":2,"profile_picture":"http://www.google.com","username":"korn"}},{"id":"8","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}},{"id":"9","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
+        by jim"}},{"id":"10","type":"profile","attributes":{"zipcode":"80544","user_id":5,"profile_picture":"http://www.google.com","username":"arteest"}}]}'
+  recorded_at: Mon, 19 Apr 2021 15:33:14 GMT
 - request:
     method: get
-    uri: https://lit-atoll-80185.herokuapp.com/api/v1/profiles/10000001/circle
+    uri: http://localhost:3001/api/v1/profiles/1/circle/posts
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.3.0
+      - Faraday v1.4.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
   response:
     status:
-      code: 400
-      message: Bad Request
+      code: 200
+      message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Sun, 18 Apr 2021 16:37:15 GMT
-      Connection:
-      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
+      Etag:
+      - W/"9b873fae1e3c288070d051154fc008da"
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6ea02aea-5bc8-4c68-b9b5-5eaa31f787da
+      - 27bbe747-a7ed-4854-b07b-904d78184291
       X-Runtime:
-      - '0.015935'
+      - '0.020195'
       Transfer-Encoding:
       - chunked
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{},"error":"invalid parameters"}'
-  recorded_at: Sun, 18 Apr 2021 16:37:15 GMT
+      string: '{"data":[{"id":"14","type":"post","attributes":{"content":"hey did
+        you see that headline?","link":"photoURL.com","user_id":2,"created_at":"2021-04-18T16:28:20.865Z"}},{"id":"15","type":"post","attributes":{"content":"hey
+        checkout my create shoes?","link":"photoURL.com","user_id":2,"created_at":"2021-04-18T16:28:20.866Z"}},{"id":"16","type":"post","attributes":{"content":"hey
+        did you see software update?","link":"photoURL.com","user_id":3,"created_at":"2021-04-18T16:28:20.868Z"}},{"id":"17","type":"post","attributes":{"content":"hey
+        did you see your mom called?","link":null,"user_id":3,"created_at":"2021-04-18T16:28:20.870Z"}},{"id":"18","type":"post","attributes":{"content":"hey
+        did you see that we''re not friends on FB anymore?","link":"photoURL.com","user_id":4,"created_at":"2021-04-18T16:28:20.872Z"}},{"id":"19","type":"post","attributes":{"content":"hey
+        did you see hear about that create app called ''level''?","link":"photoURL.com","user_id":4,"created_at":"2021-04-18T16:28:20.873Z"}},{"id":"20","type":"post","attributes":{"content":"hey
+        i just got hired at a sick new comapny","link":null,"user_id":5,"created_at":"2021-04-18T16:28:20.875Z"}}]}'
+  recorded_at: Mon, 19 Apr 2021 15:33:14 GMT
 - request:
     method: get
-    uri: https://lit-atoll-80185.herokuapp.com/api/v1/profiles/10000001/circle/posts
+    uri: http://localhost:3001/api/v1/profile/1/tags
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.3.0
+      - Faraday v1.4.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
   response:
     status:
-      code: 400
-      message: Bad Request
+      code: 200
+      message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Sun, 18 Apr 2021 16:37:15 GMT
-      Connection:
-      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
+      Etag:
+      - W/"431f28e382cb4969305146b6f1f3d405"
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - be2a765f-af36-44c6-ba4f-cbabf0b5d31f
+      - 8738fda0-cf5b-4126-8a50-c03137ea7b1d
       X-Runtime:
-      - '0.026444'
+      - '0.007815'
       Transfer-Encoding:
       - chunked
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{},"error":"invalid parameters"}'
-  recorded_at: Sun, 18 Apr 2021 16:37:16 GMT
+      string: '{"data":[{"id":"6","type":"tag","attributes":{"name":"Painter"}},{"id":"8","type":"tag","attributes":{"name":"Sculpter"}}]}'
+  recorded_at: Mon, 19 Apr 2021 15:33:14 GMT
 - request:
     method: get
-    uri: https://lit-atoll-80185.herokuapp.com/api/v1/profile/10000001/tags
+    uri: http://localhost:3001/api/v1/profiles/1/post
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.3.0
+      - Faraday v1.4.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
   response:
     status:
-      code: 400
-      message: Bad Request
+      code: 200
+      message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Sun, 18 Apr 2021 16:37:15 GMT
-      Connection:
-      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
+      Etag:
+      - W/"13977c8a9377c93ca19bf8ac8b1d93b2"
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 40760615-2c00-4c37-8410-66294882c855
+      - 8d2ed11b-335c-4a24-ba6b-db3bc8ebe8d7
       X-Runtime:
-      - '0.006989'
+      - '0.008381'
       Transfer-Encoding:
       - chunked
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{},"error":"invalid parameters"}'
-  recorded_at: Sun, 18 Apr 2021 16:37:16 GMT
+      string: '{"data":[{"id":"11","type":"post","attributes":{"content":"hey did
+        you see that lil nas X video?","link":"photoURL.com","user_id":1,"created_at":"2021-04-18T16:28:20.859Z"}},{"id":"12","type":"post","attributes":{"content":"hey
+        did you see that create meme?","link":"photoURL.com","user_id":1,"created_at":"2021-04-18T16:28:20.861Z"}},{"id":"13","type":"post","attributes":{"content":"hey
+        did you see that riot footage?","link":null,"user_id":1,"created_at":"2021-04-18T16:28:20.863Z"}}]}'
+  recorded_at: Mon, 19 Apr 2021 15:33:15 GMT
 - request:
     method: get
-    uri: https://lit-atoll-80185.herokuapp.com/api/v1/profiles/10000001/post
+    uri: http://localhost:3001/api/v1/profiles/1/galleries
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.3.0
+      - Faraday v1.4.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
   response:
     status:
-      code: 400
-      message: Bad Request
+      code: 200
+      message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Sun, 18 Apr 2021 16:37:15 GMT
-      Connection:
-      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
+      Etag:
+      - W/"e541dcb1dfea46045755e5dc23fe5db5"
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7056a273-7bc3-42a0-a4ef-aa8db9e96d0e
+      - 0de45fbf-99e2-4c8f-9055-74e86b8b2386
       X-Runtime:
-      - '0.009748'
+      - '0.009724'
       Transfer-Encoding:
       - chunked
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{},"error":"invalid parameters"}'
-  recorded_at: Sun, 18 Apr 2021 16:37:16 GMT
+      string: '{"data":[{"id":"1","type":"gallery","attributes":{"user_id":1,"photo_url":"http://www.google.com","name":"photos
+        from cali","created_at":"2021-04-18T16:28:20.884Z","updated_at":"2021-04-18T16:28:20.884Z","photo_count":3}}]}'
+  recorded_at: Mon, 19 Apr 2021 15:33:15 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/1/galleries/1/photos
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"9213c8fd2c307a52fe9509f495c8e673"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7706178d-6ccf-43f8-bff1-c34de74ca63f
+      X-Runtime:
+      - '0.011006'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-18T16:28:20.916Z","updated_at":"2021-04-18T16:28:20.916Z","gallery_id":1}},{"id":"2","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-18T16:28:20.921Z","updated_at":"2021-04-18T16:28:20.921Z","gallery_id":1}},{"id":"3","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-18T16:28:20.924Z","updated_at":"2021-04-18T16:28:20.924Z","gallery_id":1}}]}'
+  recorded_at: Mon, 19 Apr 2021 15:33:15 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"ee2dbbfdd216341bf42396a125d2fe61"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e68bb3aa-78bc-49a5-8801-019de368fa41
+      X-Runtime:
+      - '0.004898'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"6","type":"profile","attributes":{"zipcode":"80301","user_id":1,"profile_picture":"http://www.google.com","username":"the
+        painter man"}}}'
+  recorded_at: Mon, 19 Apr 2021 15:33:15 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"ee2dbbfdd216341bf42396a125d2fe61"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b5c2ac45-b79a-43c5-abfa-ca15446fd1ce
+      X-Runtime:
+      - '0.008629'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"6","type":"profile","attributes":{"zipcode":"80301","user_id":1,"profile_picture":"http://www.google.com","username":"the
+        painter man"}}}'
+  recorded_at: Mon, 19 Apr 2021 15:33:15 GMT
 recorded_with: VCR 6.0.0

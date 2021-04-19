@@ -1,39 +1,37 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: http://localhost:3001/api/v1/profiles?profile_picture=name&user_id=497&username&zipcode=8111
+    method: get
+    uri: http://localhost:3001/api/v1/distance?current_user=1&user=2
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
       - Faraday v1.4.1
-      Content-Length:
-      - '0'
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
   response:
     status:
-      code: 201
-      message: Created
+      code: 200
+      message: OK
     headers:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"8f7fc60752a9e15e49c51adc89963144"
+      - W/"80bfe6560f8d0c791611233fdbb16307"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0413f659-291c-4575-8bfc-ef822a17cf5d
+      - 8430af4d-7372-4884-87ed-31216ad531c0
       X-Runtime:
-      - '0.020366'
+      - '1.061918'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":"profile created successfully"}'
-  recorded_at: Mon, 19 Apr 2021 15:33:16 GMT
+      string: '{"data":5.19}'
+  recorded_at: Mon, 19 Apr 2021 15:33:18 GMT
 recorded_with: VCR 6.0.0

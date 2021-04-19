@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3001/api/v1/profiles?profile_picture=name&user_id=497&username&zipcode=8111
+    uri: http://localhost:3001/api/v1/tags?name=art
     body:
       encoding: UTF-8
       string: ''
@@ -23,17 +23,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"8f7fc60752a9e15e49c51adc89963144"
+      - W/"d0eff6fab224463bc1abbc174e1b9074"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0413f659-291c-4575-8bfc-ef822a17cf5d
+      - a6d1dc0e-cd5c-4bcf-913f-14a17eeb7ef3
       X-Runtime:
-      - '0.020366'
+      - '0.012112'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":"profile created successfully"}'
-  recorded_at: Mon, 19 Apr 2021 15:33:16 GMT
+      string: '{"data":"tags successfully created"}'
+  recorded_at: Mon, 19 Apr 2021 15:33:21 GMT
 recorded_with: VCR 6.0.0
