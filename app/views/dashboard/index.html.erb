@@ -7,7 +7,9 @@
 <%= render 'shared/nav_bar' %>
 
 <div class="topcorner">
+
   <div class="card text-white bg-dark mb-3" style="width: 18rem;">
+		<img src= " <%= @photo[:photo_url] %> ">
     <div class="card-body">
       <h5 class="card-title">Hello, <%= @user.first_name %></h5>
       <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>

@@ -13,6 +13,14 @@ class BackendService
     conn = Faraday.new(url: "http://localhost:3001")
   end
 
+  def self.local_connection_photo
+    conn = Faraday.new(url: "http://localhost:3001") do |f|
+      f.request :multipart
+      f.request :url_encoded
+      f.adapter Faraday.default_adapter
+    end
+  end
+
   def self.post_gallery_photo(user_id, gallery_id, description, url)
     response = connection.post("/api/v1/profiles/#{user_id}/galleries/#{gallery_id}/photos") do |f|
       f.params['description'] = description
@@ -21,17 +29,20 @@ class BackendService
     parse(response)
   end
 
-  def self.post_user_galleries(user_id, name, photo_url)
-    response = connection.post("/api/v1/profiles/#{user_id}/galleries") do |f|
+  def self.post_user_galleries(user_id, name, picture_url)
+    file = Faraday::UploadIO.new(
+      picture_url.tempfile.path,
+      picture_url.content_type,
+      picture_url.original_filename)
+    payload = { :file => file }
+    response = local_connection_photo.post("/api/v1/profiles/#{user_id}/galleries", payload) do |f|
       f.params['user_id'] = user_id
       f.params['name'] = name
-      f.params['photo_url'] = photo_url
     end
-    parse(response)
   end
 
   def self.get_user_galleries(user_id)
-    response = connection.get("/api/v1/profiles/#{user_id}/galleries")
+    response = local_connection.get("/api/v1/profiles/#{user_id}/galleries")
     parse(response)
   end
 
