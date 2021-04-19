@@ -10,7 +10,7 @@
       <%= form_with url: '/galleries' , local: true, method: :post do |form| %>
         <%= form.text_field :name, {class:"form-control", placeholder:"Enter Gallery Name"} %>
         <%= form.label 'Upload Images to your Gallery'%>
-        <%= form.file_field :image, multiple: true, class: "form-control" %>
+        <%= form.file_field :images, multiple: true, class: "form-control" %>
         <%= form.submit 'Upload' %>
       <% end %>
     </section>

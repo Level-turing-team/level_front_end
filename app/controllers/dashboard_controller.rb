@@ -3,6 +3,6 @@ class DashboardController < ApplicationController
 
   def index
     @user = current_user
-    @photo = BackendService.get_user_galleries(@user.id)[:data].first[:attributes]
+    # @photo = BackendService.get_gallery_photos(@user.id)[:data].first[:attributes]
   end
 end
