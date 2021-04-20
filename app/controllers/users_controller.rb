@@ -16,8 +16,8 @@ class UsersController < ApplicationController
   end
 
   def show
-     !!params[:lookup] ? @user = User.find(params[:lookup]) : @user = User.find_by(google_id: session[:user_id])
-     # Will need to @distance for distance from user on show page
+   !!params[:lookup] ? @user = User.find(params[:lookup]) : @user = User.find_by(google_id: session[:user_id])
+   # Will need to @distance for distance from user on show page
   end
 
   private

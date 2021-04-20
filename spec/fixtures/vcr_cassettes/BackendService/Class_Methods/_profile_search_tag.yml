@@ -25,14 +25,14 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - cb5b6e6d-723a-4a89-96ce-25b370c16325
+      - 9ec2275e-62df-4844-a228-ebcc05dd969e
       X-Runtime:
-      - '0.017262'
+      - '0.009515'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"8","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}},{"id":"9","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
         by jim"}}]}'
-  recorded_at: Mon, 19 Apr 2021 15:33:19 GMT
+  recorded_at: Mon, 19 Apr 2021 21:05:37 GMT
 recorded_with: VCR 6.0.0

@@ -16,3 +16,68 @@
 
  @import "bootstrap";
 
+ textarea { resize: none; }
+
+ profile-img {
+  border-radius: 50%;
+}
+
+.img-circular{
+ width: 150px;
+ height: 150px;
+ background-size: cover;
+ display: block;
+ border-radius: 100px;
+ -webkit-border-radius: 100px;
+ -moz-border-radius: 100px;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+.small-circular{
+ width: 50px;
+ height: 50px;
+ background-size: cover;
+ display: block;
+ // border-radius: 100px;
+ // -webkit-border-radius: 100px;
+ // -moz-border-radius: 100px;
+ // margin-left: auto;
+ // margin-right: auto;
+}
+
+.scroll {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.scroll-2 {
+  max-height: 364px;
+  overflow-y: auto;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+.textfield {
+  width: 100%;
+  height: 20px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+body {
+ background-image: url("https://img.17qq.com/images/seceucsax.jpeg");
+}
