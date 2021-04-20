@@ -4,4 +4,31 @@
 
 <%= render partial: 'artists_near_me', 
 locals: { artists: @artists } %>
+<div class="row mb-5">
+    <div class="col-lg-8 mx-auto">
+      <div class="bg-dark p-5 rounded shadow">
+        <h5 class="font-weight-light mb-4 font-italic text-white">Custom rounded search bars with input group</h5>
+          <%= form_with url: discover_index_path, method: :get, local: true do |f| %>
+              <div class="input-group">
+                <%= f.label :search_term, "Search" %>
+                <%= f.text_field :search_term, {placeholder:"What're you searching for?", class:"textfield"} %>
+              <div class="input-group-append">
+                <%= f.submit :search, {id:"button-addon1", class:"btn btn-link text-primary"} %>
+              </div>
+            </div>
+              <%= f.radio_button :search_type, 'name', {class:"btn-check", id:"option1", autocomplete:"off"} %>
+              <%= f.label :name, {class:"btn btn-secondary", for:"option1"} %>
+              <%= f.radio_button :search_type, 'radius', {class:"btn-check", id:"option2", autocomplete:"off"} %>
+              <%= f.label :distance, {class:"btn btn-secondary", for:"option2"} %>
+              <%= f.radio_button :search_type, 'tag', {class:"btn-check", id:"option3", autocomplete:"off"} %>
+              <%= f.label :tag, {class:"btn btn-secondary", for:"option3"} %>
+          <% end %>
+      </div>
+    </div>
+</div>
 
+<% @search_results.each do |profile| %>
+  <%= image_tag "#{profile.profile_photo}" %>
+  <%= profile.username %>
+  <%= current_user.distance(profile.id) %>
+<% end %>

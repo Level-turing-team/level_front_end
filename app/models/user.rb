@@ -13,4 +13,8 @@ class User < ApplicationRecord
     user.save
     user
   end
+
+  def distance(requested_user_id)
+    BackendService.get_distance(self.id, requested_user_id)[:data]
+  end
 end
