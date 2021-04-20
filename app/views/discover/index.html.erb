@@ -2,7 +2,7 @@
 
 <h1> <%= current_user.username %> Discover Page</h1>
 
-<%= render partial: 'artists_near_me', 
+<%= render partial: 'artists_near_me',
 locals: { artists: @artists } %>
 <div class="row mb-5">
     <div class="col-lg-8 mx-auto">
@@ -27,8 +27,12 @@ locals: { artists: @artists } %>
     </div>
 </div>
 
-<% @search_results.each do |profile| %>
-  <%= image_tag "#{profile.profile_photo}" %>
-  <%= profile.username %>
-  <%= current_user.distance(profile.id) %>
-<% end %>
+<div class="search_results">
+  <% @search_results.each do |profile| %>
+  <%= link_to profile_path(profile.id) do %>
+    <%= image_tag "#{profile.profile_photo}" %>
+    <%= profile.username %>
+    <% end %>
+    <%= current_user.distance(profile.id) %>
+  <% end %>
+</div>
