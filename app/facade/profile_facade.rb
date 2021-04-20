@@ -6,6 +6,7 @@ class ProfileFacade < BackendFacade
     user_posts = post_objects(BackendService.user_posts(user_id))
     galleries = gallery_objects(user_id)
     profile_photo = BackendService.get_user(user_id)[:data][:attributes][:profile_picture]
+    # require 'pry'; binding.pry
     username = BackendService.get_user(user_id)[:data][:attributes][:username]
     Profile.new({
       id: user_id,

@@ -1,44 +1,8 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: http://localhost:3001/api/v1/profiles?profile_picture=name&user_id=158&username&zipcode=8111
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.4.1
-      Content-Length:
-      - '0'
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 201
-      message: Created
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"8f7fc60752a9e15e49c51adc89963144"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - ebe12904-a1f4-4b3b-9bd5-888047ddf80d
-      X-Runtime:
-      - '0.246677'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":"profile created successfully"}'
-  recorded_at: Tue, 20 Apr 2021 15:08:07 GMT
-- request:
     method: get
-    uri: http://localhost:3001/api/v1/distance?current_user=1&user=158
+    uri: http://localhost:3001/api/v1/distance?current_user=1&user=1
     body:
       encoding: US-ASCII
       string: ''
@@ -51,130 +15,25 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 500
-      message: Internal Server Error
+      code: 200
+      message: OK
     headers:
       Content-Type:
-      - application/json; charset=UTF-8
+      - application/json; charset=utf-8
+      Etag:
+      - W/"1f76e91028fbb6d3dcccb3be7352576f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 47291f46-8ee0-4fad-8a79-7382a06130e4
+      - 9fca01fe-0374-435d-82b1-0d42733d385d
       X-Runtime:
-      - '0.775716'
-      Content-Length:
-      - '10280'
+      - '0.928711'
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: UTF-8
-      string: '{"status":500,"error":"Internal Server Error","exception":"#\u003cTypeError:
-        no implicit conversion of String into Integer\u003e","traces":{"Application
-        Trace":[{"id":0,"trace":"app/facades/zipcode_facade.rb:4:in `distance_between''"},{"id":1,"trace":"app/controllers/api/v1/zipcode_controller.rb:6:in
-        `distance''"}],"Framework Trace":[{"id":2,"trace":"actionpack (5.2.5) lib/action_controller/metal/basic_implicit_render.rb:6:in
-        `send_action''"},{"id":3,"trace":"actionpack (5.2.5) lib/abstract_controller/base.rb:194:in
-        `process_action''"},{"id":4,"trace":"actionpack (5.2.5) lib/action_controller/metal/rendering.rb:30:in
-        `process_action''"},{"id":5,"trace":"actionpack (5.2.5) lib/abstract_controller/callbacks.rb:42:in
-        `block in process_action''"},{"id":6,"trace":"activesupport (5.2.5) lib/active_support/callbacks.rb:98:in
-        `run_callbacks''"},{"id":7,"trace":"actionpack (5.2.5) lib/abstract_controller/callbacks.rb:41:in
-        `process_action''"},{"id":8,"trace":"actionpack (5.2.5) lib/action_controller/metal/rescue.rb:22:in
-        `process_action''"},{"id":9,"trace":"actionpack (5.2.5) lib/action_controller/metal/instrumentation.rb:34:in
-        `block in process_action''"},{"id":10,"trace":"activesupport (5.2.5) lib/active_support/notifications.rb:168:in
-        `block in instrument''"},{"id":11,"trace":"activesupport (5.2.5) lib/active_support/notifications/instrumenter.rb:23:in
-        `instrument''"},{"id":12,"trace":"activesupport (5.2.5) lib/active_support/notifications.rb:168:in
-        `instrument''"},{"id":13,"trace":"actionpack (5.2.5) lib/action_controller/metal/instrumentation.rb:32:in
-        `process_action''"},{"id":14,"trace":"actionpack (5.2.5) lib/action_controller/metal/params_wrapper.rb:256:in
-        `process_action''"},{"id":15,"trace":"activerecord (5.2.5) lib/active_record/railties/controller_runtime.rb:24:in
-        `process_action''"},{"id":16,"trace":"actionpack (5.2.5) lib/abstract_controller/base.rb:134:in
-        `process''"},{"id":17,"trace":"actionview (5.2.5) lib/action_view/rendering.rb:32:in
-        `process''"},{"id":18,"trace":"actionpack (5.2.5) lib/action_controller/metal.rb:191:in
-        `dispatch''"},{"id":19,"trace":"actionpack (5.2.5) lib/action_controller/metal.rb:252:in
-        `dispatch''"},{"id":20,"trace":"actionpack (5.2.5) lib/action_dispatch/routing/route_set.rb:52:in
-        `dispatch''"},{"id":21,"trace":"actionpack (5.2.5) lib/action_dispatch/routing/route_set.rb:34:in
-        `serve''"},{"id":22,"trace":"actionpack (5.2.5) lib/action_dispatch/journey/router.rb:52:in
-        `block in serve''"},{"id":23,"trace":"actionpack (5.2.5) lib/action_dispatch/journey/router.rb:35:in
-        `each''"},{"id":24,"trace":"actionpack (5.2.5) lib/action_dispatch/journey/router.rb:35:in
-        `serve''"},{"id":25,"trace":"actionpack (5.2.5) lib/action_dispatch/routing/route_set.rb:840:in
-        `call''"},{"id":26,"trace":"rack (2.2.3) lib/rack/etag.rb:27:in `call''"},{"id":27,"trace":"rack
-        (2.2.3) lib/rack/conditional_get.rb:27:in `call''"},{"id":28,"trace":"rack
-        (2.2.3) lib/rack/head.rb:12:in `call''"},{"id":29,"trace":"activerecord (5.2.5)
-        lib/active_record/migration.rb:559:in `call''"},{"id":30,"trace":"actionpack
-        (5.2.5) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call''"},{"id":31,"trace":"activesupport
-        (5.2.5) lib/active_support/callbacks.rb:98:in `run_callbacks''"},{"id":32,"trace":"actionpack
-        (5.2.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"id":33,"trace":"actionpack
-        (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"id":34,"trace":"actionpack
-        (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call''"},{"id":35,"trace":"actionpack
-        (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call''"},{"id":36,"trace":"railties
-        (5.2.5) lib/rails/rack/logger.rb:38:in `call_app''"},{"id":37,"trace":"railties
-        (5.2.5) lib/rails/rack/logger.rb:26:in `block in call''"},{"id":38,"trace":"activesupport
-        (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged''"},{"id":39,"trace":"activesupport
-        (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged''"},{"id":40,"trace":"activesupport
-        (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged''"},{"id":41,"trace":"railties
-        (5.2.5) lib/rails/rack/logger.rb:26:in `call''"},{"id":42,"trace":"actionpack
-        (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call''"},{"id":43,"trace":"actionpack
-        (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call''"},{"id":44,"trace":"rack
-        (2.2.3) lib/rack/runtime.rb:22:in `call''"},{"id":45,"trace":"activesupport
-        (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
-        `call''"},{"id":46,"trace":"actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in
-        `call''"},{"id":47,"trace":"actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in
-        `call''"},{"id":48,"trace":"rack (2.2.3) lib/rack/sendfile.rb:110:in `call''"},{"id":49,"trace":"railties
-        (5.2.5) lib/rails/engine.rb:524:in `call''"},{"id":50,"trace":"puma (3.12.6)
-        lib/puma/configuration.rb:227:in `call''"},{"id":51,"trace":"puma (3.12.6)
-        lib/puma/server.rb:706:in `handle_request''"},{"id":52,"trace":"puma (3.12.6)
-        lib/puma/server.rb:476:in `process_client''"},{"id":53,"trace":"puma (3.12.6)
-        lib/puma/server.rb:334:in `block in run''"},{"id":54,"trace":"puma (3.12.6)
-        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}],"Full Trace":[{"id":0,"trace":"app/facades/zipcode_facade.rb:4:in
-        `distance_between''"},{"id":1,"trace":"app/controllers/api/v1/zipcode_controller.rb:6:in
-        `distance''"},{"id":2,"trace":"actionpack (5.2.5) lib/action_controller/metal/basic_implicit_render.rb:6:in
-        `send_action''"},{"id":3,"trace":"actionpack (5.2.5) lib/abstract_controller/base.rb:194:in
-        `process_action''"},{"id":4,"trace":"actionpack (5.2.5) lib/action_controller/metal/rendering.rb:30:in
-        `process_action''"},{"id":5,"trace":"actionpack (5.2.5) lib/abstract_controller/callbacks.rb:42:in
-        `block in process_action''"},{"id":6,"trace":"activesupport (5.2.5) lib/active_support/callbacks.rb:98:in
-        `run_callbacks''"},{"id":7,"trace":"actionpack (5.2.5) lib/abstract_controller/callbacks.rb:41:in
-        `process_action''"},{"id":8,"trace":"actionpack (5.2.5) lib/action_controller/metal/rescue.rb:22:in
-        `process_action''"},{"id":9,"trace":"actionpack (5.2.5) lib/action_controller/metal/instrumentation.rb:34:in
-        `block in process_action''"},{"id":10,"trace":"activesupport (5.2.5) lib/active_support/notifications.rb:168:in
-        `block in instrument''"},{"id":11,"trace":"activesupport (5.2.5) lib/active_support/notifications/instrumenter.rb:23:in
-        `instrument''"},{"id":12,"trace":"activesupport (5.2.5) lib/active_support/notifications.rb:168:in
-        `instrument''"},{"id":13,"trace":"actionpack (5.2.5) lib/action_controller/metal/instrumentation.rb:32:in
-        `process_action''"},{"id":14,"trace":"actionpack (5.2.5) lib/action_controller/metal/params_wrapper.rb:256:in
-        `process_action''"},{"id":15,"trace":"activerecord (5.2.5) lib/active_record/railties/controller_runtime.rb:24:in
-        `process_action''"},{"id":16,"trace":"actionpack (5.2.5) lib/abstract_controller/base.rb:134:in
-        `process''"},{"id":17,"trace":"actionview (5.2.5) lib/action_view/rendering.rb:32:in
-        `process''"},{"id":18,"trace":"actionpack (5.2.5) lib/action_controller/metal.rb:191:in
-        `dispatch''"},{"id":19,"trace":"actionpack (5.2.5) lib/action_controller/metal.rb:252:in
-        `dispatch''"},{"id":20,"trace":"actionpack (5.2.5) lib/action_dispatch/routing/route_set.rb:52:in
-        `dispatch''"},{"id":21,"trace":"actionpack (5.2.5) lib/action_dispatch/routing/route_set.rb:34:in
-        `serve''"},{"id":22,"trace":"actionpack (5.2.5) lib/action_dispatch/journey/router.rb:52:in
-        `block in serve''"},{"id":23,"trace":"actionpack (5.2.5) lib/action_dispatch/journey/router.rb:35:in
-        `each''"},{"id":24,"trace":"actionpack (5.2.5) lib/action_dispatch/journey/router.rb:35:in
-        `serve''"},{"id":25,"trace":"actionpack (5.2.5) lib/action_dispatch/routing/route_set.rb:840:in
-        `call''"},{"id":26,"trace":"rack (2.2.3) lib/rack/etag.rb:27:in `call''"},{"id":27,"trace":"rack
-        (2.2.3) lib/rack/conditional_get.rb:27:in `call''"},{"id":28,"trace":"rack
-        (2.2.3) lib/rack/head.rb:12:in `call''"},{"id":29,"trace":"activerecord (5.2.5)
-        lib/active_record/migration.rb:559:in `call''"},{"id":30,"trace":"actionpack
-        (5.2.5) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call''"},{"id":31,"trace":"activesupport
-        (5.2.5) lib/active_support/callbacks.rb:98:in `run_callbacks''"},{"id":32,"trace":"actionpack
-        (5.2.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"id":33,"trace":"actionpack
-        (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"id":34,"trace":"actionpack
-        (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call''"},{"id":35,"trace":"actionpack
-        (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call''"},{"id":36,"trace":"railties
-        (5.2.5) lib/rails/rack/logger.rb:38:in `call_app''"},{"id":37,"trace":"railties
-        (5.2.5) lib/rails/rack/logger.rb:26:in `block in call''"},{"id":38,"trace":"activesupport
-        (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged''"},{"id":39,"trace":"activesupport
-        (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged''"},{"id":40,"trace":"activesupport
-        (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged''"},{"id":41,"trace":"railties
-        (5.2.5) lib/rails/rack/logger.rb:26:in `call''"},{"id":42,"trace":"actionpack
-        (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call''"},{"id":43,"trace":"actionpack
-        (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call''"},{"id":44,"trace":"rack
-        (2.2.3) lib/rack/runtime.rb:22:in `call''"},{"id":45,"trace":"activesupport
-        (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
-        `call''"},{"id":46,"trace":"actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in
-        `call''"},{"id":47,"trace":"actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in
-        `call''"},{"id":48,"trace":"rack (2.2.3) lib/rack/sendfile.rb:110:in `call''"},{"id":49,"trace":"railties
-        (5.2.5) lib/rails/engine.rb:524:in `call''"},{"id":50,"trace":"puma (3.12.6)
-        lib/puma/configuration.rb:227:in `call''"},{"id":51,"trace":"puma (3.12.6)
-        lib/puma/server.rb:706:in `handle_request''"},{"id":52,"trace":"puma (3.12.6)
-        lib/puma/server.rb:476:in `process_client''"},{"id":53,"trace":"puma (3.12.6)
-        lib/puma/server.rb:334:in `block in run''"},{"id":54,"trace":"puma (3.12.6)
-        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}]}}'
-  recorded_at: Tue, 20 Apr 2021 15:08:08 GMT
+      string: '{"data":0}'
+  recorded_at: Tue, 20 Apr 2021 20:15:35 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profile/1/tags
@@ -200,15 +59,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 23ba223b-6112-432e-b448-c2b33b4dd763
+      - '00078c29-556b-4221-a1ab-3f1494d1b214'
       X-Runtime:
-      - '0.036429'
+      - '0.006433'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"tag","attributes":{"name":"Painter"}},{"id":"3","type":"tag","attributes":{"name":"Sculpter"}}]}'
-  recorded_at: Tue, 20 Apr 2021 15:08:08 GMT
+  recorded_at: Tue, 20 Apr 2021 20:15:35 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1/post
@@ -234,9 +93,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a42f3e9d-2722-403b-a964-335f4e834864
+      - caa86703-7c80-4fc0-8468-95c15440f094
       X-Runtime:
-      - '0.029100'
+      - '0.005669'
       Transfer-Encoding:
       - chunked
     body:
@@ -245,7 +104,7 @@ http_interactions:
         see that lil nas X video?","link":"photoURL.com","user_id":1,"created_at":"2021-04-19T21:22:47.070Z"}},{"id":"2","type":"post","attributes":{"content":"hey
         did you see that create meme?","link":"photoURL.com","user_id":1,"created_at":"2021-04-19T21:22:47.072Z"}},{"id":"3","type":"post","attributes":{"content":"hey
         did you see that riot footage?","link":null,"user_id":1,"created_at":"2021-04-19T21:22:47.073Z"}}]}'
-  recorded_at: Tue, 20 Apr 2021 15:08:08 GMT
+  recorded_at: Tue, 20 Apr 2021 20:15:35 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1/galleries
@@ -271,16 +130,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b7dbb71f-4a24-4bd7-bce5-4aa17bb5fe70
+      - 4626f678-2c13-4cb8-b8d3-8574524c5c74
       X-Runtime:
-      - '0.023982'
+      - '0.004006'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"gallery","attributes":{"user_id":1,"name":"photos
         from cali","created_at":"2021-04-19T21:22:47.093Z","updated_at":"2021-04-19T21:22:47.093Z","photo_url":"http://www.google.com"}}]}'
-  recorded_at: Tue, 20 Apr 2021 15:08:08 GMT
+  recorded_at: Tue, 20 Apr 2021 20:15:35 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1/galleries/1/photos
@@ -306,9 +165,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 87c24b32-a952-432c-9560-0b25270687a1
+      - e2505cbb-98ad-4e0f-840b-3b1e5002db46
       X-Runtime:
-      - '0.035103'
+      - '0.005494'
       Transfer-Encoding:
       - chunked
     body:
@@ -317,7 +176,7 @@ http_interactions:
         1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.117Z","updated_at":"2021-04-19T21:22:47.117Z","gallery_id":1}},{"id":"2","type":"photo","attributes":{"description":"pic
         1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.120Z","updated_at":"2021-04-19T21:22:47.120Z","gallery_id":1}},{"id":"3","type":"photo","attributes":{"description":"pic
         1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.123Z","updated_at":"2021-04-19T21:22:47.123Z","gallery_id":1}}]}'
-  recorded_at: Tue, 20 Apr 2021 15:08:08 GMT
+  recorded_at: Tue, 20 Apr 2021 20:15:35 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1
@@ -343,16 +202,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - dd95fcd7-ac52-4c04-87ed-d14b4b7cfa12
+      - 620243b7-9ee1-4af1-9e94-267651089262
       X-Runtime:
-      - '0.005574'
+      - '0.003033'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"profile","attributes":{"zipcode":"80301","user_id":1,"profile_picture":"http://www.google.com","username":"the
         painter man"}}}'
-  recorded_at: Tue, 20 Apr 2021 15:08:08 GMT
+  recorded_at: Tue, 20 Apr 2021 20:15:35 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1
@@ -378,14 +237,14 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 11799b1b-2287-421e-9ba2-b4c0605c8dd7
+      - 6bdc1af1-375e-4161-af74-6a1fafbb5c24
       X-Runtime:
-      - '0.004222'
+      - '0.002431'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"profile","attributes":{"zipcode":"80301","user_id":1,"profile_picture":"http://www.google.com","username":"the
         painter man"}}}'
-  recorded_at: Tue, 20 Apr 2021 15:08:08 GMT
+  recorded_at: Tue, 20 Apr 2021 20:15:35 GMT
 recorded_with: VCR 6.0.0

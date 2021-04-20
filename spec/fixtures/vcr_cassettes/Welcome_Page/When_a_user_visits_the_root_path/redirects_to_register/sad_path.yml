@@ -1,0 +1,37 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3001/api/v1/profiles?user_id=64&zipcode=
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 3d9af2ea-313b-4f5b-8e21-6bb17a66bbd5
+      X-Runtime:
+      - '0.009152'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{},"error":"invalid parameters"}'
+  recorded_at: Tue, 20 Apr 2021 20:15:43 GMT
+recorded_with: VCR 6.0.0

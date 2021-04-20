@@ -5,70 +5,63 @@ RSpec.describe 'Profile Page' do
     @user_1 = User.first
     @user_2 = User.second
     @user_3 = User.third
+    @user_4 = User.last
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_1)
   end
+
   #happy path
   describe "profile route" do
     it "exists" do
       VCR.use_cassette("profile_route", 
         match_requests_on: %i[body]) do
-        visit root_path
-        login
-
-        fill_in 'user[username]', with: "name"
-        fill_in 'user[zip]', with: "8111"
-        fill_in 'user[bio]', with: "bio testing"
-
-        click_button 'Register'
-
+        allow_any_instance_of(ActionDispatch::Request).to receive(:session) { { user_id: '123' } }
         visit profile_path
+        
         expect(current_path).to eq(profile_path)
         expect(page).not_to have_content("Action Needed!")
       end
     end
   end
+
   #sad path
   describe "profile route sad path" do
     it "doesnt let you log in" do
       VCR.use_cassette("doesnt_log_in", 
         match_requests_on: %i[body]) do
-        visit root_path
-        login
-        visit profile_path
-        expect(page).to have_content("Action Needed!")
-        expect(page).to have_field 'user[username]'
-        expect(page).to have_field 'user[zip]'
-      end
-    end
-  end
-  #sad path
-  describe "dashboard route sad path" do
-    it "doesnt let you log in", :vcr do
-      visit root_path
-      login
-      expect(page).to have_content("Your page needs a new name")
-      expect(page).to have_field 'user[username]'
-      expect(page).to have_field 'user[zip]'
-    end
-  end
-  describe "artist bio" do
-    it "should have a section for artist bio" do
-      VCR.use_cassette("artist_bio_profile_page", 
-      match_requests_on: %i[body]) do
-        visit root_path
-        login
-
-        fill_in 'user[username]', with: "name"
-        fill_in 'user[zip]', with: "8111"
-        fill_in 'user[bio]', with: "bio testing"
-
-        click_button 'Register'
-
-        visit profile_path
-        within("#artist-bio") do
-          expect(page).to have_content("bio testing")
+          visit root_path
+          login
+          visit profile_path
+          expect(page).to have_content("Action Needed!")
+          expect(page).to have_field 'user[username]'
+          expect(page).to have_field 'user[zip]'
         end
       end
+    end
+
+    #sad path
+    describe "dashboard route sad path" do
+      it "doesnt let you log in", :vcr do
+        visit root_path
+        login
+        expect(page).to have_content("Registration")
+        expect(page).to have_field 'user[username]'
+        expect(page).to have_field 'user[zip]'
+        expect(page).to have_field 'user[profile_gallery_picture]'
+      end
+    end
+
+    describe "artist bio" do
+      it "should have a section for artist bio" do
+        VCR.use_cassette("artist_bio_profile_page", 
+          match_requests_on: %i[body]) do
+            allow_any_instance_of(ActionDispatch::Request).to receive(:session) { { user_id: '123' } }
+            visit profile_path
+
+            within("#artist-bio") do
+              expect(page).to have_content("music is dope")
+              expect(page).to have_content("Created by #{@user_1.username}")
+            end
+        end
     end
   end
 
@@ -76,14 +69,8 @@ RSpec.describe 'Profile Page' do
     it "should have a section for artist bio even when not given" do
       VCR.use_cassette("see_section_when_bio_not_given", 
       match_requests_on: %i[body]) do
-        visit root_path
-        login
-
-        fill_in 'user[username]', with: "name"
-        fill_in 'user[zip]', with: "8111"
-
-        click_button 'Register'
-
+        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_4)
+        allow_any_instance_of(ActionDispatch::Request).to receive(:session) { { user_id: '101' } }
         visit profile_path
         within("#artist-bio") do
           expect(page).to have_content("Nothing to see here!")
@@ -96,41 +83,27 @@ RSpec.describe 'Profile Page' do
     it "shows other profiles" do
       VCR.use_cassette("profile_can_see_another_user", 
       match_requests_on: %i[body]) do
-        visit root_path
-        login
-
-        fill_in 'user[username]', with: "the painter man"
-        fill_in 'user[zip]', with: "8111"
-        fill_in 'user[bio]', with: "bio testing"
-
-        click_button 'Register'
-
+        allow_any_instance_of(ActionDispatch::Request).to receive(:session) { { user_id: '123' } }
         visit "/profile"
+
         expect(page).not_to have_content "#{@user_2.username}"
         expect(page).to have_content "#{@user_1.username}'s profile"
         
+        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_2)
+        allow_any_instance_of(ActionDispatch::Request).to receive(:session) { { user_id: '456' } }
         click_on "other profile"
-
+        
         expect(page).to have_content "#{@user_2.username}"
         expect(page).not_to have_content "#{@user_1.username}"
       end
     end
   end
-
+  
   describe "profile page" do
     it "shows distance to other profiles" do
       VCR.use_cassette("shows_distance_to_other_profiles", 
-      match_requests_on: %i[body]) do
-        visit root_path
-        login
-        
-        fill_in 'user[username]', with: "name"
-        fill_in 'user[zip]', with: "80210"
-        fill_in 'user[bio]', with: "bio testing"
-        
-        click_button 'Register'
-
-        @user_4 = User.find_by(google_id: '123545')
+        match_requests_on: %i[body]) do
+        allow_any_instance_of(ActionDispatch::Request).to receive(:session) { { user_id: '101' } }
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_4)
         
         visit "/profile"
@@ -138,11 +111,12 @@ RSpec.describe 'Profile Page' do
         within ("#distance") do
           expect(page).to have_content("You are 0 miles from yourself")
         end
-        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_1)
+
+        allow_any_instance_of(ActionDispatch::Request).to receive(:session) { { user_id: '456' } }
         click_on "other profile"
 
         within ("#distance") do
-          expect(page).to have_content("5.19 miles from you")
+          expect(page).to have_content("20.82 miles from you")
         end
       end
     end
@@ -150,38 +124,25 @@ RSpec.describe 'Profile Page' do
     it "displays the users profile pic and name" do 
       VCR.use_cassette("displays_profile_pic_and_name", 
       match_requests_on: %i[body]) do
-        visit root_path
-        login
-        fill_in 'user[username]', with: "name"
-        fill_in 'user[zip]', with: "8111"
-        fill_in 'user[bio]', with: "bio testing"
-        # attach_file("user[picture_url]", Rails.root + "spec/fixtures/fluff.jpg")
-        click_button 'Register'
-        logged_in_user = User.find_by(email: "test@test.com")
+        allow_any_instance_of(ActionDispatch::Request).to receive(:session) { { user_id: '123' } }
         visit profile_path
+
         expect(current_path).to eq(profile_path)
-        within ("#profilePicture") do 
-          # check for display once image actually displays
+        within ("#profilepicture") do 
+          expect(page).to have_xpath('//img[@src="http://www.google.com"]')
         end
         within ("#username") do 
-          expect(page).to have_content(logged_in_user.username)
+          expect(page).to have_content(@user_1.username)
         end
       end
     end
+
     it "displays the posts on current_user page and friends page" do 
       VCR.use_cassette("see_posts_spec", 
       match_requests_on: %i[body]) do
-        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_1)
-        visit root_path
-        login
-        fill_in 'user[username]', with: "name"
-        fill_in 'user[zip]', with: "8111"
-        fill_in 'user[bio]', with: "bio testing"
-
-        click_button 'Register'
-        
+        allow_any_instance_of(ActionDispatch::Request).to receive(:session) { { user_id: '123' } }
         visit profile_path
-
+        
         expect(current_path).to eq(profile_path)
         within('#posts') do
           expect(page).to have_content('hey did you see that lil nas X video?')
@@ -190,6 +151,7 @@ RSpec.describe 'Profile Page' do
           expect(page).to have_link('photoURL.com')
         end
         
+        allow_any_instance_of(ActionDispatch::Request).to receive(:session) { { user_id: '456' } }
         click_link 'other profile'
         
         within('#posts') do

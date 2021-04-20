@@ -3,7 +3,11 @@
 	<p>Please complete your profile setup</p>
 	<%= render partial: "/shared/registration" %>
 <% else %>
+
+  <section id='username'>
 	<h3><%= @user.username %>'s profile</h3>
+  </section>
+
 	<section id="artist-bio">
 		<!-- 
 		REMOVE THIS LINK ONCE FUNCTIONALITY IS IMPLEMENTED, ITS JUST FOR TESTING 
@@ -11,11 +15,17 @@
 		 -->
 		<p>Link to other page  <%= link_to("other profile", profile_path(lookup: "2")) %> </p>
 
+    <section id='profilepicture'>
+      <p><%= image_tag @profile_data.profile_photo unless @profile_data.profile_photo.nil?%></p>
+    </section>
+
       <section id="distance">
 		<% if @user.id == @current_user.id %>
 					<p>You are 0 miles from yourself</p>
 		<% else %> 
         <p><%= @distance %> miles from you</p>
+
+        
 		<% end %>
 			</section>
 
