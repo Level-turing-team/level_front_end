@@ -3,6 +3,15 @@ require 'rails_helper'
 RSpec.describe BackendService, type: :model do
   before :each do
     @user_1 = User.find(1)
+    @user = User.create(
+      email: 'example@example.com',
+      id: '6',
+      google_id: '12345',
+      zip: '80022',
+      first_name: 'john',
+      last_name: 'whatever',
+      username: 'Pie'
+    )
   end
 
   describe 'Class Methods' do
@@ -95,31 +104,27 @@ RSpec.describe BackendService, type: :model do
       expect(@response[:data].first.keys.count).to eq(3)
       expect(@response[:data].first.keys).to eq([:id, :type, :attributes])
       expect(@response[:data].first[:type]).to eq('gallery')
-      expect(@response[:data].first[:attributes].keys).to eq([:user_id, :photo_url, :name, :created_at, :updated_at, :photo_count])
+      expect(@response[:data].first[:attributes].keys).to eq([:user_id, :name, :created_at, :updated_at, :photo_url])
     end
 
-    it '#post_user_galleries' do
+    it '#post_user_galleries', :vcr do
       json = File.read('spec/fixtures/new_gallery.json')
-
-      stub_request(:post, "http://localhost:3001/api/v1/profiles/1/galleries?name=gallery&url=url.com&description=description&user_id=1").
-         with(
-           headers: {
-       	  'Accept'=>'*/*',
-       	  'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-       	  'Content-Length'=>'0',
-       	  'User-Agent'=>'Faraday v1.4.1'
-           }).
-         to_return(status: 201, body: json)
-
-      @response = BackendService.post_user_galleries(@user_1.id, 'gallery', 'url.com', 'description')
-
-      expect(@response[:data]).to eq('gallery created successfully')
+      picture_url = ActionDispatch::Http::UploadedFile.new({
+  :filename => 'fluff.jpg',
+  :type => 'image/jpeg',
+  :tempfile => File.new("#{Rails.root}/spec/fixtures/fluff.jpg")
+})
+      @response = BackendService.post_user_galleries(@user.id, 'gallery', picture_url, 'description')
+      expect(JSON.parse(@response.body)["data"]).to eq('gallery created successfully')
+      @galleries = GalleryFacade.profile_object(@user.id).galleries
+      @gallery = @galleries.find {|gall| gall.name == 'gallery' }
+      BackendService.destroy_gallery(@user.id, @gallery.id)
     end
 
-    it '#post_gallery_photo' do
+    it '#post_gallery_photo', :vcr do
       json = File.read('spec/fixtures/new_photo.json')
-
-      stub_request(:post, "http://localhost:3001/api/v1/profiles/1/galleries/1/photos?description=description&url=url").
+      picture_url = fixture_file_upload("spec/fixtures/fluff.jpg", 'img/jpg')
+      stub_request(:post, "http://localhost:3001/api/v1/profiles/1/galleries/1/photos?description=description&file=file").
          with(
            headers: {
        	  'Accept'=>'*/*',
@@ -129,9 +134,10 @@ RSpec.describe BackendService, type: :model do
            }).
          to_return(status: 201, body: json)
 
-      @response = BackendService.post_gallery_photo(@user_1.id, '1', 'description', 'url')
+      @response = BackendService.post_gallery_photo(@user_1.id, '1', 'description', picture_url)
 
-      expect(@response[:data]).to eq('photo created successfully')
+      expect(JSON.parse(@response.body)["data"]).to eq('photo created successfully')
+
     end
 
     it '#get_distance', :vcr do

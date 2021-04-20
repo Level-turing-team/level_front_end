@@ -6,16 +6,16 @@
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body" style="color:black">
-    <section>
+    <section class="profile">
       <h2><center> Create a new Gallery <center></h2>
       <%= form_with url: '/galleries' , local: true, method: :post do |form| %>
         <%= form.text_field :name, {class:"form-control", placeholder:"Enter Gallery Name"} %>
-        <%= form.text_field :description, {class:"form-control", placeholder:"Description of photo"} %>
+        <%= form.text_field :new_description, {class:"form-control", placeholder:"Description of photo"} %>
         <%= form.file_field :images, class: "form-control" %>
-        <%= form.submit 'Upload' %>
+        <%= form.submit 'Create Gallery' %>
       <% end %>
     </section>
-    <section>
+    <section id="photo-upload">
       <%= form_with url: '/photos' , local: true, method: :post do |form| %>
 
       <h2><center> Check the Gallery you want to add photo to: </center></h2>

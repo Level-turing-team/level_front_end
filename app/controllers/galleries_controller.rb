@@ -18,7 +18,7 @@ class GalleriesController < ApplicationController
   def create
     name =  params[:name] if params[:name].present?
     image = params[:images] if params[:images].present?
-    description = params[:description] if params[:description].present?
+    description = params[:new_description] if params[:new_description].present?
     @user = current_user
     BackendService.post_user_galleries(@user.id, name, image, description)
     redirect_to '/galleries'

@@ -1,0 +1,176 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/6/galleries
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"4031fbfaccb6084c6ea2224611884de7"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 11defc01-fbca-47ee-8e75-cc0665b7d033
+      X-Runtime:
+      - '0.007807'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"9","type":"gallery","attributes":{"user_id":6,"name":"Profile","created_at":"2021-04-20T18:47:52.682Z","updated_at":"2021-04-20T18:47:52.682Z","photo_url":null}},{"id":"10","type":"gallery","attributes":{"user_id":6,"name":"Dog","created_at":"2021-04-20T18:49:37.531Z","updated_at":"2021-04-20T18:49:37.531Z","photo_url":null}},{"id":"14","type":"gallery","attributes":{"user_id":6,"name":"test_gallery","created_at":"2021-04-20T23:35:16.387Z","updated_at":"2021-04-20T23:35:16.387Z","photo_url":null}},{"id":"15","type":"gallery","attributes":{"user_id":6,"name":"test
+        gallery","created_at":"2021-04-20T23:37:09.679Z","updated_at":"2021-04-20T23:37:09.679Z","photo_url":null}}]}'
+  recorded_at: Tue, 20 Apr 2021 23:37:10 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/6/galleries/9/photos
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"a142359054f936b4f71072770ba83999"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 74c089b7-8301-475a-a46c-7d5fae9d709a
+      X-Runtime:
+      - '0.006551'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"23","type":"photo","attributes":{"description":"Kids","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--fe1227e1532832de827f4916084b6f7daff39f2d/IMG_3570.JPG","created_at":"2021-04-20T18:47:52.700Z","updated_at":"2021-04-20T18:47:52.767Z","gallery_id":9}},{"id":"28","type":"photo","attributes":{"description":"kids","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2d4c62ce1525656794567542335a9307685eb50e/IMG_3570.JPG","created_at":"2021-04-20T20:19:47.970Z","updated_at":"2021-04-20T20:19:48.000Z","gallery_id":9}}]}'
+  recorded_at: Tue, 20 Apr 2021 23:37:10 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/6/galleries/10/photos
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"47e0a1a84a86554cfdff09add250d853"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 96fe57e1-25c8-436c-8aad-55e34ff973dd
+      X-Runtime:
+      - '0.007873'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"24","type":"photo","attributes":{"description":"Kupo","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e8407cc61369d015b9c344652604b6084917e548/IMG_2585.jpg","created_at":"2021-04-20T18:49:37.535Z","updated_at":"2021-04-20T18:49:37.557Z","gallery_id":10}},{"id":"25","type":"photo","attributes":{"description":"Fluffy","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2e4e4f1b6ecf01fafdf5ad84495d08fb0a2d861b/IMG_8151.JPG","created_at":"2021-04-20T19:22:38.969Z","updated_at":"2021-04-20T19:22:39.016Z","gallery_id":10}},{"id":"26","type":"photo","attributes":{"description":"mucho
+        liko","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5341d90f75756c106d10657ed09434c5acabaa67/iconfinder_github_291716.png","created_at":"2021-04-20T19:36:25.831Z","updated_at":"2021-04-20T19:36:25.871Z","gallery_id":10}},{"id":"27","type":"photo","attributes":{"description":"Fluffy","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2e301c76fdc188fd5cface0ad40912f5f908b7de/IMG_8213.JPG","created_at":"2021-04-20T19:41:04.913Z","updated_at":"2021-04-20T19:41:04.955Z","gallery_id":10}}]}'
+  recorded_at: Tue, 20 Apr 2021 23:37:10 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/6/galleries/14/photos
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"33ae63d6e1f7c9189e8815dca761cea3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e22e0f89-e1a1-4441-8d22-6e6e6fa0851c
+      X-Runtime:
+      - '0.005317'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"34","type":"photo","attributes":{"description":"description","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--379abda0c3489c164aa8d39401754efe96c701d4/fluff.jpg","created_at":"2021-04-20T23:35:16.410Z","updated_at":"2021-04-20T23:35:16.522Z","gallery_id":14}}]}'
+  recorded_at: Tue, 20 Apr 2021 23:37:10 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/6/galleries/15/photos
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"88708b6d24577e937648a1c0516b7162"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 63d85788-8005-4acd-a5e6-4cb5104cf74c
+      X-Runtime:
+      - '0.004941'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"35","type":"photo","attributes":{"description":"test
+        photo","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ea6edb380803ea61a48d030761fc1290fa5144c8/fluff.jpg","created_at":"2021-04-20T23:37:09.684Z","updated_at":"2021-04-20T23:37:09.729Z","gallery_id":15}}]}'
+  recorded_at: Tue, 20 Apr 2021 23:37:10 GMT
+recorded_with: VCR 6.0.0

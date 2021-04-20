@@ -1,7 +1,7 @@
 <%= render 'shared/nav_bar' %>
 
 <center>
-<h1 style= "font-color:white;"> <%= @user.username%> Galleries </h1>
+<h1 class="my-gallery"style= "font-color:white;"> <%= @user.username%> Galleries </h1>
 </center>
 
   <div class="container">
@@ -13,10 +13,12 @@
           <%= render 'shared/edit_profile' %>
         		<div class="card-body">
 
-              <% @galleries.each do |gallery| %>
+              <% @galleries.each_with_index do |gallery, index| %>
                 <% cache gallery do %>
                     <div class="card">
-                      <img class="card-img" src="<%=gallery.photos.first.url%>" alt="picture">
+                        <div class=" image-<%= index + 1 %> ">
+                          <img class="card-img" src="<%=gallery.photos.first.url%>" alt="picture">
+                        </div>
                       <div class="card-img-overlay">
                         <p class="card-text"><%= button_to gallery.name, galleries_path, params: {gallery_id: gallery.id}, method: :get, class: 'btn btn-outline-info form-control' %></p>
                       </div>
