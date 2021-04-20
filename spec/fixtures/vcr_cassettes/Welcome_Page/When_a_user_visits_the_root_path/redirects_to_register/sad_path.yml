@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3001/api/v1/profiles?profile_picture=&user_id=503&username&zipcode=
+    uri: http://localhost:3001/api/v1/profiles?user_id=64&zipcode=
     body:
       encoding: UTF-8
       string: ''
@@ -25,13 +25,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 9a3fc48d-afe8-45c8-be60-8820524c3343
+      - 3d9af2ea-313b-4f5b-8e21-6bb17a66bbd5
       X-Runtime:
-      - '0.041354'
+      - '0.009152'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{},"error":"invalid parameters"}'
-  recorded_at: Mon, 19 Apr 2021 15:33:16 GMT
+  recorded_at: Tue, 20 Apr 2021 20:15:43 GMT
 recorded_with: VCR 6.0.0

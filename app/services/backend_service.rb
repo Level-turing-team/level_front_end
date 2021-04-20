@@ -3,21 +3,38 @@ class BackendService
     conn = Faraday.new(url: ENV['API_URL'])
   end
 
-  def self.post_gallery_photo(user_id, gallery_id, description, url)
-    response = connection.post("/api/v1/profiles/#{user_id}/galleries/#{gallery_id}/photos") do |f|
-      f.params['description'] = description
-      f.params['url'] = url
+  def self.local_connection_photo
+    conn = Faraday.new(url: ENV['API_URL']) do |f|
+      f.request :multipart
+      f.request :url_encoded
+      f.adapter Faraday.default_adapter
     end
-    parse(response)
   end
 
-  def self.post_user_galleries(user_id, name, photo_url)
-    response = connection.post("/api/v1/profiles/#{user_id}/galleries") do |f|
+  def self.post_gallery_photo(user_id, gallery_id, description, picture_url)
+    file = Faraday::UploadIO.new(
+      picture_url.tempfile.path,
+      picture_url.content_type,
+      picture_url.original_filename)
+    payload = { :file => file }
+    response = local_connection_photo.post("/api/v1/profiles/#{user_id}/galleries/#{gallery_id}/photos", payload) do |f|
+      f.params['user_id'] = user_id
+      f.params['gallery_id'] = gallery_id
+      f.params['description'] = description
+    end
+  end
+
+  def self.post_user_galleries(user_id, name, picture_url, photo_description)
+    file = Faraday::UploadIO.new(
+      picture_url.tempfile.path,
+      picture_url.content_type,
+      picture_url.original_filename)
+    payload = { :file => file }
+    response = local_connection_photo.post("/api/v1/profiles/#{user_id}/galleries", payload) do |f|
       f.params['user_id'] = user_id
       f.params['name'] = name
-      f.params['photo_url'] = photo_url
+      f.params['photo_description'] = photo_description
     end
-    parse(response)
   end
 
   def self.get_user_galleries(user_id)
@@ -34,12 +51,10 @@ class BackendService
     parse(response)
   end
 
-  def self.post_user(user_id, zip, picture_url, username)
+  def self.post_user(user_id, zip)
     response = connection.post("/api/v1/profiles") do |f|
       f.params['user_id'] = user_id
       f.params['zipcode'] = zip
-      f.params['profile_picture'] = picture_url
-      f.params['username'] = username
     end
     parse(response)
   end

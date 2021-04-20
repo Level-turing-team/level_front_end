@@ -7,16 +7,27 @@
 <%= render 'shared/nav_bar' %>
 
 <div class="topcorner">
-  <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">Hello, <%= @user.first_name %></h5>
-      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
-  </div>
+	<div class="d-flex justify-content-center">
+  	<div class="card text-white bg-dark mb-3" style="width: 18rem;">
+  			<img src="<%= @photo[:photo_url] %>" class="card-img-top" alt="...">
+  			<div class="card-body">
+    			<h5 class="card-title">Hello, <%= @user.first_name %></h5>
+    			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  		  </div>
+  			<ul class="list-group list-group-flush">
+    		<li class="list-group-item">An item</li>
+    		<li class="list-group-item">A second item</li>
+    		<li class="list-group-item">A third item</li>
+  			</ul>
+  			<div class="card-body">
+    			<a href="#" class="card-link">Card link</a>
+    			<a href="#" class="card-link">Another link</a>
+  			</div>
+		</div>
+	</div>
 </div>
+
+
 <div class="d-flex justify-content-center">
   <div class="card text-white bg-dark mb-3" style="width: 40rem; top: 15px;">
     <div class="card-body">

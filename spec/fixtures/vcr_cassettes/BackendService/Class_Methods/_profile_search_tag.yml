@@ -21,18 +21,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"98ad2758ed397f7c78316786f9f212af"
+      - W/"1b3c8021bb3c41bdf9b8ad1607d8a00f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - cb5b6e6d-723a-4a89-96ce-25b370c16325
+      - 89d5cd3b-80bc-4b95-abba-ac046b1cfe51
       X-Runtime:
-      - '0.017262'
+      - '0.010635'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"8","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}},{"id":"9","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
-        by jim"}}]}'
-  recorded_at: Mon, 19 Apr 2021 15:33:19 GMT
+      string: '{"data":[{"id":"3","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}},{"id":"4","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
+        by jim"}},{"id":"86","type":"profile","attributes":{"zipcode":"80228","user_id":6,"profile_picture":"http://www.google.com","username":"former
+        salesman"}}]}'
+  recorded_at: Tue, 20 Apr 2021 20:15:45 GMT
 recorded_with: VCR 6.0.0

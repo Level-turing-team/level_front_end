@@ -21,17 +21,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"e012ca16315b62554329a403b621df2d"
+      - W/"2e325e9af752bd70823b41a11dce7d18"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 720018e7-313e-45bc-9c52-ffad1a6fa9b2
+      - 4d9816a4-eee2-4650-8026-3693e8bf918c
       X-Runtime:
-      - '0.006432'
+      - '0.005240'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"10","type":"profile","attributes":{"zipcode":"80544","user_id":5,"profile_picture":"http://www.google.com","username":"arteest"}}]}'
-  recorded_at: Mon, 19 Apr 2021 15:33:19 GMT
+      string: '{"data":[{"id":"5","type":"profile","attributes":{"zipcode":"80544","user_id":5,"profile_picture":"http://www.google.com","username":"arteest"}}]}'
+  recorded_at: Tue, 20 Apr 2021 20:15:45 GMT
 recorded_with: VCR 6.0.0

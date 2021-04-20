@@ -21,18 +21,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"ee2dbbfdd216341bf42396a125d2fe61"
+      - W/"26830db28cea9cadaa30ce67a401308e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d53b112e-f41a-485f-b8af-d403897ba033
+      - 7ca269f6-5e30-4019-bd7c-527d3bc9aea2
       X-Runtime:
-      - '0.006012'
+      - '0.003504'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"6","type":"profile","attributes":{"zipcode":"80301","user_id":1,"profile_picture":"http://www.google.com","username":"the
+      string: '{"data":{"id":"1","type":"profile","attributes":{"zipcode":"80301","user_id":1,"profile_picture":"http://www.google.com","username":"the
         painter man"}}}'
-  recorded_at: Mon, 19 Apr 2021 15:33:19 GMT
+  recorded_at: Tue, 20 Apr 2021 20:15:45 GMT
 recorded_with: VCR 6.0.0
