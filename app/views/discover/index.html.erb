@@ -2,8 +2,6 @@
 
 <h1> <%= current_user.username %> Discover Page</h1>
 
-<%= render partial: 'artists_near_me',
-locals: { artists: @artists } %>
 <div class="row mb-5">
     <div class="col-lg-8 mx-auto">
       <div class="bg-dark p-5 rounded shadow">
@@ -29,10 +27,45 @@ locals: { artists: @artists } %>
 
 <div class="search_results">
   <% @search_results.each do |profile| %>
-  <%= link_to profile_path(profile.id) do %>
+  <%= link_to profile_path(lookup: profile.id) do %>
     <%= image_tag "#{profile.profile_photo}" %>
     <%= profile.username %>
     <% end %>
     <%= current_user.distance(profile.id) %>
   <% end %>
 </div>
+
+<div class="recent_photos">
+  <% @search_results.each do |profile| %>
+  <%= link_to profile_path(lookup: profile.id) do %>
+    <%= image_tag "#{profile.profile_photo}" %>
+    <%= profile.username %>
+    <% end %>
+    <%= current_user.distance(profile.id) %>
+  <% end %>
+</div>
+
+#recent photos for all usrs
+
+
+
+
+<div class="container">
+    <div class="row align-items-start">
+      <div class="col-4">
+        <div class="card text-white bg-dark mb-3 scroll-3" style="width: 100%;margin-top: 10px;text-align: center;margin-left: auto; margin-right: auto;" id="my-feed">
+        	<h5 class="card-header"> Arrtists Near Me </h5>
+        		<div class="card-body">
+              <% @artists.each do |artist| %>
+                    <div class="card">
+                      <img class="card-img-top" src="<%=artist.profile_photo%>" alt="picture">
+                      <div class="card-body">
+                        <%= link_to artist.username, profile_path(lookup: artist.id) %>
+                        <h5>Zipcode: <%= artist.zipcode %></h5>
+                        <p class="card-text"></p>
+                      </div>
+                    </div><br>
+              <% end %>
+        		</div>
+        </div>
+      </div>

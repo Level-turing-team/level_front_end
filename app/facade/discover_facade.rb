@@ -2,10 +2,12 @@ class DiscoverFacade < BackendFacade
   def self.profile_object(user_id)
     profile_photo = BackendService.get_user(user_id)[:data][:attributes][:profile_picture]
     username = BackendService.get_user(user_id)[:data][:attributes][:username]
+    zipcode = BackendService.get_user(user_id)[:data][:attributes][:zipcode]
     Profile.new({
       id: user_id,
       username: username,
-      profile_photo: profile_photo
+      profile_photo: profile_photo,
+      zipcode: zipcode
     })
   end
 
@@ -34,7 +36,7 @@ class DiscoverFacade < BackendFacade
   def self.gallery_initialize_helper(user_id, gallery_id)
 
   end
-  
+
   def self.search_user_objects(user_id, search_term, search_type)
     BackendService.profile_search(user_id, search_term, search_type)[:data].map do |data|
       profile_object(data[:id])
@@ -56,7 +58,7 @@ class DiscoverFacade < BackendFacade
   def self.artists_near_me(user_id)
     artists = BackendService.get_artists_near_me(user_id)
     artists[:data].map do |artist|
-      Artist.combine(artist)
+      Profile.new(artist)
     end
   end
 
