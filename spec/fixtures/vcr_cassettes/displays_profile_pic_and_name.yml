@@ -25,15 +25,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e0f4d5ba-8963-4828-ab06-9d9ef7c0a98e
+      - cfc51713-271b-442c-bbdd-eca4683bc639
       X-Runtime:
-      - '0.731333'
+      - '0.621215'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":0}'
-  recorded_at: Tue, 20 Apr 2021 20:15:41 GMT
+  recorded_at: Tue, 20 Apr 2021 20:59:16 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profile/1/tags
@@ -59,15 +59,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 29353ed6-c4d5-4e2e-9c31-6780cc673648
+      - 4628a2ce-87bd-496e-9886-bf97d1c80a12
       X-Runtime:
-      - '0.006237'
+      - '0.005858'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"tag","attributes":{"name":"Painter"}},{"id":"3","type":"tag","attributes":{"name":"Sculpter"}}]}'
-  recorded_at: Tue, 20 Apr 2021 20:15:41 GMT
+  recorded_at: Tue, 20 Apr 2021 20:59:16 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1/post
@@ -89,13 +89,13 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"5328e8f68779cef577a16c7f5f4dd69d"
+      - W/"5e0870b51fcd278d67344607e7464ed1"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2797c596-5946-4d08-a556-943866f2f067
+      - 8003cbea-0c83-45c8-ad26-309e624c4bd3
       X-Runtime:
-      - '0.004950'
+      - '0.005193'
       Transfer-Encoding:
       - chunked
     body:
@@ -103,8 +103,10 @@ http_interactions:
       string: '{"data":[{"id":"1","type":"post","attributes":{"content":"hey did you
         see that lil nas X video?","link":"photoURL.com","user_id":1,"created_at":"2021-04-19T21:22:47.070Z"}},{"id":"2","type":"post","attributes":{"content":"hey
         did you see that create meme?","link":"photoURL.com","user_id":1,"created_at":"2021-04-19T21:22:47.072Z"}},{"id":"3","type":"post","attributes":{"content":"hey
-        did you see that riot footage?","link":null,"user_id":1,"created_at":"2021-04-19T21:22:47.073Z"}}]}'
-  recorded_at: Tue, 20 Apr 2021 20:15:41 GMT
+        did you see that riot footage?","link":null,"user_id":1,"created_at":"2021-04-19T21:22:47.073Z"}},{"id":"11","type":"post","attributes":{"content":"this
+        is my first post","link":"www.google.com","user_id":1,"created_at":"2021-04-20T20:59:07.211Z"}},{"id":"12","type":"post","attributes":{"content":"this
+        is my first post","link":"","user_id":1,"created_at":"2021-04-20T20:59:07.731Z"}}]}'
+  recorded_at: Tue, 20 Apr 2021 20:59:16 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1/galleries
@@ -130,16 +132,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8fbade8e-dd04-437c-a902-878dee95bfc8
+      - cc3c9296-831f-4110-92ec-de77a0bbee92
       X-Runtime:
-      - '0.007134'
+      - '0.004650'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"gallery","attributes":{"user_id":1,"name":"photos
         from cali","created_at":"2021-04-19T21:22:47.093Z","updated_at":"2021-04-19T21:22:47.093Z","photo_url":"http://www.google.com"}}]}'
-  recorded_at: Tue, 20 Apr 2021 20:15:41 GMT
+  recorded_at: Tue, 20 Apr 2021 20:59:16 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1/galleries/1/photos
@@ -165,9 +167,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - '083eb58f-28e5-4c10-b740-7700e7b1d10b'
+      - '0990ec59-ff01-4a70-ba10-210aac98c636'
       X-Runtime:
-      - '0.006202'
+      - '0.005801'
       Transfer-Encoding:
       - chunked
     body:
@@ -176,7 +178,7 @@ http_interactions:
         1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.117Z","updated_at":"2021-04-19T21:22:47.117Z","gallery_id":1}},{"id":"2","type":"photo","attributes":{"description":"pic
         1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.120Z","updated_at":"2021-04-19T21:22:47.120Z","gallery_id":1}},{"id":"3","type":"photo","attributes":{"description":"pic
         1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.123Z","updated_at":"2021-04-19T21:22:47.123Z","gallery_id":1}}]}'
-  recorded_at: Tue, 20 Apr 2021 20:15:41 GMT
+  recorded_at: Tue, 20 Apr 2021 20:59:16 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1
@@ -202,16 +204,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 61c9eccd-ce78-44a6-8ebc-a80cc77acf67
+      - 4561be85-b7f2-45fb-9f55-7f6988bc20f4
       X-Runtime:
-      - '0.002630'
+      - '0.002680'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"profile","attributes":{"zipcode":"80301","user_id":1,"profile_picture":"http://www.google.com","username":"the
         painter man"}}}'
-  recorded_at: Tue, 20 Apr 2021 20:15:41 GMT
+  recorded_at: Tue, 20 Apr 2021 20:59:16 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1
@@ -237,14 +239,14 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9225f6fc-ff10-41af-88e6-79749279188a
+      - f549c47b-733f-4c42-a0a8-8fb470eb03ce
       X-Runtime:
-      - '0.002232'
+      - '0.003135'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"profile","attributes":{"zipcode":"80301","user_id":1,"profile_picture":"http://www.google.com","username":"the
         painter man"}}}'
-  recorded_at: Tue, 20 Apr 2021 20:15:41 GMT
+  recorded_at: Tue, 20 Apr 2021 20:59:16 GMT
 recorded_with: VCR 6.0.0

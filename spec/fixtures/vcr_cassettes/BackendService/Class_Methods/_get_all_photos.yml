@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b9e20478-26a0-458e-8562-7064553f338b
+      - 9e8627a5-82c7-4cc1-b436-f15b798254dc
       X-Runtime:
-      - '0.011561'
+      - '0.007887'
       Transfer-Encoding:
       - chunked
     body:
@@ -56,5 +56,5 @@ http_interactions:
         1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.123Z","updated_at":"2021-04-19T21:22:47.123Z","gallery_id":1}},{"id":"2","type":"photo","attributes":{"description":"pic
         1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.120Z","updated_at":"2021-04-19T21:22:47.120Z","gallery_id":1}},{"id":"1","type":"photo","attributes":{"description":"pic
         1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.117Z","updated_at":"2021-04-19T21:22:47.117Z","gallery_id":1}}]}'
-  recorded_at: Tue, 20 Apr 2021 20:15:45 GMT
+  recorded_at: Tue, 20 Apr 2021 20:59:21 GMT
 recorded_with: VCR 6.0.0

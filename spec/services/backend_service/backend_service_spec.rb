@@ -53,7 +53,7 @@ RSpec.describe BackendService, type: :model do
     it '#post_user' do
       json = File.read('spec/fixtures/new_profile.json')
 
-      stub_request(:post, "http://localhost:3001/api/v1/profiles?profile_picture=http://www.google.com&user_id=6&username=username&zipcode=80302").
+      stub_request(:post, "http://localhost:3001/api/v1/profiles?user_id=6&zipcode=80302").
          with(
            headers: {
        	  'Accept'=>'*/*',
@@ -63,7 +63,7 @@ RSpec.describe BackendService, type: :model do
            }).
          to_return(status: 201, body: json)
 
-      @response = BackendService.post_user('6', '80302', 'http://www.google.com', 'username')
+      @response = BackendService.post_user('6', '80302')
 
       expect(@response[:data]).to eq('profile created successfully')
     end
@@ -101,7 +101,7 @@ RSpec.describe BackendService, type: :model do
     it '#post_user_galleries' do
       json = File.read('spec/fixtures/new_gallery.json')
 
-      stub_request(:post, "http://localhost:3001/api/v1/profiles/1/galleries?name=gallery&photo_url=fjdlkas&user_id=1").
+      stub_request(:post, "http://localhost:3001/api/v1/profiles/1/galleries?name=gallery&url=url.com&description=description&user_id=1").
          with(
            headers: {
        	  'Accept'=>'*/*',
@@ -111,7 +111,7 @@ RSpec.describe BackendService, type: :model do
            }).
          to_return(status: 201, body: json)
 
-      @response = BackendService.post_user_galleries(@user_1.id, 'gallery', 'fjdlkas')
+      @response = BackendService.post_user_galleries(@user_1.id, 'gallery', 'url.com', 'description')
 
       expect(@response[:data]).to eq('gallery created successfully')
     end
@@ -225,6 +225,22 @@ RSpec.describe BackendService, type: :model do
       @response = BackendService.post_profile_tag(1, 6)
 
       expect(@response[:data]).to eq('tags created successfully')
+    end
+
+    it "::create_user_circle" do
+      json = File.read('spec/fixtures/new_circle.json')
+      stub_request(:post, "http://localhost:3001/api/v1/profile/5/circle?following_id=1&user_id=5").
+         with(
+           headers: {
+       	  'Accept'=>'*/*',
+       	  'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+       	  'Content-Length'=>'0',
+       	  'User-Agent'=>'Faraday v1.4.1'
+           }).
+         to_return(status: 201, body: json)
+
+      @response = BackendService.create_user_circle(5, 1)
+      expect(@response[:data]).to eq('circle created successfully')
     end
   end
 end
