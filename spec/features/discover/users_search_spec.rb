@@ -9,8 +9,9 @@ RSpec.describe 'As an authenticated user' do
     it 'searches by name' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_1)
       visit discover_index_path(@user_1)
+      save_and_open_page
 
-      fill_in 'Search', with: 'korn'
+      fill_in 'search_term', with: 'korn'
       click_button 'Search'
 
       expect(dashboard_index_path)
