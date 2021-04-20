@@ -1,0 +1,16 @@
+<h1> <%= @gallery.name.upcase %> </h1>
+
+<% @gallery.photos.each do |photo| %>
+  <div style="overflow:auto">
+    <div class="row flex-row flex-nowrap">
+        <div class="col-2">
+          <div class="card">
+            <img class="card-img-top" src="<%=photo.url%>" alt="picture">
+            <div class="card-body">
+              <p class="card-text"> <%= photo.description %></p>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+<% end %>

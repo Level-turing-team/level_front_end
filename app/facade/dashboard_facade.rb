@@ -5,12 +5,14 @@ class DashboardFacade < BackendFacade
     user_posts = post_objects(BackendService.user_posts(user_id))
     profile_photo = BackendService.get_user(user_id)[:data][:attributes][:profile_picture]
     username = BackendService.get_user(user_id)[:data][:attributes][:username]
+    tags = tag_objects(user_id)
     Profile.new({
       id: user_id,
       username: username,
       circle: user_circle,
       circle_posts: circle_posts,
-      profile_photo: profile_photo
+      profile_photo: profile_photo,
+      tags: tags
     })
   end
 end

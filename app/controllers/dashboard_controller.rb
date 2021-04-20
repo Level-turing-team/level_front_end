@@ -6,6 +6,7 @@ class DashboardController < ApplicationController
     @profile = DashboardFacade.profile_object(@user.id)
     @circle = @profile.circle
     @circle_posts = @profile.circle_posts
+    @tags = @profile.tags
   end
 
   def create_post

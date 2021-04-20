@@ -7,25 +7,32 @@
 <%= render 'shared/nav_bar' %>
 <body>
 
+<center>
+<h1 style="color:white;"> <%= @user.username%>'s Dashboard </h1>
+</center>
 
 <div class="container">
 	<div class="row">
 
 		<div class="col">
 
-			<div class="card text-white bg-dark mb-3 scroll-2" id="my-circle" style="max-width: 18rem;margin-top: 10px;text-align: center;">
+			<div class="card d-flex text-white bg-dark mb-3 scroll-2" id="my-circle" style="max-width: 18rem;margin-top: 10px;text-align: center;">
 			  <h5 class="card-header">My Circle</h5>
 				  <div class="card-body">
 						<h6 class="card-subtitle mb-2 text-muted">You have <%= @circle.length %> friends</h6>
-						<p class="card-text"><% @circle.each do |user| %>
-							<ul>
-								<li class="card-text"> <%= link_to user.username, profile_path(user) %></li>
+							<% @circle.each do |user| %>
+
+							<div class="card" style="width: 15rem;">
+							  <div class="card-img-top" alt="profile photo">
 									<%= link_to profile_path(user) do %>
-										<%= image_tag "#{user.profile_picture}", class: "small-circular" %>
+										<%= image_tag "#{user.profile_picture}" %>
 									<% end %>
-							</ul>
-						<% end %></p>
-						<%= button_to "Discover More Friends", discover_index_path, class: "btn btn-secondary" %>
+								</div>
+							  <div class="card-body">
+							    <p class="card-text"><%= link_to user.username, profile_path(user) %></p>
+							  </div>
+							</div><br>
+							<% end %>
 				  </div>
 			</div>
 		</div>
@@ -33,7 +40,7 @@
 
 		<div class="col-6">
 
-			<div class="card text-white bg-dark mb-3" style="max-width: 100%;margin-top: 10px;text-align: center;">
+			<div class="card d-flex text-white bg-dark mb-3" style="max-width: 100%;margin-top: 10px;text-align: center;">
 			  <h5 class="card-header">Create Post</h5>
 				<div style="padding:5px;margin:5px">
 					<%= form_with url: new_post_path, method: :get, local: true do |f| %>
@@ -53,10 +60,14 @@
 
 		<div class="col">
 
-			<div class="card text-white bg-dark mb-3" style="max-width: 18rem;margin-top: 10px;text-align: center;">
+			<div class="card d-flex text-white bg-dark mb-3 scroll-2" style="max-width: 18rem;margin-top: 10px;text-align: center;">
 			  <h2 class="card-header"><%= @profile.username %></h2>
 				<div class="card-body">
-					<%= image_tag "https://coursereport-s3-production.global.ssl.fastly.net/uploads/school/logo/79/original/turing-logo-cr.png", class: "img-circular" %>
+					<%= image_tag "https://coursereport-s3-production.global.ssl.fastly.net/uploads/school/logo/79/original/turing-logo-cr.png", class: "img-circular" %><br>
+					<h5>Tags</h5>
+					<% @tags.each do |tag| %>
+						<span class="badge rounded-pill bg-info"><%= tag.name %></span>
+					<% end %>
 				</div>
 			</div>
 
@@ -65,27 +76,35 @@
 </div>
 
 
-<div class="card text-white bg-dark mb-3 scroll" style="width: 938px;margin-top: 10px;text-align: center;margin-left: auto; margin-right: auto;" id="my-feed">
+<div class="card text-white bg-dark mb-3 scroll" style="width: 1118px;margin-top: 10px;text-align: center;margin-left: auto; margin-right: auto;" id="my-feed">
 	<h5 class="card-header"> My Feed </h5>
 		<div class="card-body">
 			<h6 class="card-subtitle mb-2 text-muted">Your Circle's Posts</h6>
-			<p class="card-text"><% @circle_posts.each do |post| %>
-					<div class="card text-dark bg-light mb-3" style="max-width: 100%;margin-left: auto; margin-right: auto;">
-						<div class="card-header"><%= link_to post.user.username, profile_path(post.user.id) %>
+			<% @circle_posts.each do |post| %>
+
+			<center>
+				<div class="card mb-3" style="max-width: 1000px;">
+				  <div class="row g-0">
+				    <div class="col-md-2">
+							<%= link_to post.user.username, profile_path(post.user.id) %>
 							<%= link_to profile_path(post.user.id) do %>
-							<%= image_tag "#{User.find(post.user.id).picture_url}", class: "small-circular" %>
-						<% end %></div>
-						<div class="card-body">
-							<div class="card-text"><%= post.content %><br><br>
-								<% if post.link %>
-									<h6 class="card-subtitle mb-2 text-muted"> <%= link_to "#{post.link}" %> </h6>
-								<% end %>
-								<p class="card-subtitle mb-2 text-muted" style="font-size:11px"> <%= post.created_at_format %> </p>
-							</div>
-						</div>
-					</div>
-			<% end %>
-		</div>
+								<%= image_tag "#{User.find(post.user.id).picture_url}", class: "small-circular" %>
+							<% end %>
+				    </div>
+				    <div class="col-md-8">
+				      <div class="card-body">
+				        <p class="card-text" style="color:black;"><%= post.content %></p><br>
+									<% if post.link %>
+										<h6 class="card-subtitle mb-2 text-muted"> <%= link_to "#{post.link}" %> </h6>
+									<% end %>
+									<p class="card-subtitle mb-2 text-muted" style="font-size:11px"> <%= post.created_at_format %> </p>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</center>
+		<% end %>
+	</div>
 </div>
 
 
