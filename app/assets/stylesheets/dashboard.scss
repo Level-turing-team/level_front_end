@@ -92,13 +92,21 @@
 //         background: #fff;
 //         color: #6172b9;
 //     }
-.topcorner{
-  position:absolute;
+.topcornerright {
+  position:fixed;
   top:70px;
-  right: 10px;
+  right: 20px;
+  width: 300px;
 }
-#topcornerleft{
-  position:absolute;
+.topcornerleft {
+  position:fixed;
   top:40px;
-  left: 10px;
+  left: 20px;
+  width: 300px;
+}
+
+.container {
+  flex-shrink: 3;
+  // align-items: stretch;
+  // flex-flow: column wrap;
 }

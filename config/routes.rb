@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   resources :galleries, only: %i[index show create]
   resources :photos, only: %i[create]
 
+  get '/user_post_new', to: 'dashboard#create_post', as: 'new_post'
+
   get '/auth/google_oauth2/callback', to: 'sessions#googleAuth'
   get '/failure', to: redirect('/')
 end

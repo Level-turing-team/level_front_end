@@ -3,6 +3,9 @@ class GalleriesController < ApplicationController
   def index
     @user = current_user
     @galleries = GalleryFacade.profile_object(@user.id).galleries
+    @photos = [] if !params[:gallery_id]
+    @gallery = @galleries.find {|gall| gall.id == params[:gallery_id] }
+    @photos = @gallery.photos if params[:gallery_id]
   end
 
   def show

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -11,8 +10,7 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
-
-  <body>
+  <body class="background">
     <main>
       <script src="" integrity="" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
@@ -21,16 +19,5 @@
       <% end %>
       <%= yield %>
     </main>
-    <footer>
-      <img src="width="75px" style="margin:10px" >
-      <div>
-        <p>
-          Thank you to <a href="n"></a>  data that is used in this application.
-        </p>
-        <p>
-          Further citation information regarding the movie data used in this project can be found <a href="">here.</a>
-        </p>
-      </div>
-    </footer>
   </body>
 </html>

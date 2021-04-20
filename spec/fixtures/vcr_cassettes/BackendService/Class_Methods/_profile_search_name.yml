@@ -1,0 +1,37 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/1/search?name=arteest
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"2e325e9af752bd70823b41a11dce7d18"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c6e10e76-2ea4-4d58-a62e-4e072d26d358
+      X-Runtime:
+      - '0.005112'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"5","type":"profile","attributes":{"zipcode":"80544","user_id":5,"profile_picture":"http://www.google.com","username":"arteest"}}]}'
+  recorded_at: Tue, 20 Apr 2021 20:59:21 GMT
+recorded_with: VCR 6.0.0

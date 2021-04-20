@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3001/api/v1/tags?name=art
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"d0eff6fab224463bc1abbc174e1b9074"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2ce1fa57-51d5-4213-b0f1-8b4f1103ab34
+      X-Runtime:
+      - '0.006653'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":"tags successfully created"}'
+  recorded_at: Tue, 20 Apr 2021 20:59:23 GMT
+recorded_with: VCR 6.0.0
