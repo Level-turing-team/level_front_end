@@ -10,3 +10,4 @@
 @user_3 = User.create!(first_name: "Kris", last_name: "Account", email: "something3@example.com", username: "slipknot", google_id: "789", zip: "80304", bio:"music is dope")
 @user_4 = User.create!(first_name: "Jesus", last_name: "Account", email: "something4@example.com", username: "photos by jim", google_id: "910", zip: "80303", bio:"i love music")
 @user_5 = User.create!(first_name: "Kyle", last_name: "Account", email: "something5@example.com", username: "arteest", google_id: "111", zip: "80544", bio:"music is dope")
+@user_6 = User.create!(first_name: "Jake", last_name: "Account", email: "something6@example.com", username: "former salesman", google_id: "101", zip: "80228", bio:"")

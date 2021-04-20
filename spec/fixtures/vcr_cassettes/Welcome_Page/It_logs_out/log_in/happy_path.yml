@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3001/api/v1/profiles?profile_picture=name&user_id=552&username&zipcode=8111
+    uri: http://localhost:3001/api/v1/profiles?user_id=79&zipcode=8111
     body:
       encoding: UTF-8
       string: ''
@@ -17,23 +17,21 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 201
-      message: Created
+      code: 400
+      message: Bad Request
     headers:
       Content-Type:
       - application/json; charset=utf-8
-      Etag:
-      - W/"8f7fc60752a9e15e49c51adc89963144"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - a1e1bb04-d10f-4b46-b3bf-f82ecc2a4713
+      - c5cbf535-bff4-4b46-b0a3-74344b2ff671
       X-Runtime:
-      - '0.008240'
+      - '0.008373'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":"profile created successfully"}'
-  recorded_at: Mon, 19 Apr 2021 21:05:27 GMT
+      string: '{"data":{},"error":"invalid parameters"}'
+  recorded_at: Tue, 20 Apr 2021 20:59:19 GMT
 recorded_with: VCR 6.0.0
