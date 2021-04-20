@@ -10,10 +10,8 @@ Rails.application.routes.draw do
   resources :discover, only: %i[index]
   resources :users, only: %i[create update]
   resources :dashboard, only: %i[index]
-
-  resources :galleries, only: %i[index show]
-  resources :photos
-  post '/galleries', to: 'galleries#create_gallery_and_photo'
+  resources :galleries, only: %i[index show create]
+  resources :photos, only: %i[create]
 
   get '/auth/google_oauth2/callback', to: 'sessions#googleAuth'
   get '/failure', to: redirect('/')

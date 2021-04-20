@@ -12,10 +12,12 @@ class GalleriesController < ApplicationController
     end
   end
 
-  def create_gallery_and_photo
-    name =  params[:name] if !params[:name].nil?
+  def create
+    name =  params[:name] if params[:name].present?
+    image = params[:images] if params[:images].present?
+    description = params[:description] if params[:description].present?
     @user = current_user
-    BackendService.post_user_galleries(@user.id, name, params[:images], params[:description])
+    BackendService.post_user_galleries(@user.id, name, image, description)
     redirect_to '/galleries'
   end
 

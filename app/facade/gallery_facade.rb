@@ -1,13 +1,9 @@
 class GalleryFacade < BackendFacade
   def self.profile_object(user_id)
     galleries = gallery_objects(user_id)
-    profile_photo = photo_objects(user_id, galleries.first.id)
-    username = User.find(user_id).username
     Profile.new({
       id: user_id,
-      username: username,
-      galleries: galleries,
-      profile_photo: profile_photo
+      galleries: galleries
     })
   end
 
@@ -24,7 +20,6 @@ class GalleryFacade < BackendFacade
                 id: gallery[:id],
                 user_id: gallery[:attributes][:user_id],
                 name: gallery[:attributes][:name],
-                photo_url: gallery[:attributes][:photo_url],
                 created_at: gallery[:attributes][:created_at],
                 updated_at: gallery[:attributes][:updated_at],
                 photos: photos
