@@ -226,5 +226,21 @@ RSpec.describe BackendService, type: :model do
 
       expect(@response[:data]).to eq('tags created successfully')
     end
+
+    it "::create_user_circle" do
+      json = File.read('spec/fixtures/new_circle.json')
+      stub_request(:post, "http://localhost:3001/api/v1/profile/5/circle?following_id=1&user_id=5").
+         with(
+           headers: {
+       	  'Accept'=>'*/*',
+       	  'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+       	  'Content-Length'=>'0',
+       	  'User-Agent'=>'Faraday v1.4.1'
+           }).
+         to_return(status: 201, body: json)
+
+      @response = BackendService.create_user_circle(5, 1)
+      expect(@response[:data]).to eq('circle created successfully')
+    end
   end
 end
