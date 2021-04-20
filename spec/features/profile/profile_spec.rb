@@ -74,74 +74,80 @@ RSpec.describe 'Profile Page' do
   end
 
   describe "artist bio" do
-    it "should have a section for artist bio even when not given", :vcr do
-      visit root_path
-      login
+    it "should have a section for artist bio even when not given" do
+      VCR.use_cassette("see_section_when_bio_not_given", 
+      match_requests_on: %i[body]) do
+        visit root_path
+        login
 
-      fill_in 'user[username]', with: "name"
-      fill_in 'user[zip]', with: "8111"
+        fill_in 'user[username]', with: "name"
+        fill_in 'user[zip]', with: "8111"
 
-      click_button 'Register'
+        click_button 'Register'
 
-      logged_in_user = User.find_by(email: "test@test.com")
-      visit profile_path
-      within("#artist-bio") do
-        expect(page).to have_content("Nothing to see here!")
+        visit profile_path
+        within("#artist-bio") do
+          expect(page).to have_content("Nothing to see here!")
+        end
       end
     end
   end
 
   describe "profile route" do
-    it "shows other profiles", :vcr do
-      visit root_path
-      login
+    it "shows other profiles" do
+      VCR.use_cassette("profile_can_see_another_user", 
+      match_requests_on: %i[body]) do
+        visit root_path
+        login
 
-      fill_in 'user[username]', with: "name"
-      fill_in 'user[zip]', with: "8111"
-      fill_in 'user[bio]', with: "bio testing"
+        fill_in 'user[username]', with: "the painter man"
+        fill_in 'user[zip]', with: "8111"
+        fill_in 'user[bio]', with: "bio testing"
 
+        click_button 'Register'
 
+        visit "/profile"
+        expect(page).not_to have_content "#{@user_2.username}"
+        expect(page).to have_content "#{@user_1.username}'s profile"
+        
+        click_on "other profile"
 
-      click_button 'Register'
-
-      logged_in_user = User.find_by(email: "test@test.com")
-      visit "/profile"
-      expect(page).not_to have_content "#{@user_1.username}"
-      expect(page).to have_content "#{logged_in_user.username}"
-
-      click_on "other profile"
-
-      expect(page).to have_content "#{@user_1.username}"
-      expect(page).not_to have_content "#{logged_in_user.username}"
+        expect(page).to have_content "#{@user_2.username}"
+        expect(page).not_to have_content "#{@user_1.username}"
+      end
     end
   end
+
   describe "profile page" do
-    xit "shows distance to other profiles", :vcr do
-      visit root_path
-      login
+    it "shows distance to other profiles" do
+      VCR.use_cassette("shows_distance_to_other_profiles", 
+      match_requests_on: %i[body]) do
+        visit root_path
+        login
+        
+        fill_in 'user[username]', with: "name"
+        fill_in 'user[zip]', with: "80210"
+        fill_in 'user[bio]', with: "bio testing"
+        
+        click_button 'Register'
 
-      fill_in 'user[username]', with: "name"
-      fill_in 'user[zip]', with: "8111"
-      fill_in 'user[bio]', with: "bio testing"
+        @user_4 = User.find_by(google_id: '123545')
+        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_3)
+        
+        visit "/profile"
+        
+        within ("#distance") do
+          expect(page).to have_content("You are 0 miles from yourself")
+        end
+        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_1)
+        click_on "other profile"
 
-
-
-      click_button 'Register'
-
-      logged_in_user = User.find_by(email: "test@test.com")
-      visit "/profile"
-      within ("#distance") do
-        expect(page).to have_content("You are 0 miles from yourself")
-      end
-
-
-      click_on "other profile"
-
-
-      within ("#distance") do
-        expect(page).to have_content("11.51 miles from you")
+        within ("#distance") do
+          expect(page).to have_content("11.51 miles from you")
+        end
       end
     end
+
     xit "displays the users profile pic and name", :vcr do 
       visit root_path
       login

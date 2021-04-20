@@ -7,13 +7,15 @@
 	<section id="artist-bio">
 		<!-- 
 		REMOVE THIS LINK ONCE FUNCTIONALITY IS IMPLEMENTED, ITS JUST FOR TESTING 
+    Lookup ID is just for testing
 		 -->
-		<p>Link to other page  <%= link_to("other profile", profile_path(lookup: "10000001")) %> </p>
+		<p>Link to other page  <%= link_to("other profile", profile_path(lookup: "2")) %> </p>
+
       <section id="distance">
-		<% if @user.id == current_user.id %>
+		<% if @user.id == @current_user.id %>
 					<p>You are 0 miles from yourself</p>
-		<% else %>
-        <!--p><%= @distance %> miles from you</p-->
+		<% else %> 
+        <p><%= @distance %> miles from you</p>
 		<% end %>
 			</section>
 
