@@ -19,7 +19,7 @@
       <%= form_with url: '/photos' , local: true, method: :post do |form| %>
 
       <h2><center> Check the Gallery you want to add photo to: </center></h2>
-      <%= form.collection_check_boxes(:galleries, @galleries, :name, :name, include_hidden: false) do |gallery| %>
+      <%= form.collection_check_boxes(:galleries, @galleries, :id, :name, include_hidden: false) do |gallery| %>
         <div>
           <%= gallery.check_box %>
           <%= gallery.label %>

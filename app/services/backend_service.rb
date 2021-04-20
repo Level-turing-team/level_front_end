@@ -11,12 +11,17 @@ class BackendService
     end
   end
 
-  def self.post_gallery_photo(user_id, gallery_id, description, url)
-    response = connection.post("/api/v1/profiles/#{user_id}/galleries/#{gallery_id}/photos") do |f|
+  def self.post_gallery_photo(user_id, gallery_id, description, picture_url)
+    file = Faraday::UploadIO.new(
+      picture_url.tempfile.path,
+      picture_url.content_type,
+      picture_url.original_filename)
+    payload = { :file => file }
+    response = local_connection_photo.post("/api/v1/profiles/#{user_id}/galleries/#{gallery_id}/photos", payload) do |f|
+      f.params['user_id'] = user_id
+      f.params['gallery_id'] = gallery_id
       f.params['description'] = description
-      f.params['url'] = url
     end
-    parse(response)
   end
 
   def self.post_user_galleries(user_id, name, picture_url, photo_description)
