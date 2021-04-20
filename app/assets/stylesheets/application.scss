@@ -83,11 +83,15 @@ textarea {
   resize: none;
 }
 
-body {
- background-image: "background.jpeg";
- background-color: #4D585C;
-}
+// body {
+//  background-image: "background.jpeg";
+//  background-color: #4D585C;
+// }
 
 .background {
- background-image: url('background.jpeg');
+ background-image: url('https://i.pinimg.com/originals/75/74/54/75745413b2550fbd223522a642af0fea.jpg');
+}
+
+.blue_glow { color: #5BCDF8;
+  text-shadow: 1px 1px 2px black, 0 0 10px #5BCDF8, 0 0 5px #5BCDF8;
 }

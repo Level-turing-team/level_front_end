@@ -8,18 +8,17 @@
     <div class="row align-items-start">
       <div class="col-4">
 
-        <div class="card text-white bg-dark mb-3 scroll-3" style="width: 100%;margin-top: 10px;text-align: center;margin-left: auto; margin-right: auto;" id="my-feed">
-        	<h5 class="card-header"> My Galleries </h5>
+        <div class="card text-white mb-3 scroll-3" style="width: 100%;margin-top: 10px;text-align: center;margin-left: auto; margin-right: auto;" id="my-feed">
+        	<h5 class="card-header bg-dark"> My Galleries </h5>
           <%= render 'shared/edit_profile' %>
         		<div class="card-body">
 
               <% @galleries.each do |gallery| %>
                 <% cache gallery do %>
                     <div class="card">
-                      <img class="card-img-top" src="<%=gallery.photos.first.url%>" alt="picture">
-                      <div class="card-body">
-                        <%= button_to gallery.name, galleries_path, params: {gallery_id: gallery.id}, method: :get, class: 'btn btn-secondary' %>
-                        <p class="card-text"></p>
+                      <img class="card-img" src="<%=gallery.photos.first.url%>" alt="picture">
+                      <div class="card-img-overlay">
+                        <p class="card-text"><%= button_to gallery.name, galleries_path, params: {gallery_id: gallery.id}, method: :get, class: 'btn btn-outline-info form-control' %></p>
                       </div>
                     </div><br>
                 <% end %>
@@ -31,20 +30,17 @@
       </div>
       <div class="col-8">
 
-        <div class="card text-white bg-dark mb-3 scroll-3" style="width: 100%;margin-top: 10px;text-align: center;margin-left: auto; margin-right: auto;" id="my-feed">
-        	<h5 class="card-header"> My Photos </h5>
-        		<div class="card-body">
-
-              <% @photos.each do |photo| %>
-                  <div class="card">
-                    <img class="card-img-top" src="<%= photo.url %>" alt="picture">
-                    <div class="card-body">
-                      <p class="card-text bg-dark"><%= photo.description %></p>
-                    </div>
-                  </div><br>
-              <% end %>
-
-        		</div>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <% @photos.each do |photo| %>
+              <div class="col">
+                <div class="card">
+                  <img src="<%= photo.url %>" class="card-img" alt="...">
+                  <div class="card-img-overlay">
+                    <p class="card-text blue_glow"><%= photo.description %>.</p>
+                  </div>
+                </div>
+              </div>
+          <% end %>
         </div>
 
       </div>
