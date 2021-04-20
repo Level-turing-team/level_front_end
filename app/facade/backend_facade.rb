@@ -72,12 +72,13 @@ class BackendFacade
     end
   end
 
-  def self.create_profile_gallery_and_photo(user_id, picture_url)
+  def self.create_profile_gallery_and_photo(user_id, photo_description, picture_url)
+
     #create profile_gallery & profile_photo
-    BackendService.post_user_galleries(user_id, 'Profile', picture_url)
+    BackendService.post_user_galleries(user_id, 'Profile', picture_url, photo_description)
   end
 
-  def self.create_profile(user_id, user_zipcode, profile_picture, username)
-    BackendService.post_user(user_id, user_zipcode, profile_picture, username)
+  def self.create_profile(user_id, user_zipcode)
+    BackendService.post_user(user_id, user_zipcode)
   end
 end
