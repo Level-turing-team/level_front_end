@@ -7,11 +7,28 @@
   </div>
   <div class="offcanvas-body">
     <section>
+      <h2><center> Create a new Gallery <center></h2>
       <%= form_with url: '/galleries' , local: true, method: :post do |form| %>
         <%= form.text_field :name, {class:"form-control", placeholder:"Enter Gallery Name"} %>
-        <%= form.label 'Upload Images to your Gallery'%>
-        <%= form.file_field :images, multiple: true, class: "form-control" %>
+        <%= form.text_field :description, {class:"form-control", placeholder:"Description of photo"} %>
+        <%= form.file_field :images, class: "form-control" %>
         <%= form.submit 'Upload' %>
+      <% end %>
+    </section>
+    <section>
+      <%= form_with url: '/photos' , local: true, method: :post do |form| %>
+
+      <h2><center> Check the Gallery you want to add photo to: </center></h2>
+      <%= form.collection_check_boxes(:galleries, @galleries, :name, :name, include_hidden: false) do |gallery| %>
+        <div>
+          <%= gallery.check_box %>
+          <%= gallery.label %>
+        </div>
+      <% end %>
+
+      <%= form.text_field :description, {class:"form-control", placeholder:"Description of photo"} %>
+      <%= form.file_field :images, class: "form-control" %>
+      <%= form.submit 'Upload' %>
       <% end %>
     </section>
   </div>

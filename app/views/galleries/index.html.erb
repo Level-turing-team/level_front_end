@@ -1,4 +1,20 @@
+<%= render 'shared/nav_bar' %>
+<%= render 'shared/edit_profile' %>
 
-<% @galleries.photos.map do |img| %>
-<img src="<%= img.url %>" alt="..." width="170" height="170">
-<% end %>
+<div style="overflow:auto">
+  <div class="row flex-row flex-nowrap">
+    <% @galleries.map do |gallery| %>
+      <div class="col-2">
+        <div class="card">
+          <% gallery.photos.map do |img|  %>
+          <img class="card-img-top" src="<%=img.url%>" alt="picture">
+          <% end %>
+          <div class="card-body">
+            <h5 class="card-title"><%= link_to gallery.name, gallery_path(gallery.id) %></h5>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
