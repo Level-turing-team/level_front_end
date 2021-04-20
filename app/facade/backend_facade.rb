@@ -27,7 +27,6 @@ class BackendFacade
 
   def self.gallery_objects(user_id)
     BackendService.get_user_galleries(user_id)[:data].map do |gallery|
-      require 'pry'; binding.pry
       photos = photo_objects(user_id, gallery[:id])
       data = {
                 id: gallery[:id],

@@ -6,10 +6,6 @@ RSpec.describe 'Profile Page' do
     @user_2 = User.second
     @user_3 = User.third
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_1)
-    # User.destroy_all
-    # @user_1 = User.create!(first_name: "Test", last_name: "Account", email: "something@example.com",username: "test-user", google_id: "123", zip: "12345",bio:"music is dope")
-    # @user_2 = User.create!(first_name: "Other", last_name: "Account", email: "somethingelse@example.com",username: "test-user-2", google_id: "456", zip: "23456",bio:"i love music")
-    # @sad_user = User.create!(first_name: "Other", last_name: "Account", email: "saduser@example.com", google_id: "456")
   end
   #happy path
   describe "profile route" do
@@ -33,13 +29,16 @@ RSpec.describe 'Profile Page' do
   end
   #sad path
   describe "profile route sad path" do
-    it "doesnt let you log in", :vcr do
-      visit root_path
-      login
-      visit profile_path
-      expect(page).to have_content("Action Needed!")
-      expect(page).to have_field 'user[username]'
-      expect(page).to have_field 'user[zip]'
+    it "doesnt let you log in" do
+      VCR.use_cassette("doesnt_log_in", 
+        match_requests_on: %i[body]) do
+        visit root_path
+        login
+        visit profile_path
+        expect(page).to have_content("Action Needed!")
+        expect(page).to have_field 'user[username]'
+        expect(page).to have_field 'user[zip]'
+      end
     end
   end
   #sad path
@@ -132,7 +131,7 @@ RSpec.describe 'Profile Page' do
         click_button 'Register'
 
         @user_4 = User.find_by(google_id: '123545')
-        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_3)
+        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_4)
         
         visit "/profile"
         
@@ -143,72 +142,62 @@ RSpec.describe 'Profile Page' do
         click_on "other profile"
 
         within ("#distance") do
-          expect(page).to have_content("11.51 miles from you")
+          expect(page).to have_content("5.19 miles from you")
         end
       end
     end
 
-    xit "displays the users profile pic and name", :vcr do 
-      visit root_path
-      login
-      fill_in 'user[username]', with: "name"
-      fill_in 'user[zip]', with: "8111"
-      fill_in 'user[bio]', with: "bio testing"
-      attach_file("user[picture_url]", Rails.root + "spec/fixtures/fluff.jpg")
-      click_button 'Register'
-      logged_in_user = User.find_by(email: "test@test.com")
-      visit profile_path
-      expect(current_path).to eq(profile_path)
-      within ("#profilePicture") do 
-        # check for display once image actually displays
-      end
-      within ("#username") do 
-        expect(page).to have_content(logged_in_user.username)
-      end
-    end
-    xit "displays the posts of the user profile you are viewing", :vcr do 
-      visit root_path
-      login
-      fill_in 'user[username]', with: "name"
-      fill_in 'user[zip]', with: "8111"
-      fill_in 'user[bio]', with: "bio testing"
-      attach_file("user[picture_url]", Rails.root + "spec/fixtures/fluff.jpg")
-      click_button 'Register'
-      logged_in_user = User.find_by(email: "test@test.com")
-      logged_in_user.update(id: "3")
-      visit profile_path
-      expect(current_path).to eq(profile_path)
-    end
-    xit "displays the users profile pic and name", :vcr do 
-      visit root_path
-      login
-      fill_in 'user[username]', with: "name"
-      fill_in 'user[zip]', with: "8111"
-      fill_in 'user[bio]', with: "bio testing"
-      attach_file("user[picture_url]", Rails.root + "spec/fixtures/fluff.jpg")
-      click_button 'Register'
-      logged_in_user = User.find_by(email: "test@test.com")
-      visit profile_path
-      expect(current_path).to eq(profile_path)
-      within ("#profilePicture") do 
-        # check for display once image actually displays
-      end
-      within ("#username") do 
-        expect(page).to have_content(logged_in_user.username)
+    it "displays the users profile pic and name" do 
+      VCR.use_cassette("displays_profile_pic_and_name", 
+      match_requests_on: %i[body]) do
+        visit root_path
+        login
+        fill_in 'user[username]', with: "name"
+        fill_in 'user[zip]', with: "8111"
+        fill_in 'user[bio]', with: "bio testing"
+        # attach_file("user[picture_url]", Rails.root + "spec/fixtures/fluff.jpg")
+        click_button 'Register'
+        logged_in_user = User.find_by(email: "test@test.com")
+        visit profile_path
+        expect(current_path).to eq(profile_path)
+        within ("#profilePicture") do 
+          # check for display once image actually displays
+        end
+        within ("#username") do 
+          expect(page).to have_content(logged_in_user.username)
+        end
       end
     end
-    xit "displays the posts of the user profile you are viewing", :vcr do 
-      visit root_path
-      login
-      fill_in 'user[username]', with: "name"
-      fill_in 'user[zip]', with: "8111"
-      fill_in 'user[bio]', with: "bio testing"
-      attach_file("user[picture_url]", Rails.root + "spec/fixtures/fluff.jpg")
-      click_button 'Register'
-      logged_in_user = User.find_by(email: "test@test.com")
-      logged_in_user.update(id: "3")
-      visit profile_path
-      expect(current_path).to eq(profile_path)
+    it "displays the posts on current_user page and friends page" do 
+      VCR.use_cassette("see_posts_spec", 
+      match_requests_on: %i[body]) do
+        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_1)
+        visit root_path
+        login
+        fill_in 'user[username]', with: "name"
+        fill_in 'user[zip]', with: "8111"
+        fill_in 'user[bio]', with: "bio testing"
+
+        click_button 'Register'
+        
+        visit profile_path
+
+        expect(current_path).to eq(profile_path)
+        within('#posts') do
+          expect(page).to have_content('hey did you see that lil nas X video?')
+          expect(page).to have_content('hey did you see that create meme?')
+          expect(page).to have_content('hey did you see that riot footage?')
+          expect(page).to have_link('photoURL.com')
+        end
+        
+        click_link 'other profile'
+        
+        within('#posts') do
+          expect(page).to have_content('hey did you see that headline?')
+          expect(page).to have_content('hey checkout my create shoes?')
+          expect(page).to have_link('photoURL.com')
+        end
+      end
     end
   end
 end

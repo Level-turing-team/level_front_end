@@ -34,4 +34,15 @@
 			</figure>
 		<% end %>
 	</section>
+
+<section id="posts">
+  <h4>Posts</h4>
+    <% @profile_data.posts.each do |post| %>
+      <p><%= post.content %></p>
+      <p><%= link_to post.link unless post.link.nil? %></p>
+      <br>
+    <% end %>
+  </section>
+
 <% end %>
+

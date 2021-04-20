@@ -18,9 +18,9 @@ class UsersController < ApplicationController
   def show
     @current_user = current_user
     !!params[:lookup] ? @user = User.find(params[:lookup]) : @user = User.find_by(google_id: session[:user_id])
-    # require 'pry'; binding.pry
-    @distance = BackendService.get_distance(@current_user.id,@user.id)[:data] unless @current_user.zip.nil? || @current_user.username.nil? || !params[:lookup].nil?
-    @profile_data = params[:lookup].nil? ? BackendFacade.profile_object(@current_user.id) : BackendFacade.profile_object(@user.id)
+    @distance = BackendService.get_distance(@current_user.id,@user.id)[:data] unless (@current_user.zip.nil? || @current_user.username.nil?) || (!params[:lookup].nil? && @current_user.zip.nil?)
+    # Will need to change last conditional to => unless !params[:lookup]
+    @profile_data = params[:lookup].nil? ? ProfileFacade.profile_object(@current_user.id) : ProfileFacade.profile_object(@user.id)
   end
 
   private
