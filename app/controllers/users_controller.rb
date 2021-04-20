@@ -9,15 +9,15 @@ class UsersController < ApplicationController
     if params[:user][:username] == "" || params[:user][:zip] == ""
       redirect_to register_path
     end
-    BackendFacade.create_profile(@user.id, params[:user][:zip], params[:user][:username], params[:user][:picture_url])
-    # BackendFacade.create_profile_gallery_and_photo(@user.id, params[:user][:picture_url])
+    BackendFacade.create_profile(@user.id,params[:user][:zip])
+    BackendFacade.create_profile_gallery_and_photo(@user.id, params[:user][:photo_description], params[:user][:profile_gallery_picture])
     @user.update(user_params)
     redirect_to dashboard_index_path
   end
 
   def show
-     !!params[:lookup] ? @user = User.find(params[:lookup]) : @user = User.find_by(google_id: session[:user_id])
-     # Will need to @distance for distance from user on show page
+   !!params[:lookup] ? @user = User.find(params[:lookup]) : @user = User.find_by(google_id: session[:user_id])
+   # Will need to @distance for distance from user on show page
   end
 
   private
