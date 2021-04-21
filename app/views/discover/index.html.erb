@@ -22,8 +22,6 @@
         		</div>
         </div>
 
-
-
         <div class="card text-white bg-dark mb-3 scroll-2" style="width: 100%;margin-top: 10px;text-align: center;margin-left: auto; margin-right: auto;" id="my-feed">
         	<h5 class="card-header"> Recent Photos</h5>
         		<div class="card-body">
@@ -39,20 +37,7 @@
         		</div>
         </div>
 
-
-
-
-
-
       </div>
-
-
-
-
-
-
-
-
 
     <div class="col-8">
       <div class="card text-white bg-dark mb-3" style="width: 100%;margin-top: 10px;text-align: center;margin-left: auto; margin-right: auto;">
@@ -97,15 +82,3 @@
 			</div>
     </div>
 </div>
-
-
-<div class="recent_photos">
-  <% @search_results.each do |profile| %>
-  <%= link_to profile_path(lookup: profile.id) do %>
-    <%= image_tag "#{profile.profile_photo}" %>
-    <%= profile.username %>
-    <% end %>
-    <%= current_user.distance(profile.id) %>
-  <% end %>
-</div>
-    

@@ -16,7 +16,7 @@ class DiscoverFacade < BackendFacade
       Photo.new(data)
     end
   end
-  
+
   def self.recent_photo_objects
     BackendService.get_all_photos[:data].map do |data|
       Photo.new(data)

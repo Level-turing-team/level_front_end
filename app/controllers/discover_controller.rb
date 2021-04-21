@@ -3,10 +3,13 @@ class DiscoverController < ApplicationController
 
   def index
     @user = User.find(1)
-    # binding.pry
-    @search_results = DiscoverFacade.search_user_objects(@user.id, params[:search_term], params[:search_type])
     @profiles = DiscoverFacade.artists_near_me(@user.id)
     @photos = DiscoverFacade.recent_photo_objects
+    if params[:search_term].to_i != 0
+      @search_results = DiscoverFacade.search_user_objects(@user.id, params[:search_term].to_i, params[:search_type])
+    else
+      @search_results = DiscoverFacade.search_user_objects(@user.id, params[:search_term], params[:search_type])
+    end
   end
 
   private
