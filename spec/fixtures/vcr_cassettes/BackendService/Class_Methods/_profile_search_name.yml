@@ -25,13 +25,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8c845305-f808-46e3-a9e4-7b95c32bcba6
+      - 6021b2fb-8087-4128-9400-21da37f6391d
       X-Runtime:
-      - '0.007726'
+      - '0.004211'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"5","type":"profile","attributes":{"zipcode":"80544","user_id":5,"profile_picture":"http://www.google.com","username":"arteest"}}]}'
-  recorded_at: Wed, 21 Apr 2021 23:06:28 GMT
+  recorded_at: Wed, 21 Apr 2021 23:49:53 GMT
 recorded_with: VCR 6.0.0

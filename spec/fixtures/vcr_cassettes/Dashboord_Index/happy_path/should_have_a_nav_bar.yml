@@ -25,16 +25,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0e12d088-0f93-49df-8bc3-48c3e0db6b4f
+      - d733d637-43c4-4da1-bb63-8810fe8d26e3
       X-Runtime:
-      - '0.006610'
+      - '0.009272'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"2","type":"profile","attributes":{"zipcode":"80305","user_id":2,"profile_picture":"http://www.google.com","username":"korn"}},{"id":"3","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}},{"id":"4","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
         by jim"}},{"id":"5","type":"profile","attributes":{"zipcode":"80544","user_id":5,"profile_picture":"http://www.google.com","username":"arteest"}}]}'
-  recorded_at: Wed, 21 Apr 2021 23:06:05 GMT
+  recorded_at: Wed, 21 Apr 2021 23:49:33 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1/circle/posts
@@ -60,9 +60,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - cddd0730-2fe8-4c1d-868b-29c1b328d5e5
+      - b42dd2dd-6fd2-4a10-8937-5c696102cc70
       X-Runtime:
-      - '0.020240'
+      - '0.005994'
       Transfer-Encoding:
       - chunked
     body:
@@ -75,7 +75,7 @@ http_interactions:
         did you see that we''re not friends on FB anymore?","link":"photoURL.com","user_id":4,"created_at":"2021-04-21T23:05:49.688Z"}},{"id":"9","type":"post","attributes":{"content":"hey
         did you see hear about that create app called ''level''?","link":"photoURL.com","user_id":4,"created_at":"2021-04-21T23:05:49.689Z"}},{"id":"10","type":"post","attributes":{"content":"hey
         i just got hired at a sick new comapny","link":null,"user_id":5,"created_at":"2021-04-21T23:05:49.691Z"}}]}'
-  recorded_at: Wed, 21 Apr 2021 23:06:05 GMT
+  recorded_at: Wed, 21 Apr 2021 23:49:33 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1/post
@@ -97,13 +97,13 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"a0933f48d53318688bc40d8947b8cc7a"
+      - W/"bad89ab1cddecd0b6c533127319596e9"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 23124cb2-610f-46c7-93f3-76d7f8515827
+      - c1781d5d-e38d-41b1-abf1-8dd0ffb95808
       X-Runtime:
-      - '0.009256'
+      - '0.005222'
       Transfer-Encoding:
       - chunked
     body:
@@ -111,8 +111,12 @@ http_interactions:
       string: '{"data":[{"id":"1","type":"post","attributes":{"content":"hey did you
         see that lil nas X video?","link":"photoURL.com","user_id":1,"created_at":"2021-04-21T23:05:49.679Z"}},{"id":"2","type":"post","attributes":{"content":"hey
         did you see that create meme?","link":"photoURL.com","user_id":1,"created_at":"2021-04-21T23:05:49.680Z"}},{"id":"3","type":"post","attributes":{"content":"hey
-        did you see that riot footage?","link":null,"user_id":1,"created_at":"2021-04-21T23:05:49.682Z"}}]}'
-  recorded_at: Wed, 21 Apr 2021 23:06:05 GMT
+        did you see that riot footage?","link":null,"user_id":1,"created_at":"2021-04-21T23:05:49.682Z"}},{"id":"11","type":"post","attributes":{"content":"this
+        is my first post","link":"www.google.com","user_id":1,"created_at":"2021-04-21T23:06:06.918Z"}},{"id":"12","type":"post","attributes":{"content":"this
+        is my first post","link":"","user_id":1,"created_at":"2021-04-21T23:06:07.377Z"}},{"id":"13","type":"post","attributes":{"content":"this
+        is my first post","link":"www.google.com","user_id":1,"created_at":"2021-04-21T23:42:16.536Z"}},{"id":"14","type":"post","attributes":{"content":"this
+        is my first post","link":"","user_id":1,"created_at":"2021-04-21T23:42:16.969Z"}}]}'
+  recorded_at: Wed, 21 Apr 2021 23:49:33 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1
@@ -138,16 +142,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3b369191-0659-42af-a3d4-d77b871a20b5
+      - a0e3dce4-8408-4fb0-996b-545f9bfe9b5f
       X-Runtime:
-      - '0.006398'
+      - '0.003017'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"profile","attributes":{"zipcode":"80301","user_id":1,"profile_picture":"http://www.google.com","username":"the
         painter man"}}}'
-  recorded_at: Wed, 21 Apr 2021 23:06:05 GMT
+  recorded_at: Wed, 21 Apr 2021 23:49:33 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1
@@ -173,16 +177,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4a84b87e-cd59-4e15-adf4-56ca41d8903c
+      - '0981d7ac-3d78-4bec-84eb-d72a8050b4eb'
       X-Runtime:
-      - '0.006603'
+      - '0.003130'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"profile","attributes":{"zipcode":"80301","user_id":1,"profile_picture":"http://www.google.com","username":"the
         painter man"}}}'
-  recorded_at: Wed, 21 Apr 2021 23:06:05 GMT
+  recorded_at: Wed, 21 Apr 2021 23:49:33 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profile/1/tags
@@ -208,13 +212,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7e68b514-97c9-4fd2-8f86-7fb6b3bfa93c
+      - 8869f542-6c04-48cb-b6dd-beacf5bd3f16
       X-Runtime:
-      - '0.003878'
+      - '0.004291'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"tag","attributes":{"name":"Painter"}},{"id":"3","type":"tag","attributes":{"name":"Sculpter"}}]}'
-  recorded_at: Wed, 21 Apr 2021 23:06:05 GMT
+  recorded_at: Wed, 21 Apr 2021 23:49:33 GMT
 recorded_with: VCR 6.0.0

@@ -14,9 +14,8 @@ RSpec.describe 'Welcome Page' do
       expect(page).to have_content("LEVEL")
     end
 
-    it "they should see a button to log in with google" do
-      VCR.use_cassette("see_a_button_to_log_in_with_google",
-        match_requests_on: %i[body]) do
+    it "they should see a button to log in with google", :vcr do
+
         expect(page).to have_button('Log in/Register with Google')
         login
         expect(current_path).to eq(register_path)
@@ -27,14 +26,12 @@ RSpec.describe 'Welcome Page' do
 
         click_button 'Register'
         expect(current_path).to eq(dashboard_index_path)
-      end
+
     end
   end
 
-  describe 'It logs out/log  in' do
+  describe 'It logs out/log  in', :vcr do
     it 'happy path' do
-      VCR.use_cassette("it_logs_out_logs_in",
-        match_requests_on: %i[body]) do
         expect(page).to have_button('Log in/Register with Google')
         login
         expect(current_path).to eq(register_path)
@@ -48,7 +45,6 @@ RSpec.describe 'Welcome Page' do
 
         click_link 'Log Out'
         expect(current_path).to eq(root_path)
-      end
     end
   end
 end

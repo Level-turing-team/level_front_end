@@ -25,16 +25,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ab77c2a5-5d63-4d3d-8733-0fde9fce12c3
+      - c3d2d302-c37d-4386-940c-e93e321cf19a
       X-Runtime:
-      - '0.004246'
+      - '0.004610'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"16","type":"gallery","attributes":{"user_id":7,"name":"Profile","created_at":"2021-04-21T23:05:49.725Z","updated_at":"2021-04-21T23:05:49.725Z","photo_url":"http://www.example.com"}},{"id":"17","type":"gallery","attributes":{"user_id":7,"name":"test
         gallery","created_at":"2021-04-21T23:06:08.051Z","updated_at":"2021-04-21T23:06:08.051Z","photo_url":null}}]}'
-  recorded_at: Wed, 21 Apr 2021 23:06:08 GMT
+  recorded_at: Wed, 21 Apr 2021 23:49:36 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/7/galleries/16/photos
@@ -60,16 +60,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 92e5a7c5-854a-4a37-93d4-a1609cac5297
+      - a9ba7bbc-b7ad-45ba-9bbf-5b81566ed979
       X-Runtime:
-      - '0.009668'
+      - '0.006266'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"30","type":"photo","attributes":{"description":"feature
         photo","url":"https://media.wired.com/photos/5cdefb92b86e041493d389df/191:100/w_1500,h_785,c_limit/Culture-Grumpy-Cat-487386121.jpg","created_at":"2021-04-21T23:05:49.819Z","updated_at":"2021-04-21T23:05:49.819Z","gallery_id":16}}]}'
-  recorded_at: Wed, 21 Apr 2021 23:06:08 GMT
+  recorded_at: Wed, 21 Apr 2021 23:49:36 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/7/galleries/17/photos
@@ -91,18 +91,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"857221f396250e55e42fb0355a5febd0"
+      - W/"ff508fba5606174034b986ad1544962e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - dfca111f-c46b-4cbd-84f6-14890e111c6a
+      - 1d84b18b-cef3-4b1d-b81a-45233fe19df2
       X-Runtime:
-      - '0.014831'
+      - '0.009230'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"31","type":"photo","attributes":{"description":"test
-        photo","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--fe1227e1532832de827f4916084b6f7daff39f2d/fluff.jpg","created_at":"2021-04-21T23:06:08.054Z","updated_at":"2021-04-21T23:06:08.145Z","gallery_id":17}}]}'
-  recorded_at: Wed, 21 Apr 2021 23:06:08 GMT
+        photo","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--fe1227e1532832de827f4916084b6f7daff39f2d/fluff.jpg","created_at":"2021-04-21T23:06:08.054Z","updated_at":"2021-04-21T23:06:08.145Z","gallery_id":17}},{"id":"34","type":"photo","attributes":{"description":"test
+        photo","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5341d90f75756c106d10657ed09434c5acabaa67/fluff.jpg","created_at":"2021-04-21T23:42:17.598Z","updated_at":"2021-04-21T23:42:17.688Z","gallery_id":17}},{"id":"36","type":"photo","attributes":{"description":"test
+        photo","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2d4c62ce1525656794567542335a9307685eb50e/fluff.jpg","created_at":"2021-04-21T23:49:35.944Z","updated_at":"2021-04-21T23:49:35.996Z","gallery_id":17}}]}'
+  recorded_at: Wed, 21 Apr 2021 23:49:36 GMT
 recorded_with: VCR 6.0.0

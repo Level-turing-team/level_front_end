@@ -59,4 +59,21 @@ RSpec.describe 'As an authenticated user' do
     page.find('.photo-1')[:src]
     page.status_code.should be 200
   end
+
+  scenario 'I can add photo to my gallery' do
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+    visit galleries_path
+
+    expect(page).to have_button("Upload Photos")
+
+    click_on 'Upload Photos'
+    expect(page).to have_field(:description)
+    within("#photo-upload") do
+      find(:css, "#galleries_16").set(false)
+      fill_in :name, with: 'test gallery'
+      fill_in :description, with: 'test photo'
+      attach_file("images", Rails.root + "spec/fixtures/fluff.jpg")
+      click_on 'Upload'
+    end
+  end
 end
