@@ -25,14 +25,14 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5dfb79b7-2b17-45de-a699-df39b9de284d
+      - 3355ce29-6726-4fe1-b2d2-38a17791a1e6
       X-Runtime:
-      - '0.004292'
+      - '0.003726'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"profile","attributes":{"zipcode":"80301","user_id":1,"profile_picture":"http://www.google.com","username":"the
         painter man"}}}'
-  recorded_at: Tue, 20 Apr 2021 20:59:21 GMT
+  recorded_at: Wed, 21 Apr 2021 22:09:48 GMT
 recorded_with: VCR 6.0.0

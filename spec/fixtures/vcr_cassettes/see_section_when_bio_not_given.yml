@@ -25,15 +25,49 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 901f04e0-596f-4e1e-9ac5-5cf3f806db77
+      - '08355006-d3b4-4b36-af04-080429c1fda2'
       X-Runtime:
-      - '0.746166'
+      - '1.585767'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":0}'
-  recorded_at: Tue, 20 Apr 2021 20:59:11 GMT
+  recorded_at: Wed, 21 Apr 2021 22:09:35 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/6/circle
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f63706ab-7d14-428e-a198-f1b7c8449d05
+      X-Runtime:
+      - '0.004446'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Wed, 21 Apr 2021 22:09:35 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profile/6/tags
@@ -59,15 +93,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 29d2f569-9128-4e9e-b68c-fbfd2d12fbed
+      - ffa3f33b-2145-4375-b267-ca58fe563527
       X-Runtime:
-      - '0.020213'
+      - '0.005292'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"tag","attributes":{"name":"Painter"}}]}'
-  recorded_at: Tue, 20 Apr 2021 20:59:11 GMT
+  recorded_at: Wed, 21 Apr 2021 22:09:35 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/6/post
@@ -93,15 +127,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5db94125-7342-4da2-b39d-2e94052638ce
+      - f8310af7-a4d3-4df5-b056-bd075cafdfa3
       X-Runtime:
-      - '0.004424'
+      - '0.004472'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Tue, 20 Apr 2021 20:59:11 GMT
+  recorded_at: Wed, 21 Apr 2021 22:09:35 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/6/galleries
@@ -123,19 +157,123 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      - W/"01a3b28ec263e0af77d3ccaf2661a8fc"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6db6441f-c525-4950-ae43-2fac3e52e0ce
+      - 95023a1b-4b95-4ee8-8b12-82febcc05d18
       X-Runtime:
-      - '0.003855'
+      - '0.004823'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Tue, 20 Apr 2021 20:59:11 GMT
+      string: '{"data":[{"id":"15","type":"gallery","attributes":{"user_id":6,"name":"Profile","created_at":"2021-04-21T20:33:38.907Z","updated_at":"2021-04-21T20:33:38.907Z","photo_url":"http://www.example.com"}}]}'
+  recorded_at: Wed, 21 Apr 2021 22:09:35 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/6/galleries/15/photos
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"b5242e3e1666e32b95b59b526255ec3e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9fd11095-bc8e-4958-817f-03ca4b0bb5f3
+      X-Runtime:
+      - '0.007825'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"29","type":"photo","attributes":{"description":"feature
+        photo","url":"https://media.wired.com/photos/5cdefb92b86e041493d389df/191:100/w_1500,h_785,c_limit/Culture-Grumpy-Cat-487386121.jpg","created_at":"2021-04-21T20:33:39.098Z","updated_at":"2021-04-21T20:33:39.098Z","gallery_id":15}}]}'
+  recorded_at: Wed, 21 Apr 2021 22:09:35 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/6/galleries
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"01a3b28ec263e0af77d3ccaf2661a8fc"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c978481b-e44d-4c9b-a955-e2d39a4e79d2
+      X-Runtime:
+      - '0.004709'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"15","type":"gallery","attributes":{"user_id":6,"name":"Profile","created_at":"2021-04-21T20:33:38.907Z","updated_at":"2021-04-21T20:33:38.907Z","photo_url":"http://www.example.com"}}]}'
+  recorded_at: Wed, 21 Apr 2021 22:09:35 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/6/galleries/15/photos
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"b5242e3e1666e32b95b59b526255ec3e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 33d77501-28a7-47ec-a5d1-7212594c8b9d
+      X-Runtime:
+      - '0.005225'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"29","type":"photo","attributes":{"description":"feature
+        photo","url":"https://media.wired.com/photos/5cdefb92b86e041493d389df/191:100/w_1500,h_785,c_limit/Culture-Grumpy-Cat-487386121.jpg","created_at":"2021-04-21T20:33:39.098Z","updated_at":"2021-04-21T20:33:39.098Z","gallery_id":15}}]}'
+  recorded_at: Wed, 21 Apr 2021 22:09:35 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/6
@@ -157,53 +295,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"2c099a34eb577120aea092df60b3df2e"
+      - W/"e0ee4264d785e5cf0b130e47c76b360d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 18c057d1-d5a9-4b6b-8388-5fc675bf337c
+      - 94670f46-9e59-4f73-815d-71a9115b1129
       X-Runtime:
-      - '0.003169'
+      - '0.003216'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"86","type":"profile","attributes":{"zipcode":"80228","user_id":6,"profile_picture":"http://www.google.com","username":"former
+      string: '{"data":{"id":"6","type":"profile","attributes":{"zipcode":"80228","user_id":6,"profile_picture":"http://www.google.com","username":"former
         salesman"}}}'
-  recorded_at: Tue, 20 Apr 2021 20:59:11 GMT
-- request:
-    method: get
-    uri: http://localhost:3001/api/v1/profiles/6
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.4.1
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"2c099a34eb577120aea092df60b3df2e"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 676f6bdf-a75d-4eb8-947b-6c76e6d24bec
-      X-Runtime:
-      - '0.002680'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"86","type":"profile","attributes":{"zipcode":"80228","user_id":6,"profile_picture":"http://www.google.com","username":"former
-        salesman"}}}'
-  recorded_at: Tue, 20 Apr 2021 20:59:11 GMT
+  recorded_at: Wed, 21 Apr 2021 22:09:35 GMT
 recorded_with: VCR 6.0.0

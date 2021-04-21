@@ -14,7 +14,7 @@ RSpec.describe BackendFacade, type: :model do
       expect(@profile.id).to eq(1)
       expect(@profile.username).to eq('the painter man')
       expect(@profile.circle[0].class).to eq(Circle)
-      expect(@profile.circle.length).to eq(4)
+      expect(@profile.circle.length).to eq(6)
       expect(@profile.circle_posts[0].class).to eq(Post)
       expect(@profile.circle_posts.length).to eq(7)
       expect(@profile.posts[0].class).to eq(Post)

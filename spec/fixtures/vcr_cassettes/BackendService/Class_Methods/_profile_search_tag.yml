@@ -21,19 +21,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"1b3c8021bb3c41bdf9b8ad1607d8a00f"
+      - W/"3ba43b5bcfe0477bffbeecadd8966ae9"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 560dbddd-f3ad-4792-9d2a-b28acd89ef1e
+      - 2bfb04fa-a950-4ee3-8162-545c92fb19e7
       X-Runtime:
-      - '0.008757'
+      - '0.014795'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"3","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}},{"id":"4","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
-        by jim"}},{"id":"86","type":"profile","attributes":{"zipcode":"80228","user_id":6,"profile_picture":"http://www.google.com","username":"former
+        by jim"}},{"id":"6","type":"profile","attributes":{"zipcode":"80228","user_id":6,"profile_picture":"http://www.google.com","username":"former
         salesman"}}]}'
-  recorded_at: Tue, 20 Apr 2021 20:59:21 GMT
+  recorded_at: Wed, 21 Apr 2021 22:09:48 GMT
 recorded_with: VCR 6.0.0

@@ -18,7 +18,7 @@ RSpec.describe BackendService, type: :model do
     it '#user_circle', :vcr do
       @response = BackendService.user_circle(@user_1.id)
 
-      expect(@response[:data].length).to eq(4)
+      expect(@response[:data].length).to eq(6)
       expect(@response[:data][0]).to be_a(Hash)
       expect(@response[:data][0].keys.count).to eq(3)
       expect(@response[:data].first.keys).to eq([:id, :type, :attributes])
@@ -51,7 +51,7 @@ RSpec.describe BackendService, type: :model do
     it '#user_posts', :vcr do
       @response = BackendService.user_posts(@user_1.id)
 
-      expect(@response[:data].length).to eq(5)
+      expect(@response[:data].length).to eq(3)
       expect(@response[:data].first).to be_a(Hash)
       expect(@response[:data].first.keys.count).to eq(3)
       expect(@response[:data].first.keys).to eq([:id, :type, :attributes])
