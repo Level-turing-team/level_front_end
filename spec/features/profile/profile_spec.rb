@@ -71,6 +71,7 @@ RSpec.describe 'Profile Page' do
       match_requests_on: %i[body]) do
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_4)
         allow_any_instance_of(ActionDispatch::Request).to receive(:session) { { user_id: '101' } }
+          
         visit profile_path
         within("#artist-bio") do
           expect(page).to have_content("Nothing to see here!")
@@ -128,9 +129,11 @@ RSpec.describe 'Profile Page' do
         visit profile_path
 
         expect(current_path).to eq(profile_path)
-        within ("#profilepicture") do 
-          expect(page).to have_xpath('//img[@src="http://www.google.com"]')
-        end
+        
+        page.find('#profilepicture')[:src]
+        page.status_code.should be 200
+          
+        
         within ("#username") do 
           expect(page).to have_content(@user_1.username)
         end
@@ -159,6 +162,28 @@ RSpec.describe 'Profile Page' do
           expect(page).to have_content('hey checkout my create shoes?')
           expect(page).to have_link('photoURL.com')
         end
+      end
+    end
+    it "displays the featured photo of every gallery a user has" do 
+      VCR.use_cassette("see_featured_gallery_photo",
+        match_requests_on: %i[body]) do
+          allow_any_instance_of(ActionDispatch::Request).to receive(:session) { { user_id: '123' } }
+          visit profile_path
+
+          page.find("#gallerypicture-1")[:src]
+          page.status_code.should be 200
+
+          page.find("#gallerypicture-9")[:src]
+          page.status_code.should be 200
+
+          page.find("#gallerypicture-10")[:src]
+          page.status_code.should be 200
+          within("#gallerypicture-10") do 
+            expect(page).to have_content("Profile")
+            click_link "Profile"
+            
+            expect(current_path).to eq(galleries_path)
+          end
       end
     end
   end

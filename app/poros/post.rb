@@ -5,8 +5,7 @@ class Post
               :created_at
 
   def initialize(data)
-    @user = data[:attributes][:user_id]
-    # @user = find_user_by_id(data[:attributes][:user_id])
+    @user = find_user_by_id(data[:attributes][:user_id])
     @content = data[:attributes][:content]
     @created_at = data[:attributes][:created_at]
     @link = data[:attributes][:link]
@@ -24,7 +23,7 @@ class Post
     end
   end
 
-  # def find_user_by_id
-  #   User.find(@user)
-  # end
+  def find_user_by_id(user_id)
+    User.find(user_id)
+  end
 end

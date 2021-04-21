@@ -16,7 +16,7 @@
 		<p>Link to other page  <%= link_to("other profile", profile_path(lookup: "2")) %> </p>
 
     <section id='profilepicture'>
-      <p><%= image_tag @profile_data.profile_photo unless @profile_data.profile_photo.nil?%></p>
+      <p><%= image_tag @profile_data.profile_photo unless @profile_data.profile_photo.nil? %></p>
     </section>
 
       <section id="distance">
@@ -55,6 +55,16 @@
       <br>
     <% end %>
   </section>
+
+	<section id="galleries">
+		<% @profile_data.galleries.each do |gallery| %>
+			<section id="gallerypicture-<%= gallery.id %>">
+			<%= image_tag gallery.photos.first.url unless gallery.photos.first.url.nil? %>
+			<%= link_to gallery.name, galleries_path({gallery_id: gallery.id}) %>
+			<br>
+			<% end %>
+			</section>
+	</section>
 
 <% end %>
 
