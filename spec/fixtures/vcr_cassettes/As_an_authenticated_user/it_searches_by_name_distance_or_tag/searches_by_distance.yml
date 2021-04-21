@@ -1,0 +1,1840 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/1/discover
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f76144aad54aa53463ca3d8d974f3438"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - cf4eac43-87e2-46eb-bd08-719b224cecc8
+      X-Runtime:
+      - '1.077721'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"2","type":"profile","attributes":{"zipcode":"80305","user_id":2,"profile_picture":"http://www.google.com","username":"korn"}},{"id":"3","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}},{"id":"4","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
+        by jim"}},{"id":"5","type":"profile","attributes":{"zipcode":"80544","user_id":5,"profile_picture":"http://www.google.com","username":"arteest"}}]}'
+  recorded_at: Wed, 21 Apr 2021 22:56:31 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/photos
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"1692ac5f33b184125245fa7bbccb821c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 839612ee-449a-42fa-9f12-a2c2aae7f41e
+      X-Runtime:
+      - '0.019926'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"23","type":"photo","attributes":{"description":"feature
+        photo","url":"http:www.example.com","created_at":"2021-04-21T20:35:56.221Z","updated_at":"2021-04-21T20:35:56.221Z","gallery_id":9}},{"id":"22","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.217Z","updated_at":"2021-04-21T20:35:56.217Z","gallery_id":8}},{"id":"21","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.211Z","updated_at":"2021-04-21T20:35:56.211Z","gallery_id":8}},{"id":"20","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.206Z","updated_at":"2021-04-21T20:35:56.206Z","gallery_id":8}},{"id":"19","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.201Z","updated_at":"2021-04-21T20:35:56.201Z","gallery_id":8}},{"id":"18","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.196Z","updated_at":"2021-04-21T20:35:56.196Z","gallery_id":7}},{"id":"17","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.191Z","updated_at":"2021-04-21T20:35:56.191Z","gallery_id":7}},{"id":"16","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.186Z","updated_at":"2021-04-21T20:35:56.186Z","gallery_id":7}},{"id":"15","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.182Z","updated_at":"2021-04-21T20:35:56.182Z","gallery_id":6}},{"id":"14","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.177Z","updated_at":"2021-04-21T20:35:56.177Z","gallery_id":6}},{"id":"13","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.172Z","updated_at":"2021-04-21T20:35:56.172Z","gallery_id":6}},{"id":"12","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.167Z","updated_at":"2021-04-21T20:35:56.167Z","gallery_id":5}},{"id":"11","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.162Z","updated_at":"2021-04-21T20:35:56.162Z","gallery_id":5}},{"id":"10","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.158Z","updated_at":"2021-04-21T20:35:56.158Z","gallery_id":5}},{"id":"9","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.153Z","updated_at":"2021-04-21T20:35:56.153Z","gallery_id":4}},{"id":"8","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.149Z","updated_at":"2021-04-21T20:35:56.149Z","gallery_id":4}},{"id":"7","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.144Z","updated_at":"2021-04-21T20:35:56.144Z","gallery_id":3}},{"id":"6","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.139Z","updated_at":"2021-04-21T20:35:56.139Z","gallery_id":3}},{"id":"5","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.134Z","updated_at":"2021-04-21T20:35:56.134Z","gallery_id":2}},{"id":"4","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.130Z","updated_at":"2021-04-21T20:35:56.130Z","gallery_id":2}},{"id":"3","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.124Z","updated_at":"2021-04-21T20:35:56.124Z","gallery_id":1}},{"id":"2","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.119Z","updated_at":"2021-04-21T20:35:56.119Z","gallery_id":1}},{"id":"1","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.114Z","updated_at":"2021-04-21T20:35:56.114Z","gallery_id":1}}]}'
+  recorded_at: Wed, 21 Apr 2021 22:56:31 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/1/search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - baf5243c-cd70-467f-a22b-a98475a9cd30
+      X-Runtime:
+      - '0.015081'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{},"error":"invalid parameters"}'
+  recorded_at: Wed, 21 Apr 2021 22:56:31 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/1/discover
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f76144aad54aa53463ca3d8d974f3438"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5a1b2abd-28e7-4ca3-9c7c-18dbc92cd077
+      X-Runtime:
+      - '1.802824'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"2","type":"profile","attributes":{"zipcode":"80305","user_id":2,"profile_picture":"http://www.google.com","username":"korn"}},{"id":"3","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}},{"id":"4","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
+        by jim"}},{"id":"5","type":"profile","attributes":{"zipcode":"80544","user_id":5,"profile_picture":"http://www.google.com","username":"arteest"}}]}'
+  recorded_at: Wed, 21 Apr 2021 22:56:33 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/photos
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"1692ac5f33b184125245fa7bbccb821c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 703fa0ed-c967-42a9-9ab5-6a3f95cef68c
+      X-Runtime:
+      - '0.047075'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"23","type":"photo","attributes":{"description":"feature
+        photo","url":"http:www.example.com","created_at":"2021-04-21T20:35:56.221Z","updated_at":"2021-04-21T20:35:56.221Z","gallery_id":9}},{"id":"22","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.217Z","updated_at":"2021-04-21T20:35:56.217Z","gallery_id":8}},{"id":"21","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.211Z","updated_at":"2021-04-21T20:35:56.211Z","gallery_id":8}},{"id":"20","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.206Z","updated_at":"2021-04-21T20:35:56.206Z","gallery_id":8}},{"id":"19","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.201Z","updated_at":"2021-04-21T20:35:56.201Z","gallery_id":8}},{"id":"18","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.196Z","updated_at":"2021-04-21T20:35:56.196Z","gallery_id":7}},{"id":"17","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.191Z","updated_at":"2021-04-21T20:35:56.191Z","gallery_id":7}},{"id":"16","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.186Z","updated_at":"2021-04-21T20:35:56.186Z","gallery_id":7}},{"id":"15","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.182Z","updated_at":"2021-04-21T20:35:56.182Z","gallery_id":6}},{"id":"14","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.177Z","updated_at":"2021-04-21T20:35:56.177Z","gallery_id":6}},{"id":"13","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.172Z","updated_at":"2021-04-21T20:35:56.172Z","gallery_id":6}},{"id":"12","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.167Z","updated_at":"2021-04-21T20:35:56.167Z","gallery_id":5}},{"id":"11","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.162Z","updated_at":"2021-04-21T20:35:56.162Z","gallery_id":5}},{"id":"10","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.158Z","updated_at":"2021-04-21T20:35:56.158Z","gallery_id":5}},{"id":"9","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.153Z","updated_at":"2021-04-21T20:35:56.153Z","gallery_id":4}},{"id":"8","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.149Z","updated_at":"2021-04-21T20:35:56.149Z","gallery_id":4}},{"id":"7","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.144Z","updated_at":"2021-04-21T20:35:56.144Z","gallery_id":3}},{"id":"6","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.139Z","updated_at":"2021-04-21T20:35:56.139Z","gallery_id":3}},{"id":"5","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.134Z","updated_at":"2021-04-21T20:35:56.134Z","gallery_id":2}},{"id":"4","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.130Z","updated_at":"2021-04-21T20:35:56.130Z","gallery_id":2}},{"id":"3","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.124Z","updated_at":"2021-04-21T20:35:56.124Z","gallery_id":1}},{"id":"2","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.119Z","updated_at":"2021-04-21T20:35:56.119Z","gallery_id":1}},{"id":"1","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.114Z","updated_at":"2021-04-21T20:35:56.114Z","gallery_id":1}}]}'
+  recorded_at: Wed, 21 Apr 2021 22:56:33 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/1/search?radius=50
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"abe578a0fb0b934b5e51f3eb1697dde7"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3d8b3473-1d39-43d8-8793-2d5f1732d063
+      X-Runtime:
+      - '2.216770'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"2","type":"profile","attributes":{"zipcode":"80305","user_id":2,"profile_picture":"http://www.google.com","username":"korn"}},{"id":"3","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}},{"id":"4","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
+        by jim"}},{"id":"5","type":"profile","attributes":{"zipcode":"80544","user_id":5,"profile_picture":"http://www.google.com","username":"arteest"}},{"id":"6","type":"profile","attributes":{"zipcode":"80228","user_id":6,"profile_picture":"http://www.google.com","username":"former
+        salesman"}},{"id":"7","type":"profile","attributes":{"zipcode":"80022","user_id":7,"profile_picture":null,"username":"Pie"}}]}'
+  recorded_at: Wed, 21 Apr 2021 22:56:39 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"6a784772522809f342090705d6e48259"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 32445cf4-602b-4dcf-b8c7-0cceed9c39ba
+      X-Runtime:
+      - '0.011895'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"profile","attributes":{"zipcode":"80305","user_id":2,"profile_picture":"http://www.google.com","username":"korn"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:56:39 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"6a784772522809f342090705d6e48259"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 74e8e8bc-d910-47fe-86b3-3c45d8b97810
+      X-Runtime:
+      - '0.008270'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"profile","attributes":{"zipcode":"80305","user_id":2,"profile_picture":"http://www.google.com","username":"korn"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:56:39 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"6a784772522809f342090705d6e48259"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e5fd0edb-7046-434e-a093-c9f2afc4aa30
+      X-Runtime:
+      - '0.005818'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"profile","attributes":{"zipcode":"80305","user_id":2,"profile_picture":"http://www.google.com","username":"korn"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:56:39 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"96e8e039ea2cb122dd997a8f77d81505"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 065b6991-f92e-4895-9963-9e8b1379d35b
+      X-Runtime:
+      - '0.004268'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:56:39 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"96e8e039ea2cb122dd997a8f77d81505"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d296e5f1-64db-477e-9c8a-c1bb840afa57
+      X-Runtime:
+      - '0.015613'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:56:39 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"96e8e039ea2cb122dd997a8f77d81505"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 14a44613-05f8-4fcf-a266-b1a776a2264d
+      X-Runtime:
+      - '0.018907'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:56:39 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f64e22568d34d01aa5b74442e63c7cb3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 58a2f9fc-33e2-4206-af78-e6b0ea04b70f
+      X-Runtime:
+      - '0.005180'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"4","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
+        by jim"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:56:39 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f64e22568d34d01aa5b74442e63c7cb3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1cb4e88f-558b-4223-a43f-bc635b99aa8c
+      X-Runtime:
+      - '0.014445'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"4","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
+        by jim"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:56:39 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f64e22568d34d01aa5b74442e63c7cb3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d18025b5-6a9b-459d-8781-ed7475dcd691
+      X-Runtime:
+      - '0.005444'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"4","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
+        by jim"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:56:39 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8b767850f3b75c80e672a6e250166cf1"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 97e9ec69-a75c-4d73-9d31-937ee9b43c18
+      X-Runtime:
+      - '0.015951'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5","type":"profile","attributes":{"zipcode":"80544","user_id":5,"profile_picture":"http://www.google.com","username":"arteest"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:56:39 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8b767850f3b75c80e672a6e250166cf1"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 475083d3-b9c9-42e1-8446-9444169adf0a
+      X-Runtime:
+      - '0.007532'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5","type":"profile","attributes":{"zipcode":"80544","user_id":5,"profile_picture":"http://www.google.com","username":"arteest"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:56:40 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8b767850f3b75c80e672a6e250166cf1"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 01c2a9fd-60b7-40ad-b2a1-4d5c8d922f8c
+      X-Runtime:
+      - '0.004553'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5","type":"profile","attributes":{"zipcode":"80544","user_id":5,"profile_picture":"http://www.google.com","username":"arteest"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:56:40 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"e0ee4264d785e5cf0b130e47c76b360d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7c19ae43-2ec9-457c-9101-0efca740b3e4
+      X-Runtime:
+      - '0.010209'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"6","type":"profile","attributes":{"zipcode":"80228","user_id":6,"profile_picture":"http://www.google.com","username":"former
+        salesman"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:56:40 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"e0ee4264d785e5cf0b130e47c76b360d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b430b98e-9c6e-4947-bf9f-8148660f0c10
+      X-Runtime:
+      - '0.013989'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"6","type":"profile","attributes":{"zipcode":"80228","user_id":6,"profile_picture":"http://www.google.com","username":"former
+        salesman"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:56:40 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"e0ee4264d785e5cf0b130e47c76b360d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - cf94d645-3eae-45d5-b62e-7c1ff2e4bdb5
+      X-Runtime:
+      - '0.017250'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"6","type":"profile","attributes":{"zipcode":"80228","user_id":6,"profile_picture":"http://www.google.com","username":"former
+        salesman"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:56:40 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/7
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f651ac3ca6e4c635113fa4f6ed3a2efe"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b70abf7f-48ad-49e2-a632-ec392fd2d2a6
+      X-Runtime:
+      - '0.006930'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"7","type":"profile","attributes":{"zipcode":"80022","user_id":7,"profile_picture":null,"username":"Pie"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:56:40 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/7
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f651ac3ca6e4c635113fa4f6ed3a2efe"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9601c967-6dfa-48b7-b20b-0660a9feea0b
+      X-Runtime:
+      - '0.003875'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"7","type":"profile","attributes":{"zipcode":"80022","user_id":7,"profile_picture":null,"username":"Pie"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:56:40 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/7
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f651ac3ca6e4c635113fa4f6ed3a2efe"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6a07bf7d-827d-4451-8558-fb755675aa96
+      X-Runtime:
+      - '0.006623'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"7","type":"profile","attributes":{"zipcode":"80022","user_id":7,"profile_picture":null,"username":"Pie"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:56:40 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/1/search?radius=50
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"abe578a0fb0b934b5e51f3eb1697dde7"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 845a5067-5fe2-4001-9c06-103dd34c3453
+      X-Runtime:
+      - '3.090684'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"2","type":"profile","attributes":{"zipcode":"80305","user_id":2,"profile_picture":"http://www.google.com","username":"korn"}},{"id":"3","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}},{"id":"4","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
+        by jim"}},{"id":"5","type":"profile","attributes":{"zipcode":"80544","user_id":5,"profile_picture":"http://www.google.com","username":"arteest"}},{"id":"6","type":"profile","attributes":{"zipcode":"80228","user_id":6,"profile_picture":"http://www.google.com","username":"former
+        salesman"}},{"id":"7","type":"profile","attributes":{"zipcode":"80022","user_id":7,"profile_picture":null,"username":"Pie"}}]}'
+  recorded_at: Wed, 21 Apr 2021 22:57:04 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"6a784772522809f342090705d6e48259"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7321ea35-67a1-465c-828b-e5f4107ba6b5
+      X-Runtime:
+      - '0.007444'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"profile","attributes":{"zipcode":"80305","user_id":2,"profile_picture":"http://www.google.com","username":"korn"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:57:05 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"6a784772522809f342090705d6e48259"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0513f0a6-18bf-4c93-80a4-56df564cfdfe
+      X-Runtime:
+      - '0.036464'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"profile","attributes":{"zipcode":"80305","user_id":2,"profile_picture":"http://www.google.com","username":"korn"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:57:05 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"6a784772522809f342090705d6e48259"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 06260be2-d27c-467a-ab6d-1c86c8e1c0e0
+      X-Runtime:
+      - '0.003335'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"profile","attributes":{"zipcode":"80305","user_id":2,"profile_picture":"http://www.google.com","username":"korn"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:57:05 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"96e8e039ea2cb122dd997a8f77d81505"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - bf65749e-d334-4316-bff0-397161201c25
+      X-Runtime:
+      - '0.022036'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:57:05 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"96e8e039ea2cb122dd997a8f77d81505"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 206f8881-5f24-49c0-b9c2-92d0946d5df8
+      X-Runtime:
+      - '0.004094'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:57:05 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"96e8e039ea2cb122dd997a8f77d81505"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8668f4f9-5a9a-4ed5-8bfb-ef7c40dd7634
+      X-Runtime:
+      - '0.004721'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:57:05 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f64e22568d34d01aa5b74442e63c7cb3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 45a6c8d4-e8ab-4289-8b66-ddf858faa4b1
+      X-Runtime:
+      - '0.019322'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"4","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
+        by jim"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:57:05 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f64e22568d34d01aa5b74442e63c7cb3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b2030b13-520f-4d84-ae1f-7c7732391c85
+      X-Runtime:
+      - '0.010223'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"4","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
+        by jim"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:57:05 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f64e22568d34d01aa5b74442e63c7cb3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 260a64d2-f387-4228-a0ad-22a188710ec4
+      X-Runtime:
+      - '0.025350'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"4","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
+        by jim"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:57:05 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8b767850f3b75c80e672a6e250166cf1"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2cd11585-67ba-4656-b7bc-cbf8ea0fdc2d
+      X-Runtime:
+      - '0.009303'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5","type":"profile","attributes":{"zipcode":"80544","user_id":5,"profile_picture":"http://www.google.com","username":"arteest"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:57:05 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8b767850f3b75c80e672a6e250166cf1"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 112e73d2-1c9b-4df0-986b-392f33b54099
+      X-Runtime:
+      - '0.013148'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5","type":"profile","attributes":{"zipcode":"80544","user_id":5,"profile_picture":"http://www.google.com","username":"arteest"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:57:05 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8b767850f3b75c80e672a6e250166cf1"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 144a55c0-e8c9-4541-a5cd-25bd4aeec4f4
+      X-Runtime:
+      - '0.008254'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5","type":"profile","attributes":{"zipcode":"80544","user_id":5,"profile_picture":"http://www.google.com","username":"arteest"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:57:05 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"e0ee4264d785e5cf0b130e47c76b360d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 16912713-4150-4e42-9bf0-05c1e2514883
+      X-Runtime:
+      - '0.051008'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"6","type":"profile","attributes":{"zipcode":"80228","user_id":6,"profile_picture":"http://www.google.com","username":"former
+        salesman"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:57:06 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"e0ee4264d785e5cf0b130e47c76b360d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9fbf93d9-2278-4bb7-b4a4-4f023ae316d4
+      X-Runtime:
+      - '0.005435'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"6","type":"profile","attributes":{"zipcode":"80228","user_id":6,"profile_picture":"http://www.google.com","username":"former
+        salesman"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:57:06 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"e0ee4264d785e5cf0b130e47c76b360d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1b108774-2517-4aab-bc78-d3ee0ddf7108
+      X-Runtime:
+      - '0.006102'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"6","type":"profile","attributes":{"zipcode":"80228","user_id":6,"profile_picture":"http://www.google.com","username":"former
+        salesman"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:57:06 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/7
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f651ac3ca6e4c635113fa4f6ed3a2efe"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 05f5403c-bee5-4563-be5d-6c88e40972e1
+      X-Runtime:
+      - '0.010720'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"7","type":"profile","attributes":{"zipcode":"80022","user_id":7,"profile_picture":null,"username":"Pie"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:57:06 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/7
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f651ac3ca6e4c635113fa4f6ed3a2efe"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3b7e9407-a9ef-4e5d-b97a-fc1db7d4c677
+      X-Runtime:
+      - '0.013490'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"7","type":"profile","attributes":{"zipcode":"80022","user_id":7,"profile_picture":null,"username":"Pie"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:57:06 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/7
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f651ac3ca6e4c635113fa4f6ed3a2efe"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5203ad1a-0e57-4458-87e6-2fbc28155ae6
+      X-Runtime:
+      - '0.018972'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"7","type":"profile","attributes":{"zipcode":"80022","user_id":7,"profile_picture":null,"username":"Pie"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:57:06 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/distance?current_user=1&user=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - bc2064d1-60cf-43e8-ad62-2ccf8b5925a9
+      X-Runtime:
+      - '0.802494'
+      Content-Length:
+      - '10724'
+    body:
+      encoding: UTF-8
+      string: '{"status":500,"error":"Internal Server Error","exception":"#\u003cJSON::ParserError:
+        809: unexpected token at ''\u003ch1\u003eInternal Server Error\u003c/h1\u003e''\u003e","traces":{"Application
+        Trace":[{"id":2,"trace":"app/services/zipcode_service.rb:5:in `get_data''"},{"id":3,"trace":"app/facades/zipcode_facade.rb:4:in
+        `distance_between''"},{"id":4,"trace":"app/controllers/api/v1/zipcode_controller.rb:6:in
+        `distance''"}],"Framework Trace":[{"id":0,"trace":"json (2.5.1) lib/json/common.rb:216:in
+        `parse''"},{"id":1,"trace":"json (2.5.1) lib/json/common.rb:216:in `parse''"},{"id":5,"trace":"actionpack
+        (5.2.5) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action''"},{"id":6,"trace":"actionpack
+        (5.2.5) lib/abstract_controller/base.rb:194:in `process_action''"},{"id":7,"trace":"actionpack
+        (5.2.5) lib/action_controller/metal/rendering.rb:30:in `process_action''"},{"id":8,"trace":"actionpack
+        (5.2.5) lib/abstract_controller/callbacks.rb:42:in `block in process_action''"},{"id":9,"trace":"activesupport
+        (5.2.5) lib/active_support/callbacks.rb:98:in `run_callbacks''"},{"id":10,"trace":"actionpack
+        (5.2.5) lib/abstract_controller/callbacks.rb:41:in `process_action''"},{"id":11,"trace":"actionpack
+        (5.2.5) lib/action_controller/metal/rescue.rb:22:in `process_action''"},{"id":12,"trace":"actionpack
+        (5.2.5) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action''"},{"id":13,"trace":"activesupport
+        (5.2.5) lib/active_support/notifications.rb:168:in `block in instrument''"},{"id":14,"trace":"activesupport
+        (5.2.5) lib/active_support/notifications/instrumenter.rb:23:in `instrument''"},{"id":15,"trace":"activesupport
+        (5.2.5) lib/active_support/notifications.rb:168:in `instrument''"},{"id":16,"trace":"actionpack
+        (5.2.5) lib/action_controller/metal/instrumentation.rb:32:in `process_action''"},{"id":17,"trace":"actionpack
+        (5.2.5) lib/action_controller/metal/params_wrapper.rb:256:in `process_action''"},{"id":18,"trace":"activerecord
+        (5.2.5) lib/active_record/railties/controller_runtime.rb:24:in `process_action''"},{"id":19,"trace":"actionpack
+        (5.2.5) lib/abstract_controller/base.rb:134:in `process''"},{"id":20,"trace":"actionview
+        (5.2.5) lib/action_view/rendering.rb:32:in `process''"},{"id":21,"trace":"actionpack
+        (5.2.5) lib/action_controller/metal.rb:191:in `dispatch''"},{"id":22,"trace":"actionpack
+        (5.2.5) lib/action_controller/metal.rb:252:in `dispatch''"},{"id":23,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/routing/route_set.rb:52:in `dispatch''"},{"id":24,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/routing/route_set.rb:34:in `serve''"},{"id":25,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/journey/router.rb:52:in `block in serve''"},{"id":26,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/journey/router.rb:35:in `each''"},{"id":27,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/journey/router.rb:35:in `serve''"},{"id":28,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/routing/route_set.rb:840:in `call''"},{"id":29,"trace":"rack
+        (2.2.3) lib/rack/etag.rb:27:in `call''"},{"id":30,"trace":"rack (2.2.3) lib/rack/conditional_get.rb:27:in
+        `call''"},{"id":31,"trace":"rack (2.2.3) lib/rack/head.rb:12:in `call''"},{"id":32,"trace":"activerecord
+        (5.2.5) lib/active_record/migration.rb:559:in `call''"},{"id":33,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call''"},{"id":34,"trace":"activesupport
+        (5.2.5) lib/active_support/callbacks.rb:98:in `run_callbacks''"},{"id":35,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"id":36,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"id":37,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call''"},{"id":38,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call''"},{"id":39,"trace":"railties
+        (5.2.5) lib/rails/rack/logger.rb:38:in `call_app''"},{"id":40,"trace":"railties
+        (5.2.5) lib/rails/rack/logger.rb:26:in `block in call''"},{"id":41,"trace":"activesupport
+        (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged''"},{"id":42,"trace":"activesupport
+        (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged''"},{"id":43,"trace":"activesupport
+        (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged''"},{"id":44,"trace":"railties
+        (5.2.5) lib/rails/rack/logger.rb:26:in `call''"},{"id":45,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call''"},{"id":46,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call''"},{"id":47,"trace":"rack
+        (2.2.3) lib/rack/runtime.rb:22:in `call''"},{"id":48,"trace":"activesupport
+        (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"id":49,"trace":"actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in
+        `call''"},{"id":50,"trace":"actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in
+        `call''"},{"id":51,"trace":"rack (2.2.3) lib/rack/sendfile.rb:110:in `call''"},{"id":52,"trace":"railties
+        (5.2.5) lib/rails/engine.rb:524:in `call''"},{"id":53,"trace":"puma (3.12.6)
+        lib/puma/configuration.rb:227:in `call''"},{"id":54,"trace":"puma (3.12.6)
+        lib/puma/server.rb:706:in `handle_request''"},{"id":55,"trace":"puma (3.12.6)
+        lib/puma/server.rb:476:in `process_client''"},{"id":56,"trace":"puma (3.12.6)
+        lib/puma/server.rb:334:in `block in run''"},{"id":57,"trace":"puma (3.12.6)
+        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}],"Full Trace":[{"id":0,"trace":"json
+        (2.5.1) lib/json/common.rb:216:in `parse''"},{"id":1,"trace":"json (2.5.1)
+        lib/json/common.rb:216:in `parse''"},{"id":2,"trace":"app/services/zipcode_service.rb:5:in
+        `get_data''"},{"id":3,"trace":"app/facades/zipcode_facade.rb:4:in `distance_between''"},{"id":4,"trace":"app/controllers/api/v1/zipcode_controller.rb:6:in
+        `distance''"},{"id":5,"trace":"actionpack (5.2.5) lib/action_controller/metal/basic_implicit_render.rb:6:in
+        `send_action''"},{"id":6,"trace":"actionpack (5.2.5) lib/abstract_controller/base.rb:194:in
+        `process_action''"},{"id":7,"trace":"actionpack (5.2.5) lib/action_controller/metal/rendering.rb:30:in
+        `process_action''"},{"id":8,"trace":"actionpack (5.2.5) lib/abstract_controller/callbacks.rb:42:in
+        `block in process_action''"},{"id":9,"trace":"activesupport (5.2.5) lib/active_support/callbacks.rb:98:in
+        `run_callbacks''"},{"id":10,"trace":"actionpack (5.2.5) lib/abstract_controller/callbacks.rb:41:in
+        `process_action''"},{"id":11,"trace":"actionpack (5.2.5) lib/action_controller/metal/rescue.rb:22:in
+        `process_action''"},{"id":12,"trace":"actionpack (5.2.5) lib/action_controller/metal/instrumentation.rb:34:in
+        `block in process_action''"},{"id":13,"trace":"activesupport (5.2.5) lib/active_support/notifications.rb:168:in
+        `block in instrument''"},{"id":14,"trace":"activesupport (5.2.5) lib/active_support/notifications/instrumenter.rb:23:in
+        `instrument''"},{"id":15,"trace":"activesupport (5.2.5) lib/active_support/notifications.rb:168:in
+        `instrument''"},{"id":16,"trace":"actionpack (5.2.5) lib/action_controller/metal/instrumentation.rb:32:in
+        `process_action''"},{"id":17,"trace":"actionpack (5.2.5) lib/action_controller/metal/params_wrapper.rb:256:in
+        `process_action''"},{"id":18,"trace":"activerecord (5.2.5) lib/active_record/railties/controller_runtime.rb:24:in
+        `process_action''"},{"id":19,"trace":"actionpack (5.2.5) lib/abstract_controller/base.rb:134:in
+        `process''"},{"id":20,"trace":"actionview (5.2.5) lib/action_view/rendering.rb:32:in
+        `process''"},{"id":21,"trace":"actionpack (5.2.5) lib/action_controller/metal.rb:191:in
+        `dispatch''"},{"id":22,"trace":"actionpack (5.2.5) lib/action_controller/metal.rb:252:in
+        `dispatch''"},{"id":23,"trace":"actionpack (5.2.5) lib/action_dispatch/routing/route_set.rb:52:in
+        `dispatch''"},{"id":24,"trace":"actionpack (5.2.5) lib/action_dispatch/routing/route_set.rb:34:in
+        `serve''"},{"id":25,"trace":"actionpack (5.2.5) lib/action_dispatch/journey/router.rb:52:in
+        `block in serve''"},{"id":26,"trace":"actionpack (5.2.5) lib/action_dispatch/journey/router.rb:35:in
+        `each''"},{"id":27,"trace":"actionpack (5.2.5) lib/action_dispatch/journey/router.rb:35:in
+        `serve''"},{"id":28,"trace":"actionpack (5.2.5) lib/action_dispatch/routing/route_set.rb:840:in
+        `call''"},{"id":29,"trace":"rack (2.2.3) lib/rack/etag.rb:27:in `call''"},{"id":30,"trace":"rack
+        (2.2.3) lib/rack/conditional_get.rb:27:in `call''"},{"id":31,"trace":"rack
+        (2.2.3) lib/rack/head.rb:12:in `call''"},{"id":32,"trace":"activerecord (5.2.5)
+        lib/active_record/migration.rb:559:in `call''"},{"id":33,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call''"},{"id":34,"trace":"activesupport
+        (5.2.5) lib/active_support/callbacks.rb:98:in `run_callbacks''"},{"id":35,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"id":36,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"id":37,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call''"},{"id":38,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call''"},{"id":39,"trace":"railties
+        (5.2.5) lib/rails/rack/logger.rb:38:in `call_app''"},{"id":40,"trace":"railties
+        (5.2.5) lib/rails/rack/logger.rb:26:in `block in call''"},{"id":41,"trace":"activesupport
+        (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged''"},{"id":42,"trace":"activesupport
+        (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged''"},{"id":43,"trace":"activesupport
+        (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged''"},{"id":44,"trace":"railties
+        (5.2.5) lib/rails/rack/logger.rb:26:in `call''"},{"id":45,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call''"},{"id":46,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call''"},{"id":47,"trace":"rack
+        (2.2.3) lib/rack/runtime.rb:22:in `call''"},{"id":48,"trace":"activesupport
+        (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"id":49,"trace":"actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in
+        `call''"},{"id":50,"trace":"actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in
+        `call''"},{"id":51,"trace":"rack (2.2.3) lib/rack/sendfile.rb:110:in `call''"},{"id":52,"trace":"railties
+        (5.2.5) lib/rails/engine.rb:524:in `call''"},{"id":53,"trace":"puma (3.12.6)
+        lib/puma/configuration.rb:227:in `call''"},{"id":54,"trace":"puma (3.12.6)
+        lib/puma/server.rb:706:in `handle_request''"},{"id":55,"trace":"puma (3.12.6)
+        lib/puma/server.rb:476:in `process_client''"},{"id":56,"trace":"puma (3.12.6)
+        lib/puma/server.rb:334:in `block in run''"},{"id":57,"trace":"puma (3.12.6)
+        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}]}}'
+  recorded_at: Wed, 21 Apr 2021 22:57:07 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/distance?current_user=1&user=3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"0c682592cedd12586849c3b26d8a8f04"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 477f26cf-738d-4feb-9007-f2755bb258ae
+      X-Runtime:
+      - '0.786825'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":3.43}'
+  recorded_at: Wed, 21 Apr 2021 22:57:08 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/distance?current_user=1&user=4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"2437ceee543cf98d7361d936e4647091"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5ac6a708-aab9-4b93-8f0e-3153c1808e7c
+      X-Runtime:
+      - '0.760286'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":4.24}'
+  recorded_at: Wed, 21 Apr 2021 22:57:09 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/distance?current_user=1&user=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"bfaa7a0fade4bd6e3cb43270b0372263"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 56a33f54-4de7-4567-9dbc-781c1ca5b6c0
+      X-Runtime:
+      - '0.737391'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":4.4}'
+  recorded_at: Wed, 21 Apr 2021 22:57:10 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/distance?current_user=1&user=6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"479eaf228cbfa355ee8bf4b54c16e617"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b65c5a23-714a-49cd-9aad-75be1f32514d
+      X-Runtime:
+      - '0.707344'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":25.13}'
+  recorded_at: Wed, 21 Apr 2021 22:57:10 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/distance?current_user=1&user=7
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"875ffec127821770366859d0affd5131"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a440a04a-9700-4eef-954c-b32f6b787a9b
+      X-Runtime:
+      - '0.738436'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":22.29}'
+  recorded_at: Wed, 21 Apr 2021 22:57:11 GMT
+recorded_with: VCR 6.0.0
