@@ -110,10 +110,10 @@ RSpec.describe BackendService, type: :model do
     it '#post_user_galleries', :vcr do
       json = File.read('spec/fixtures/new_gallery.json')
       picture_url = ActionDispatch::Http::UploadedFile.new({
-  :filename => 'fluff.jpg',
-  :type => 'image/jpeg',
-  :tempfile => File.new("#{Rails.root}/spec/fixtures/fluff.jpg")
-})
+      :filename => 'fluff.jpg',
+      :type => 'image/jpeg',
+      :tempfile => File.new("#{Rails.root}/spec/fixtures/fluff.jpg")
+      })
       @response = BackendService.post_user_galleries(@user.id, 'gallery', picture_url, 'description')
       expect(JSON.parse(@response.body)["data"]).to eq('gallery created successfully')
       @galleries = GalleryFacade.profile_object(@user.id).galleries
