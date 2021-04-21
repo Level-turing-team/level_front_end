@@ -5,7 +5,7 @@ RSpec.describe BackendService, type: :model do
     @user_1 = User.find(1)
     @user = User.create(
       email: 'example@example.com',
-      id: '6',
+      id: '7',
       google_id: '12345',
       zip: '80022',
       first_name: 'john',
@@ -51,7 +51,7 @@ RSpec.describe BackendService, type: :model do
     it '#user_posts', :vcr do
       @response = BackendService.user_posts(@user_1.id)
 
-      expect(@response[:data].length).to eq(3)
+      expect(@response[:data].length).to eq(5)
       expect(@response[:data].first).to be_a(Hash)
       expect(@response[:data].first.keys.count).to eq(3)
       expect(@response[:data].first.keys).to eq([:id, :type, :attributes])
@@ -97,7 +97,7 @@ RSpec.describe BackendService, type: :model do
     end
 
     it '#get_user_galleries', :vcr do
-      @response = BackendService.get_user_galleries(@user_1.id)
+      @response = BackendService.get_user_galleries(@user.id)
 
       expect(@response[:data].length).to eq(1)
       expect(@response[:data].first).to be_a(Hash)

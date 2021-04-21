@@ -4,7 +4,7 @@ RSpec.describe 'As an authenticated user' do
   before :each do
     @user = User.create(
       email: 'example@example.com',
-      id: '6',
+      id: '7',
       google_id: '12345',
       zip: '80022',
       first_name: 'john',
@@ -45,7 +45,7 @@ RSpec.describe 'As an authenticated user' do
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
 
     visit galleries_path(@user)
-    expect(page).to have_button("Profile")
+    expect(page).to have_button("profile")
     page.find('.image-1')[:src]
     page.status_code.should be 200
   end
