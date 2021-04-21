@@ -41,10 +41,6 @@ class BackendFacade
     end
   end
 
-  def self.gallery_initialize_helper(user_id, gallery_id)
-
-  end
-
   def self.tag_objects(user_id)
     BackendService.tags(user_id)[:data].map do |data|
       Tag.new(data)

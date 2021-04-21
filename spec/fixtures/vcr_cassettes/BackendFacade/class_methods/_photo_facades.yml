@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/1/galleries/1/photos
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"9213c8fd2c307a52fe9509f495c8e673"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 892edc16-9c97-4d6f-8f95-7177cc2b8e0c
+      X-Runtime:
+      - '0.163451'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-18T16:28:20.916Z","updated_at":"2021-04-18T16:28:20.916Z","gallery_id":1}},{"id":"2","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-18T16:28:20.921Z","updated_at":"2021-04-18T16:28:20.921Z","gallery_id":1}},{"id":"3","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-18T16:28:20.924Z","updated_at":"2021-04-18T16:28:20.924Z","gallery_id":1}}]}'
+  recorded_at: Wed, 21 Apr 2021 20:04:34 GMT
+recorded_with: VCR 6.0.0
