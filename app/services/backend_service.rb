@@ -29,6 +29,7 @@ class BackendService
   end
 
   def self.post_user_galleries(user_id, name, picture_url, photo_description)
+    # require 'pry'; binding.pry
     file = Faraday::UploadIO.new(
       picture_url.tempfile.path,
       picture_url.content_type,

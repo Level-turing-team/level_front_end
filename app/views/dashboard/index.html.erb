@@ -63,7 +63,7 @@
 			<div class="card d-flex text-white bg-dark mb-3 scroll-2" style="max-width: 18rem;margin-top: 10px;text-align: center;">
 			  <h2 class="card-header"><%= @profile.username %></h2>
 				<div class="card-body">
-					<%= image_tag "https://coursereport-s3-production.global.ssl.fastly.net/uploads/school/logo/79/original/turing-logo-cr.png", class: "img-circular" %><br>
+					<%= image_tag @profile_photo.url, class: "img-circular" %><br>
 					<h5>Tags</h5>
 					<% @tags.each do |tag| %>
 						<span class="badge rounded-pill bg-info"><%= tag.name %></span>

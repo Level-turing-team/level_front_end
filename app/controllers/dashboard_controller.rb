@@ -4,6 +4,7 @@ class DashboardController < ApplicationController
   def index
     @user = current_user
     @profile = DashboardFacade.profile_object(@user.id)
+    @profile_photo = @profile.galleries.first.photos.first
     @circle = @profile.circle
     @circle_posts = @profile.circle_posts
     @tags = @profile.tags

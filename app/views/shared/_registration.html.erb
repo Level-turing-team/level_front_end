@@ -5,7 +5,7 @@
         <%= f.text_field :username, {class:"form-control", placeholder:"Enter Blog Name"} %>
         <%= f.number_field :zip, {class:"form-control", placeholder:"Enter Zip Code"} %>
         <%= f.text_field :bio, {class:"form-control", placeholder:"Enter Artist Bio"} %>
-        <%= f.text_field :photo_description, {class:"form-control", placeholder:"Enter description of your photo"} %>
+        <%= f.text_field :photo_description, {class:"form-control", placeholder:"Enter description of your photo", required: true} %>
         <%= f.label 'upload your profile picture'%>
         <%= f.file_field :profile_gallery_picture, class:"form-control" %>
         <%= f.submit "Register", class:"btn btn-outline-primary" %>
