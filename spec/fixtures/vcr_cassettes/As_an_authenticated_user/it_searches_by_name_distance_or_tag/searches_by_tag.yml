@@ -25,16 +25,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2d8ad12a-b45b-4bf5-8947-52319fc5b8b9
+      - 24e2cc41-9d40-4937-8b0e-cea957e086ca
       X-Runtime:
-      - '1.763121'
+      - '1.228703'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"2","type":"profile","attributes":{"zipcode":"80305","user_id":2,"profile_picture":"http://www.google.com","username":"korn"}},{"id":"3","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}},{"id":"4","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
         by jim"}},{"id":"5","type":"profile","attributes":{"zipcode":"80544","user_id":5,"profile_picture":"http://www.google.com","username":"arteest"}}]}'
-  recorded_at: Wed, 21 Apr 2021 21:28:10 GMT
+  recorded_at: Wed, 21 Apr 2021 22:41:18 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/photos
@@ -60,9 +60,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c1b08d83-a9d7-46b7-bb09-4b2d0c182930
+      - 2f3ed2f1-3631-4064-9453-4ae8dda85cff
       X-Runtime:
-      - '0.020268'
+      - '0.019885'
       Transfer-Encoding:
       - chunked
     body:
@@ -91,7 +91,7 @@ http_interactions:
         1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.124Z","updated_at":"2021-04-21T20:35:56.124Z","gallery_id":1}},{"id":"2","type":"photo","attributes":{"description":"pic
         1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.119Z","updated_at":"2021-04-21T20:35:56.119Z","gallery_id":1}},{"id":"1","type":"photo","attributes":{"description":"pic
         1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.114Z","updated_at":"2021-04-21T20:35:56.114Z","gallery_id":1}}]}'
-  recorded_at: Wed, 21 Apr 2021 21:28:10 GMT
+  recorded_at: Wed, 21 Apr 2021 22:41:18 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1/search
@@ -115,15 +115,15 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - d7e18edc-fcdf-4ebb-b3bf-ece24087c767
+      - d7e5bfd5-8dde-47c2-bed6-0392819f340e
       X-Runtime:
-      - '0.005414'
+      - '0.010168'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{},"error":"invalid parameters"}'
-  recorded_at: Wed, 21 Apr 2021 21:28:15 GMT
+  recorded_at: Wed, 21 Apr 2021 22:41:18 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1/discover
@@ -149,16 +149,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9baea233-f2f9-4a9a-af38-3e1b79611d8c
+      - 47fdf48b-9c09-4fe6-8590-cf1bf9ec910a
       X-Runtime:
-      - '1.273439'
+      - '8.930223'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"2","type":"profile","attributes":{"zipcode":"80305","user_id":2,"profile_picture":"http://www.google.com","username":"korn"}},{"id":"3","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}},{"id":"4","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
         by jim"}},{"id":"5","type":"profile","attributes":{"zipcode":"80544","user_id":5,"profile_picture":"http://www.google.com","username":"arteest"}}]}'
-  recorded_at: Wed, 21 Apr 2021 21:28:17 GMT
+  recorded_at: Wed, 21 Apr 2021 22:41:27 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/photos
@@ -184,9 +184,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e2fef2a2-bd36-4589-97d2-4d1c25e35f2e
+      - c509b9e0-36e8-47e6-b932-d6c78494f82d
       X-Runtime:
-      - '0.013113'
+      - '0.024087'
       Transfer-Encoding:
       - chunked
     body:
@@ -215,10 +215,10 @@ http_interactions:
         1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.124Z","updated_at":"2021-04-21T20:35:56.124Z","gallery_id":1}},{"id":"2","type":"photo","attributes":{"description":"pic
         1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.119Z","updated_at":"2021-04-21T20:35:56.119Z","gallery_id":1}},{"id":"1","type":"photo","attributes":{"description":"pic
         1","url":"http:www.google.com","created_at":"2021-04-21T20:35:56.114Z","updated_at":"2021-04-21T20:35:56.114Z","gallery_id":1}}]}'
-  recorded_at: Wed, 21 Apr 2021 21:28:17 GMT
+  recorded_at: Wed, 21 Apr 2021 22:41:27 GMT
 - request:
     method: get
-    uri: http://localhost:3001/api/v1/profiles/1/search?name=korn
+    uri: http://localhost:3001/api/v1/profiles/1/search?tag=Painter
     body:
       encoding: US-ASCII
       string: ''
@@ -237,22 +237,24 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"c4f2e8a7c912e285c323caea70f82b4b"
+      - W/"3ba43b5bcfe0477bffbeecadd8966ae9"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 822ee5e9-55bd-4fdc-a913-ac88ed35b953
+      - '08a32d69-4cdf-4828-af41-6e9d4e83e8a8'
       X-Runtime:
-      - '0.013160'
+      - '0.133051'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"2","type":"profile","attributes":{"zipcode":"80305","user_id":2,"profile_picture":"http://www.google.com","username":"korn"}}]}'
-  recorded_at: Wed, 21 Apr 2021 21:28:20 GMT
+      string: '{"data":[{"id":"3","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}},{"id":"4","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
+        by jim"}},{"id":"6","type":"profile","attributes":{"zipcode":"80228","user_id":6,"profile_picture":"http://www.google.com","username":"former
+        salesman"}}]}'
+  recorded_at: Wed, 21 Apr 2021 22:41:27 GMT
 - request:
     method: get
-    uri: http://localhost:3001/api/v1/profiles/2
+    uri: http://localhost:3001/api/v1/profiles/3
     body:
       encoding: US-ASCII
       string: ''
@@ -271,22 +273,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"6a784772522809f342090705d6e48259"
+      - W/"96e8e039ea2cb122dd997a8f77d81505"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 28ef32f4-cf9d-49cc-91f4-7a0fa087a323
+      - 692b7884-b89d-4828-be23-4196369ce876
       X-Runtime:
-      - '0.006389'
+      - '0.005936'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"profile","attributes":{"zipcode":"80305","user_id":2,"profile_picture":"http://www.google.com","username":"korn"}}}'
-  recorded_at: Wed, 21 Apr 2021 21:28:20 GMT
+      string: '{"data":{"id":"3","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:41:27 GMT
 - request:
     method: get
-    uri: http://localhost:3001/api/v1/profiles/2
+    uri: http://localhost:3001/api/v1/profiles/3
     body:
       encoding: US-ASCII
       string: ''
@@ -305,22 +307,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"6a784772522809f342090705d6e48259"
+      - W/"96e8e039ea2cb122dd997a8f77d81505"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3ce12ce0-349f-43b8-87f6-7d5e3bc79c06
+      - 73282cfe-b863-4a87-a5d5-ed2f6b3ae570
       X-Runtime:
-      - '0.008268'
+      - '0.008284'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"profile","attributes":{"zipcode":"80305","user_id":2,"profile_picture":"http://www.google.com","username":"korn"}}}'
-  recorded_at: Wed, 21 Apr 2021 21:28:20 GMT
+      string: '{"data":{"id":"3","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:41:27 GMT
 - request:
     method: get
-    uri: http://localhost:3001/api/v1/profiles/2
+    uri: http://localhost:3001/api/v1/profiles/3
     body:
       encoding: US-ASCII
       string: ''
@@ -339,22 +341,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"6a784772522809f342090705d6e48259"
+      - W/"96e8e039ea2cb122dd997a8f77d81505"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0bd87831-bd72-4225-a8ac-e51eaaa2feb7
+      - 234856ed-e7c7-487d-8365-f61775cd8a42
       X-Runtime:
-      - '0.003726'
+      - '0.005619'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"profile","attributes":{"zipcode":"80305","user_id":2,"profile_picture":"http://www.google.com","username":"korn"}}}'
-  recorded_at: Wed, 21 Apr 2021 21:28:20 GMT
+      string: '{"data":{"id":"3","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:41:27 GMT
 - request:
     method: get
-    uri: http://localhost:3001/api/v1/distance?current_user=1&user=2
+    uri: http://localhost:3001/api/v1/profiles/4
     body:
       encoding: US-ASCII
       string: ''
@@ -373,17 +375,295 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"80bfe6560f8d0c791611233fdbb16307"
+      - W/"f64e22568d34d01aa5b74442e63c7cb3"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 05b1e612-48b8-4633-ac30-2e2d23500d78
+      - 262bdef8-66f4-459e-847a-8a65d5cce81c
       X-Runtime:
-      - '1.157431'
+      - '0.009741'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":5.19}'
-  recorded_at: Wed, 21 Apr 2021 21:28:22 GMT
+      string: '{"data":{"id":"4","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
+        by jim"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:41:27 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f64e22568d34d01aa5b74442e63c7cb3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - bb0ba525-e87f-4ed3-b8d1-51fe446a841d
+      X-Runtime:
+      - '0.024603'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"4","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
+        by jim"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:41:27 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f64e22568d34d01aa5b74442e63c7cb3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - cfbd236a-7f06-4b03-98d6-7e9f564753ab
+      X-Runtime:
+      - '0.014664'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"4","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
+        by jim"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:41:27 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"e0ee4264d785e5cf0b130e47c76b360d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 60f5cb1c-b5b0-4c59-865d-8e779f7390ce
+      X-Runtime:
+      - '0.029228'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"6","type":"profile","attributes":{"zipcode":"80228","user_id":6,"profile_picture":"http://www.google.com","username":"former
+        salesman"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:41:27 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"e0ee4264d785e5cf0b130e47c76b360d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8f23708d-3420-412f-849a-358165987556
+      X-Runtime:
+      - '0.009796'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"6","type":"profile","attributes":{"zipcode":"80228","user_id":6,"profile_picture":"http://www.google.com","username":"former
+        salesman"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:41:27 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"e0ee4264d785e5cf0b130e47c76b360d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5a116f65-b6c7-4d4e-bdc9-f5722b7fccb6
+      X-Runtime:
+      - '0.005352'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"6","type":"profile","attributes":{"zipcode":"80228","user_id":6,"profile_picture":"http://www.google.com","username":"former
+        salesman"}}}'
+  recorded_at: Wed, 21 Apr 2021 22:41:28 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/distance?current_user=1&user=3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"0c682592cedd12586849c3b26d8a8f04"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ecc5d081-9310-44a1-915b-cbc2954ae72c
+      X-Runtime:
+      - '0.454951'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":3.43}'
+  recorded_at: Wed, 21 Apr 2021 22:41:28 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/distance?current_user=1&user=4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"2437ceee543cf98d7361d936e4647091"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2ebd71ee-86fd-4f65-b236-afc74a4c343d
+      X-Runtime:
+      - '0.723873'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":4.24}'
+  recorded_at: Wed, 21 Apr 2021 22:41:29 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/distance?current_user=1&user=6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"479eaf228cbfa355ee8bf4b54c16e617"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b160e810-b78b-4a5a-bd56-4424c4277e30
+      X-Runtime:
+      - '0.461549'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":25.13}'
+  recorded_at: Wed, 21 Apr 2021 22:41:29 GMT
 recorded_with: VCR 6.0.0
