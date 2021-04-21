@@ -8,7 +8,7 @@
 <body>
 
 <center>
-<h1 style="color:white;"> <%= @user.username%>'s Dashboard </h1>
+<h1 style="color:black;"> <%= @user.username%>'s Dashboard </h1>
 </center>
 
 <div class="container">
@@ -16,8 +16,8 @@
 
 		<div class="col">
 
-			<div class="card d-flex text-white bg-dark mb-3 scroll-2" id="my-circle" style="max-width: 18rem;margin-top: 10px;text-align: center;">
-			  <h5 class="card-header">My Circle</h5>
+			<div class="card d-flex text-white mb-3 scroll-2" id="my-circle" style="max-width: 18rem;margin-top: 10px;text-align: center;">
+			  <h5 class="card-header bg-dark">My Circle</h5>
 				  <div class="card-body">
 						<h6 class="card-subtitle mb-2 text-muted">You have <%= @circle.length %> friends</h6>
 							<% @circle.each do |user| %>
@@ -40,8 +40,8 @@
 
 		<div class="col-6">
 
-			<div class="card d-flex text-white bg-dark mb-3" style="max-width: 100%;margin-top: 10px;text-align: center;">
-			  <h5 class="card-header">Create Post</h5>
+			<div class="card d-flex mb-3 background" style="max-width: 100%;margin-top: 10px;text-align: center;">
+			  <h5 class="card-header text-white bg-dark">Create Post</h5>
 				<div style="padding:5px;margin:5px">
 					<%= form_with url: new_post_path, method: :get, local: true do |f| %>
 						<%= f.label :content %><br>
@@ -76,14 +76,14 @@
 </div>
 
 
-<div class="card text-white bg-dark mb-3 scroll" style="width: 1118px;margin-top: 10px;text-align: center;margin-left: auto; margin-right: auto;" id="my-feed">
-	<h5 class="card-header"> My Feed </h5>
+<div class="card mb-3 scroll" style="width: 1118px;margin-top: 10px;text-align: center;margin-left: auto; margin-right: auto;" id="my-feed">
+	<h5 class="card-header text-white bg-dark"> My Feed </h5>
 		<div class="card-body">
-			<h6 class="card-subtitle mb-2 text-muted">Your Circle's Posts</h6>
+			<h6 class="card-subtitle mb-2 text-muted background">Your Circle's Posts</h6>
 			<% @circle_posts.each do |post| %>
 
 			<center>
-				<div class="card mb-3" style="max-width: 1000px;">
+				<div class="card mb-3 background" style="max-width: 1000px;">
 				  <div class="row g-0">
 				    <div class="col-md-2">
 							<%= link_to post.user.username, profile_path(post.user.id) %>

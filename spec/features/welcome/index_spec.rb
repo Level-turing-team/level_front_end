@@ -21,20 +21,10 @@ RSpec.describe 'Welcome Page' do
 
       fill_in 'user[username]', with: "name"
       fill_in 'user[zip]', with: "8111"
+      attach_file("user[profile_gallery_picture]", Rails.root + "spec/fixtures/fluff.jpg")
 
       click_button 'Register'
       expect(current_path).to eq(dashboard_index_path)
-    end
-
-    it 'redirects to register/sad path', :vcr do
-      expect(page).to have_button('Log in/Register with Google')
-      login
-      expect(current_path).to eq(register_path)
-
-      click_button 'Register'
-      click_link 'Log Out'
-      visit dashboard_index_path
-      expect(current_path).to eq(root_path)
     end
   end
 
@@ -46,6 +36,7 @@ RSpec.describe 'Welcome Page' do
 
       fill_in 'user[username]', with: "name"
       fill_in 'user[zip]', with: "8111"
+      attach_file("user[profile_gallery_picture]", Rails.root + "spec/fixtures/fluff.jpg")
 
       click_button 'Register'
       expect(current_path).to eq(dashboard_index_path)
