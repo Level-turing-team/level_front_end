@@ -1,26 +1,24 @@
 class DiscoverFacade < BackendFacade
   def self.profile_object(user_id)
-    user_circle = user_circle_objects(user_id)
-    circle_posts = post_objects(BackendService.circle_posts(user_id))
-    tags = tag_objects(user_id)
-    user_posts = post_objects(BackendService.user_posts(user_id))
-    galleries = gallery_objects(user_id)
     profile_photo = BackendService.get_user(user_id)[:data][:attributes][:profile_picture]
     username = BackendService.get_user(user_id)[:data][:attributes][:username]
+    zipcode = BackendService.get_user(user_id)[:data][:attributes][:zipcode]
     Profile.new({
       id: user_id,
       username: username,
-      circle: user_circle,
-      posts: user_posts,
-      tags: tags,
-      circle_posts: circle_posts,
-      galleries: galleries,
-      profile_photo: profile_photo
+      profile_photo: profile_photo,
+      zipcode: zipcode
     })
   end
 
   def self.photo_objects(user_id, gallery_id)
     BackendService.get_gallery_photos(user_id, gallery_id)[:data].map do |data|
+      Photo.new(data)
+    end
+  end
+
+  def self.recent_photo_objects
+    BackendService.get_all_photos[:data].map do |data|
       Photo.new(data)
     end
   end
@@ -41,8 +39,10 @@ class DiscoverFacade < BackendFacade
     end
   end
 
-  def self.gallery_initialize_helper(user_id, gallery_id)
-
+  def self.search_user_objects(user_id, search_term, search_type)
+    BackendService.profile_search(user_id, search_term, search_type)[:data].map do |data|
+      profile_object(data[:id])
+    end
   end
 
   def self.tag_objects(user_id)
@@ -59,8 +59,8 @@ class DiscoverFacade < BackendFacade
 
   def self.artists_near_me(user_id)
     artists = BackendService.get_artists_near_me(user_id)
-    artists[:data].map do |artist|
-      Artist.combine(artist)
+    artists[:data].flat_map do |data|
+      Profile.new(data[:attributes])
     end
   end
 

@@ -1,7 +1,84 @@
 <%= render 'shared/nav_bar' %>
+<center>
+  <h1 class="font-weight-light mb-4 font-italic text-white"> <%= current_user.username %> Discover Page</h1>
+</center>
 
-<h1> <%= current_user.username %> Discover Page</h1>
+<div class="container">
+    <div class="row align-items-start">
+      <div class="col-4">
+        <div class="card text-white bg-dark mb-3 scroll-2" style="width: 100%;margin-top: 10px;text-align: center;margin-left: auto; margin-right: auto;" id="my-feed">
+        	<h5 class="card-header"> Artists Near Me</h5>
+        		<div class="card-body">
+              <% @profiles.each do |profile| %>
+                    <div class="card">
+                      <img class="card-img-top" src="<%=profile.profile_photo%>" alt="picture">
+                      <div class="card-body">
+                        <%= link_to profile.username, profile_path(lookup: profile.id) %>
+                        <h5>Zipcode: <%= profile.zipcode %></h5>
+                        <p class="card-text"></p>
+                      </div>
+                    </div><br>
+              <% end %>
+        		</div>
+        </div>
 
-<%= render partial: 'artists_near_me', 
-locals: { artists: @artists } %>
+        <div class="card text-white bg-dark mb-3 scroll-2" style="width: 100%;margin-top: 10px;text-align: center;margin-left: auto; margin-right: auto;" id="my-feed">
+        	<h5 class="card-header"> Recent Photos</h5>
+        		<div class="card-body">
+              <% @photos.each do |photo| %>
+                    <div class="card">
+                      <img class="card-img-top" src="<%=photo.url%>" alt="picture">
+                      <div class="card-body" style="color:black">
+                      <%= photo.description %>
+                        <p class="card-text"></p>
+                      </div>
+                    </div><br>
+              <% end %>
+        		</div>
+        </div>
 
+      </div>
+
+    <div class="col-8">
+      <div class="card text-white bg-dark mb-3" style="width: 100%;margin-top: 10px;text-align: center;margin-left: auto; margin-right: auto;">
+        <h5 class="font-weight-light mb-4 font-italic text-white">Custom rounded search bars with input group</h5>
+          <%= form_with url: discover_index_path, method: :get, local: true do |f| %>
+              <div class="input-group">
+                <%= f.label :search_term, "Search" %>
+                <%= f.text_field :search_term, {placeholder:"What're you searching for?", class:"textfield"} %>
+              <div class="input-group-append">
+                <%= f.submit :search, {id:"button-addon1", class:"btn btn-link text-primary"} %>
+              </div>
+            </div>
+              <%= f.radio_button :search_type, 'name', {class:"btn-check", id:"option1", autocomplete:"off"} %>
+              <%= f.label :name, {class:"btn btn-secondary", for:"option1"} %>
+              <%= f.radio_button :search_type, 'radius', {class:"btn-check", id:"option2", autocomplete:"off"} %>
+              <%= f.label :distance, {class:"btn btn-secondary", for:"option2"} %>
+              <%= f.radio_button :search_type, 'tag', {class:"btn-check", id:"option3", autocomplete:"off"} %>
+              <%= f.label :tag, {class:"btn btn-secondary", for:"option3"} %>
+          <% end %>
+      </div>
+
+
+
+       <div class="card d-flex text-white bg-dark mb-3 scroll" style="margin-top:15px">
+			  <h5 class="card-header">Search Results</h5>
+				  <div class="card-body">
+						<h6 class="card-subtitle mb-2 text-muted">You have <%= @search_results.length %> results</h6>
+							<% @search_results.each do |artist| %>
+							<div class="card" style="width: 15rem;">
+							  <div class="card-img-top" alt="profile photo">
+									<%= link_to profile_path(artist) do %>
+										<%= image_tag "#{artist.profile_photo}" %>
+									<% end %>
+                    <%=  current_user.distance(artist.id) %>
+								</div>
+							  <div class="card-body">
+							    <p class="card-text"><%= link_to artist.username, profile_path(artist) %></p>
+							  </div>
+							</div><br>
+							<% end %>
+				  </div>
+			</div>
+    </div>
+</div>

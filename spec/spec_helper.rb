@@ -17,6 +17,14 @@
 # end
 require 'simplecov'
 require 'webmock/rspec'
+
+def test_db_dump
+  @user_1 = User.create!(id: 1,first_name: "Andrew", last_name: "Account", email: "something@example.com", username: "the painter man", google_id: "123", zip: "80301", bio:"music is dope")
+  @user_2 = User.create!(id: 2,first_name: "Joe", last_name: "Account", email: "something2@example.com", username: "korn", google_id: "456", zip: "80305", bio:"i love music")
+  @user_3 = User.create!(id: 3,first_name: "Kris", last_name: "Account", email: "something3@example.com", username: "slipknot", google_id: "789", zip: "80304", bio:"music is dope")
+  @user_4 = User.create!(id: 4,first_name: "Jesus", last_name: "Account", email: "something4@example.com", username: "photos by jim", google_id: "910", zip: "80303", bio:"i love music")
+  @user_5 = User.create!(id: 5,first_name: "Kyle", last_name: "Account", email: "something5@example.com", username: "arteest", google_id: "111", zip: "80544", bio:"music is dope")
+end
 SimpleCov.start 'rails'
 SimpleCov.add_filter ['spec', 'config', 'app/channels/application_cable', 'jobs', 'mailers']
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration

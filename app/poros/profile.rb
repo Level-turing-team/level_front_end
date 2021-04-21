@@ -6,7 +6,8 @@ class Profile
               :tags,
               :circle_posts,
               :profile_photo,
-              :galleries
+              :galleries,
+              :zipcode
 
   def initialize(data)
     @id = data[:id]
@@ -17,5 +18,6 @@ class Profile
     @circle_posts = data[:circle_posts]
     @galleries = data[:galleries]
     @profile_photo = data[:profile_photo]
+    @zipcode = data[:zipcode]
   end
 end
