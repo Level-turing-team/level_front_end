@@ -21,20 +21,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"6e55a6aa79081d4b65e8ea4ee75b5d90"
+      - W/"f76144aad54aa53463ca3d8d974f3438"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a9580ea1-3628-4acb-9419-41f97f572b3d
+      - e7b8123c-2423-4a62-b4c0-8e31a2f64d31
       X-Runtime:
-      - '0.005969'
+      - '0.004518'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"7","type":"profile","attributes":{"zipcode":"80305","user_id":2,"profile_picture":"http://www.google.com","username":"korn"}},{"id":"8","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}},{"id":"9","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
-        by jim"}},{"id":"10","type":"profile","attributes":{"zipcode":"80544","user_id":5,"profile_picture":"http://www.google.com","username":"arteest"}}]}'
-  recorded_at: Tue, 20 Apr 2021 02:35:13 GMT
+      string: '{"data":[{"id":"2","type":"profile","attributes":{"zipcode":"80305","user_id":2,"profile_picture":"http://www.google.com","username":"korn"}},{"id":"3","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}},{"id":"4","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
+        by jim"}},{"id":"5","type":"profile","attributes":{"zipcode":"80544","user_id":5,"profile_picture":"http://www.google.com","username":"arteest"}}]}'
+  recorded_at: Tue, 20 Apr 2021 20:59:06 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1/circle/posts
@@ -56,26 +56,26 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"9b873fae1e3c288070d051154fc008da"
+      - W/"08924d8bf83010adfebe064dca647fcf"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ccb49e48-f7bf-44e9-9dbc-314c1fd7a9fa
+      - e3f6107e-6c75-490b-86d4-86f287db0428
       X-Runtime:
-      - '0.010644'
+      - '0.007896'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"14","type":"post","attributes":{"content":"hey did
-        you see that headline?","link":"photoURL.com","user_id":2,"created_at":"2021-04-18T16:28:20.865Z"}},{"id":"15","type":"post","attributes":{"content":"hey
-        checkout my create shoes?","link":"photoURL.com","user_id":2,"created_at":"2021-04-18T16:28:20.866Z"}},{"id":"16","type":"post","attributes":{"content":"hey
-        did you see software update?","link":"photoURL.com","user_id":3,"created_at":"2021-04-18T16:28:20.868Z"}},{"id":"17","type":"post","attributes":{"content":"hey
-        did you see your mom called?","link":null,"user_id":3,"created_at":"2021-04-18T16:28:20.870Z"}},{"id":"18","type":"post","attributes":{"content":"hey
-        did you see that we''re not friends on FB anymore?","link":"photoURL.com","user_id":4,"created_at":"2021-04-18T16:28:20.872Z"}},{"id":"19","type":"post","attributes":{"content":"hey
-        did you see hear about that create app called ''level''?","link":"photoURL.com","user_id":4,"created_at":"2021-04-18T16:28:20.873Z"}},{"id":"20","type":"post","attributes":{"content":"hey
-        i just got hired at a sick new comapny","link":null,"user_id":5,"created_at":"2021-04-18T16:28:20.875Z"}}]}'
-  recorded_at: Tue, 20 Apr 2021 02:35:13 GMT
+      string: '{"data":[{"id":"4","type":"post","attributes":{"content":"hey did you
+        see that headline?","link":"photoURL.com","user_id":2,"created_at":"2021-04-19T21:22:47.075Z"}},{"id":"5","type":"post","attributes":{"content":"hey
+        checkout my create shoes?","link":"photoURL.com","user_id":2,"created_at":"2021-04-19T21:22:47.077Z"}},{"id":"6","type":"post","attributes":{"content":"hey
+        did you see software update?","link":"photoURL.com","user_id":3,"created_at":"2021-04-19T21:22:47.079Z"}},{"id":"7","type":"post","attributes":{"content":"hey
+        did you see your mom called?","link":null,"user_id":3,"created_at":"2021-04-19T21:22:47.080Z"}},{"id":"8","type":"post","attributes":{"content":"hey
+        did you see that we''re not friends on FB anymore?","link":"photoURL.com","user_id":4,"created_at":"2021-04-19T21:22:47.082Z"}},{"id":"9","type":"post","attributes":{"content":"hey
+        did you see hear about that create app called ''level''?","link":"photoURL.com","user_id":4,"created_at":"2021-04-19T21:22:47.083Z"}},{"id":"10","type":"post","attributes":{"content":"hey
+        i just got hired at a sick new comapny","link":null,"user_id":5,"created_at":"2021-04-19T21:22:47.085Z"}}]}'
+  recorded_at: Tue, 20 Apr 2021 20:59:06 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1/post
@@ -97,22 +97,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"13977c8a9377c93ca19bf8ac8b1d93b2"
+      - W/"5328e8f68779cef577a16c7f5f4dd69d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 35002a2c-fc56-46eb-98f3-93bcf7d5e4c3
+      - ba207d86-102a-4be4-b420-7574f7c3d9a7
       X-Runtime:
-      - '0.006521'
+      - '0.003918'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"11","type":"post","attributes":{"content":"hey did
-        you see that lil nas X video?","link":"photoURL.com","user_id":1,"created_at":"2021-04-18T16:28:20.859Z"}},{"id":"12","type":"post","attributes":{"content":"hey
-        did you see that create meme?","link":"photoURL.com","user_id":1,"created_at":"2021-04-18T16:28:20.861Z"}},{"id":"13","type":"post","attributes":{"content":"hey
-        did you see that riot footage?","link":null,"user_id":1,"created_at":"2021-04-18T16:28:20.863Z"}}]}'
-  recorded_at: Tue, 20 Apr 2021 02:35:13 GMT
+      string: '{"data":[{"id":"1","type":"post","attributes":{"content":"hey did you
+        see that lil nas X video?","link":"photoURL.com","user_id":1,"created_at":"2021-04-19T21:22:47.070Z"}},{"id":"2","type":"post","attributes":{"content":"hey
+        did you see that create meme?","link":"photoURL.com","user_id":1,"created_at":"2021-04-19T21:22:47.072Z"}},{"id":"3","type":"post","attributes":{"content":"hey
+        did you see that riot footage?","link":null,"user_id":1,"created_at":"2021-04-19T21:22:47.073Z"}}]}'
+  recorded_at: Tue, 20 Apr 2021 20:59:06 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1
@@ -134,20 +134,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"ee2dbbfdd216341bf42396a125d2fe61"
+      - W/"26830db28cea9cadaa30ce67a401308e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1e31d6ac-2386-4f93-a2f2-befbb428b7d2
+      - 3a16416c-2323-4f37-9ca4-c80f1dfded27
       X-Runtime:
-      - '0.005542'
+      - '0.002836'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"6","type":"profile","attributes":{"zipcode":"80301","user_id":1,"profile_picture":"http://www.google.com","username":"the
+      string: '{"data":{"id":"1","type":"profile","attributes":{"zipcode":"80301","user_id":1,"profile_picture":"http://www.google.com","username":"the
         painter man"}}}'
-  recorded_at: Tue, 20 Apr 2021 02:35:13 GMT
+  recorded_at: Tue, 20 Apr 2021 20:59:06 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1
@@ -169,18 +169,52 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"ee2dbbfdd216341bf42396a125d2fe61"
+      - W/"26830db28cea9cadaa30ce67a401308e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 88947313-b05a-4cd8-87dd-0e9382d6ed66
+      - 95f96d92-920a-4758-9b19-a6cf6728ed55
       X-Runtime:
-      - '0.003715'
+      - '0.002507'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"6","type":"profile","attributes":{"zipcode":"80301","user_id":1,"profile_picture":"http://www.google.com","username":"the
+      string: '{"data":{"id":"1","type":"profile","attributes":{"zipcode":"80301","user_id":1,"profile_picture":"http://www.google.com","username":"the
         painter man"}}}'
-  recorded_at: Tue, 20 Apr 2021 02:35:13 GMT
+  recorded_at: Tue, 20 Apr 2021 20:59:06 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profile/1/tags
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"b097848aa641a140251637a1381b4326"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d25cd53a-3743-497c-bfb4-dd8932101a8f
+      X-Runtime:
+      - '0.006003'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"tag","attributes":{"name":"Painter"}},{"id":"3","type":"tag","attributes":{"name":"Sculpter"}}]}'
+  recorded_at: Tue, 20 Apr 2021 20:59:06 GMT
 recorded_with: VCR 6.0.0

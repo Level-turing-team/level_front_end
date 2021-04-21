@@ -134,6 +134,14 @@ class BackendService
     parse(response)
   end
 
+  def self.create_user_circle(user_id, following_id)
+    response = connection.post("/api/v1/profile/#{user_id}/circle") do |f|
+      f.params['following_id'] = following_id
+      f.params['user_id'] = user_id
+    end
+    parse(response)
+  end
+
   def self.parse(response)
     JSON.parse(response.body, symbolize_names: true)
   end
