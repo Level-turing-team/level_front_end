@@ -45,7 +45,7 @@ RSpec.describe 'As an authenticated user' do
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
 
     visit galleries_path(@user)
-    expect(page).to have_button("profile")
+    expect(page).to have_button("Profile")
     page.find('.image-1')[:src]
     page.status_code.should be 200
   end
@@ -54,8 +54,8 @@ RSpec.describe 'As an authenticated user' do
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
 
     visit galleries_path(@user)
-    expect(page).to have_button("profile")
-    click_on 'profile'
+    expect(page).to have_button("Profile")
+    click_on 'Profile'
     page.find('.photo-1')[:src]
     page.status_code.should be 200
   end

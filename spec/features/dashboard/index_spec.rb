@@ -29,7 +29,7 @@ RSpec.describe 'Dashboord Index', type: :feature do
 
       within '#my-circle' do
         expect(page).to have_content('My Circle')
-        expect(page).to have_content('You have 6 friends')
+        expect(page).to have_content('You have 4 friends')
         expect(page).to have_link(@user_2.username)
         expect(page).to have_link(@user_3.username)
         expect(page).to have_link(@user_4.username)
