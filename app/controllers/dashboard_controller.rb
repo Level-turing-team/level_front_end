@@ -2,7 +2,7 @@ class DashboardController < ApplicationController
   before_action :authorized, only: [:index]
 
   def index
-    @user = User.find(1)
+    @user = current_user
     @profile = DashboardFacade.profile_object(@user.id)
     @circle = @profile.circle
     @circle_posts = @profile.circle_posts

@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     if user.username.nil? || user.zip.nil?
       redirect_to register_path
     else
-      redirect_to dashboard_index_path
+      redirect_to dashboard_index_path(user)
     end
   end
 
