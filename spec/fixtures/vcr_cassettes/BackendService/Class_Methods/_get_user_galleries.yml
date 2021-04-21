@@ -21,18 +21,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"21fb6f684195e6b9d8c2a512971b82e6"
+      - W/"d2cc8686b092016a8c21ca091655d921"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 786e7552-729c-4212-921e-591229e40dbf
+      - 44be47c2-7d22-4ca0-b42e-d220328032ff
       X-Runtime:
-      - '0.004202'
+      - '0.007850'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"gallery","attributes":{"user_id":1,"name":"photos
-        from cali","created_at":"2021-04-19T21:22:47.093Z","updated_at":"2021-04-19T21:22:47.093Z","photo_url":"http://www.google.com"}}]}'
-  recorded_at: Tue, 20 Apr 2021 20:59:20 GMT
+        from cali","created_at":"2021-04-20T22:34:23.554Z","updated_at":"2021-04-20T22:34:23.554Z","photo_url":"http://www.google.com"}}]}'
+  recorded_at: Wed, 21 Apr 2021 02:06:09 GMT
 recorded_with: VCR 6.0.0

@@ -24,8 +24,10 @@
 					<p>You are 0 miles from yourself</p>
 		<% else %> 
         <p><%= @distance %> miles from you</p>
-
-        
+				<p><%= button_to "Add this user to your circle!",
+				 circles_path({user_id: @current_user.id, following_id: @user.id}), 
+				 method: :post  if !@circle_ids.include?(@user.id) %></p>
+        <p><%= "This user is in your circle!" if @circle_ids.include?(@user.id) %></p>
 		<% end %>
 			</section>
 

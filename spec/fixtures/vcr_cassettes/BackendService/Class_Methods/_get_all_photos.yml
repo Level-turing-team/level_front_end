@@ -21,40 +21,39 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"6edb13007a6045b2eed704a4cc6790d3"
+      - W/"f91a49ad99fe63ff6b5c45c662dd8602"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9e8627a5-82c7-4cc1-b436-f15b798254dc
+      - e021bd77-1b2f-4e30-bbb7-447ac08be5ef
       X-Runtime:
-      - '0.007887'
+      - '0.010498'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"25","type":"photo","attributes":{"description":"ANOTHER","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6abe5508983ff537315648413da6bbc182adf8ae/download%20(1).jpeg","created_at":"2021-04-20T15:44:46.332Z","updated_at":"2021-04-20T15:44:46.351Z","gallery_id":10}},{"id":"24","type":"photo","attributes":{"description":"new","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f186bbde9000102fd40c958599fab3b8352b6a60/gray.jpeg","created_at":"2021-04-20T15:43:50.754Z","updated_at":"2021-04-20T15:43:50.776Z","gallery_id":10}},{"id":"23","type":"photo","attributes":{"description":"sweet
-        stuff","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--54b0c432dd8fe93fd767f99774875c3350ec2d58/download.png","created_at":"2021-04-20T15:42:05.553Z","updated_at":"2021-04-20T15:42:05.682Z","gallery_id":9}},{"id":"22","type":"photo","attributes":{"description":"pic
-        1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.170Z","updated_at":"2021-04-19T21:22:47.170Z","gallery_id":8}},{"id":"21","type":"photo","attributes":{"description":"pic
-        1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.168Z","updated_at":"2021-04-19T21:22:47.168Z","gallery_id":8}},{"id":"20","type":"photo","attributes":{"description":"pic
-        1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.165Z","updated_at":"2021-04-19T21:22:47.165Z","gallery_id":8}},{"id":"19","type":"photo","attributes":{"description":"pic
-        1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.163Z","updated_at":"2021-04-19T21:22:47.163Z","gallery_id":8}},{"id":"18","type":"photo","attributes":{"description":"pic
-        1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.161Z","updated_at":"2021-04-19T21:22:47.161Z","gallery_id":7}},{"id":"17","type":"photo","attributes":{"description":"pic
-        1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.159Z","updated_at":"2021-04-19T21:22:47.159Z","gallery_id":7}},{"id":"16","type":"photo","attributes":{"description":"pic
-        1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.156Z","updated_at":"2021-04-19T21:22:47.156Z","gallery_id":7}},{"id":"15","type":"photo","attributes":{"description":"pic
-        1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.153Z","updated_at":"2021-04-19T21:22:47.153Z","gallery_id":6}},{"id":"14","type":"photo","attributes":{"description":"pic
-        1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.151Z","updated_at":"2021-04-19T21:22:47.151Z","gallery_id":6}},{"id":"13","type":"photo","attributes":{"description":"pic
-        1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.149Z","updated_at":"2021-04-19T21:22:47.149Z","gallery_id":6}},{"id":"12","type":"photo","attributes":{"description":"pic
-        1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.147Z","updated_at":"2021-04-19T21:22:47.147Z","gallery_id":5}},{"id":"11","type":"photo","attributes":{"description":"pic
-        1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.145Z","updated_at":"2021-04-19T21:22:47.145Z","gallery_id":5}},{"id":"10","type":"photo","attributes":{"description":"pic
-        1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.142Z","updated_at":"2021-04-19T21:22:47.142Z","gallery_id":5}},{"id":"9","type":"photo","attributes":{"description":"pic
-        1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.140Z","updated_at":"2021-04-19T21:22:47.140Z","gallery_id":4}},{"id":"8","type":"photo","attributes":{"description":"pic
-        1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.137Z","updated_at":"2021-04-19T21:22:47.137Z","gallery_id":4}},{"id":"7","type":"photo","attributes":{"description":"pic
-        1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.135Z","updated_at":"2021-04-19T21:22:47.135Z","gallery_id":3}},{"id":"6","type":"photo","attributes":{"description":"pic
-        1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.133Z","updated_at":"2021-04-19T21:22:47.133Z","gallery_id":3}},{"id":"5","type":"photo","attributes":{"description":"pic
-        1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.130Z","updated_at":"2021-04-19T21:22:47.130Z","gallery_id":2}},{"id":"4","type":"photo","attributes":{"description":"pic
-        1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.127Z","updated_at":"2021-04-19T21:22:47.127Z","gallery_id":2}},{"id":"3","type":"photo","attributes":{"description":"pic
-        1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.123Z","updated_at":"2021-04-19T21:22:47.123Z","gallery_id":1}},{"id":"2","type":"photo","attributes":{"description":"pic
-        1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.120Z","updated_at":"2021-04-19T21:22:47.120Z","gallery_id":1}},{"id":"1","type":"photo","attributes":{"description":"pic
-        1","url":"http:www.google.com","created_at":"2021-04-19T21:22:47.117Z","updated_at":"2021-04-19T21:22:47.117Z","gallery_id":1}}]}'
-  recorded_at: Tue, 20 Apr 2021 20:59:21 GMT
+      string: '{"data":[{"id":"22","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-20T22:34:23.733Z","updated_at":"2021-04-20T22:34:23.733Z","gallery_id":8}},{"id":"21","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-20T22:34:23.728Z","updated_at":"2021-04-20T22:34:23.728Z","gallery_id":8}},{"id":"20","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-20T22:34:23.722Z","updated_at":"2021-04-20T22:34:23.722Z","gallery_id":8}},{"id":"19","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-20T22:34:23.715Z","updated_at":"2021-04-20T22:34:23.715Z","gallery_id":8}},{"id":"18","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-20T22:34:23.710Z","updated_at":"2021-04-20T22:34:23.710Z","gallery_id":7}},{"id":"17","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-20T22:34:23.705Z","updated_at":"2021-04-20T22:34:23.705Z","gallery_id":7}},{"id":"16","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-20T22:34:23.700Z","updated_at":"2021-04-20T22:34:23.700Z","gallery_id":7}},{"id":"15","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-20T22:34:23.696Z","updated_at":"2021-04-20T22:34:23.696Z","gallery_id":6}},{"id":"14","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-20T22:34:23.692Z","updated_at":"2021-04-20T22:34:23.692Z","gallery_id":6}},{"id":"13","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-20T22:34:23.673Z","updated_at":"2021-04-20T22:34:23.673Z","gallery_id":6}},{"id":"12","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-20T22:34:23.665Z","updated_at":"2021-04-20T22:34:23.665Z","gallery_id":5}},{"id":"11","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-20T22:34:23.659Z","updated_at":"2021-04-20T22:34:23.659Z","gallery_id":5}},{"id":"10","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-20T22:34:23.656Z","updated_at":"2021-04-20T22:34:23.656Z","gallery_id":5}},{"id":"9","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-20T22:34:23.650Z","updated_at":"2021-04-20T22:34:23.650Z","gallery_id":4}},{"id":"8","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-20T22:34:23.646Z","updated_at":"2021-04-20T22:34:23.646Z","gallery_id":4}},{"id":"7","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-20T22:34:23.643Z","updated_at":"2021-04-20T22:34:23.643Z","gallery_id":3}},{"id":"6","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-20T22:34:23.637Z","updated_at":"2021-04-20T22:34:23.637Z","gallery_id":3}},{"id":"5","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-20T22:34:23.629Z","updated_at":"2021-04-20T22:34:23.629Z","gallery_id":2}},{"id":"4","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-20T22:34:23.623Z","updated_at":"2021-04-20T22:34:23.623Z","gallery_id":2}},{"id":"3","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-20T22:34:23.615Z","updated_at":"2021-04-20T22:34:23.615Z","gallery_id":1}},{"id":"2","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-20T22:34:23.609Z","updated_at":"2021-04-20T22:34:23.609Z","gallery_id":1}},{"id":"1","type":"photo","attributes":{"description":"pic
+        1","url":"http:www.google.com","created_at":"2021-04-20T22:34:23.602Z","updated_at":"2021-04-20T22:34:23.602Z","gallery_id":1}}]}'
+  recorded_at: Wed, 21 Apr 2021 02:06:10 GMT
 recorded_with: VCR 6.0.0
