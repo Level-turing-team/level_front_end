@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/7/galleries
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"5f3228fb52f3310223f6994187faa2e2"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b7740439-1cc0-4b4b-b08b-9fe26724d2b2
+      X-Runtime:
+      - '0.141415'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"10","type":"gallery","attributes":{"user_id":7,"name":"profile","created_at":"2021-04-21T01:21:56.834Z","updated_at":"2021-04-21T01:21:56.834Z","photo_url":null}}]}'
+  recorded_at: Wed, 21 Apr 2021 01:27:39 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/7/galleries/10/photos
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"b39893327df3149decb9301b6c8f6bcf"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d131fb19-0743-4f61-889b-c4563ba543a1
+      X-Runtime:
+      - '0.025693'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"24","type":"photo","attributes":{"description":"description","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--fe1227e1532832de827f4916084b6f7daff39f2d/fluff.jpg","created_at":"2021-04-21T01:22:07.461Z","updated_at":"2021-04-21T01:22:07.551Z","gallery_id":10}}]}'
+  recorded_at: Wed, 21 Apr 2021 01:27:39 GMT
+recorded_with: VCR 6.0.0

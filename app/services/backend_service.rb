@@ -11,6 +11,10 @@ class BackendService
     end
   end
 
+  def self.destroy_gallery(user_id, gallery_id)
+    response = connection.delete("api/v1/profiles/#{user_id}/galleries/#{gallery_id}")
+  end
+
   def self.post_gallery_photo(user_id, gallery_id, description, picture_url)
     file = Faraday::UploadIO.new(
       picture_url.tempfile.path,
