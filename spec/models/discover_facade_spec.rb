@@ -14,10 +14,10 @@ RSpec.describe DiscoverFacade do
     it "#recent_photo_objects", :vcr do
       result = DiscoverFacade.recent_photo_objects
       expect(result.first).to be_a(Photo)
-      expect(result.length).to eq(22)
-      expect(result.first.description).to eq("pic 1")
-      expect(result.first.gallery_id).to eq(8)
-      expect(result.first.url).to eq("http:www.google.com")
+      expect(result.length).to eq(50)
+      expect(result.first.description).to eq("this painter")
+      expect(result.first.gallery_id).to eq(43)
+      expect(result.first.url).to eq("http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBJZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--18fa914e6b38c771c080ae5134c1b2dafbf278bc/fluff.jpg")
     end
 
     it "#search_user_objects", :vcr do

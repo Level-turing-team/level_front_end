@@ -34,10 +34,10 @@ RSpec.describe BackendFacade, type: :model do
     it '#photo_objects', :vcr do
       @photos = BackendFacade.photo_objects(@user.id, 1)
 
-      expect(@photos.size).to eq(4)
+      expect(@photos.size).to eq(3)
       expect(@photos[0].gallery_id).to eq(1)
       expect(@photos[0].description).to eq('pic 1')
-      expect(@photos[0].url).to eq('https://miro.medium.com/max/3840/1*6h1kck2QmGaC89ERN_W3UA.jpeg')
+      expect(@photos[0].url).to eq("http:www.google.com")
     end
 
     it '#gallery_objects', :vcr do
