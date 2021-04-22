@@ -17,22 +17,7 @@
 
 
 
-## Getting Started
 
-### GemFile/Dependency
-
-  ```
-  gem 'fast_jsonapi'
-  gem 'rspec-rails'
-  gem 'capybara'
-  gem 'launchy'
-  gem 'pry'
-  gem 'simplecov'
-  gem 'shoulda-matchers', '~> 3.1'
-  gem 'orderly'
-  gem 'factory_bot_rails'
-  gem 'faker'
-  ```
   
 
 
@@ -86,7 +71,22 @@
  * Also utilize the artists near me section to find artists in your area to collaborate with by searching.
  
  
- 
+ ## Getting Started
+
+### GemFile/Dependency
+
+  ```
+  gem 'fast_jsonapi'
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'pry'
+  gem 'simplecov'
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'orderly'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  ```
  
  
  ### How LEVEL is set up
