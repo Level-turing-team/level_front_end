@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/1/post
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"9e61e91aa40b7a9bca7744c277fd1812"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - cd95616d-a46e-4cb6-bb81-9cfabff79ec3
+      X-Runtime:
+      - '0.079889'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"11","type":"post","attributes":{"content":"hey did
+        you see that lil nas X video?","link":"photoURL.com","user_id":1,"created_at":"2021-04-18T16:28:20.859Z"}},{"id":"12","type":"post","attributes":{"content":"hey
+        did you see that create meme?","link":"photoURL.com","user_id":1,"created_at":"2021-04-18T16:28:20.861Z"}},{"id":"13","type":"post","attributes":{"content":"hey
+        did you see that riot footage?","link":null,"user_id":1,"created_at":"2021-04-18T16:28:20.863Z"}},{"id":"21","type":"post","attributes":{"content":"this
+        is my first post","link":"www.google.com","user_id":1,"created_at":"2021-04-20T02:39:20.925Z"}},{"id":"22","type":"post","attributes":{"content":"this
+        is my first post","link":"www.google.com","user_id":1,"created_at":"2021-04-20T02:41:17.650Z"}},{"id":"23","type":"post","attributes":{"content":"this
+        is my first post","link":"","user_id":1,"created_at":"2021-04-20T02:52:21.239Z"}}]}'
+  recorded_at: Wed, 21 Apr 2021 20:34:50 GMT
+recorded_with: VCR 6.0.0

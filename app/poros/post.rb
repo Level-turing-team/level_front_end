@@ -12,7 +12,6 @@ class Post
   end
 
   def created_at_format
-    # @created_at.strftime('%b %-d, %Y at %l:%M%P')
     @created_at.to_date.strftime('%A %B %-d, %Y').sub!(/\d?\d/) do |day|
       case day
         when "1", "21", "31" then "#{day}st"
