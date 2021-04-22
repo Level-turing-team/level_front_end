@@ -13,11 +13,10 @@ RSpec.describe 'Follow another user from their profile' do
     it 'has a button to add them to your circle' do 
       VCR.use_cassette("button_to_add_user_to_your_circle", 
         match_requests_on: %i[body]) do
-          allow_any_instance_of(ActionDispatch::Request).to receive(:session) { { user_id: '111' } }
+          allow_any_instance_of(ActionDispatch::Request).to receive(:session) { { user_id: '456' } }
         
           visit "/profile"
 
-          click_on "other profile"
 
           expect(page).to have_button("Add this user to your circle!")
           expect(page).to_not have_content("This user is in your circle!")

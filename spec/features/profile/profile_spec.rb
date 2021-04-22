@@ -86,13 +86,13 @@ RSpec.describe 'Profile Page' do
       match_requests_on: %i[body]) do
         allow_any_instance_of(ActionDispatch::Request).to receive(:session) { { user_id: '123' } }
         visit "/profile"
-
+        
         expect(page).not_to have_content "#{@user_2.username}"
         expect(page).to have_content "#{@user_1.username}'s profile"
         
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_2)
         allow_any_instance_of(ActionDispatch::Request).to receive(:session) { { user_id: '456' } }
-        click_on "other profile"
+        visit "/profile"
         
         expect(page).to have_content "#{@user_2.username}"
         expect(page).not_to have_content "#{@user_1.username}"
@@ -112,9 +112,9 @@ RSpec.describe 'Profile Page' do
         within ("#distance") do
           expect(page).to have_content("You are 0 miles from yourself")
         end
-
+        
         allow_any_instance_of(ActionDispatch::Request).to receive(:session) { { user_id: '456' } }
-        click_on "other profile"
+        visit "/profile"
 
         within ("#distance") do
           expect(page).to have_content("20.82 miles from you")
@@ -131,7 +131,7 @@ RSpec.describe 'Profile Page' do
         expect(current_path).to eq(profile_path)
         
         page.find('#profilepicture')[:src]
-        page.status_code.should be 200
+        expect(page.status_code).to eq(200)
           
         
         within ("#username") do 
@@ -154,12 +154,13 @@ RSpec.describe 'Profile Page' do
           expect(page).to have_link('photoURL.com')
         end
         
-        allow_any_instance_of(ActionDispatch::Request).to receive(:session) { { user_id: '456' } }
-        click_link 'other profile'
+        allow_any_instance_of(ActionDispatch::Request).to receive(:session) { { user_id: '910' } }
+        visit "/profile"
         
         within('#posts') do
-          expect(page).to have_content('hey did you see that headline?')
-          expect(page).to have_content('hey checkout my create shoes?')
+          expect(page).to have_content('hey did you see that lil nas X video?')
+          expect(page).to have_content('hey did you see that create meme?')
+          expect(page).to have_content('hey did you see that riot footage?')
           expect(page).to have_link('photoURL.com')
         end
       end
