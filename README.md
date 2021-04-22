@@ -2,50 +2,6 @@
 
  * There are plenty of sites to showcase any type of art that you the artist want to showcase, LEVEL is more focused on generating collaboration and human interaction between artists themselves to further their art.  LEVEL was made with the idea of connecting artists to artists, you can showcase some of your work and view curated galleries of other artist's work so the community can have a feel for each other's work and how/why you'd want to collaborate with each other.  LEVEL concentrates just as much on what work you want to showcase as much as it does connecting you to other artists so that as a community you can grow with other artists together.  Get connected. Make Art. Level the playing field.
 
-  https://github.com/orgs/Level-turing-team/people
-
-## Authors
-
-- **Kyle Schulz**   
-
-  * <img src="https://user-images.githubusercontent.com/46826902/114424033-fb538b00-9b74-11eb-884d-429d4ad4132d.png">https://github.com/kylejschulz
-  * <img src="https://user-images.githubusercontent.com/46826902/114425392-43bf7880-9b76-11eb-811a-d3255ced4b3b.png">
-
-- **Andrew Johnston**   
-
-  * <img src="https://user-images.githubusercontent.com/46826902/114424033-fb538b00-9b74-11eb-884d-429d4ad4132d.png">https://github.com/avjohnston
-  * <img src="https://user-images.githubusercontent.com/46826902/114425392-43bf7880-9b76-11eb-811a-d3255ced4b3b.png">
-
-- **Joseph Budina**    
-
-  * <img src="https://user-images.githubusercontent.com/46826902/114424033-fb538b00-9b74-11eb-884d-429d4ad4132d.png">https://github.com/josephbudina
-  * <img src="https://user-images.githubusercontent.com/46826902/114425392-43bf7880-9b76-11eb-811a-d3255ced4b3b.png">
-
-- **Ben Fulton**     
-
-  * <img src="https://user-images.githubusercontent.com/46826902/114424033-fb538b00-9b74-11eb-884d-429d4ad4132d.png">https://github.com/b-enji-cmd
-  * <img src="https://user-images.githubusercontent.com/46826902/114425392-43bf7880-9b76-11eb-811a-d3255ced4b3b.png">
-
-- **Jake Volpe**    
-
-  * <img src="https://user-images.githubusercontent.com/46826902/114424033-fb538b00-9b74-11eb-884d-429d4ad4132d.png">https://github.com/javolpe
-  * <img src="https://user-images.githubusercontent.com/46826902/114425392-43bf7880-9b76-11eb-811a-d3255ced4b3b.png">
-
-- **Jesus Quezada-Guillen**
-
-  * <img src="https://user-images.githubusercontent.com/46826902/114424033-fb538b00-9b74-11eb-884d-429d4ad4132d.png">https://github.com/jequeza
-  * <img src="https://user-images.githubusercontent.com/46826902/114425392-43bf7880-9b76-11eb-811a-d3255ced4b3b.png">
-
-- **Kris Litman**     
-
-  * <img src="https://user-images.githubusercontent.com/46826902/114424033-fb538b00-9b74-11eb-884d-429d4ad4132d.png">https://github.com/krislitman
-  * <img src="https://user-images.githubusercontent.com/46826902/114425392-43bf7880-9b76-11eb-811a-d3255ced4b3b.png">
-
-- **Khoa Nguyen**   
-
-  * <img src="https://user-images.githubusercontent.com/46826902/114424033-fb538b00-9b74-11eb-884d-429d4ad4132d.png"> - https://github.com/Omegaeye
-  * <img src="https://user-images.githubusercontent.com/46826902/114425392-43bf7880-9b76-11eb-811a-d3255ced4b3b.png">
-
 ## Table of Contents
 
   - [Getting Started](#getting-started)
@@ -55,6 +11,11 @@
   - [API End Points](#api-end-points)
   - [License](#license)
   - [Acknowledgments](#acknowledgments)
+
+  https://github.com/orgs/Level-turing-team/people
+
+
+
 
 ## Getting Started
 
@@ -77,7 +38,7 @@
 
 ### Why LEVEL? Why did we bother to make this app?
 
- As artists ourselves we are frankly sick and tired of the commercialization of other apps that artists almost have no choice in using.  You've heard of them.  Mabye one commonly called !n$ta or something like that.  We want to build a community of artists for artists.  For this reason you will NEVER be able to see who is "following" you, only who you are "following".  Wait, why is following in quotes. Well because even though it works like a follow on other apps (not like a two-way friend) we have changed the terminology to "Circle".  When you add someone to your Cirlce you will see all of their posts in your feed but unless they also add you to their Circle they will not see your posts in their feed.  
+ As artists ourselves we are frankly sick and tired of the commercialization of other apps that artists almost have no choice in using.  We want to build a community of artists for artists.  For this reason you will NEVER be able to see who is "following" you, only who you are "following".  Wait, why is following in quotes. Well because even though it works like a follow on other apps (not like a two-way friend) we have changed the terminology to "Circle".  When you add someone to your Cirlce you will see all of their posts in your feed but unless they also add you to their Circle they will not see your posts in their feed.  
  
  Hold up.  If I can't see how many people are following me, how will I get validation.  We don't know but it won't be from this app.  Well if I can't see how many followers I have how can you monetize this app and eventually sell it to a tech giant?  We don't care. We're used to not having a ton of money and are pretty cool wih that.  We want LEVEL members to care about who is in their Cirlce because that is who they want to collab with and this is our sole focus.
 
@@ -163,15 +124,63 @@ https://gist.github.com/iandouglas/a9942814d016f2090b9f27dde848b565
  * bootstrap and j query has not been implemted so feel free to style if interested. We have not added much in terms of style
  * The travis ci yml is setup in a way that seems to still push to heroku if all tests pass however it says otherwise. We changed the branch name from travis to main which broke travis, so we changed it back. It needs to be fixed.
  * For any more clarification hit us up
+
 ## Built With
 
-  - Ruby/Rails
-  - HTML
+  - [Ruby on Rails](https://rubyonrails.org/)
+  - [HTML](https://www.w3schools.com/html/html_intro.asp)
+  - [Bootstrap](https://getbootstrap.com)
 
-## License
 
-  - Me and me only
+## Links To Other Repos
+  - [Backend](https://github.com/Level-turing-team/level_backend)
+  - [Zip Code Micro Service](https://github.com/Level-turing-team/level-zipcode-microservice)
+
 
 ## Acknowledgments
 
   - My 2011 BE cohorts that helped all of us out a lot.
+
+
+## Authors
+
+- **Kyle Schulz**   
+
+  * <img src="https://user-images.githubusercontent.com/46826902/114424033-fb538b00-9b74-11eb-884d-429d4ad4132d.png">https://github.com/kylejschulz
+  * <img src="https://user-images.githubusercontent.com/46826902/114425392-43bf7880-9b76-11eb-811a-d3255ced4b3b.png">
+
+- **Andrew Johnston**   
+
+  * <img src="https://user-images.githubusercontent.com/46826902/114424033-fb538b00-9b74-11eb-884d-429d4ad4132d.png">https://github.com/avjohnston
+  * <img src="https://user-images.githubusercontent.com/46826902/114425392-43bf7880-9b76-11eb-811a-d3255ced4b3b.png">
+
+- **Joseph Budina**    
+
+  * <img src="https://user-images.githubusercontent.com/46826902/114424033-fb538b00-9b74-11eb-884d-429d4ad4132d.png">https://github.com/josephbudina
+  * <img src="https://user-images.githubusercontent.com/46826902/114425392-43bf7880-9b76-11eb-811a-d3255ced4b3b.png">
+
+- **Ben Fulton**     
+
+  * <img src="https://user-images.githubusercontent.com/46826902/114424033-fb538b00-9b74-11eb-884d-429d4ad4132d.png">https://github.com/b-enji-cmd
+  * <img src="https://user-images.githubusercontent.com/46826902/114425392-43bf7880-9b76-11eb-811a-d3255ced4b3b.png">
+
+- **Jake Volpe**    
+
+  * <img src="https://user-images.githubusercontent.com/46826902/114424033-fb538b00-9b74-11eb-884d-429d4ad4132d.png">https://github.com/javolpe
+  * <img src="https://user-images.githubusercontent.com/46826902/114425392-43bf7880-9b76-11eb-811a-d3255ced4b3b.png">
+
+- **Jesus Quezada-Guillen**
+
+  * <img src="https://user-images.githubusercontent.com/46826902/114424033-fb538b00-9b74-11eb-884d-429d4ad4132d.png">https://github.com/jequeza
+  * <img src="https://user-images.githubusercontent.com/46826902/114425392-43bf7880-9b76-11eb-811a-d3255ced4b3b.png">
+
+- **Kris Litman**     
+
+  * <img src="https://user-images.githubusercontent.com/46826902/114424033-fb538b00-9b74-11eb-884d-429d4ad4132d.png">https://github.com/krislitman
+  * <img src="https://user-images.githubusercontent.com/46826902/114425392-43bf7880-9b76-11eb-811a-d3255ced4b3b.png">
+
+- **Khoa Nguyen**   
+
+  * <img src="https://user-images.githubusercontent.com/46826902/114424033-fb538b00-9b74-11eb-884d-429d4ad4132d.png"> - https://github.com/Omegaeye
+  * <img src="https://user-images.githubusercontent.com/46826902/114425392-43bf7880-9b76-11eb-811a-d3255ced4b3b.png">
+
