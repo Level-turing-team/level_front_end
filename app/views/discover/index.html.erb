@@ -11,7 +11,7 @@
         		<div class="card-body">
               <% @profiles.each do |profile| %>
                     <div class="card">
-                      <img class="card-img-top" src="<%=profile.profile_photo%>" alt="picture">
+                      <img class="card-img-top" src="<%= profile.profile_photo %>" alt="picture">
                       <div class="card-body">
                         <%= link_to profile.username, profile_path(lookup: profile.id) %>
                         <h5>Zipcode: <%= profile.zipcode %></h5>
