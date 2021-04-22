@@ -30,12 +30,14 @@ RSpec.describe DiscoverFacade do
       expect(result.first.id).to eq("3")
     end
 
-    it "artists_near_me", :vcr do
-      result = DiscoverFacade.artists_near_me(1)
-      expect(result.first).to be_an_instance_of(Profile)
-      expect(result.length).to eq(4)
-      expect(result.first.username).to eq("korn")
-      expect(result.first.zipcode).to eq("80305")
+    it "artists_near_me" do
+      VCR.use_cassette("artists_near_me") do
+        result = DiscoverFacade.artists_near_me(1)
+        expect(result.first).to be_an_instance_of(Profile)
+        expect(result.length).to eq(4)
+        expect(result.first.username).to eq("korn")
+        expect(result.first.zipcode).to eq("80305")
+      end
     end
   end
 end

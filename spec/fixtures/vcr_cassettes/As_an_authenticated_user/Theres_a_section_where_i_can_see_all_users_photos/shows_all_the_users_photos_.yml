@@ -1,0 +1,148 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/1/discover
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f76144aad54aa53463ca3d8d974f3438"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6cc00245-b513-4fd6-9d97-a4451b2bc623
+      X-Runtime:
+      - '1.159405'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"2","type":"profile","attributes":{"zipcode":"80305","user_id":2,"profile_picture":"http://www.google.com","username":"korn"}},{"id":"3","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}},{"id":"4","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
+        by jim"}},{"id":"5","type":"profile","attributes":{"zipcode":"80544","user_id":5,"profile_picture":"http://www.google.com","username":"arteest"}}]}'
+  recorded_at: Thu, 22 Apr 2021 20:34:14 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/photos
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fc265e33a1e7d54c72a9b9cade7dc035"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4ee36e36-2315-444c-a953-03de0f38abed
+      X-Runtime:
+      - '0.107074'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"44","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ac950f4f4061b2e8cf2efb4cf498d8abcb4be889/fluff.jpg","created_at":"2021-04-22T20:21:38.758Z","updated_at":"2021-04-22T20:21:38.790Z","gallery_id":30,"user_id":57}},{"id":"43","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--521f703b67a78fece7cf7fe05fc6250d5cb77d73/fluff.jpg","created_at":"2021-04-22T20:21:38.234Z","updated_at":"2021-04-22T20:21:38.268Z","gallery_id":29,"user_id":56}},{"id":"42","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3c5053e9fe3b5493ed2a90364626f7e9094b4caf/fluff.jpg","created_at":"2021-04-22T20:21:20.014Z","updated_at":"2021-04-22T20:21:20.048Z","gallery_id":28,"user_id":52}},{"id":"41","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1094308866ff730222a30d032bb803408b8939dd/fluff.jpg","created_at":"2021-04-22T20:21:19.181Z","updated_at":"2021-04-22T20:21:19.261Z","gallery_id":27,"user_id":51}},{"id":"40","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4e5fc38efada8e6fc5bd527e020492e0192b13a6/fluff.jpg","created_at":"2021-04-22T20:17:45.234Z","updated_at":"2021-04-22T20:17:45.268Z","gallery_id":26,"user_id":47}},{"id":"39","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--27a40649023f9e0b2bb860d5b7eaabd4221f6018/fluff.jpg","created_at":"2021-04-22T20:17:44.434Z","updated_at":"2021-04-22T20:17:44.470Z","gallery_id":25,"user_id":46}},{"id":"38","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--becf0187cfcd51b38d7134377abe69c8ccdfef0c/fluff.jpg","created_at":"2021-04-22T20:17:13.869Z","updated_at":"2021-04-22T20:17:13.906Z","gallery_id":24,"user_id":42}},{"id":"37","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--609f0f40bef10af717afa67bdcb19f4a0488ba4e/fluff.jpg","created_at":"2021-04-22T20:17:12.950Z","updated_at":"2021-04-22T20:17:13.004Z","gallery_id":23,"user_id":41}},{"id":"36","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5a1014f535653b3b5be3ed34bb790056466efdab/fluff.jpg","created_at":"2021-04-22T20:13:47.200Z","updated_at":"2021-04-22T20:13:47.237Z","gallery_id":22,"user_id":33}},{"id":"35","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b6f6276d37c8dbc535d91db19a69da7b562a9996/fluff.jpg","created_at":"2021-04-22T20:13:46.673Z","updated_at":"2021-04-22T20:13:46.706Z","gallery_id":21,"user_id":32}},{"id":"34","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--61508a5171ff5c1ca594ff7fc901605c99e125d4/fluff.jpg","created_at":"2021-04-22T20:11:44.157Z","updated_at":"2021-04-22T20:11:44.200Z","gallery_id":20,"user_id":28}},{"id":"33","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6abe5508983ff537315648413da6bbc182adf8ae/fluff.jpg","created_at":"2021-04-22T20:11:43.611Z","updated_at":"2021-04-22T20:11:43.649Z","gallery_id":19,"user_id":27}},{"id":"32","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f186bbde9000102fd40c958599fab3b8352b6a60/fluff.jpg","created_at":"2021-04-22T20:10:34.059Z","updated_at":"2021-04-22T20:10:34.095Z","gallery_id":18,"user_id":23}},{"id":"31","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--54b0c432dd8fe93fd767f99774875c3350ec2d58/fluff.jpg","created_at":"2021-04-22T20:10:33.115Z","updated_at":"2021-04-22T20:10:33.227Z","gallery_id":17,"user_id":22}},{"id":"30","type":"photo","attributes":{"description":"feature
+        photo","url":"https://media.wired.com/photos/5cdefb92b86e041493d389df/191:100/w_1500,h_785,c_limit/Culture-Grumpy-Cat-487386121.jpg","created_at":"2021-04-22T20:08:19.380Z","updated_at":"2021-04-22T20:08:19.380Z","gallery_id":16,"user_id":7}},{"id":"29","type":"photo","attributes":{"description":"feature
+        photo","url":"https://media.wired.com/photos/5cdefb92b86e041493d389df/191:100/w_1500,h_785,c_limit/Culture-Grumpy-Cat-487386121.jpg","created_at":"2021-04-22T20:08:19.377Z","updated_at":"2021-04-22T20:08:19.377Z","gallery_id":15,"user_id":6}},{"id":"28","type":"photo","attributes":{"description":"feature
+        photo","url":"https://media.wired.com/photos/5cdefb92b86e041493d389df/191:100/w_1500,h_785,c_limit/Culture-Grumpy-Cat-487386121.jpg","created_at":"2021-04-22T20:08:19.375Z","updated_at":"2021-04-22T20:08:19.375Z","gallery_id":14,"user_id":5}},{"id":"27","type":"photo","attributes":{"description":"feature
+        photo","url":"https://media.wired.com/photos/5cdefb92b86e041493d389df/191:100/w_1500,h_785,c_limit/Culture-Grumpy-Cat-487386121.jpg","created_at":"2021-04-22T20:08:19.373Z","updated_at":"2021-04-22T20:08:19.373Z","gallery_id":13,"user_id":4}},{"id":"26","type":"photo","attributes":{"description":"feature
+        photo","url":"https://media.wired.com/photos/5cdefb92b86e041493d389df/191:100/w_1500,h_785,c_limit/Culture-Grumpy-Cat-487386121.jpg","created_at":"2021-04-22T20:08:19.370Z","updated_at":"2021-04-22T20:08:19.370Z","gallery_id":12,"user_id":3}},{"id":"25","type":"photo","attributes":{"description":"feature
+        photo","url":"https://media.wired.com/photos/5cdefb92b86e041493d389df/191:100/w_1500,h_785,c_limit/Culture-Grumpy-Cat-487386121.jpg","created_at":"2021-04-22T20:08:19.368Z","updated_at":"2021-04-22T20:08:19.368Z","gallery_id":11,"user_id":2}},{"id":"24","type":"photo","attributes":{"description":"feature
+        photo","url":"https://media.wired.com/photos/5cdefb92b86e041493d389df/191:100/w_1500,h_785,c_limit/Culture-Grumpy-Cat-487386121.jpg","created_at":"2021-04-22T20:08:19.366Z","updated_at":"2021-04-22T20:08:19.366Z","gallery_id":10,"user_id":1}},{"id":"23","type":"photo","attributes":{"description":"feature
+        photo","url":"https://wallpaperaccess.com/full/16965.jpg","created_at":"2021-04-22T20:08:19.363Z","updated_at":"2021-04-22T20:08:19.363Z","gallery_id":9,"user_id":1}},{"id":"22","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T20:08:19.361Z","updated_at":"2021-04-22T20:08:19.361Z","gallery_id":8,"user_id":5}},{"id":"21","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T20:08:19.359Z","updated_at":"2021-04-22T20:08:19.359Z","gallery_id":8,"user_id":5}},{"id":"20","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T20:08:19.356Z","updated_at":"2021-04-22T20:08:19.356Z","gallery_id":8,"user_id":5}},{"id":"19","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T20:08:19.354Z","updated_at":"2021-04-22T20:08:19.354Z","gallery_id":8,"user_id":5}},{"id":"18","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T20:08:19.351Z","updated_at":"2021-04-22T20:08:19.351Z","gallery_id":7,"user_id":3}},{"id":"17","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T20:08:19.349Z","updated_at":"2021-04-22T20:08:19.349Z","gallery_id":7,"user_id":3}},{"id":"16","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T20:08:19.346Z","updated_at":"2021-04-22T20:08:19.346Z","gallery_id":7,"user_id":3}},{"id":"15","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T20:08:19.344Z","updated_at":"2021-04-22T20:08:19.344Z","gallery_id":6,"user_id":2}},{"id":"14","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T20:08:19.342Z","updated_at":"2021-04-22T20:08:19.342Z","gallery_id":6,"user_id":2}},{"id":"13","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T20:08:19.339Z","updated_at":"2021-04-22T20:08:19.339Z","gallery_id":6,"user_id":2}},{"id":"12","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T20:08:19.337Z","updated_at":"2021-04-22T20:08:19.337Z","gallery_id":5,"user_id":5}},{"id":"11","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T20:08:19.335Z","updated_at":"2021-04-22T20:08:19.335Z","gallery_id":5,"user_id":5}},{"id":"10","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T20:08:19.333Z","updated_at":"2021-04-22T20:08:19.333Z","gallery_id":5,"user_id":5}},{"id":"9","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T20:08:19.329Z","updated_at":"2021-04-22T20:08:19.329Z","gallery_id":4,"user_id":4}},{"id":"8","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T20:08:19.327Z","updated_at":"2021-04-22T20:08:19.327Z","gallery_id":4,"user_id":4}},{"id":"7","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T20:08:19.324Z","updated_at":"2021-04-22T20:08:19.324Z","gallery_id":3,"user_id":3}},{"id":"6","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T20:08:19.321Z","updated_at":"2021-04-22T20:08:19.321Z","gallery_id":3,"user_id":3}},{"id":"5","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T20:08:19.319Z","updated_at":"2021-04-22T20:08:19.319Z","gallery_id":2,"user_id":2}},{"id":"4","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T20:08:19.317Z","updated_at":"2021-04-22T20:08:19.317Z","gallery_id":2,"user_id":2}},{"id":"3","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T20:08:19.313Z","updated_at":"2021-04-22T20:08:19.313Z","gallery_id":1,"user_id":1}},{"id":"2","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T20:08:19.310Z","updated_at":"2021-04-22T20:08:19.310Z","gallery_id":1,"user_id":1}},{"id":"1","type":"photo","attributes":{"description":"pic
+        1","url":"https://miro.medium.com/max/3840/1*6h1kck2QmGaC89ERN_W3UA.jpeg","created_at":"2021-04-22T20:08:19.307Z","updated_at":"2021-04-22T20:08:19.307Z","gallery_id":1,"user_id":1}}]}'
+  recorded_at: Thu, 22 Apr 2021 20:34:14 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/1/search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 367dd0aa-a599-44e9-98a0-8fb2afe0eb24
+      X-Runtime:
+      - '0.003306'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{},"error":"invalid parameters"}'
+  recorded_at: Thu, 22 Apr 2021 20:34:14 GMT
+recorded_with: VCR 6.0.0
