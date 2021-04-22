@@ -1,0 +1,592 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/distance?current_user=1&user=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - 305a2477-6753-4884-b1ca-785410be83cf
+      X-Runtime:
+      - '0.803731'
+      Content-Length:
+      - '12264'
+    body:
+      encoding: UTF-8
+      string: '{"status":500,"error":"Internal Server Error","exception":"#\u003cJSON::ParserError:
+        809: unexpected token at ''\u003ch1\u003eInternal Server Error\u003c/h1\u003e''\u003e","traces":{"Application
+        Trace":[{"id":2,"trace":"app/services/zipcode_service.rb:4:in `get_data''"},{"id":3,"trace":"app/facades/zipcode_facade.rb:6:in
+        `block in distance_between''"},{"id":11,"trace":"app/facades/zipcode_facade.rb:4:in
+        `distance_between''"},{"id":12,"trace":"app/controllers/api/v1/zipcode_controller.rb:6:in
+        `distance''"}],"Framework Trace":[{"id":0,"trace":"json (2.5.1) lib/json/common.rb:216:in
+        `parse''"},{"id":1,"trace":"json (2.5.1) lib/json/common.rb:216:in `parse''"},{"id":4,"trace":"activesupport
+        (5.2.5) lib/active_support/cache.rb:323:in `block in fetch''"},{"id":5,"trace":"activesupport
+        (5.2.5) lib/active_support/cache.rb:694:in `block in save_block_result_to_cache''"},{"id":6,"trace":"activesupport
+        (5.2.5) lib/active_support/cache.rb:663:in `block in instrument''"},{"id":7,"trace":"activesupport
+        (5.2.5) lib/active_support/notifications.rb:170:in `instrument''"},{"id":8,"trace":"activesupport
+        (5.2.5) lib/active_support/cache.rb:663:in `instrument''"},{"id":9,"trace":"activesupport
+        (5.2.5) lib/active_support/cache.rb:693:in `save_block_result_to_cache''"},{"id":10,"trace":"activesupport
+        (5.2.5) lib/active_support/cache.rb:323:in `fetch''"},{"id":13,"trace":"actionpack
+        (5.2.5) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action''"},{"id":14,"trace":"actionpack
+        (5.2.5) lib/abstract_controller/base.rb:194:in `process_action''"},{"id":15,"trace":"actionpack
+        (5.2.5) lib/action_controller/metal/rendering.rb:30:in `process_action''"},{"id":16,"trace":"actionpack
+        (5.2.5) lib/abstract_controller/callbacks.rb:42:in `block in process_action''"},{"id":17,"trace":"activesupport
+        (5.2.5) lib/active_support/callbacks.rb:98:in `run_callbacks''"},{"id":18,"trace":"actionpack
+        (5.2.5) lib/abstract_controller/callbacks.rb:41:in `process_action''"},{"id":19,"trace":"actionpack
+        (5.2.5) lib/action_controller/metal/rescue.rb:22:in `process_action''"},{"id":20,"trace":"actionpack
+        (5.2.5) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action''"},{"id":21,"trace":"activesupport
+        (5.2.5) lib/active_support/notifications.rb:168:in `block in instrument''"},{"id":22,"trace":"activesupport
+        (5.2.5) lib/active_support/notifications/instrumenter.rb:23:in `instrument''"},{"id":23,"trace":"activesupport
+        (5.2.5) lib/active_support/notifications.rb:168:in `instrument''"},{"id":24,"trace":"actionpack
+        (5.2.5) lib/action_controller/metal/instrumentation.rb:32:in `process_action''"},{"id":25,"trace":"actionpack
+        (5.2.5) lib/action_controller/metal/params_wrapper.rb:256:in `process_action''"},{"id":26,"trace":"activerecord
+        (5.2.5) lib/active_record/railties/controller_runtime.rb:24:in `process_action''"},{"id":27,"trace":"actionpack
+        (5.2.5) lib/abstract_controller/base.rb:134:in `process''"},{"id":28,"trace":"actionview
+        (5.2.5) lib/action_view/rendering.rb:32:in `process''"},{"id":29,"trace":"actionpack
+        (5.2.5) lib/action_controller/metal.rb:191:in `dispatch''"},{"id":30,"trace":"actionpack
+        (5.2.5) lib/action_controller/metal.rb:252:in `dispatch''"},{"id":31,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/routing/route_set.rb:52:in `dispatch''"},{"id":32,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/routing/route_set.rb:34:in `serve''"},{"id":33,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/journey/router.rb:52:in `block in serve''"},{"id":34,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/journey/router.rb:35:in `each''"},{"id":35,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/journey/router.rb:35:in `serve''"},{"id":36,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/routing/route_set.rb:840:in `call''"},{"id":37,"trace":"rack
+        (2.2.3) lib/rack/etag.rb:27:in `call''"},{"id":38,"trace":"rack (2.2.3) lib/rack/conditional_get.rb:27:in
+        `call''"},{"id":39,"trace":"rack (2.2.3) lib/rack/head.rb:12:in `call''"},{"id":40,"trace":"activerecord
+        (5.2.5) lib/active_record/migration.rb:559:in `call''"},{"id":41,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call''"},{"id":42,"trace":"activesupport
+        (5.2.5) lib/active_support/callbacks.rb:98:in `run_callbacks''"},{"id":43,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"id":44,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"id":45,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call''"},{"id":46,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call''"},{"id":47,"trace":"railties
+        (5.2.5) lib/rails/rack/logger.rb:38:in `call_app''"},{"id":48,"trace":"railties
+        (5.2.5) lib/rails/rack/logger.rb:26:in `block in call''"},{"id":49,"trace":"activesupport
+        (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged''"},{"id":50,"trace":"activesupport
+        (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged''"},{"id":51,"trace":"activesupport
+        (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged''"},{"id":52,"trace":"railties
+        (5.2.5) lib/rails/rack/logger.rb:26:in `call''"},{"id":53,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call''"},{"id":54,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call''"},{"id":55,"trace":"rack
+        (2.2.3) lib/rack/runtime.rb:22:in `call''"},{"id":56,"trace":"activesupport
+        (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"id":57,"trace":"actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in
+        `call''"},{"id":58,"trace":"actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in
+        `call''"},{"id":59,"trace":"rack (2.2.3) lib/rack/sendfile.rb:110:in `call''"},{"id":60,"trace":"railties
+        (5.2.5) lib/rails/engine.rb:524:in `call''"},{"id":61,"trace":"puma (3.12.6)
+        lib/puma/configuration.rb:227:in `call''"},{"id":62,"trace":"puma (3.12.6)
+        lib/puma/server.rb:706:in `handle_request''"},{"id":63,"trace":"puma (3.12.6)
+        lib/puma/server.rb:476:in `process_client''"},{"id":64,"trace":"puma (3.12.6)
+        lib/puma/server.rb:334:in `block in run''"},{"id":65,"trace":"puma (3.12.6)
+        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}],"Full Trace":[{"id":0,"trace":"json
+        (2.5.1) lib/json/common.rb:216:in `parse''"},{"id":1,"trace":"json (2.5.1)
+        lib/json/common.rb:216:in `parse''"},{"id":2,"trace":"app/services/zipcode_service.rb:4:in
+        `get_data''"},{"id":3,"trace":"app/facades/zipcode_facade.rb:6:in `block in
+        distance_between''"},{"id":4,"trace":"activesupport (5.2.5) lib/active_support/cache.rb:323:in
+        `block in fetch''"},{"id":5,"trace":"activesupport (5.2.5) lib/active_support/cache.rb:694:in
+        `block in save_block_result_to_cache''"},{"id":6,"trace":"activesupport (5.2.5)
+        lib/active_support/cache.rb:663:in `block in instrument''"},{"id":7,"trace":"activesupport
+        (5.2.5) lib/active_support/notifications.rb:170:in `instrument''"},{"id":8,"trace":"activesupport
+        (5.2.5) lib/active_support/cache.rb:663:in `instrument''"},{"id":9,"trace":"activesupport
+        (5.2.5) lib/active_support/cache.rb:693:in `save_block_result_to_cache''"},{"id":10,"trace":"activesupport
+        (5.2.5) lib/active_support/cache.rb:323:in `fetch''"},{"id":11,"trace":"app/facades/zipcode_facade.rb:4:in
+        `distance_between''"},{"id":12,"trace":"app/controllers/api/v1/zipcode_controller.rb:6:in
+        `distance''"},{"id":13,"trace":"actionpack (5.2.5) lib/action_controller/metal/basic_implicit_render.rb:6:in
+        `send_action''"},{"id":14,"trace":"actionpack (5.2.5) lib/abstract_controller/base.rb:194:in
+        `process_action''"},{"id":15,"trace":"actionpack (5.2.5) lib/action_controller/metal/rendering.rb:30:in
+        `process_action''"},{"id":16,"trace":"actionpack (5.2.5) lib/abstract_controller/callbacks.rb:42:in
+        `block in process_action''"},{"id":17,"trace":"activesupport (5.2.5) lib/active_support/callbacks.rb:98:in
+        `run_callbacks''"},{"id":18,"trace":"actionpack (5.2.5) lib/abstract_controller/callbacks.rb:41:in
+        `process_action''"},{"id":19,"trace":"actionpack (5.2.5) lib/action_controller/metal/rescue.rb:22:in
+        `process_action''"},{"id":20,"trace":"actionpack (5.2.5) lib/action_controller/metal/instrumentation.rb:34:in
+        `block in process_action''"},{"id":21,"trace":"activesupport (5.2.5) lib/active_support/notifications.rb:168:in
+        `block in instrument''"},{"id":22,"trace":"activesupport (5.2.5) lib/active_support/notifications/instrumenter.rb:23:in
+        `instrument''"},{"id":23,"trace":"activesupport (5.2.5) lib/active_support/notifications.rb:168:in
+        `instrument''"},{"id":24,"trace":"actionpack (5.2.5) lib/action_controller/metal/instrumentation.rb:32:in
+        `process_action''"},{"id":25,"trace":"actionpack (5.2.5) lib/action_controller/metal/params_wrapper.rb:256:in
+        `process_action''"},{"id":26,"trace":"activerecord (5.2.5) lib/active_record/railties/controller_runtime.rb:24:in
+        `process_action''"},{"id":27,"trace":"actionpack (5.2.5) lib/abstract_controller/base.rb:134:in
+        `process''"},{"id":28,"trace":"actionview (5.2.5) lib/action_view/rendering.rb:32:in
+        `process''"},{"id":29,"trace":"actionpack (5.2.5) lib/action_controller/metal.rb:191:in
+        `dispatch''"},{"id":30,"trace":"actionpack (5.2.5) lib/action_controller/metal.rb:252:in
+        `dispatch''"},{"id":31,"trace":"actionpack (5.2.5) lib/action_dispatch/routing/route_set.rb:52:in
+        `dispatch''"},{"id":32,"trace":"actionpack (5.2.5) lib/action_dispatch/routing/route_set.rb:34:in
+        `serve''"},{"id":33,"trace":"actionpack (5.2.5) lib/action_dispatch/journey/router.rb:52:in
+        `block in serve''"},{"id":34,"trace":"actionpack (5.2.5) lib/action_dispatch/journey/router.rb:35:in
+        `each''"},{"id":35,"trace":"actionpack (5.2.5) lib/action_dispatch/journey/router.rb:35:in
+        `serve''"},{"id":36,"trace":"actionpack (5.2.5) lib/action_dispatch/routing/route_set.rb:840:in
+        `call''"},{"id":37,"trace":"rack (2.2.3) lib/rack/etag.rb:27:in `call''"},{"id":38,"trace":"rack
+        (2.2.3) lib/rack/conditional_get.rb:27:in `call''"},{"id":39,"trace":"rack
+        (2.2.3) lib/rack/head.rb:12:in `call''"},{"id":40,"trace":"activerecord (5.2.5)
+        lib/active_record/migration.rb:559:in `call''"},{"id":41,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call''"},{"id":42,"trace":"activesupport
+        (5.2.5) lib/active_support/callbacks.rb:98:in `run_callbacks''"},{"id":43,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"id":44,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"id":45,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call''"},{"id":46,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call''"},{"id":47,"trace":"railties
+        (5.2.5) lib/rails/rack/logger.rb:38:in `call_app''"},{"id":48,"trace":"railties
+        (5.2.5) lib/rails/rack/logger.rb:26:in `block in call''"},{"id":49,"trace":"activesupport
+        (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged''"},{"id":50,"trace":"activesupport
+        (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged''"},{"id":51,"trace":"activesupport
+        (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged''"},{"id":52,"trace":"railties
+        (5.2.5) lib/rails/rack/logger.rb:26:in `call''"},{"id":53,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call''"},{"id":54,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call''"},{"id":55,"trace":"rack
+        (2.2.3) lib/rack/runtime.rb:22:in `call''"},{"id":56,"trace":"activesupport
+        (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"id":57,"trace":"actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in
+        `call''"},{"id":58,"trace":"actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in
+        `call''"},{"id":59,"trace":"rack (2.2.3) lib/rack/sendfile.rb:110:in `call''"},{"id":60,"trace":"railties
+        (5.2.5) lib/rails/engine.rb:524:in `call''"},{"id":61,"trace":"puma (3.12.6)
+        lib/puma/configuration.rb:227:in `call''"},{"id":62,"trace":"puma (3.12.6)
+        lib/puma/server.rb:706:in `handle_request''"},{"id":63,"trace":"puma (3.12.6)
+        lib/puma/server.rb:476:in `process_client''"},{"id":64,"trace":"puma (3.12.6)
+        lib/puma/server.rb:334:in `block in run''"},{"id":65,"trace":"puma (3.12.6)
+        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}]}}'
+  recorded_at: Thu, 22 Apr 2021 03:45:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/1/circle
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f76144aad54aa53463ca3d8d974f3438"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a188ef9b-39da-4eb2-967f-fe9e90fc004d
+      X-Runtime:
+      - '0.006638'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"2","type":"profile","attributes":{"zipcode":"80305","user_id":2,"profile_picture":"http://www.google.com","username":"korn"}},{"id":"3","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}},{"id":"4","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
+        by jim"}},{"id":"5","type":"profile","attributes":{"zipcode":"80544","user_id":5,"profile_picture":"http://www.google.com","username":"arteest"}}]}'
+  recorded_at: Thu, 22 Apr 2021 03:45:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profile/1/tags
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"b097848aa641a140251637a1381b4326"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9c2bbc4d-6b3b-4d21-96d2-5a00f50b25e8
+      X-Runtime:
+      - '0.006324'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"tag","attributes":{"name":"Painter"}},{"id":"3","type":"tag","attributes":{"name":"Sculpter"}}]}'
+  recorded_at: Thu, 22 Apr 2021 03:45:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/1/post
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"e8b819399f8b8ddb69477261f88c0325"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6b2ab70c-003c-4b55-8c1c-999914861f12
+      X-Runtime:
+      - '0.005818'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"14","type":"post","attributes":{"content":"this is
+        my first post","link":"","user_id":1,"created_at":"2021-04-22T03:44:16.561Z"}},{"id":"13","type":"post","attributes":{"content":"this
+        is my first post","link":"www.google.com","user_id":1,"created_at":"2021-04-22T03:44:15.642Z"}},{"id":"12","type":"post","attributes":{"content":"this
+        is my first post","link":"","user_id":1,"created_at":"2021-04-22T02:05:08.327Z"}},{"id":"11","type":"post","attributes":{"content":"this
+        is my first post","link":"www.google.com","user_id":1,"created_at":"2021-04-22T02:05:07.338Z"}},{"id":"3","type":"post","attributes":{"content":"hey
+        did you see that riot footage?","link":null,"user_id":1,"created_at":"2021-04-22T01:53:56.386Z"}},{"id":"2","type":"post","attributes":{"content":"hey
+        did you see that create meme?","link":"photoURL.com","user_id":1,"created_at":"2021-04-22T01:53:56.366Z"}},{"id":"1","type":"post","attributes":{"content":"hey
+        did you see that lil nas X video?","link":"photoURL.com","user_id":1,"created_at":"2021-04-22T01:53:56.363Z"}}]}'
+  recorded_at: Thu, 22 Apr 2021 03:45:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/1/galleries
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"cb98bea0e300c33615fd5766c4ef2634"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f8d3daf1-3f72-4c7d-a0b1-5d0f92352ccb
+      X-Runtime:
+      - '0.004991'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"gallery","attributes":{"user_id":1,"name":"photos
+        from cali","created_at":"2021-04-22T01:53:56.411Z","updated_at":"2021-04-22T01:53:56.411Z","photo_url":"https://miro.medium.com/max/3840/1*6h1kck2QmGaC89ERN_W3UA.jpeg"}},{"id":"9","type":"gallery","attributes":{"user_id":1,"name":"PROFILE","created_at":"2021-04-22T01:53:56.435Z","updated_at":"2021-04-22T01:53:56.435Z","photo_url":"https://wallpaperaccess.com/full/16965.jpg"}},{"id":"10","type":"gallery","attributes":{"user_id":1,"name":"Profile","created_at":"2021-04-22T01:53:56.437Z","updated_at":"2021-04-22T01:53:56.437Z","photo_url":"https://wallpaperaccess.com/full/16965.jpg"}}]}'
+  recorded_at: Thu, 22 Apr 2021 03:45:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/1/galleries/1/photos
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"36d756223a8fc7200a84ef8d91d0358b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e8f33080-ac0e-4126-9dfe-6294b7cf0109
+      X-Runtime:
+      - '0.005929'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"photo","attributes":{"description":"pic
+        1","url":"https://miro.medium.com/max/3840/1*6h1kck2QmGaC89ERN_W3UA.jpeg","created_at":"2021-04-22T01:53:56.472Z","updated_at":"2021-04-22T01:53:56.472Z","gallery_id":1,"user_id":1}},{"id":"2","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T01:53:56.477Z","updated_at":"2021-04-22T01:53:56.477Z","gallery_id":1,"user_id":1}},{"id":"3","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T01:53:56.482Z","updated_at":"2021-04-22T01:53:56.482Z","gallery_id":1,"user_id":1}},{"id":"33","type":"photo","attributes":{"description":"description","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c9886db3f17b5771a10dae11cd97d2a56ba727be/fluff.jpg","created_at":"2021-04-22T02:05:50.334Z","updated_at":"2021-04-22T02:05:50.369Z","gallery_id":1,"user_id":1}}]}'
+  recorded_at: Thu, 22 Apr 2021 03:45:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/1/galleries/9/photos
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fe08d5982817fd89c86e7962c35fca61"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 172d116e-e79f-4ccd-946c-6e915738262a
+      X-Runtime:
+      - '0.004678'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"23","type":"photo","attributes":{"description":"feature
+        photo","url":"https://wallpaperaccess.com/full/16965.jpg","created_at":"2021-04-22T01:53:56.545Z","updated_at":"2021-04-22T01:53:56.545Z","gallery_id":9,"user_id":1}}]}'
+  recorded_at: Thu, 22 Apr 2021 03:45:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/1/galleries/10/photos
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"3e98ff73423755da11aaf87a65648b4c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5816fad4-540b-405d-8398-053db7c4ffd0
+      X-Runtime:
+      - '0.006052'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"24","type":"photo","attributes":{"description":"feature
+        photo","url":"https://media.wired.com/photos/5cdefb92b86e041493d389df/191:100/w_1500,h_785,c_limit/Culture-Grumpy-Cat-487386121.jpg","created_at":"2021-04-22T01:53:56.548Z","updated_at":"2021-04-22T01:53:56.548Z","gallery_id":10,"user_id":1}}]}'
+  recorded_at: Thu, 22 Apr 2021 03:45:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/1/galleries
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"cb98bea0e300c33615fd5766c4ef2634"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1f93359e-1872-4c10-804a-4453f454c89a
+      X-Runtime:
+      - '0.003852'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"gallery","attributes":{"user_id":1,"name":"photos
+        from cali","created_at":"2021-04-22T01:53:56.411Z","updated_at":"2021-04-22T01:53:56.411Z","photo_url":"https://miro.medium.com/max/3840/1*6h1kck2QmGaC89ERN_W3UA.jpeg"}},{"id":"9","type":"gallery","attributes":{"user_id":1,"name":"PROFILE","created_at":"2021-04-22T01:53:56.435Z","updated_at":"2021-04-22T01:53:56.435Z","photo_url":"https://wallpaperaccess.com/full/16965.jpg"}},{"id":"10","type":"gallery","attributes":{"user_id":1,"name":"Profile","created_at":"2021-04-22T01:53:56.437Z","updated_at":"2021-04-22T01:53:56.437Z","photo_url":"https://wallpaperaccess.com/full/16965.jpg"}}]}'
+  recorded_at: Thu, 22 Apr 2021 03:45:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/1/galleries/1/photos
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"36d756223a8fc7200a84ef8d91d0358b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - db6fa1c5-0b2f-455f-9fd6-98270ab5ed42
+      X-Runtime:
+      - '0.005689'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"photo","attributes":{"description":"pic
+        1","url":"https://miro.medium.com/max/3840/1*6h1kck2QmGaC89ERN_W3UA.jpeg","created_at":"2021-04-22T01:53:56.472Z","updated_at":"2021-04-22T01:53:56.472Z","gallery_id":1,"user_id":1}},{"id":"2","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T01:53:56.477Z","updated_at":"2021-04-22T01:53:56.477Z","gallery_id":1,"user_id":1}},{"id":"3","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T01:53:56.482Z","updated_at":"2021-04-22T01:53:56.482Z","gallery_id":1,"user_id":1}},{"id":"33","type":"photo","attributes":{"description":"description","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c9886db3f17b5771a10dae11cd97d2a56ba727be/fluff.jpg","created_at":"2021-04-22T02:05:50.334Z","updated_at":"2021-04-22T02:05:50.369Z","gallery_id":1,"user_id":1}}]}'
+  recorded_at: Thu, 22 Apr 2021 03:45:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/1/galleries/9/photos
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fe08d5982817fd89c86e7962c35fca61"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - '018e80de-0ea3-4035-ab40-2f5a2b797136'
+      X-Runtime:
+      - '0.004996'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"23","type":"photo","attributes":{"description":"feature
+        photo","url":"https://wallpaperaccess.com/full/16965.jpg","created_at":"2021-04-22T01:53:56.545Z","updated_at":"2021-04-22T01:53:56.545Z","gallery_id":9,"user_id":1}}]}'
+  recorded_at: Thu, 22 Apr 2021 03:45:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/1/galleries/10/photos
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"3e98ff73423755da11aaf87a65648b4c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9e75f704-9dd2-498e-92e4-b770359e2b7f
+      X-Runtime:
+      - '0.003853'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"24","type":"photo","attributes":{"description":"feature
+        photo","url":"https://media.wired.com/photos/5cdefb92b86e041493d389df/191:100/w_1500,h_785,c_limit/Culture-Grumpy-Cat-487386121.jpg","created_at":"2021-04-22T01:53:56.548Z","updated_at":"2021-04-22T01:53:56.548Z","gallery_id":10,"user_id":1}}]}'
+  recorded_at: Thu, 22 Apr 2021 03:45:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"26830db28cea9cadaa30ce67a401308e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1380e329-cb0c-4a65-918a-f74a7cc98836
+      X-Runtime:
+      - '0.002236'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"profile","attributes":{"zipcode":"80301","user_id":1,"profile_picture":"http://www.google.com","username":"the
+        painter man"}}}'
+  recorded_at: Thu, 22 Apr 2021 03:45:00 GMT
+recorded_with: VCR 6.0.0

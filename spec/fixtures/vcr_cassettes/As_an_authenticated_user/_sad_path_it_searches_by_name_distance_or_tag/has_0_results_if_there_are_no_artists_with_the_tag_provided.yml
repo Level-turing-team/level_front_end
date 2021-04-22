@@ -1,0 +1,312 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/1/discover
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f76144aad54aa53463ca3d8d974f3438"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d0969d60-8c24-4c55-8aca-32cc29d8fe32
+      X-Runtime:
+      - '1.077770'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"2","type":"profile","attributes":{"zipcode":"80305","user_id":2,"profile_picture":"http://www.google.com","username":"korn"}},{"id":"3","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}},{"id":"4","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
+        by jim"}},{"id":"5","type":"profile","attributes":{"zipcode":"80544","user_id":5,"profile_picture":"http://www.google.com","username":"arteest"}}]}'
+  recorded_at: Thu, 22 Apr 2021 03:44:52 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/photos
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"dfb751dabb86bbfbbd2812a965ce867c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - de4ad65e-9731-42b7-b575-58553e21e8d3
+      X-Runtime:
+      - '0.038919'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"51","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--449ca10d8d837c304213271e6a1093b98b2eaeff/fluff.jpg","created_at":"2021-04-22T03:06:30.677Z","updated_at":"2021-04-22T03:06:30.720Z","gallery_id":38,"user_id":195}},{"id":"50","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2f64293121e181de6d5a5bb1da4e6992edbfaf2a/fluff.jpg","created_at":"2021-04-22T03:06:29.645Z","updated_at":"2021-04-22T03:06:29.694Z","gallery_id":37,"user_id":194}},{"id":"49","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--822ed840696db3f7aff2b2ba7dc091e6fb2ec799/fluff.jpg","created_at":"2021-04-22T03:04:37.741Z","updated_at":"2021-04-22T03:04:37.783Z","gallery_id":36,"user_id":190}},{"id":"48","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f14091b04d6d9f59f597bee2edfcc22cae064cb/fluff.jpg","created_at":"2021-04-22T03:04:36.950Z","updated_at":"2021-04-22T03:04:37.000Z","gallery_id":35,"user_id":189}},{"id":"47","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8cbc23969bfbd486e79d19089b7f7fa61716ed0a/fluff.jpg","created_at":"2021-04-22T03:04:17.512Z","updated_at":"2021-04-22T03:04:17.554Z","gallery_id":34,"user_id":185}},{"id":"46","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--60a8377cbc104fe9da15b0f157b5cc452ac08d41/fluff.jpg","created_at":"2021-04-22T03:04:16.389Z","updated_at":"2021-04-22T03:04:16.436Z","gallery_id":33,"user_id":184}},{"id":"45","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ba47636bcd11fefd09a05b5ac651aee55e46e86b/fluff.jpg","created_at":"2021-04-22T03:02:05.806Z","updated_at":"2021-04-22T03:02:05.846Z","gallery_id":32,"user_id":179}},{"id":"44","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e9e0dfe83b5fd8d08cbe5f331ff6d473273c8d54/fluff.jpg","created_at":"2021-04-22T03:00:33.293Z","updated_at":"2021-04-22T03:00:33.349Z","gallery_id":31,"user_id":175}},{"id":"43","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4f64109682742bf293c08d4ae4493058a23a19e0/fluff.jpg","created_at":"2021-04-22T02:52:39.775Z","updated_at":"2021-04-22T02:52:39.815Z","gallery_id":30,"user_id":160}},{"id":"42","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--74c604a2795a20d1a2396907cdca4fb23ae1eb10/fluff.jpg","created_at":"2021-04-22T02:52:38.821Z","updated_at":"2021-04-22T02:52:38.865Z","gallery_id":29,"user_id":159}},{"id":"41","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bb7cd534899fe78efc7b042781ec05a2af8718b0/fluff.jpg","created_at":"2021-04-22T02:51:44.945Z","updated_at":"2021-04-22T02:51:44.998Z","gallery_id":28,"user_id":155}},{"id":"40","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9c4f00cf38df24402ae385fc0727b95b4debfd94/fluff.jpg","created_at":"2021-04-22T02:50:10.730Z","updated_at":"2021-04-22T02:50:10.773Z","gallery_id":27,"user_id":150}},{"id":"39","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--fb6c1a65538bc5a6578a6835f86c00467c8b9e0e/fluff.jpg","created_at":"2021-04-22T02:50:09.928Z","updated_at":"2021-04-22T02:50:09.982Z","gallery_id":26,"user_id":149}},{"id":"38","type":"photo","attributes":{"description":"me","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--cf438f891127eb7a503edf353567f5e617000dac/F32A2DB5-B039-49ED-B86A-68514C84C515.jpeg","created_at":"2021-04-22T02:46:32.156Z","updated_at":"2021-04-22T02:46:32.297Z","gallery_id":25,"user_id":13}},{"id":"37","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--70cfff184d06bc60a8a90c9653f46309fb345b93/fluff.jpg","created_at":"2021-04-22T02:38:20.683Z","updated_at":"2021-04-22T02:38:20.724Z","gallery_id":24,"user_id":140}},{"id":"36","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a8456346a41de1f28f3d26c269e9f0b8dd774d80/fluff.jpg","created_at":"2021-04-22T02:38:19.860Z","updated_at":"2021-04-22T02:38:19.907Z","gallery_id":23,"user_id":139}},{"id":"35","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f515ad065e127c85e9e3fd1bc9d52a358fb5f49f/fluff.jpg","created_at":"2021-04-22T02:37:56.046Z","updated_at":"2021-04-22T02:37:56.081Z","gallery_id":22,"user_id":135}},{"id":"34","type":"photo","attributes":{"description":"this
+        painter","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b61f0843843e0ebdfd32f8d6626c3df61ec64c85/fluff.jpg","created_at":"2021-04-22T02:37:28.046Z","updated_at":"2021-04-22T02:37:28.108Z","gallery_id":21,"user_id":129}},{"id":"33","type":"photo","attributes":{"description":"description","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c9886db3f17b5771a10dae11cd97d2a56ba727be/fluff.jpg","created_at":"2021-04-22T02:05:50.334Z","updated_at":"2021-04-22T02:05:50.369Z","gallery_id":1,"user_id":1}},{"id":"31","type":"photo","attributes":{"description":"test
+        photo","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--61be40417f6954cfba45257f05765d31225c522c/fluff.jpg","created_at":"2021-04-22T02:05:38.090Z","updated_at":"2021-04-22T02:05:38.217Z","gallery_id":17,"user_id":7}},{"id":"30","type":"photo","attributes":{"description":"feature
+        photo","url":"https://media.wired.com/photos/5cdefb92b86e041493d389df/191:100/w_1500,h_785,c_limit/Culture-Grumpy-Cat-487386121.jpg","created_at":"2021-04-22T01:53:56.566Z","updated_at":"2021-04-22T01:53:56.566Z","gallery_id":16,"user_id":7}},{"id":"29","type":"photo","attributes":{"description":"feature
+        photo","url":"https://media.wired.com/photos/5cdefb92b86e041493d389df/191:100/w_1500,h_785,c_limit/Culture-Grumpy-Cat-487386121.jpg","created_at":"2021-04-22T01:53:56.562Z","updated_at":"2021-04-22T01:53:56.562Z","gallery_id":15,"user_id":6}},{"id":"28","type":"photo","attributes":{"description":"feature
+        photo","url":"https://media.wired.com/photos/5cdefb92b86e041493d389df/191:100/w_1500,h_785,c_limit/Culture-Grumpy-Cat-487386121.jpg","created_at":"2021-04-22T01:53:56.559Z","updated_at":"2021-04-22T01:53:56.559Z","gallery_id":14,"user_id":5}},{"id":"27","type":"photo","attributes":{"description":"feature
+        photo","url":"https://media.wired.com/photos/5cdefb92b86e041493d389df/191:100/w_1500,h_785,c_limit/Culture-Grumpy-Cat-487386121.jpg","created_at":"2021-04-22T01:53:56.556Z","updated_at":"2021-04-22T01:53:56.556Z","gallery_id":13,"user_id":4}},{"id":"26","type":"photo","attributes":{"description":"feature
+        photo","url":"https://media.wired.com/photos/5cdefb92b86e041493d389df/191:100/w_1500,h_785,c_limit/Culture-Grumpy-Cat-487386121.jpg","created_at":"2021-04-22T01:53:56.554Z","updated_at":"2021-04-22T01:53:56.554Z","gallery_id":12,"user_id":3}},{"id":"25","type":"photo","attributes":{"description":"feature
+        photo","url":"https://media.wired.com/photos/5cdefb92b86e041493d389df/191:100/w_1500,h_785,c_limit/Culture-Grumpy-Cat-487386121.jpg","created_at":"2021-04-22T01:53:56.551Z","updated_at":"2021-04-22T01:53:56.551Z","gallery_id":11,"user_id":2}},{"id":"24","type":"photo","attributes":{"description":"feature
+        photo","url":"https://media.wired.com/photos/5cdefb92b86e041493d389df/191:100/w_1500,h_785,c_limit/Culture-Grumpy-Cat-487386121.jpg","created_at":"2021-04-22T01:53:56.548Z","updated_at":"2021-04-22T01:53:56.548Z","gallery_id":10,"user_id":1}},{"id":"23","type":"photo","attributes":{"description":"feature
+        photo","url":"https://wallpaperaccess.com/full/16965.jpg","created_at":"2021-04-22T01:53:56.545Z","updated_at":"2021-04-22T01:53:56.545Z","gallery_id":9,"user_id":1}},{"id":"22","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T01:53:56.542Z","updated_at":"2021-04-22T01:53:56.542Z","gallery_id":8,"user_id":5}},{"id":"21","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T01:53:56.539Z","updated_at":"2021-04-22T01:53:56.539Z","gallery_id":8,"user_id":5}},{"id":"20","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T01:53:56.536Z","updated_at":"2021-04-22T01:53:56.536Z","gallery_id":8,"user_id":5}},{"id":"19","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T01:53:56.532Z","updated_at":"2021-04-22T01:53:56.532Z","gallery_id":8,"user_id":5}},{"id":"18","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T01:53:56.528Z","updated_at":"2021-04-22T01:53:56.528Z","gallery_id":7,"user_id":3}},{"id":"17","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T01:53:56.524Z","updated_at":"2021-04-22T01:53:56.524Z","gallery_id":7,"user_id":3}},{"id":"16","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T01:53:56.520Z","updated_at":"2021-04-22T01:53:56.520Z","gallery_id":7,"user_id":3}},{"id":"15","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T01:53:56.517Z","updated_at":"2021-04-22T01:53:56.517Z","gallery_id":6,"user_id":2}},{"id":"14","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T01:53:56.514Z","updated_at":"2021-04-22T01:53:56.514Z","gallery_id":6,"user_id":2}},{"id":"13","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T01:53:56.511Z","updated_at":"2021-04-22T01:53:56.511Z","gallery_id":6,"user_id":2}},{"id":"12","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T01:53:56.508Z","updated_at":"2021-04-22T01:53:56.508Z","gallery_id":5,"user_id":5}},{"id":"11","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T01:53:56.506Z","updated_at":"2021-04-22T01:53:56.506Z","gallery_id":5,"user_id":5}},{"id":"10","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T01:53:56.504Z","updated_at":"2021-04-22T01:53:56.504Z","gallery_id":5,"user_id":5}},{"id":"9","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T01:53:56.501Z","updated_at":"2021-04-22T01:53:56.501Z","gallery_id":4,"user_id":4}},{"id":"8","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T01:53:56.498Z","updated_at":"2021-04-22T01:53:56.498Z","gallery_id":4,"user_id":4}},{"id":"7","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T01:53:56.495Z","updated_at":"2021-04-22T01:53:56.495Z","gallery_id":3,"user_id":3}},{"id":"6","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T01:53:56.492Z","updated_at":"2021-04-22T01:53:56.492Z","gallery_id":3,"user_id":3}},{"id":"5","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T01:53:56.489Z","updated_at":"2021-04-22T01:53:56.489Z","gallery_id":2,"user_id":2}},{"id":"4","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T01:53:56.486Z","updated_at":"2021-04-22T01:53:56.486Z","gallery_id":2,"user_id":2}},{"id":"3","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T01:53:56.482Z","updated_at":"2021-04-22T01:53:56.482Z","gallery_id":1,"user_id":1}},{"id":"2","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T01:53:56.477Z","updated_at":"2021-04-22T01:53:56.477Z","gallery_id":1,"user_id":1}},{"id":"1","type":"photo","attributes":{"description":"pic
+        1","url":"https://miro.medium.com/max/3840/1*6h1kck2QmGaC89ERN_W3UA.jpeg","created_at":"2021-04-22T01:53:56.472Z","updated_at":"2021-04-22T01:53:56.472Z","gallery_id":1,"user_id":1}}]}'
+  recorded_at: Thu, 22 Apr 2021 03:44:52 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/1/search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - f23f7593-91d8-4c84-abbb-4b83be90c17d
+      X-Runtime:
+      - '0.002265'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{},"error":"invalid parameters"}'
+  recorded_at: Thu, 22 Apr 2021 03:44:53 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/1/discover
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - 54d32ebb-0f41-4f12-9e15-24cde935cb30
+      X-Runtime:
+      - '0.832606'
+      Content-Length:
+      - '12242'
+    body:
+      encoding: UTF-8
+      string: '{"status":500,"error":"Internal Server Error","exception":"#\u003cJSON::ParserError:
+        809: unexpected token at ''\u003ch1\u003eInternal Server Error\u003c/h1\u003e''\u003e","traces":{"Application
+        Trace":[{"id":2,"trace":"app/services/zipcode_service.rb:10:in `get_zipcodes''"},{"id":3,"trace":"app/facades/zipcode_facade.rb:13:in
+        `block in near_me''"},{"id":11,"trace":"app/facades/zipcode_facade.rb:11:in
+        `near_me''"},{"id":12,"trace":"app/controllers/api/v1/profiles_controller.rb:5:in
+        `near_me''"}],"Framework Trace":[{"id":0,"trace":"json (2.5.1) lib/json/common.rb:216:in
+        `parse''"},{"id":1,"trace":"json (2.5.1) lib/json/common.rb:216:in `parse''"},{"id":4,"trace":"activesupport
+        (5.2.5) lib/active_support/cache.rb:323:in `block in fetch''"},{"id":5,"trace":"activesupport
+        (5.2.5) lib/active_support/cache.rb:694:in `block in save_block_result_to_cache''"},{"id":6,"trace":"activesupport
+        (5.2.5) lib/active_support/cache.rb:663:in `block in instrument''"},{"id":7,"trace":"activesupport
+        (5.2.5) lib/active_support/notifications.rb:170:in `instrument''"},{"id":8,"trace":"activesupport
+        (5.2.5) lib/active_support/cache.rb:663:in `instrument''"},{"id":9,"trace":"activesupport
+        (5.2.5) lib/active_support/cache.rb:693:in `save_block_result_to_cache''"},{"id":10,"trace":"activesupport
+        (5.2.5) lib/active_support/cache.rb:323:in `fetch''"},{"id":13,"trace":"actionpack
+        (5.2.5) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action''"},{"id":14,"trace":"actionpack
+        (5.2.5) lib/abstract_controller/base.rb:194:in `process_action''"},{"id":15,"trace":"actionpack
+        (5.2.5) lib/action_controller/metal/rendering.rb:30:in `process_action''"},{"id":16,"trace":"actionpack
+        (5.2.5) lib/abstract_controller/callbacks.rb:42:in `block in process_action''"},{"id":17,"trace":"activesupport
+        (5.2.5) lib/active_support/callbacks.rb:98:in `run_callbacks''"},{"id":18,"trace":"actionpack
+        (5.2.5) lib/abstract_controller/callbacks.rb:41:in `process_action''"},{"id":19,"trace":"actionpack
+        (5.2.5) lib/action_controller/metal/rescue.rb:22:in `process_action''"},{"id":20,"trace":"actionpack
+        (5.2.5) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action''"},{"id":21,"trace":"activesupport
+        (5.2.5) lib/active_support/notifications.rb:168:in `block in instrument''"},{"id":22,"trace":"activesupport
+        (5.2.5) lib/active_support/notifications/instrumenter.rb:23:in `instrument''"},{"id":23,"trace":"activesupport
+        (5.2.5) lib/active_support/notifications.rb:168:in `instrument''"},{"id":24,"trace":"actionpack
+        (5.2.5) lib/action_controller/metal/instrumentation.rb:32:in `process_action''"},{"id":25,"trace":"actionpack
+        (5.2.5) lib/action_controller/metal/params_wrapper.rb:256:in `process_action''"},{"id":26,"trace":"activerecord
+        (5.2.5) lib/active_record/railties/controller_runtime.rb:24:in `process_action''"},{"id":27,"trace":"actionpack
+        (5.2.5) lib/abstract_controller/base.rb:134:in `process''"},{"id":28,"trace":"actionview
+        (5.2.5) lib/action_view/rendering.rb:32:in `process''"},{"id":29,"trace":"actionpack
+        (5.2.5) lib/action_controller/metal.rb:191:in `dispatch''"},{"id":30,"trace":"actionpack
+        (5.2.5) lib/action_controller/metal.rb:252:in `dispatch''"},{"id":31,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/routing/route_set.rb:52:in `dispatch''"},{"id":32,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/routing/route_set.rb:34:in `serve''"},{"id":33,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/journey/router.rb:52:in `block in serve''"},{"id":34,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/journey/router.rb:35:in `each''"},{"id":35,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/journey/router.rb:35:in `serve''"},{"id":36,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/routing/route_set.rb:840:in `call''"},{"id":37,"trace":"rack
+        (2.2.3) lib/rack/etag.rb:27:in `call''"},{"id":38,"trace":"rack (2.2.3) lib/rack/conditional_get.rb:27:in
+        `call''"},{"id":39,"trace":"rack (2.2.3) lib/rack/head.rb:12:in `call''"},{"id":40,"trace":"activerecord
+        (5.2.5) lib/active_record/migration.rb:559:in `call''"},{"id":41,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call''"},{"id":42,"trace":"activesupport
+        (5.2.5) lib/active_support/callbacks.rb:98:in `run_callbacks''"},{"id":43,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"id":44,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"id":45,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call''"},{"id":46,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call''"},{"id":47,"trace":"railties
+        (5.2.5) lib/rails/rack/logger.rb:38:in `call_app''"},{"id":48,"trace":"railties
+        (5.2.5) lib/rails/rack/logger.rb:26:in `block in call''"},{"id":49,"trace":"activesupport
+        (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged''"},{"id":50,"trace":"activesupport
+        (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged''"},{"id":51,"trace":"activesupport
+        (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged''"},{"id":52,"trace":"railties
+        (5.2.5) lib/rails/rack/logger.rb:26:in `call''"},{"id":53,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call''"},{"id":54,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call''"},{"id":55,"trace":"rack
+        (2.2.3) lib/rack/runtime.rb:22:in `call''"},{"id":56,"trace":"activesupport
+        (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"id":57,"trace":"actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in
+        `call''"},{"id":58,"trace":"actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in
+        `call''"},{"id":59,"trace":"rack (2.2.3) lib/rack/sendfile.rb:110:in `call''"},{"id":60,"trace":"railties
+        (5.2.5) lib/rails/engine.rb:524:in `call''"},{"id":61,"trace":"puma (3.12.6)
+        lib/puma/configuration.rb:227:in `call''"},{"id":62,"trace":"puma (3.12.6)
+        lib/puma/server.rb:706:in `handle_request''"},{"id":63,"trace":"puma (3.12.6)
+        lib/puma/server.rb:476:in `process_client''"},{"id":64,"trace":"puma (3.12.6)
+        lib/puma/server.rb:334:in `block in run''"},{"id":65,"trace":"puma (3.12.6)
+        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}],"Full Trace":[{"id":0,"trace":"json
+        (2.5.1) lib/json/common.rb:216:in `parse''"},{"id":1,"trace":"json (2.5.1)
+        lib/json/common.rb:216:in `parse''"},{"id":2,"trace":"app/services/zipcode_service.rb:10:in
+        `get_zipcodes''"},{"id":3,"trace":"app/facades/zipcode_facade.rb:13:in `block
+        in near_me''"},{"id":4,"trace":"activesupport (5.2.5) lib/active_support/cache.rb:323:in
+        `block in fetch''"},{"id":5,"trace":"activesupport (5.2.5) lib/active_support/cache.rb:694:in
+        `block in save_block_result_to_cache''"},{"id":6,"trace":"activesupport (5.2.5)
+        lib/active_support/cache.rb:663:in `block in instrument''"},{"id":7,"trace":"activesupport
+        (5.2.5) lib/active_support/notifications.rb:170:in `instrument''"},{"id":8,"trace":"activesupport
+        (5.2.5) lib/active_support/cache.rb:663:in `instrument''"},{"id":9,"trace":"activesupport
+        (5.2.5) lib/active_support/cache.rb:693:in `save_block_result_to_cache''"},{"id":10,"trace":"activesupport
+        (5.2.5) lib/active_support/cache.rb:323:in `fetch''"},{"id":11,"trace":"app/facades/zipcode_facade.rb:11:in
+        `near_me''"},{"id":12,"trace":"app/controllers/api/v1/profiles_controller.rb:5:in
+        `near_me''"},{"id":13,"trace":"actionpack (5.2.5) lib/action_controller/metal/basic_implicit_render.rb:6:in
+        `send_action''"},{"id":14,"trace":"actionpack (5.2.5) lib/abstract_controller/base.rb:194:in
+        `process_action''"},{"id":15,"trace":"actionpack (5.2.5) lib/action_controller/metal/rendering.rb:30:in
+        `process_action''"},{"id":16,"trace":"actionpack (5.2.5) lib/abstract_controller/callbacks.rb:42:in
+        `block in process_action''"},{"id":17,"trace":"activesupport (5.2.5) lib/active_support/callbacks.rb:98:in
+        `run_callbacks''"},{"id":18,"trace":"actionpack (5.2.5) lib/abstract_controller/callbacks.rb:41:in
+        `process_action''"},{"id":19,"trace":"actionpack (5.2.5) lib/action_controller/metal/rescue.rb:22:in
+        `process_action''"},{"id":20,"trace":"actionpack (5.2.5) lib/action_controller/metal/instrumentation.rb:34:in
+        `block in process_action''"},{"id":21,"trace":"activesupport (5.2.5) lib/active_support/notifications.rb:168:in
+        `block in instrument''"},{"id":22,"trace":"activesupport (5.2.5) lib/active_support/notifications/instrumenter.rb:23:in
+        `instrument''"},{"id":23,"trace":"activesupport (5.2.5) lib/active_support/notifications.rb:168:in
+        `instrument''"},{"id":24,"trace":"actionpack (5.2.5) lib/action_controller/metal/instrumentation.rb:32:in
+        `process_action''"},{"id":25,"trace":"actionpack (5.2.5) lib/action_controller/metal/params_wrapper.rb:256:in
+        `process_action''"},{"id":26,"trace":"activerecord (5.2.5) lib/active_record/railties/controller_runtime.rb:24:in
+        `process_action''"},{"id":27,"trace":"actionpack (5.2.5) lib/abstract_controller/base.rb:134:in
+        `process''"},{"id":28,"trace":"actionview (5.2.5) lib/action_view/rendering.rb:32:in
+        `process''"},{"id":29,"trace":"actionpack (5.2.5) lib/action_controller/metal.rb:191:in
+        `dispatch''"},{"id":30,"trace":"actionpack (5.2.5) lib/action_controller/metal.rb:252:in
+        `dispatch''"},{"id":31,"trace":"actionpack (5.2.5) lib/action_dispatch/routing/route_set.rb:52:in
+        `dispatch''"},{"id":32,"trace":"actionpack (5.2.5) lib/action_dispatch/routing/route_set.rb:34:in
+        `serve''"},{"id":33,"trace":"actionpack (5.2.5) lib/action_dispatch/journey/router.rb:52:in
+        `block in serve''"},{"id":34,"trace":"actionpack (5.2.5) lib/action_dispatch/journey/router.rb:35:in
+        `each''"},{"id":35,"trace":"actionpack (5.2.5) lib/action_dispatch/journey/router.rb:35:in
+        `serve''"},{"id":36,"trace":"actionpack (5.2.5) lib/action_dispatch/routing/route_set.rb:840:in
+        `call''"},{"id":37,"trace":"rack (2.2.3) lib/rack/etag.rb:27:in `call''"},{"id":38,"trace":"rack
+        (2.2.3) lib/rack/conditional_get.rb:27:in `call''"},{"id":39,"trace":"rack
+        (2.2.3) lib/rack/head.rb:12:in `call''"},{"id":40,"trace":"activerecord (5.2.5)
+        lib/active_record/migration.rb:559:in `call''"},{"id":41,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call''"},{"id":42,"trace":"activesupport
+        (5.2.5) lib/active_support/callbacks.rb:98:in `run_callbacks''"},{"id":43,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"id":44,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"id":45,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call''"},{"id":46,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call''"},{"id":47,"trace":"railties
+        (5.2.5) lib/rails/rack/logger.rb:38:in `call_app''"},{"id":48,"trace":"railties
+        (5.2.5) lib/rails/rack/logger.rb:26:in `block in call''"},{"id":49,"trace":"activesupport
+        (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged''"},{"id":50,"trace":"activesupport
+        (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged''"},{"id":51,"trace":"activesupport
+        (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged''"},{"id":52,"trace":"railties
+        (5.2.5) lib/rails/rack/logger.rb:26:in `call''"},{"id":53,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call''"},{"id":54,"trace":"actionpack
+        (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call''"},{"id":55,"trace":"rack
+        (2.2.3) lib/rack/runtime.rb:22:in `call''"},{"id":56,"trace":"activesupport
+        (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"id":57,"trace":"actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in
+        `call''"},{"id":58,"trace":"actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in
+        `call''"},{"id":59,"trace":"rack (2.2.3) lib/rack/sendfile.rb:110:in `call''"},{"id":60,"trace":"railties
+        (5.2.5) lib/rails/engine.rb:524:in `call''"},{"id":61,"trace":"puma (3.12.6)
+        lib/puma/configuration.rb:227:in `call''"},{"id":62,"trace":"puma (3.12.6)
+        lib/puma/server.rb:706:in `handle_request''"},{"id":63,"trace":"puma (3.12.6)
+        lib/puma/server.rb:476:in `process_client''"},{"id":64,"trace":"puma (3.12.6)
+        lib/puma/server.rb:334:in `block in run''"},{"id":65,"trace":"puma (3.12.6)
+        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}]}}'
+  recorded_at: Thu, 22 Apr 2021 03:44:53 GMT
+recorded_with: VCR 6.0.0
