@@ -11,11 +11,11 @@
 		<div class="col">
 			<section id="artist-bio">
 				<div class="card border-dark mb-3" style="max-width: 18rem;">
-				  <div class="card-header bg-dark text-white"> <%= @user.username %>'s	Bio	</div>
+				  <div class="card-header bg-dark font-weight-light mb-4 font-italic text-white"> <%= @user.username %>'s	Bio	</div>
 					  <div class="card-body text-dark">
 					    <div class="card-text">
 								<% if @user.bio.empty? %>
-									<p>Nothing to see here!</p>
+									<p class="font-weight-light mb-4 font-italic text-white" >Nothing to see here!</p>
 								<% else %>
 									<figure class="text-left">
 										<blockquote class="blockquote">
@@ -39,7 +39,7 @@
 					<% @profile_data.galleries.each_with_index do |gallery, index| %>
 					<div class="col-6">
 						<div class="card background">
-							<div class="image-<%= index + 1 %>">
+							<div class="image-<%= index + 1 %>"><br>
 								<center>
 									<img class="card-img-top cropped1" src="<%=gallery.photos.first.url%>" alt="<%= gallery.name %>">
 								</center>
@@ -58,8 +58,8 @@
 			<div class="card d-flex text-white mb-3" id="my-circle" style="max-width: 18rem;margin-top: 10px;text-align: center;">
 				<h5 class="card-header bg-dark">
 					<section id='username'>
-						<center class="blue_glow">
-							<h3><%= @user.username %>'s profile</h3>
+						<center>
+							<h3 class="font-weight-light mb-4 font-italic text-white" ><%= @user.username %>'s profile</h3>
 						</center>
 					</section>
 				</h5>
@@ -72,10 +72,10 @@
 								<div class="card-body background">
 									<div class="card-text" style="color:black">
 										<section id="distance">
-											<h4>Your Circle distance from you: </h4>
+											<h4 class="font-weight-light mb-4 font-italic text-white">Your Circle distance from you: </h4>
 											<% if @user.id == @current_user.id %>
 											<% else %>
-												<p><%= @distance %> miles from you</p>
+												<p class="font-weight-light mb-4 font-italic text-white"><%= @distance %> miles from you</p>
 												<p><%= button_to "Add this user to your circle!",
 													circles_path({user_id: @current_user.id, following_id: @user.id}),
 													method: :post  if !@circle_ids.include?(@user.id) %></p>
