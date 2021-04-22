@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3001/api/v1/distance?current_user=1&user=389
+    uri: http://localhost:3001/api/v1/distance?current_user=1&user=534
     body:
       encoding: US-ASCII
       string: ''
@@ -21,9 +21,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       X-Request-Id:
-      - 36a61902-08fa-4c4d-836e-45a57a4c4bb2
+      - 287de898-b2d3-4758-916f-78b986bd770b
       X-Runtime:
-      - '0.023564'
+      - '0.025994'
       Content-Length:
       - '10134'
     body:
@@ -137,7 +137,7 @@ http_interactions:
         lib/puma/server.rb:476:in `process_client''"},{"id":52,"trace":"puma (3.12.6)
         lib/puma/server.rb:334:in `block in run''"},{"id":53,"trace":"puma (3.12.6)
         lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}]}}'
-  recorded_at: Wed, 21 Apr 2021 23:49:40 GMT
+  recorded_at: Thu, 22 Apr 2021 02:19:43 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1/circle
@@ -163,16 +163,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9f35963f-5193-4594-b900-d8a698c9a955
+      - bcaff500-1b7e-4ab2-a552-a3d52f4f1ec0
       X-Runtime:
-      - '0.003880'
+      - '0.006968'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"2","type":"profile","attributes":{"zipcode":"80305","user_id":2,"profile_picture":"http://www.google.com","username":"korn"}},{"id":"3","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}},{"id":"4","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
         by jim"}},{"id":"5","type":"profile","attributes":{"zipcode":"80544","user_id":5,"profile_picture":"http://www.google.com","username":"arteest"}}]}'
-  recorded_at: Wed, 21 Apr 2021 23:49:40 GMT
+  recorded_at: Thu, 22 Apr 2021 02:19:43 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profile/1/tags
@@ -198,15 +198,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d9a1159e-a441-4253-9d0c-5afd66813e99
+      - ec0ed8a7-402b-4c86-9037-f89d17bffc7d
       X-Runtime:
-      - '0.004827'
+      - '0.004360'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"tag","attributes":{"name":"Painter"}},{"id":"3","type":"tag","attributes":{"name":"Sculpter"}}]}'
-  recorded_at: Wed, 21 Apr 2021 23:49:40 GMT
+  recorded_at: Thu, 22 Apr 2021 02:19:43 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1/post
@@ -228,28 +228,32 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"8f74f261412baf5a57adcbd65a5dff77"
+      - W/"e5f4723e7334e6648f57fca7ead9d13f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 04c47b61-99cb-40a1-b84b-fa0de05f7197
+      - 00ebc9c2-c69a-4e42-91a5-33295e2275e1
       X-Runtime:
-      - '0.004465'
+      - '0.005037'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"post","attributes":{"content":"hey did you
-        see that lil nas X video?","link":"photoURL.com","user_id":1,"created_at":"2021-04-21T23:05:49.679Z"}},{"id":"2","type":"post","attributes":{"content":"hey
-        did you see that create meme?","link":"photoURL.com","user_id":1,"created_at":"2021-04-21T23:05:49.680Z"}},{"id":"3","type":"post","attributes":{"content":"hey
-        did you see that riot footage?","link":null,"user_id":1,"created_at":"2021-04-21T23:05:49.682Z"}},{"id":"11","type":"post","attributes":{"content":"this
-        is my first post","link":"www.google.com","user_id":1,"created_at":"2021-04-21T23:06:06.918Z"}},{"id":"12","type":"post","attributes":{"content":"this
-        is my first post","link":"","user_id":1,"created_at":"2021-04-21T23:06:07.377Z"}},{"id":"13","type":"post","attributes":{"content":"this
-        is my first post","link":"www.google.com","user_id":1,"created_at":"2021-04-21T23:42:16.536Z"}},{"id":"14","type":"post","attributes":{"content":"this
-        is my first post","link":"","user_id":1,"created_at":"2021-04-21T23:42:16.969Z"}},{"id":"15","type":"post","attributes":{"content":"this
-        is my first post","link":"www.google.com","user_id":1,"created_at":"2021-04-21T23:49:34.834Z"}},{"id":"16","type":"post","attributes":{"content":"this
-        is my first post","link":"","user_id":1,"created_at":"2021-04-21T23:49:35.303Z"}}]}'
-  recorded_at: Wed, 21 Apr 2021 23:49:40 GMT
+      string: '{"data":[{"id":"20","type":"post","attributes":{"content":"this is
+        my first post","link":"","user_id":1,"created_at":"2021-04-22T02:19:38.248Z"}},{"id":"19","type":"post","attributes":{"content":"this
+        is my first post","link":"www.google.com","user_id":1,"created_at":"2021-04-22T02:19:37.664Z"}},{"id":"18","type":"post","attributes":{"content":"this
+        is my first post","link":"","user_id":1,"created_at":"2021-04-22T02:18:38.065Z"}},{"id":"17","type":"post","attributes":{"content":"this
+        is my first post","link":"www.google.com","user_id":1,"created_at":"2021-04-22T02:18:37.602Z"}},{"id":"16","type":"post","attributes":{"content":"this
+        is my first post","link":"","user_id":1,"created_at":"2021-04-22T02:16:47.278Z"}},{"id":"15","type":"post","attributes":{"content":"this
+        is my first post","link":"www.google.com","user_id":1,"created_at":"2021-04-22T02:16:46.840Z"}},{"id":"14","type":"post","attributes":{"content":"this
+        is my first post","link":"","user_id":1,"created_at":"2021-04-22T02:03:57.724Z"}},{"id":"13","type":"post","attributes":{"content":"this
+        is my first post","link":"www.google.com","user_id":1,"created_at":"2021-04-22T02:03:57.260Z"}},{"id":"12","type":"post","attributes":{"content":"this
+        is my first post","link":"","user_id":1,"created_at":"2021-04-22T02:01:24.567Z"}},{"id":"11","type":"post","attributes":{"content":"this
+        is my first post","link":"www.google.com","user_id":1,"created_at":"2021-04-22T02:01:24.026Z"}},{"id":"3","type":"post","attributes":{"content":"hey
+        did you see that riot footage?","link":null,"user_id":1,"created_at":"2021-04-22T01:53:07.543Z"}},{"id":"2","type":"post","attributes":{"content":"hey
+        did you see that create meme?","link":"photoURL.com","user_id":1,"created_at":"2021-04-22T01:53:07.540Z"}},{"id":"1","type":"post","attributes":{"content":"hey
+        did you see that lil nas X video?","link":"photoURL.com","user_id":1,"created_at":"2021-04-22T01:53:07.535Z"}}]}'
+  recorded_at: Thu, 22 Apr 2021 02:19:43 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1/galleries
@@ -271,20 +275,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"904f5a809b6be4c73ebef501320d628a"
+      - W/"3eaa9254cbf551f9290512c160ee1f59"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a84f1495-1a5f-449a-98f2-f91211bb8064
+      - 492d1d02-e5e7-4d38-b9ad-7c082ffd2631
       X-Runtime:
-      - '0.003651'
+      - '0.004244'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"gallery","attributes":{"user_id":1,"name":"photos
-        from cali","created_at":"2021-04-21T23:05:49.699Z","updated_at":"2021-04-21T23:05:49.699Z","photo_url":"https://miro.medium.com/max/3840/1*6h1kck2QmGaC89ERN_W3UA.jpeg"}},{"id":"9","type":"gallery","attributes":{"user_id":1,"name":"PROFILE","created_at":"2021-04-21T23:05:49.715Z","updated_at":"2021-04-21T23:05:49.715Z","photo_url":"https://wallpaperaccess.com/full/16965.jpg"}},{"id":"10","type":"gallery","attributes":{"user_id":1,"name":"Profile","created_at":"2021-04-21T23:05:49.716Z","updated_at":"2021-04-21T23:05:49.716Z","photo_url":"https://wallpaperaccess.com/full/16965.jpg"}}]}'
-  recorded_at: Wed, 21 Apr 2021 23:49:40 GMT
+        from cali","created_at":"2021-04-22T01:53:07.572Z","updated_at":"2021-04-22T01:53:07.572Z","photo_url":"https://miro.medium.com/max/3840/1*6h1kck2QmGaC89ERN_W3UA.jpeg"}},{"id":"9","type":"gallery","attributes":{"user_id":1,"name":"PROFILE","created_at":"2021-04-22T01:53:07.592Z","updated_at":"2021-04-22T01:53:07.592Z","photo_url":"https://wallpaperaccess.com/full/16965.jpg"}},{"id":"10","type":"gallery","attributes":{"user_id":1,"name":"Profile","created_at":"2021-04-22T01:53:07.594Z","updated_at":"2021-04-22T01:53:07.594Z","photo_url":"https://wallpaperaccess.com/full/16965.jpg"}}]}'
+  recorded_at: Thu, 22 Apr 2021 02:19:43 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1/galleries/1/photos
@@ -306,22 +310,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"f9e32645dd647aee30c4b8eaaaa0920a"
+      - W/"d6d973d200aef0f5fcaaa972ccc5efaa"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9a365fca-57b7-4266-add9-f99884e411cc
+      - 9c7ef706-cbf9-45dd-b434-d4a1631a4c7c
       X-Runtime:
-      - '0.004001'
+      - '0.005130'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"photo","attributes":{"description":"pic
-        1","url":"https://miro.medium.com/max/3840/1*6h1kck2QmGaC89ERN_W3UA.jpeg","created_at":"2021-04-21T23:05:49.734Z","updated_at":"2021-04-21T23:05:49.734Z","gallery_id":1}},{"id":"2","type":"photo","attributes":{"description":"pic
-        1","url":"http://www.google.com","created_at":"2021-04-21T23:05:49.737Z","updated_at":"2021-04-21T23:05:49.737Z","gallery_id":1}},{"id":"3","type":"photo","attributes":{"description":"pic
-        1","url":"http://www.google.com","created_at":"2021-04-21T23:05:49.739Z","updated_at":"2021-04-21T23:05:49.739Z","gallery_id":1}}]}'
-  recorded_at: Wed, 21 Apr 2021 23:49:40 GMT
+        1","url":"https://miro.medium.com/max/3840/1*6h1kck2QmGaC89ERN_W3UA.jpeg","created_at":"2021-04-22T01:53:07.623Z","updated_at":"2021-04-22T01:53:07.623Z","gallery_id":1,"user_id":1}},{"id":"2","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T01:53:07.627Z","updated_at":"2021-04-22T01:53:07.627Z","gallery_id":1,"user_id":1}},{"id":"3","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T01:53:07.629Z","updated_at":"2021-04-22T01:53:07.629Z","gallery_id":1,"user_id":1}}]}'
+  recorded_at: Thu, 22 Apr 2021 02:19:43 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1/galleries/9/photos
@@ -343,20 +347,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"bca7b6b10e1e8f42b17b3aae5d771e83"
+      - W/"3aa45ef2aafc5c75217afa0fcf8b53ee"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8973e8c9-11c2-4aca-9da9-2f139d4ae4d0
+      - 9c7023c2-5c2c-4f11-9880-88c6b8d5da08
       X-Runtime:
-      - '0.003496'
+      - '0.005155'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"23","type":"photo","attributes":{"description":"feature
-        photo","url":"https://wallpaperaccess.com/full/16965.jpg","created_at":"2021-04-21T23:05:49.793Z","updated_at":"2021-04-21T23:05:49.793Z","gallery_id":9}}]}'
-  recorded_at: Wed, 21 Apr 2021 23:49:40 GMT
+        photo","url":"https://wallpaperaccess.com/full/16965.jpg","created_at":"2021-04-22T01:53:07.674Z","updated_at":"2021-04-22T01:53:07.674Z","gallery_id":9,"user_id":1}}]}'
+  recorded_at: Thu, 22 Apr 2021 02:19:43 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1/galleries/10/photos
@@ -378,20 +382,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"c5e323f874eb0c28b1efe58c0704c74c"
+      - W/"f3d261c7316a5b3c621e6ed813eaad13"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a967af63-173b-414d-9928-834a2e930945
+      - 77336a1b-fa14-4b87-994b-a82540ae11b1
       X-Runtime:
-      - '0.004327'
+      - '0.007723'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"24","type":"photo","attributes":{"description":"feature
-        photo","url":"https://media.wired.com/photos/5cdefb92b86e041493d389df/191:100/w_1500,h_785,c_limit/Culture-Grumpy-Cat-487386121.jpg","created_at":"2021-04-21T23:05:49.796Z","updated_at":"2021-04-21T23:05:49.796Z","gallery_id":10}}]}'
-  recorded_at: Wed, 21 Apr 2021 23:49:40 GMT
+        photo","url":"https://media.wired.com/photos/5cdefb92b86e041493d389df/191:100/w_1500,h_785,c_limit/Culture-Grumpy-Cat-487386121.jpg","created_at":"2021-04-22T01:53:07.676Z","updated_at":"2021-04-22T01:53:07.676Z","gallery_id":10,"user_id":1}}]}'
+  recorded_at: Thu, 22 Apr 2021 02:19:43 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1/galleries
@@ -413,20 +417,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"904f5a809b6be4c73ebef501320d628a"
+      - W/"3eaa9254cbf551f9290512c160ee1f59"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4c691ccf-3399-4742-9805-cc8786c48ad2
+      - 14050e0f-2176-452a-b41d-c063c34acfb4
       X-Runtime:
-      - '0.003207'
+      - '0.004021'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"gallery","attributes":{"user_id":1,"name":"photos
-        from cali","created_at":"2021-04-21T23:05:49.699Z","updated_at":"2021-04-21T23:05:49.699Z","photo_url":"https://miro.medium.com/max/3840/1*6h1kck2QmGaC89ERN_W3UA.jpeg"}},{"id":"9","type":"gallery","attributes":{"user_id":1,"name":"PROFILE","created_at":"2021-04-21T23:05:49.715Z","updated_at":"2021-04-21T23:05:49.715Z","photo_url":"https://wallpaperaccess.com/full/16965.jpg"}},{"id":"10","type":"gallery","attributes":{"user_id":1,"name":"Profile","created_at":"2021-04-21T23:05:49.716Z","updated_at":"2021-04-21T23:05:49.716Z","photo_url":"https://wallpaperaccess.com/full/16965.jpg"}}]}'
-  recorded_at: Wed, 21 Apr 2021 23:49:40 GMT
+        from cali","created_at":"2021-04-22T01:53:07.572Z","updated_at":"2021-04-22T01:53:07.572Z","photo_url":"https://miro.medium.com/max/3840/1*6h1kck2QmGaC89ERN_W3UA.jpeg"}},{"id":"9","type":"gallery","attributes":{"user_id":1,"name":"PROFILE","created_at":"2021-04-22T01:53:07.592Z","updated_at":"2021-04-22T01:53:07.592Z","photo_url":"https://wallpaperaccess.com/full/16965.jpg"}},{"id":"10","type":"gallery","attributes":{"user_id":1,"name":"Profile","created_at":"2021-04-22T01:53:07.594Z","updated_at":"2021-04-22T01:53:07.594Z","photo_url":"https://wallpaperaccess.com/full/16965.jpg"}}]}'
+  recorded_at: Thu, 22 Apr 2021 02:19:43 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1/galleries/1/photos
@@ -448,22 +452,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"f9e32645dd647aee30c4b8eaaaa0920a"
+      - W/"d6d973d200aef0f5fcaaa972ccc5efaa"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 66310248-2c74-4af7-9836-3fe03a0c5269
+      - a982c3ef-3d8e-41fd-b4e4-435a0802041f
       X-Runtime:
-      - '0.004049'
+      - '0.005740'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"photo","attributes":{"description":"pic
-        1","url":"https://miro.medium.com/max/3840/1*6h1kck2QmGaC89ERN_W3UA.jpeg","created_at":"2021-04-21T23:05:49.734Z","updated_at":"2021-04-21T23:05:49.734Z","gallery_id":1}},{"id":"2","type":"photo","attributes":{"description":"pic
-        1","url":"http://www.google.com","created_at":"2021-04-21T23:05:49.737Z","updated_at":"2021-04-21T23:05:49.737Z","gallery_id":1}},{"id":"3","type":"photo","attributes":{"description":"pic
-        1","url":"http://www.google.com","created_at":"2021-04-21T23:05:49.739Z","updated_at":"2021-04-21T23:05:49.739Z","gallery_id":1}}]}'
-  recorded_at: Wed, 21 Apr 2021 23:49:40 GMT
+        1","url":"https://miro.medium.com/max/3840/1*6h1kck2QmGaC89ERN_W3UA.jpeg","created_at":"2021-04-22T01:53:07.623Z","updated_at":"2021-04-22T01:53:07.623Z","gallery_id":1,"user_id":1}},{"id":"2","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T01:53:07.627Z","updated_at":"2021-04-22T01:53:07.627Z","gallery_id":1,"user_id":1}},{"id":"3","type":"photo","attributes":{"description":"pic
+        1","url":"http://www.google.com","created_at":"2021-04-22T01:53:07.629Z","updated_at":"2021-04-22T01:53:07.629Z","gallery_id":1,"user_id":1}}]}'
+  recorded_at: Thu, 22 Apr 2021 02:19:43 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1/galleries/9/photos
@@ -485,20 +489,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"bca7b6b10e1e8f42b17b3aae5d771e83"
+      - W/"3aa45ef2aafc5c75217afa0fcf8b53ee"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a4ebec52-061a-4307-9063-9fc60cfec17c
+      - 94bdede6-723d-4db4-81c7-9992e1397662
       X-Runtime:
-      - '0.004313'
+      - '0.003910'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"23","type":"photo","attributes":{"description":"feature
-        photo","url":"https://wallpaperaccess.com/full/16965.jpg","created_at":"2021-04-21T23:05:49.793Z","updated_at":"2021-04-21T23:05:49.793Z","gallery_id":9}}]}'
-  recorded_at: Wed, 21 Apr 2021 23:49:40 GMT
+        photo","url":"https://wallpaperaccess.com/full/16965.jpg","created_at":"2021-04-22T01:53:07.674Z","updated_at":"2021-04-22T01:53:07.674Z","gallery_id":9,"user_id":1}}]}'
+  recorded_at: Thu, 22 Apr 2021 02:19:43 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1/galleries/10/photos
@@ -520,20 +524,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"c5e323f874eb0c28b1efe58c0704c74c"
+      - W/"f3d261c7316a5b3c621e6ed813eaad13"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - aaf83165-d447-43d2-a39c-0b1b0e77ddd5
+      - 83ca1785-b48a-45d2-a4f3-df04d1fae595
       X-Runtime:
-      - '0.003497'
+      - '0.004860'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"24","type":"photo","attributes":{"description":"feature
-        photo","url":"https://media.wired.com/photos/5cdefb92b86e041493d389df/191:100/w_1500,h_785,c_limit/Culture-Grumpy-Cat-487386121.jpg","created_at":"2021-04-21T23:05:49.796Z","updated_at":"2021-04-21T23:05:49.796Z","gallery_id":10}}]}'
-  recorded_at: Wed, 21 Apr 2021 23:49:40 GMT
+        photo","url":"https://media.wired.com/photos/5cdefb92b86e041493d389df/191:100/w_1500,h_785,c_limit/Culture-Grumpy-Cat-487386121.jpg","created_at":"2021-04-22T01:53:07.676Z","updated_at":"2021-04-22T01:53:07.676Z","gallery_id":10,"user_id":1}}]}'
+  recorded_at: Thu, 22 Apr 2021 02:19:43 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1
@@ -559,14 +563,14 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c3b15fdc-8d4f-498d-b536-52b446c95cee
+      - 147b7d57-b39c-4c15-a3bc-51eea1af50df
       X-Runtime:
-      - '0.002494'
+      - '0.004644'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"profile","attributes":{"zipcode":"80301","user_id":1,"profile_picture":"http://www.google.com","username":"the
         painter man"}}}'
-  recorded_at: Wed, 21 Apr 2021 23:49:40 GMT
+  recorded_at: Thu, 22 Apr 2021 02:19:43 GMT
 recorded_with: VCR 6.0.0

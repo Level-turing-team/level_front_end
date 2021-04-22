@@ -21,24 +21,24 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"66bb8dd2441f651ad06516315296fa18"
+      - W/"811148b184b8640a88b7ac2d4db9ceac"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 815a8a1c-c0fb-49df-a75c-e8aedf9d85d7
+      - 88592c68-a52f-4587-b7b9-0de90ca19e81
       X-Runtime:
-      - '0.006767'
+      - '0.006236'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"4","type":"post","attributes":{"content":"hey did you
-        see that headline?","link":"photoURL.com","user_id":2,"created_at":"2021-04-21T23:05:49.683Z"}},{"id":"5","type":"post","attributes":{"content":"hey
-        checkout my create shoes?","link":"photoURL.com","user_id":2,"created_at":"2021-04-21T23:05:49.684Z"}},{"id":"6","type":"post","attributes":{"content":"hey
-        did you see software update?","link":"photoURL.com","user_id":3,"created_at":"2021-04-21T23:05:49.686Z"}},{"id":"7","type":"post","attributes":{"content":"hey
-        did you see your mom called?","link":null,"user_id":3,"created_at":"2021-04-21T23:05:49.687Z"}},{"id":"8","type":"post","attributes":{"content":"hey
-        did you see that we''re not friends on FB anymore?","link":"photoURL.com","user_id":4,"created_at":"2021-04-21T23:05:49.688Z"}},{"id":"9","type":"post","attributes":{"content":"hey
-        did you see hear about that create app called ''level''?","link":"photoURL.com","user_id":4,"created_at":"2021-04-21T23:05:49.689Z"}},{"id":"10","type":"post","attributes":{"content":"hey
-        i just got hired at a sick new comapny","link":null,"user_id":5,"created_at":"2021-04-21T23:05:49.691Z"}}]}'
-  recorded_at: Wed, 21 Apr 2021 23:49:50 GMT
+        see that headline?","link":"photoURL.com","user_id":2,"created_at":"2021-04-22T01:53:07.547Z"}},{"id":"5","type":"post","attributes":{"content":"hey
+        checkout my create shoes?","link":"photoURL.com","user_id":2,"created_at":"2021-04-22T01:53:07.550Z"}},{"id":"6","type":"post","attributes":{"content":"hey
+        did you see software update?","link":"photoURL.com","user_id":3,"created_at":"2021-04-22T01:53:07.552Z"}},{"id":"7","type":"post","attributes":{"content":"hey
+        did you see your mom called?","link":null,"user_id":3,"created_at":"2021-04-22T01:53:07.554Z"}},{"id":"8","type":"post","attributes":{"content":"hey
+        did you see that we''re not friends on FB anymore?","link":"photoURL.com","user_id":4,"created_at":"2021-04-22T01:53:07.557Z"}},{"id":"9","type":"post","attributes":{"content":"hey
+        did you see hear about that create app called ''level''?","link":"photoURL.com","user_id":4,"created_at":"2021-04-22T01:53:07.559Z"}},{"id":"10","type":"post","attributes":{"content":"hey
+        i just got hired at a sick new comapny","link":null,"user_id":5,"created_at":"2021-04-22T01:53:07.562Z"}}]}'
+  recorded_at: Thu, 22 Apr 2021 02:20:00 GMT
 recorded_with: VCR 6.0.0

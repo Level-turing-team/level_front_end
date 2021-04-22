@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7d699938-febb-4b01-b04d-cba05324097d
+      - 7cab2fc7-96b7-4f08-a1a5-66b4eb08e395
       X-Runtime:
-      - '0.007997'
+      - '0.013421'
       Transfer-Encoding:
       - chunked
     body:
@@ -35,5 +35,5 @@ http_interactions:
       string: '{"data":[{"id":"3","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}},{"id":"4","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
         by jim"}},{"id":"6","type":"profile","attributes":{"zipcode":"80228","user_id":6,"profile_picture":"http://www.google.com","username":"former
         salesman"}}]}'
-  recorded_at: Wed, 21 Apr 2021 23:49:53 GMT
+  recorded_at: Thu, 22 Apr 2021 02:20:03 GMT
 recorded_with: VCR 6.0.0

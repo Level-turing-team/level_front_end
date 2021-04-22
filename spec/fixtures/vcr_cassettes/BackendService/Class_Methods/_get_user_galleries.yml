@@ -21,18 +21,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"d07c940541edbbba1c6171bbdd36b71f"
+      - W/"cedb5d038b17b34b899fc3c7a36f4b4b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - '082cbecf-38c2-47df-b97f-9574c63a65a2'
+      - a202a53c-37b6-4e02-bb1b-60db9c945cef
       X-Runtime:
-      - '0.005713'
+      - '0.007375'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"16","type":"gallery","attributes":{"user_id":7,"name":"Profile","created_at":"2021-04-21T23:05:49.725Z","updated_at":"2021-04-21T23:05:49.725Z","photo_url":"http://www.example.com"}},{"id":"17","type":"gallery","attributes":{"user_id":7,"name":"test
-        gallery","created_at":"2021-04-21T23:06:08.051Z","updated_at":"2021-04-21T23:06:08.051Z","photo_url":null}}]}'
-  recorded_at: Wed, 21 Apr 2021 23:49:51 GMT
+      string: '{"data":[{"id":"16","type":"gallery","attributes":{"user_id":7,"name":"Profile","created_at":"2021-04-22T01:53:07.610Z","updated_at":"2021-04-22T01:53:07.610Z","photo_url":"http://www.example.com"}},{"id":"17","type":"gallery","attributes":{"user_id":7,"name":"test
+        gallery","created_at":"2021-04-22T02:03:58.414Z","updated_at":"2021-04-22T02:03:58.414Z","photo_url":null}}]}'
+  recorded_at: Thu, 22 Apr 2021 02:20:00 GMT
 recorded_with: VCR 6.0.0

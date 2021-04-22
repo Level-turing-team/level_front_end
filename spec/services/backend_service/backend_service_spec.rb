@@ -171,7 +171,7 @@ RSpec.describe BackendService, type: :model do
       expect(@response[:data][0].keys.count).to eq(3)
       expect(@response[:data].first.keys).to eq([:id, :type, :attributes])
       expect(@response[:data].first[:type]).to eq('photo')
-      expect(@response[:data].first[:attributes].keys).to eq([:description, :url, :created_at, :updated_at, :gallery_id])
+      expect(@response[:data].first[:attributes].keys).to eq([:description, :url, :created_at, :updated_at, :gallery_id, :user_id])
     end
 
     it '#get_all_photos', :vcr do
@@ -180,7 +180,7 @@ RSpec.describe BackendService, type: :model do
       expect(@response[:data][0].keys.count).to eq(3)
       expect(@response[:data].first.keys).to eq([:id, :type, :attributes])
       expect(@response[:data].first[:type]).to eq('photo')
-      expect(@response[:data].first[:attributes].keys).to eq([:description, :url, :created_at, :updated_at, :gallery_id])
+      expect(@response[:data].first[:attributes].keys).to eq([:description, :url, :created_at, :updated_at, :gallery_id, :user_id])
     end
 
     it '#profile_search_name', :vcr do

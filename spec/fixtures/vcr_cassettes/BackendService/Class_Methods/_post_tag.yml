@@ -27,13 +27,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b5912df0-48e6-404a-9be7-fa735ac1ad6c
+      - b3ec14dc-0117-4953-bb53-8050cec6d6d8
       X-Runtime:
-      - '0.004516'
+      - '0.004887'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":"tags successfully created"}'
-  recorded_at: Wed, 21 Apr 2021 23:49:55 GMT
+  recorded_at: Thu, 22 Apr 2021 02:20:05 GMT
 recorded_with: VCR 6.0.0
