@@ -3,7 +3,8 @@ class Photo
               :url,
               :created_at,
               :updated_at,
-              :gallery_id
+              :gallery_id,
+              :user_id
 
   def initialize(data)
     @description = data[:attributes][:description]
@@ -11,5 +12,6 @@ class Photo
     @created_at = data[:attributes][:created_at]
     @updated_at = data[:attributes][:updated_at]
     @gallery_id = data[:attributes][:gallery_id]
+    @user_id = data[:attributes][:user_id]
   end
 end
