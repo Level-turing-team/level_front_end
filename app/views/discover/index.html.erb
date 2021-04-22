@@ -21,11 +21,11 @@
               <% end %>
         		</div>
         </div>
-
-        <div class="card text-white bg-dark mb-3 scroll-2" style="width: 100%;margin-top: 10px;text-align: center;margin-left: auto; margin-right: auto;" id="my-feed">
-        	<h5 class="card-header"> Recent Photos</h5>
-        		<div class="card-body">
-              <% @photos.each do |photo| %>
+        <div class="recent_photos">
+          <div class="card text-white bg-dark mb-3 scroll-2" style="width: 100%;margin-top: 10px;text-align: center;margin-left: auto; margin-right: auto;" id="my-feed">
+          	<h5 class="card-header"> Recent Photos</h5>
+          		<div class="card-body">
+                <% @photos.each do |photo| %>
                     <div class="card">
                       <%= link_to profile_path(lookup: photo.user_id) do %>
                         <img class="card-img-top" src="<%=photo.url%>" alt="picture">
@@ -35,11 +35,11 @@
                         <p class="card-text"></p>
                       </div>
                     </div><br>
-              <% end %>
-        		</div>
+                  <% end %>
+          		</div>
+          </div>
         </div>
-
-      </div>
+    </div>
 
     <div class="col-8">
       <div class="card text-white bg-dark mb-3" style="width: 100%;margin-top: 10px;text-align: center;margin-left: auto; margin-right: auto;">
