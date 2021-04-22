@@ -1,6 +1,7 @@
 # Level
 
- * There are plenty of sites to showcase any type of art that you the artist want to showcase, LEVEL is more focused on generating collaboration and human interaction between artists themselves to further their art.  LEVEL was made with the idea of connecting artists to artists, you can showcase some of your work and view curated galleries of other artist's work so the community can have a feel for each other's work and how/why you'd want to collaborate with each other.  LEVEL concentrates just as much on what work you want to showcase as much as it does connecting you to other artists so that as a community you can grow with other artists together.  Get connected. Make Art. Level the playing field.
+ * There are plenty of sites to showcase any type of art that you the artist want to showcase, LEVEL is more focused on generating collaboration and human interaction between artists themselves to further their art.  LEVEL was made with the idea of connecting artists to artists, you can showcase some of your work and view curated galleries of other artist's work so the community can have a feel for each other's work and how/why you'd want to collaborate with each other.  LEVEL concentrates just as much on what work you want to showcase as much as it does connecting you to other artists so that as a community you can grow with other artists together.  
+ * Get connected. Make Art. Level the playing field.
 
 ## Table of Contents
 
