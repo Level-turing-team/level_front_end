@@ -120,7 +120,9 @@ Get connected. Make Art. Level the playing field.
  
  ### insert image of discover page
 
- *The discover page is how you find other artist's to add to your Circle and collab with.  You can search by name, location or tag but can only search by one of those three at a time. Examples of tag being "musician", "painter", "photographer", etc.  
+ * The discover page is how you find other artist's to add to your Circle and collab with.  You can search by name, location or tag but can only search by one of those three at a time. Examples of tag being "musician", "painter", "photographer", etc.  
+ 
+ * Also utilize the artists near me section to find artists in your area to collaborate with by searching.
  
  
  
