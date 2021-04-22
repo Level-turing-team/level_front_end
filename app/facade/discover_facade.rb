@@ -58,9 +58,16 @@ class DiscoverFacade < BackendFacade
   end
 
   def self.artists_near_me(user_id)
+    # binding.pry
     artists = BackendService.get_artists_near_me(user_id)
     artists[:data].flat_map do |data|
-      Profile.new(data[:attributes])
+      info = {
+          id: data[:attributes][:user_id],
+          zipcode: data[:attributes][:zipcode],
+          username: data[:attributes][:username],
+          profile_photo: data[:attributes][:profile_picture]
+        }
+      Profile.new(info)
     end
   end
 

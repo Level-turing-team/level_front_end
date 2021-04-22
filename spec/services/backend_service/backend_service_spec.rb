@@ -99,7 +99,7 @@ RSpec.describe BackendService, type: :model do
     it '#get_user_galleries', :vcr do
       @response = BackendService.get_user_galleries(@user.id)
 
-      expect(@response[:data].length).to eq(1)
+      expect(@response[:data].length).to eq(2)
       expect(@response[:data].first).to be_a(Hash)
       expect(@response[:data].first.keys.count).to eq(3)
       expect(@response[:data].first.keys).to eq([:id, :type, :attributes])
@@ -167,11 +167,11 @@ RSpec.describe BackendService, type: :model do
     it '#get_gallery_photos', :vcr do
       @response = BackendService.get_gallery_photos(1,1)
 
-      expect(@response[:data].length).to eq(3)
+      expect(@response[:data].length).to eq(4)
       expect(@response[:data][0].keys.count).to eq(3)
       expect(@response[:data].first.keys).to eq([:id, :type, :attributes])
       expect(@response[:data].first[:type]).to eq('photo')
-      expect(@response[:data].first[:attributes].keys).to eq([:description, :url, :created_at, :updated_at, :gallery_id])
+      expect(@response[:data].first[:attributes].keys).to eq([:description, :url, :created_at, :updated_at, :gallery_id, :user_id])
     end
 
     it '#get_all_photos', :vcr do
@@ -180,7 +180,7 @@ RSpec.describe BackendService, type: :model do
       expect(@response[:data][0].keys.count).to eq(3)
       expect(@response[:data].first.keys).to eq([:id, :type, :attributes])
       expect(@response[:data].first[:type]).to eq('photo')
-      expect(@response[:data].first[:attributes].keys).to eq([:description, :url, :created_at, :updated_at, :gallery_id])
+      expect(@response[:data].first[:attributes].keys).to eq([:description, :url, :created_at, :updated_at, :gallery_id, :user_id])
     end
 
     it '#profile_search_name', :vcr do
