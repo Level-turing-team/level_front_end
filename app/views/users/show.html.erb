@@ -4,63 +4,123 @@
 	<%= render partial: "/shared/registration" %>
 <% else %>
 
-  <section id='username'>
-	<h3 class="font-weight-light mb-4 font-italic text-white"><%= @user.username %>'s profile</h3>
-  </section>
+<%= render 'shared/nav_bar' %><br>
 
-
-	<section id="artist-bio">
-
-
-    <section id='profilepicture' class="font-weight-light mb-4 font-italic text-white">
-      <p><%= image_tag @profile_data.profile_photo, class: "img-fluid img-thumbnail" unless @profile_data.profile_photo.nil?%></p>
-    </section>
-
-      <section id="distance" class="font-weight-light mb-4 font-italic text-white">
-		<% if @user.id == @current_user.id %>
-					<p>You are 0 miles from yourself</p>
-		<% else %>
-        <p><%= @distance %> miles from you</p>
-				<p><%= button_to "Add this user to your circle!",
-				 circles_path({user_id: @current_user.id, following_id: @user.id}),
-				 method: :post  if !@circle_ids.include?(@user.id) %></p>
-        <p><%= "This user is in your circle!" if @circle_ids.include?(@user.id) %></p>
-		<% end %>
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<section id="artist-bio">
+				<div class="card border-dark mb-3" style="max-width: 18rem;">
+				  <div class="card-header bg-dark text-white"> <%= @user.username %>'s	Bio	</div>
+					  <div class="card-body text-dark">
+					    <div class="card-text">
+								<% if @user.bio.empty? %>
+									<p>Nothing to see here!</p>
+								<% else %>
+									<figure class="text-left">
+										<blockquote class="blockquote">
+											<p><%= @user.bio %></p>
+										</blockquote>
+										<figcaption class="blockquote-footer">
+											Created by <cite title="Source Title"><%= @user.username %></cite>
+										</figcaption>
+									</figure>
+								<% end %>
+							</div>
+				  	</div>
+					</div>
 			</section>
+		</div>
 
-		<h4 class="font-weight-light mb-4 font-italic text-white">Artist Bio</h4>
 
-		<% if @user.bio.empty? %>
-			<p class="font-weight-light mb-4 font-italic text-white">Nothing to see here!</p>
-			<% else %>
-			<figure class="text-left">
-			  <blockquote class="blockquote">
-			  	<p><%= @user.bio %></p>
-			  </blockquote>
-			  <figcaption class="blockquote-footer">
-			    Created by <cite title="Source Title"><%= @user.username %></cite>
-			  </figcaption>
-			</figure>
-		<% end %>
-	</section>
+		<div class="col-6">
+			<div style="overflow:auto">
+				<div class="row flex-row flex-nowrap">
+					<% @profile_data.galleries.each_with_index do |gallery, index| %>
+					<div class="col-6">
+						<div class="card background">
+							<div class="image-<%= index + 1 %>">
+								<center>
+									<img class="card-img-top cropped1" src="<%=gallery.photos.first.url%>" alt="<%= gallery.name %>">
+								</center>
+								<div class="card-body">
+									<p class="card-text"><%= button_to gallery.name, galleries_path, params: {gallery_id: gallery.id}, method: :get, class: 'btn btn-outline-info form-control'%></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<% end %>
+				</div>
+			</div>
+		</div>
 
-<section id="posts" class="font-weight-light mb-4 font-italic text-white">
-  <h4>Posts</h4>
-    <% @profile_data.posts.each do |post| %>
-      <p><%= post.content %></p>
-      <p><%= link_to post.link unless post.link.nil? %></p>
-      <br>
-    <% end %>
-  </section>
+		<div class="col">
+			<div class="card d-flex text-white mb-3" id="my-circle" style="max-width: 18rem;margin-top: 10px;text-align: center;">
+				<h5 class="card-header bg-dark">
+					<section id='username'>
+						<center class="blue_glow">
+							<h3><%= @user.username %>'s profile</h3>
+						</center>
+					</section>
+				</h5>
+				<div class="card-body background">
+						<h6 class="card-subtitle mb-2 text-muted"></h6>
+							<div class="card" style="width: 15rem;">
+								<div class="card-img-top" alt="profile photo">
+									<img class="card-img-top" src="<%= @profile_data.profile_photo unless @profile_data.profile_photo.nil? %>" alt="Card image cap">
+								</div>
+								<div class="card-body background">
+									<div class="card-text" style="color:black">
+										<section id="distance">
+											<h4>Your Circle distance from you: </h4>
+											<% if @user.id == @current_user.id %>
+											<% else %>
+												<p><%= @distance %> miles from you</p>
+												<p><%= button_to "Add this user to your circle!",
+													circles_path({user_id: @current_user.id, following_id: @user.id}),
+													method: :post  if !@circle_ids.include?(@user.id) %></p>
+												<p><%= "This user is in your circle!" if @circle_ids.include?(@user.id) %></p>
+											<% end %>
+										</section>
+									</div>
+								</div>
+							</div><br>
+						<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-	<section id="galleries">
-		<% @profile_data.galleries.each do |gallery| %>
-			<section id="gallerypicture-<%= gallery.id %>">
-			<%= image_tag gallery.photos.first.url unless gallery.photos.first.url.nil? %>
-			<%= link_to gallery.name, galleries_path({gallery_id: gallery.id}) %>
-			<br>
+<section id="posts" class="container">
+	<div class="card mb-3 scroll" style="width: 1118px;margin-top: auto;text-align: center;margin-left: auto; margin-right: auto;">
+		<h5 class="card-header text-white bg-dark">Posts</h5>
+		<div class="card-body">
+			<h6 class="card-subtitle mb-2 text-muted background"></h6>
+			<% @profile_data.posts.each do |post| %>
+
+			<center>
+				<div class="card mb-3 background" style="max-width: 1000px;">
+					<div class="row g-0">
+						<div class="col-md-2">
+							<%= link_to post.user.username, profile_path(post.user.id) %>
+							<%= link_to profile_path(post.user.id) do %>
+							<%= image_tag "#{User.find(post.user.id).picture_url}", class: "small-circular" %>
+							<% end %>
+						</div>
+						<div class="col-md-8">
+							<div class="card-body">
+								<p class="card-text" style="color:black;"><%= post.content %></p><br>
+								<% if post.link %>
+								<h6 class="card-subtitle mb-2 text-muted"> <%= link_to "#{post.link}" %> </h6>
+								<% end %>
+								<p class="card-subtitle mb-2 text-muted" style="font-size:11px"> <%= post.created_at_format %> </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</center>
 			<% end %>
-			</section>
-	</section>
-
-<% end %>
+		</div>
+	</div>
+</section>
