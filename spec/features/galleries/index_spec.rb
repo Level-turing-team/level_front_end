@@ -27,10 +27,6 @@ RSpec.describe 'As an authenticated user' do
     visit galleries_path
     expect(page).to have_content("My Galleries")
 
-    within('.my-gallery') do
-      expect(page).to have_content("#{@user.username} Galleries")
-    end
-
     expect(page).to have_button("Upload Photos")
 
     click_on 'Upload Photos'

@@ -5,16 +5,18 @@
 <% else %>
 
   <section id='username'>
-	<h3><%= @user.username %>'s profile</h3>
+	<h3 class="font-weight-light mb-4 font-italic text-white"><%= @user.username %>'s profile</h3>
   </section>
+
 
 	<section id="artist-bio">
 
-    <section id='profilepicture'>
-      <p><%= image_tag @profile_data.profile_photo unless @profile_data.profile_photo.nil? %></p>
+
+    <section id='profilepicture' class="font-weight-light mb-4 font-italic text-white">
+      <p><%= image_tag @profile_data.profile_photo, class: "img-fluid img-thumbnail" unless @profile_data.profile_photo.nil?%></p>
     </section>
 
-      <section id="distance">
+      <section id="distance" class="font-weight-light mb-4 font-italic text-white">
 		<% if @user.id == @current_user.id %>
 					<p>You are 0 miles from yourself</p>
 		<% else %>
@@ -26,10 +28,10 @@
 		<% end %>
 			</section>
 
-		<h4>Artist Bio</h4>
+		<h4 class="font-weight-light mb-4 font-italic text-white">Artist Bio</h4>
 
 		<% if @user.bio.empty? %>
-			<p>Nothing to see here!</p>
+			<p class="font-weight-light mb-4 font-italic text-white">Nothing to see here!</p>
 			<% else %>
 			<figure class="text-left">
 			  <blockquote class="blockquote">
@@ -42,7 +44,7 @@
 		<% end %>
 	</section>
 
-<section id="posts">
+<section id="posts" class="font-weight-light mb-4 font-italic text-white">
   <h4>Posts</h4>
     <% @profile_data.posts.each do |post| %>
       <p><%= post.content %></p>
