@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b56fbf31-e115-42bb-9cd9-0a10060caa06
+      - cae22e55-0dcb-4270-b4db-8c69287dcfd7
       X-Runtime:
-      - '0.006163'
+      - '0.004114'
       Transfer-Encoding:
       - chunked
     body:
@@ -36,5 +36,5 @@ http_interactions:
         1","url":"https://miro.medium.com/max/3840/1*6h1kck2QmGaC89ERN_W3UA.jpeg","created_at":"2021-04-22T01:53:56.472Z","updated_at":"2021-04-22T01:53:56.472Z","gallery_id":1,"user_id":1}},{"id":"2","type":"photo","attributes":{"description":"pic
         1","url":"http://www.google.com","created_at":"2021-04-22T01:53:56.477Z","updated_at":"2021-04-22T01:53:56.477Z","gallery_id":1,"user_id":1}},{"id":"3","type":"photo","attributes":{"description":"pic
         1","url":"http://www.google.com","created_at":"2021-04-22T01:53:56.482Z","updated_at":"2021-04-22T01:53:56.482Z","gallery_id":1,"user_id":1}},{"id":"33","type":"photo","attributes":{"description":"description","url":"http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c9886db3f17b5771a10dae11cd97d2a56ba727be/fluff.jpg","created_at":"2021-04-22T02:05:50.334Z","updated_at":"2021-04-22T02:05:50.369Z","gallery_id":1,"user_id":1}}]}'
-  recorded_at: Thu, 22 Apr 2021 02:05:52 GMT
+  recorded_at: Thu, 22 Apr 2021 03:45:20 GMT
 recorded_with: VCR 6.0.0

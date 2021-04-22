@@ -27,7 +27,9 @@
         		<div class="card-body">
               <% @photos.each do |photo| %>
                     <div class="card">
-                      <img class="card-img-top" src="<%=photo.url%>" alt="picture">
+                      <%= link_to profile_path(lookup: photo.user_id) do %>
+                        <img class="card-img-top" src="<%=photo.url%>" alt="picture">
+                      <% end %>
                       <div class="card-body" style="color:black">
                       <%= photo.description %>
                         <p class="card-text"></p>

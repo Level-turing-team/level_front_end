@@ -25,16 +25,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f977cfe1-5313-41d4-b710-19645c50b2ff
+      - 5f76a114-1b61-4af9-9732-1cb06947091e
       X-Runtime:
-      - '0.003103'
+      - '0.003324'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"profile","attributes":{"zipcode":"80301","user_id":1,"profile_picture":"http://www.google.com","username":"the
         painter man"}}}'
-  recorded_at: Thu, 22 Apr 2021 02:05:49 GMT
+  recorded_at: Thu, 22 Apr 2021 03:45:17 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1
@@ -60,16 +60,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 86290363-1072-40d1-9a04-8a4170d45d2b
+      - ad0ca225-d8c4-4ba6-98db-d9a6ec052d41
       X-Runtime:
-      - '0.003356'
+      - '0.002729'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"profile","attributes":{"zipcode":"80301","user_id":1,"profile_picture":"http://www.google.com","username":"the
         painter man"}}}'
-  recorded_at: Thu, 22 Apr 2021 02:05:49 GMT
+  recorded_at: Thu, 22 Apr 2021 03:45:17 GMT
 - request:
     method: get
     uri: http://localhost:3001/api/v1/profiles/1
@@ -95,14 +95,14 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fe5f31dd-fc26-44c3-87f0-a8d1edcc41bf
+      - d8f331f2-a525-411f-b85f-da8d5433647e
       X-Runtime:
-      - '0.002753'
+      - '0.002640'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"profile","attributes":{"zipcode":"80301","user_id":1,"profile_picture":"http://www.google.com","username":"the
         painter man"}}}'
-  recorded_at: Thu, 22 Apr 2021 02:05:49 GMT
+  recorded_at: Thu, 22 Apr 2021 03:45:17 GMT
 recorded_with: VCR 6.0.0

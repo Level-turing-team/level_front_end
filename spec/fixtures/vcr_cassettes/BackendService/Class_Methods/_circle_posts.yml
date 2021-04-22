@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - '09727f66-56a3-418e-aa73-8d1d875f9216'
+      - c52119a1-5dfc-4497-99c4-7416a9f470ca
       X-Runtime:
-      - '0.006967'
+      - '0.007308'
       Transfer-Encoding:
       - chunked
     body:
@@ -40,5 +40,5 @@ http_interactions:
         did you see that we''re not friends on FB anymore?","link":"photoURL.com","user_id":4,"created_at":"2021-04-22T01:53:56.396Z"}},{"id":"9","type":"post","attributes":{"content":"hey
         did you see hear about that create app called ''level''?","link":"photoURL.com","user_id":4,"created_at":"2021-04-22T01:53:56.399Z"}},{"id":"10","type":"post","attributes":{"content":"hey
         i just got hired at a sick new comapny","link":null,"user_id":5,"created_at":"2021-04-22T01:53:56.401Z"}}]}'
-  recorded_at: Thu, 22 Apr 2021 02:05:49 GMT
+  recorded_at: Thu, 22 Apr 2021 03:45:17 GMT
 recorded_with: VCR 6.0.0

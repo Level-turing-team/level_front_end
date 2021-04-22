@@ -25,13 +25,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 812a0fa8-248e-44ff-83cb-3bb7164215ba
+      - 1ed39b17-ddd9-43d8-b2d8-82f555a8ae90
       X-Runtime:
-      - '0.005967'
+      - '0.004150'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"tag","attributes":{"name":"Painter"}},{"id":"3","type":"tag","attributes":{"name":"Sculpter"}}]}'
-  recorded_at: Thu, 22 Apr 2021 02:05:49 GMT
+  recorded_at: Thu, 22 Apr 2021 03:45:17 GMT
 recorded_with: VCR 6.0.0

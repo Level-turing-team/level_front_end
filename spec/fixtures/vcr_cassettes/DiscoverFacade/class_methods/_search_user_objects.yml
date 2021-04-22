@@ -1,0 +1,139 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/1/search?name=slipknot
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"3ff625c98766083ac089d2b5e6756044"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 924500fd-e396-40a2-89be-8faa3762935a
+      X-Runtime:
+      - '0.007469'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"3","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}}]}'
+  recorded_at: Thu, 22 Apr 2021 04:00:52 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"96e8e039ea2cb122dd997a8f77d81505"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b095b58b-c90b-4a94-8f30-eb6d68ccfb3f
+      X-Runtime:
+      - '0.003560'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}}}'
+  recorded_at: Thu, 22 Apr 2021 04:00:52 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"96e8e039ea2cb122dd997a8f77d81505"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 157700ca-7fe5-4d9f-b955-b7c053d5fd9b
+      X-Runtime:
+      - '0.004426'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}}}'
+  recorded_at: Thu, 22 Apr 2021 04:00:52 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/api/v1/profiles/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"96e8e039ea2cb122dd997a8f77d81505"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a559afae-5b44-4aef-9e21-f4ffcda350db
+      X-Runtime:
+      - '0.004473'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}}}'
+  recorded_at: Thu, 22 Apr 2021 04:00:52 GMT
+recorded_with: VCR 6.0.0

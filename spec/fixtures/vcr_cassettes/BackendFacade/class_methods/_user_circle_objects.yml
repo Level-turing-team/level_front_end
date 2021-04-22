@@ -25,14 +25,14 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e4766152-8794-4c6d-b897-3ea93e65c337
+      - cae52912-a44b-4a92-8235-f91a24568e75
       X-Runtime:
-      - '0.030529'
+      - '0.008789'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"2","type":"profile","attributes":{"zipcode":"80305","user_id":2,"profile_picture":"http://www.google.com","username":"korn"}},{"id":"3","type":"profile","attributes":{"zipcode":"80304","user_id":3,"profile_picture":"http://www.google.com","username":"slipknot"}},{"id":"4","type":"profile","attributes":{"zipcode":"80303","user_id":4,"profile_picture":"http://www.google.com","username":"photos
         by jim"}},{"id":"5","type":"profile","attributes":{"zipcode":"80544","user_id":5,"profile_picture":"http://www.google.com","username":"arteest"}}]}'
-  recorded_at: Thu, 22 Apr 2021 02:05:05 GMT
+  recorded_at: Thu, 22 Apr 2021 03:44:13 GMT
 recorded_with: VCR 6.0.0
