@@ -95,3 +95,9 @@ textarea {
 .blue_glow { color: #5BCDF8;
   text-shadow: 1px 1px 2px black, 0 0 10px #5BCDF8, 0 0 5px #5BCDF8;
 }
+
+.cropped1 {
+  width: 200px; /* width of container */
+  height: 200px; /* height of container */
+  object-fit: cover;
+}
