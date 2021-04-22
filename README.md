@@ -25,7 +25,7 @@
 
  As artists ourselves we are frankly sick and tired of the commercialization of other apps that artists almost have no choice in using.  We want to build a community of artists for artists.  For this reason you will NEVER be able to see who is "following" you, only who you are "following".  Wait, why is following in quotes. Well because even though it works like a follow on other apps (not like a two-way friend) we have changed the terminology to "Circle".  When you add someone to your Cirlce you will see all of their posts in your feed but unless they also add you to their Circle they will not see your posts in their feed.  
  
- Hold up.  If I can't see how many people are following me, how will I get validation.  We don't know but it won't be from this app.  Well if I can't see how many followers I have how can you monetize this app and eventually sell it to a tech giant?  We don't care. We're used to not having a ton of money and are pretty cool wih that.  We want LEVEL members to care about who is in their Cirlce because that is who they want to collab with and this is our sole focus.
+
 
 ## How to use LEVEL
 
