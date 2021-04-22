@@ -71,7 +71,7 @@ RSpec.describe 'Profile Page' do
       match_requests_on: %i[body]) do
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_4)
         allow_any_instance_of(ActionDispatch::Request).to receive(:session) { { user_id: '101' } }
-          
+
         visit profile_path
         within("#artist-bio") do
           expect(page).to have_content("Nothing to see here!")
@@ -86,14 +86,14 @@ RSpec.describe 'Profile Page' do
       match_requests_on: %i[body]) do
         allow_any_instance_of(ActionDispatch::Request).to receive(:session) { { user_id: '123' } }
         visit "/profile"
-        
+
         expect(page).not_to have_content "#{@user_2.username}"
         expect(page).to have_content "#{@user_1.username}'s profile"
-        
+
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_2)
         allow_any_instance_of(ActionDispatch::Request).to receive(:session) { { user_id: '456' } }
         visit "/profile"
-        
+
         expect(page).to have_content "#{@user_2.username}"
         expect(page).not_to have_content "#{@user_1.username}"
       end
@@ -106,13 +106,9 @@ RSpec.describe 'Profile Page' do
         match_requests_on: %i[body]) do
         allow_any_instance_of(ActionDispatch::Request).to receive(:session) { { user_id: '101' } }
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_4)
-        
+
         visit "/profile"
-        
-        within ("#distance") do
-          expect(page).to have_content("You are 0 miles from yourself")
-        end
-        
+
         allow_any_instance_of(ActionDispatch::Request).to receive(:session) { { user_id: '456' } }
         visit "/profile"
 
@@ -165,26 +161,25 @@ RSpec.describe 'Profile Page' do
         end
       end
     end
+
     it "displays the featured photo of every gallery a user has" do 
       VCR.use_cassette("see_featured_gallery_photo",
         match_requests_on: %i[body]) do
           allow_any_instance_of(ActionDispatch::Request).to receive(:session) { { user_id: '123' } }
           visit profile_path
 
-          page.find("#gallerypicture-1")[:src]
+          page.find(".image-1")[:src]
           page.status_code.should be 200
 
-          page.find("#gallerypicture-9")[:src]
+          page.find(".image-2")[:src]
           page.status_code.should be 200
 
-          page.find("#gallerypicture-10")[:src]
+          page.find(".image-3")[:src]
           page.status_code.should be 200
-          within("#gallerypicture-10") do 
-            expect(page).to have_content("Profile")
-            click_link "Profile"
+
+          click_button "Profile"
             
-            expect(current_path).to eq(galleries_path)
-          end
+          expect(current_path).to eq(galleries_path)
       end
     end
   end
