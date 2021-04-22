@@ -94,7 +94,9 @@ Get connected. Make Art. Level the playing field.
  
  *insert image of registration page*
  
- Once you have logged in with your Google account you will be directed to a registration page.  To fully access LEVEL and use the application as intended we do require all users to upload a profile photo of your choosing, a user name for yourself, the zip code you are located in, and a brief artist bio.  The reason for this is LEVEL is inteded to be a place to generate real world collaboration between artists and we feel this information is the baseline required to start fostering those connections.
+  * To fully access LEVEL and use the application as intended we do require all users to upload a profile photo of your choosing, a user name for yourself, the zip code you are located in, and a brief artist bio.  
+
+  * The reason for this is LEVEL is inteded to be a place to generate real world collaboration between artists and we feel this information is the baseline required to start fostering those connections.
  
  *insert image of dashboard page*
  
