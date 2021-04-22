@@ -75,15 +75,55 @@ Get connected. Make Art. Level the playing field.
   gem 'faker'
   ```
   
-### How LEVEL is set up
 
- Level is hosted on Heroku between three different repositories of code.  A frontend built with a Rails Application utilizting bootstrap.  A backend built with an API only Rails applicaton.  And a micro service using the Sinatra framework.  You the user will only have to interact with the frontend to access the app fully like you would any other app.  LEVEL is currently set up to be focused on photographers but we aim to open the platform up to many other mediums (reffered to as "Tags") in the future. LEVEL will allow you to upload and display your work but the focus should be on a curated selection rather than your whole cataloge so as to more narrowly focus on the pieces, themes, or motifs you want to focus on.
 
+### Why LEVEl? Why did we bother to make this app?
+ As artists ourselves we are frankly sick and tired of the commercialization of other apps that artists almost have no choice in using.  You've heard of them.  Mabye one commonly called !n$ta or something like that.  We want to build a community of artists for artists.  For this reason you will NEVER be able to see who is "following" you, only who you are "following".  Wait, why is following in quotes. Well because even though it works like a follow on other apps (not like a two-way friend) we have changed the terminology to "Circle".  When you add someone to your Cirlce you will see all of their posts in your feed but unless they also add you to their Circle they will not see your posts in their feed.  
+ 
+ Hold up.  If I can't see how many people are following me, how will I get validation.  We don't know but it won't be from this app.  Well if I can't see how many followers I have how can you monetize this app and eventually sell it to a tech giant?  We don't care. We're used to not having a ton of money and are pretty cool wih that.  We want LEVEL members to care about who is in their Cirlce because that is who they want to collab with and this is our sole focus.
 
 ## How to use LEVEL
 
- As stated above LEVEL is a hosted webservice so you will need an internet connection to access the application.  To be as openly accessible as possible and provide and adequate level of security, logging in and log in related security is handled through Google OAuth.  You will need a google account to access this service and your LEVEL account will be linked to that Google account.  
-  <insert image of log in with google to log in page>
+#### insert image of log in with google to log in page
+ 
+ Visit [LEVEL Homepage](https://arcane-scrubland-46989.herokuapp.com/)
+ Use your Google account to log in.
+ 
+ ##### insert image of registration page 
+ 
+ Once you have logged in with your Google account you will be directed to a registration page.  To fully access LEVEL and use the application as intended we do require all users to upload a Profile Photo of your choosing, a User Name for yourself, the zip code you are located in, and a brief Artist Bio.  The reason for this is LEVEL is inteded to be a place to generate real world collaboration between artists and we feel this information is the baseline required to start fostering those connections.
+ 
+### insert image of dashboard page
+ 
+ After you have completed the necessary registration steps you will be redirected to your Dashboard for the application.  You will see the profile photo and user name you selected for yourself during registration.  
+ 
+ From your user dasbhoard you will see a section for creating a post.  A post is intended to share some sort of info.  How you are feeling, a show you are going to or hosting, an invitation to collaborate, etc.  A post has options to add a link or a photo but they are optional.
+ 
+ There will also be a section that is your feed where you see posts from other artists in your Circle.
+ 
+ The final section we have currently available will be an area that displays all members currently in your Circle.  Click the link associated with their username to be taken to their profile.
+ 
+### insert image of profile
+
+ Any profile you visit will have that user's profile photo and user name.  Underneath that you will see how far away their zipcode is from you and a button to add them to your Cirlce.
+ 
+ There will also be sections for that artist's bio, the main photo for a gallery they have uploaded with a link to that full gallery, and a section for their posts.
+ 
+ ### insert image of gallery 
+ 
+ After navigating to the gallery page from the artist's profile page you will see all the photos from that gallery.  There will also be a section above with that gallery's name and info regarding that gallery.  To the side you will see the main photo for other galleries from that artist as well as links to view all the photos in that gallery.
+ 
+ ### insert image of discover page
+
+ The discover page is how you find other artist's to add to your Circle and collab with.  You can search by name, location or tag but can only search by one of those three at a time. Examples of tag being "musician", "painter", "photographer", etc.  
+ 
+ 
+ 
+ 
+ 
+ ### How LEVEL is set up
+
+ Level is hosted on Heroku between three different repositories of code.  A frontend built with a Rails Application utilizting bootstrap.  A backend built with an API only Rails applicaton.  And a micro service using the Sinatra framework.  You the user will only have to interact with the frontend to access the app fully like you would any other app.  LEVEL is currently set up to be focused on photographers but we aim to open the platform up to many other mediums (reffered to as "Tags") in the future. LEVEL will allow you to upload and display your work but the focus should be on a curated selection rather than your whole cataloge so as to more narrowly focus on the pieces, themes, or motifs you want to focus on.
 
 ### Prerequisites
 
