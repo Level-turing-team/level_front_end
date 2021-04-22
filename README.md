@@ -98,25 +98,25 @@ Get connected. Make Art. Level the playing field.
  
  *insert image of dashboard page*
  
- *After you have completed the necessary registration steps you will be redirected to your dashboard for the application.  You will see the profile photo and user name you selected for yourself during registration.  
+ * After you have completed the necessary registration steps you will be redirected to your dashboard for the application.  You will see the profile photo and user name you selected for yourself during registration.  
  
- *From your user dasbhoard you will see a section for creating a post.  A post is intended to share some sort of info.  How you are feeling, a show you are going to or hosting, an invitation to collaborate, etc.  A post has options to add a link or a photo but they are optional.
+ * From your user dasbhoard you will see a section for creating a post.  A post is intended to share some sort of info.  How you are feeling, a show you are going to or hosting, an invitation to collaborate, etc.  A post has options to add a link or a photo but they are optional.
  
- *There will also be a section that is your feed where you see posts from other artists in your Circle.
+ * There will also be a section that is your feed where you see posts from other artists in your Circle.
  
- *The final section we have currently available will be an area that displays all members currently in your Circle.  Click the link associated with their username to be taken to their profile.
+ * The final section we have currently available will be an area that displays all members currently in your Circle.  Click the link associated with their username to be taken to their profile.
  
 *insert image of profile*
 
- *Any profile you visit will have that user's profile photo and user name.  Underneath that you will see how far away their zipcode is from you and a button to add them to your Cirlce.
+ * Any profile you visit will have that user's profile photo and user name.  Underneath that you will see how far away their zipcode is from you and a button to add them to your Cirlce.
  
- *There will also be sections for that artist's bio, the main photo for a gallery they have uploaded with a link to that full gallery, and a section for their posts.
+ * There will also be sections for that artist's bio, the main photo for a gallery they have uploaded with a link to that full gallery, and a section for their posts.
  
   *insert image of gallery*
  
- *After navigating to the gallery page from the artist's profile page you will see all the photos from that gallery.  There will also be a section above with that gallery's name and info regarding that gallery.  
+ * After navigating to the gallery page from the artist's profile page you will see all the photos from that gallery.  There will also be a section above with that gallery's name and info regarding that gallery.  
  
- *To the side you will see the main photo for other galleries from that artist as well as links to view all the photos in that gallery.
+ * To the side you will see the main photo for other galleries from that artist as well as links to view all the photos in that gallery.
  
  ### insert image of discover page
 
