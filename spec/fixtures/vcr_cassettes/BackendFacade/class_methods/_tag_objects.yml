@@ -21,17 +21,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"431f28e382cb4969305146b6f1f3d405"
+      - W/"b097848aa641a140251637a1381b4326"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1a8aeb50-98f9-4bfa-b99e-70066122395d
+      - 41e086c4-487f-4037-a20a-f58d8e11c972
       X-Runtime:
-      - '0.073113'
+      - '0.033070'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"6","type":"tag","attributes":{"name":"Painter"}},{"id":"8","type":"tag","attributes":{"name":"Sculpter"}}]}'
-  recorded_at: Wed, 21 Apr 2021 20:10:55 GMT
+      string: '{"data":[{"id":"1","type":"tag","attributes":{"name":"Painter"}},{"id":"3","type":"tag","attributes":{"name":"Sculpter"}}]}'
+  recorded_at: Thu, 22 Apr 2021 02:05:05 GMT
 recorded_with: VCR 6.0.0

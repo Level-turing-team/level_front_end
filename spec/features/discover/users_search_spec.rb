@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe 'As an authenticated user' do
   before :each do
-    test_db_dump
+    # binding.pry
+    @user_1 = User.first
   end
 
   describe 'it searches by name, distance, or tag', :vcr do

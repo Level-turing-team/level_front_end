@@ -37,16 +37,16 @@ RSpec.describe BackendFacade, type: :model do
       expect(@photos.size).to eq(3)
       expect(@photos[0].gallery_id).to eq(1)
       expect(@photos[0].description).to eq('pic 1')
-      expect(@photos[0].url).to eq('http:www.google.com')
+      expect(@photos[0].url).to eq('https://miro.medium.com/max/3840/1*6h1kck2QmGaC89ERN_W3UA.jpeg')
     end
 
     it '#gallery_objects', :vcr do
       @galleries = BackendFacade.gallery_objects(1)
 
-      expect(@galleries.size).to eq(1)
+      expect(@galleries.size).to eq(3)
       expect(@galleries[0].id).to eq('1')
       expect(@galleries[0].name).to eq('photos from cali')
-      expect(@galleries[0].created_at).to eq('2021-04-18T16:28:20.884Z')
+      expect(@galleries[0].created_at).to eq('2021-04-22T01:53:56.411Z')
       expect(@galleries[0].photos.size).to eq(3)
       expect(@galleries[0].photos[0].class).to eq(Photo)
     end
