@@ -33,10 +33,12 @@
       <div class="col-8">
 
         <div class="row row-cols-1 row-cols-md-3 g-4">
-            <% @photos.each do |photo| %>
+            <% @photos.each_with_index do |photo, index| %>
               <div class="col">
                 <div class="card">
-                  <img src="<%= photo.url %>" class="card-img" alt="...">
+                  <div class=" photo-<%= index + 1 %> ">
+                    <img src="<%= photo.url %>" class="card-img" alt="...">
+                  </div>
                   <div class="card-img-overlay">
                     <p class="card-text blue_glow"><%= photo.description %>.</p>
                   </div>

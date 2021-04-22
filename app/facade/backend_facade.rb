@@ -42,9 +42,17 @@ class BackendFacade
   end
 
   def self.tag_objects(user_id)
-    BackendService.tags(user_id)[:data].map do |data|
-      Tag.new(data)
+    @tags = BackendService.tags(user_id)
+    if !@tags[:data].empty?
+      @tags[:data].map do |data|
+        Tag.new(data)
+      end
+    else 
+      []
     end
+    # BackendService.tags(user_id)[:data].map do |data|
+    #   Tag.new(data)
+    # end
   end
 
   def self.user_circle_objects(user_id)
