@@ -17,6 +17,8 @@ class ProfileFacade < BackendFacade
 
   def self.find_profile_picture(user_id)
     response = GalleryFacade.profile_object(user_id)
+    return if response.galleries.empty? || response.galleries.first.name != "Profile" 
+
     gallery = response.galleries.find do |gallery|
       gallery.name == "Profile" 
     end

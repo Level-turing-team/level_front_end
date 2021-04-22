@@ -19,6 +19,7 @@ class UsersController < ApplicationController
     @current_user = current_user
     # require "pry"; binding.pry
     !!params[:lookup] ? @user = User.find(params[:lookup]) : @user = User.find_by(google_id: session[:user_id])
+    # @not_current_user = User.find(params[:lookup])
     @distance = BackendService.get_distance(@current_user.id,@user.id)[:data] unless (@current_user.zip.nil? || @current_user.username.nil?) || (!params[:lookup].nil? && @current_user.zip.nil?)
     # Will need to change last conditional to => unless !params[:lookup] once app goes live in production
     @circle_ids = BackendFacade.user_circle_objects(@current_user.id).map{|user| user.id}

@@ -8,12 +8,9 @@
 	<h3 class="font-weight-light mb-4 font-italic text-white"><%= @user.username %>'s profile</h3>
   </section>
 
-	<section id="artist-bio" class="font-weight-light mb-4 font-italic text-white">
-		<!--
-		REMOVE THIS LINK ONCE FUNCTIONALITY IS IMPLEMENTED, ITS JUST FOR TESTING
-    Lookup ID is just for testing
-		 -->
-		<p>Link to other page  <%= link_to("other profile", profile_path(lookup: 2)) %> </p>
+
+	<section id="artist-bio">
+
 
     <section id='profilepicture' class="font-weight-light mb-4 font-italic text-white">
       <p><%= image_tag @profile_data.profile_photo, class: "img-fluid img-thumbnail" unless @profile_data.profile_photo.nil?%></p>

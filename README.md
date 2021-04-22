@@ -2,6 +2,8 @@
   * There are plenty of sites to host all types of art, from music to photos or anything else you want to share, there’s less supply of apps and resources to connect you one on one with other individuals who share your drive and passion.  Level helps you more easily connect with local people through our location based searches who share your passion and drive for your creative endeavors. Level concentrates as much of your work as you want from other hosting services to help ensure the connections you make are fruitful and grounded in common interest prior to taking the jump and meeting a co-collaborator in person.
 Get connected. Make Art. Level the playing field.
 
+ * There are plenty of sites to showcase any type of art that you the artist want to showcase, LEVEL is more focused on generating collaboration and human interaction between artists themselves to further their art.  LEVEL was made with the idea of connecting artists to artists, you can showcase some of your work and view curated galleries of other artist's work so the community can have a feel for each other's work and how/why you'd want to collaborate with each other.  LEVEL concentrates just as much on what work you want to showcase as much as it does connecting you to other artists so that as a community you can grow with other artists together.  Get connected. Make Art. Level the playing field.
+
   https://github.com/orgs/Level-turing-team/people
 
 ## Authors
@@ -72,7 +74,16 @@ Get connected. Make Art. Level the playing field.
   gem 'factory_bot_rails'
   gem 'faker'
   ```
+  
+### How LEVEL is set up
 
+ Level is hosted on Heroku between three different repositories of code.  A frontend built with a Rails Application utilizting bootstrap.  A backend built with an API only Rails applicaton.  And a micro service using the Sinatra framework.  You the user will only have to interact with the frontend to access the app fully like you would any other app.  LEVEL is currently set up to be focused on photographers but we aim to open the platform up to many other mediums (reffered to as "Tags") in the future. LEVEL will allow you to upload and display your work but the focus should be on a curated selection rather than your whole cataloge so as to more narrowly focus on the pieces, themes, or motifs you want to focus on.
+
+
+## How to use LEVEL
+
+ As stated above LEVEL is a hosted webservice so you will need an internet connection to access the application.  To be as openly accessible as possible and provide and adequate level of security, logging in and log in related security is handled through Google OAuth.  You will need a google account to access this service and your LEVEL account will be linked to that Google account.  
+  <insert image of log in with google to log in page>
 
 ### Prerequisites
 
