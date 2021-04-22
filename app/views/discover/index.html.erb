@@ -1,6 +1,6 @@
 <%= render 'shared/nav_bar' %>
 <center>
-  <h1 class="font-weight-light mb-4 font-italic text-white"> <%= current_user.username %>'s Discover Page</h1>
+
 </center>
 
 <div class="container">
@@ -43,21 +43,20 @@
 
     <div class="col-8">
       <div class="card text-white bg-dark mb-3" style="width: 100%;margin-top: 10px;text-align: center;margin-left: auto; margin-right: auto;">
-        <h5 class="font-weight-light mb-4 font-italic text-white">Custom rounded search bars with input group</h5>
           <%= form_with url: discover_index_path, method: :get, local: true do |f| %>
-              <div class="input-group">
-                <%= f.label :search_term, "Search" %>
-                <%= f.text_field :search_term, {placeholder:"What're you searching for?", class:"textfield"} %>
-              <div class="input-group-append">
-                <%= f.submit :search, {id:"button-addon1", class:"btn btn-link text-primary"} %>
+                <h3 class="font-weight-light mb-4 font-italic text-white" ><%= f.label :search_term, "Find a Circle" %></h3><br>
+              <div class="input-group mb-4">
+                <%= f.text_field :search_term, {type:"search", placeholder:"What're you searching for?", class:"form-control bg-none border-0"} %>
               </div>
-            </div>
               <%= f.radio_button :search_type, 'name', {class:"btn-check", id:"option1", autocomplete:"off"} %>
               <%= f.label :name, {class:"btn btn-secondary", for:"option1"} %>
               <%= f.radio_button :search_type, 'radius', {class:"btn-check", id:"option2", autocomplete:"off"} %>
               <%= f.label :distance, {class:"btn btn-secondary", for:"option2"} %>
               <%= f.radio_button :search_type, 'tag', {class:"btn-check", id:"option3", autocomplete:"off"} %>
-              <%= f.label :tag, {class:"btn btn-secondary", for:"option3"} %>
+              <%= f.label :tag, {class:"btn btn-secondary", for:"option3"} %><br><br>
+              <div class="input-group-append">
+                <%= f.submit :search, {id:"button-addon1", class:"btn btn-outline-secondary"} %><br><br>
+            </div>
           <% end %>
       </div>
 
