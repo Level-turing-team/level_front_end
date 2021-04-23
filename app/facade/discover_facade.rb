@@ -3,11 +3,14 @@ class DiscoverFacade < BackendFacade
     profile_photo = BackendService.get_user(user_id)[:data][:attributes][:profile_picture]
     username = BackendService.get_user(user_id)[:data][:attributes][:username]
     zipcode = BackendService.get_user(user_id)[:data][:attributes][:zipcode]
+    galleries = BackendFacade.gallery_objects(user_id)
+    binding.pry
     Profile.new({
       id: user_id,
       username: username,
       profile_photo: profile_photo,
-      zipcode: zipcode
+      zipcode: zipcode,
+      galleries: galleries
     })
   end
 
