@@ -71,7 +71,8 @@
 							<% @search_results.each do |artist| %>
 							<div class="card" style="width: 15rem;">
 							  <div class="card-img-top" alt="profile photo">
-									<%= link_to profile_path(lookup: artist) do %>
+                <%= binding.pry %>
+									<%= link_to artist.username, profile_path(lookup: artist.id) do %>
 										
 									<% end %>
                     <%=  current_user.distance(artist.id) %>
