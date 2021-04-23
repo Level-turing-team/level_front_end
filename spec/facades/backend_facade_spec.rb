@@ -34,10 +34,10 @@ RSpec.describe BackendFacade, type: :model do
     it '#photo_objects', :vcr do
       @photos = BackendFacade.photo_objects(@user.id, 1)
 
-      expect(@photos.size).to eq(3)
+      expect(@photos.size).to eq(4)
       expect(@photos[0].gallery_id).to eq(1)
       expect(@photos[0].description).to eq('pic 1')
-      expect(@photos[0].url).to eq("http:www.google.com")
+      expect(@photos[0].url).to eq("https://miro.medium.com/max/3840/1*6h1kck2QmGaC89ERN_W3UA.jpeg")
     end
 
     it '#gallery_objects', :vcr do
@@ -71,8 +71,8 @@ RSpec.describe BackendFacade, type: :model do
     it '#post_objects', :vcr do
       @posts = BackendFacade.post_objects(BackendService.user_posts(@user.id))
 
-      expect(@posts.size).to eq(6)
-      expect(@posts[0].content).to eq('hey did you see that lil nas X video?')
+      expect(@posts.size).to eq(7)
+      expect(@posts[0].content).to eq('this is my first post')
       expect(@posts[0].created_at).to eq('2021-04-18T16:28:20.859Z')
       expect(@posts[0].link).to eq('photoURL.com')
       expect(@posts[0].user).to eq(@user)

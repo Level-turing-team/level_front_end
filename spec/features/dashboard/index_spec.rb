@@ -29,7 +29,7 @@ RSpec.describe 'Dashboord Index', type: :feature do
 
       within '#my-circle' do
         expect(page).to have_content('My Circle')
-        expect(page).to have_content('You have 4 friends')
+        expect(page).to have_content('You Have 4 Artists In Your Circle')
         expect(page).to have_link(@user_2.username)
         expect(page).to have_link(@user_3.username)
         expect(page).to have_link(@user_4.username)
@@ -47,7 +47,6 @@ RSpec.describe 'Dashboord Index', type: :feature do
       visit dashboard_index_path(@user_1)
 
       expect(page).to have_content("#{@user_1.username}")
-      expect(page).to have_css(".small-circular")
     end
 
     it 'should be able to create a post', :vcr do
