@@ -11,7 +11,7 @@
         		<div class="card-body">
               <% @profiles.each do |profile| %>
                     <div class="card">
-                      <img class="card-img-top" src="<%= profile.profile_photo %>" alt="picture">
+                      <img class="card-img-top" src="<%= profile.galleries.first.photos.first.url %>" alt="picture">
                       <div class="card-body">
                         <%= link_to profile.username, profile_path(lookup: profile.id) %>
                         <h5>Zipcode: <%= profile.zipcode %></h5>
@@ -71,8 +71,8 @@
 							<% @search_results.each do |artist| %>
 							<div class="card" style="width: 15rem;">
 							  <div class="card-img-top" alt="profile photo">
-									<%= link_to profile_path(artist) do %>
-										<%= image_tag "#{artist.profile_photo}" %>
+									<%= link_to profile_path(lookup: artist) do %>
+										<%= image_tag "#{artist.galleries.first.photos.first.url}" %>
 									<% end %>
                     <%=  current_user.distance(artist.id) %>
 								</div>
