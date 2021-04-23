@@ -8,7 +8,7 @@
 <body>
 
 <center>
-<h1 class="font-weight-light mb-4 font-italic text-white"> <%= @user.username%>'s Dashboard </h1>
+<h1 class="font-weight-light mb-4 font-italic text-white"> <%= @user.username %>'s Dashboard </h1>
 </center>
 
 <div class="container">
@@ -19,13 +19,12 @@
 			<div class="card d-flex text-white mb-3 scroll-2" id="my-circle" style="max-width: 18rem;margin-top: 10px;text-align: center;">
 			  <h5 class="card-header bg-dark">My Circle</h5>
 				  <div class="card-body">
-						<h6 class="card-subtitle mb-2 text-muted">You have <%= @circle.length %> friends</h6>
+						<h6 class="card-subtitle mb-2 text-muted">You Have <%= @circle.length %> Artists In Your Circle</h6>
 							<% @circle.each do |user| %>
-
 							<div class="card" style="width: 15rem;">
 							  <div class="card-img-top" alt="profile photo">
-									<%= link_to profile_path(user) do %>
-										<%= image_tag "#{user.profile_picture}" %>
+									<%= link_to user.username, profile_path(lookup: user.user_id) do %>
+										<%= image_tag "#{user.galleries.first.photos.first.url}" %>
 									<% end %>
 								</div>
 							  <div class="card-body">
@@ -40,13 +39,13 @@
 
 		<div class="col-6">
 
-			<div class="card d-flex mb-3 background" style="max-width: 100%;margin-top: 10px;text-align: center;">
+			<div class="card d-flex bg-dark mb-3" style="max-width: 100%;margin-top: 10px;text-align: center;">
 			  <h5 class="card-header text-white bg-dark">Create Post</h5>
-				<div style="padding:5px;margin:5px">
+				<div style="padding:5px;margin:5px;color:white;">
 					<%= form_with url: new_post_path, method: :get, local: true do |f| %>
-						<%= f.label :content %><br>
+						<%= f.label :content, style: "color: white" %><br>
 						<%= f.text_area :content, size: "70 x 4", maxlength: 168, class: "form-label", required: true %><br>
-						<%= f.label :link %><br>
+						<%= f.label :link, style: "color: white" %><br>
 						<%= f.text_field :link, size: "66 x 1", class: "textfield" %><br><br>
 						<%= f.submit 'Create Post', class:"btn btn-secondary" %>
 					<% end %>
@@ -79,7 +78,7 @@
 <div class="card mb-3 scroll" style="width: 1118px;margin-top: 10px;text-align: center;margin-left: auto; margin-right: auto;" id="my-feed">
 	<h5 class="card-header text-white bg-dark"> My Feed </h5>
 		<div class="card-body">
-			<h6 class="card-subtitle mb-2 text-muted background">Your Circle's Posts</h6>
+			<h6 class="card-subtitle mb-2 text-muted">Your Circle's Posts</h6>
 			<% @circle_posts.each do |post| %>
 
 			<center>
@@ -87,7 +86,7 @@
 				  <div class="row g-0">
 				    <div class="col-md-2">
 							<%= link_to post.user.username, profile_path(post.user.id) %>
-							<%= link_to profile_path(post.user.id) do %>
+							<%= link_to profile_path(lookup: post.user.id) do %>
 								<%= image_tag "#{User.find(post.user.id).picture_url}", class: "small-circular" %>
 							<% end %>
 				    </div>

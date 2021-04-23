@@ -98,7 +98,6 @@
 		<div class="card-body">
 			<h6 class="card-subtitle mb-2 text-muted background"></h6>
 			<% @profile_data.posts.each do |post| %>
-
 			<center>
 				<div class="card mb-3 background" style="max-width: 1000px;">
 					<div class="row g-0">
@@ -108,9 +107,9 @@
 							<%= image_tag "#{User.find(post.user.id).picture_url}", class: "small-circular" %>
 							<% end %>
 						</div>
-						<div class="col-md-8">
-							<div class="card-body">
-								<p class="card-text" style="color:black;"><%= post.content %></p><br>
+						<div class="col-md-8"><br>
+							<div class="card text-white bg-dark mb-3">
+								<p class="card-text" style="color:white;"><%= post.content %></p><br>
 								<% if post.link %>
 								<h6 class="card-subtitle mb-2 text-muted"> <%= link_to "#{post.link}" %> </h6>
 								<% end %>
