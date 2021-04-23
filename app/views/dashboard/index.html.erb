@@ -23,9 +23,7 @@
 							<% @circle.each do |user| %>
 							<div class="card" style="width: 15rem;">
 							  <div class="card-img-top" alt="profile photo">
-									<%= link_to user.username, profile_path(lookup: user.id) do %>
-										
-									<% end %>
+									<%= link_to user.username, profile_path(lookup: user.id) %>
 								</div>
 							  <div class="card-body">
 							    <p class="card-text"><%= link_to user.username, profile_path(user) %></p>
@@ -86,9 +84,7 @@
 				  <div class="row g-0">
 				    <div class="col-md-2">
 							<%= link_to post.user.username, profile_path(post.user.id) %>
-							<%= link_to profile_path(lookup: post.user.id) do %>
-								
-							<% end %>
+							<%= link_to profile_path(lookup: post.user.id) %>
 				    </div>
 				    <div class="col-md-8">
 				      <div class="card-body">

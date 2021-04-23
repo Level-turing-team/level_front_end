@@ -46,7 +46,7 @@ RSpec.describe 'Profile Page' do
         expect(page).to have_content("Registration")
         expect(page).to have_field 'user[username]'
         expect(page).to have_field 'user[zip]'
-        expect(page).to have_field 'user[profile_gallery_picture]'
+        expect(page).to have_field 'user[picture_url]'
       end
     end
 
