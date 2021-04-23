@@ -1,5 +1,7 @@
 # Level
 
+![Level](https://imgur.com/kXAkuci.png)
+
  * There are plenty of sites to showcase any type of art that you the artist want to showcase, LEVEL is more focused on generating collaboration and human interaction between artists themselves to further their art.  LEVEL was made with the idea of connecting artists to artists, you can showcase some of your work and view curated galleries of other artist's work so the community can have a feel for each other's work and how/why you'd want to collaborate with each other.  LEVEL concentrates just as much on what work you want to showcase as much as it does connecting you to other artists so that as a community you can grow with other artists together.  
  * Get connected. Make Art. Level the playing field.
 
@@ -37,13 +39,13 @@
  Visit [LEVEL Homepage](https://arcane-scrubland-46989.herokuapp.com/)
  Use your Google account to log in.
  
- *insert image of registration page*
+![Registration Page](https://imgur.com/4u2cyex.png)
  
   * To fully access LEVEL and use the application as intended we do require all users to upload a profile photo of your choosing, a user name for yourself, the zip code you are located in, and a brief artist bio.  
 
   * The reason for this is LEVEL is inteded to be a place to generate real world collaboration between artists and we feel this information is the baseline required to start fostering those connections.
  
- *insert image of dashboard page*
+ ![Dashboard](https://imgur.com/ysAzuhN.png)
  
  * After you have completed the necessary registration steps you will be redirected to your dashboard for the application.  You will see the profile photo and user name you selected for yourself during registration.  
  
@@ -53,19 +55,19 @@
  
  * The final section we have currently available will be an area that displays all members currently in your Circle.  Click the link associated with their username to be taken to their profile.
  
-*insert image of profile*
+![Profile](https://imgur.com/UEmoSf1.png)
 
  * Any profile you visit will have that user's profile photo and user name.  Underneath that you will see how far away their zipcode is from you and a button to add them to your Cirlce.
  
  * There will also be sections for that artist's bio, the main photo for a gallery they have uploaded with a link to that full gallery, and a section for their posts.
  
-  *insert image of gallery*
+  ![Gallery](https://imgur.com/0IWSzZr.png)
  
  * After navigating to the gallery page from the artist's profile page you will see all the photos from that gallery.  There will also be a section above with that gallery's name and info regarding that gallery.  
  
  * To the side you will see the main photo for other galleries from that artist as well as links to view all the photos in that gallery.
  
- ### insert image of discover page
+ ![Discover](https://imgur.com/iGSPX6O.png)
 
  * The discover page is how you find other artist's to add to your Circle and collab with.  You can search by name, location or tag but can only search by one of those three at a time. Examples of tag being "musician", "painter", "photographer", etc.  
  
