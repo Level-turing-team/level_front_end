@@ -10,7 +10,7 @@ class UsersController < ApplicationController
       redirect_to register_path
     end
     BackendFacade.create_profile(@user.id,params[:user][:zip])
-    BackendFacade.create_profile_gallery_and_photo(@user.id, params[:user][:photo_description], params[:user][:profile_gallery_picture])
+    BackendFacade.create_profile_gallery_and_photo(@user.id, params[:user][:photo_description], params[:user][:picture_url])
     @user.update(user_params)
     redirect_to dashboard_index_path
   end
